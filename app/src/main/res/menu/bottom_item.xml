@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/main_invest"
+        android:title="투자하기"
+        android:icon="@mipmap/ic_launcher"
+        />
+    <item
+        android:id="@+id/main_loan"
+        android:title="대출받기"
+        android:icon="@mipmap/ic_launcher"
+        />
+    <item
+        android:id="@+id/main_custom"
+        android:title="마이페이지"
+        android:icon="@mipmap/ic_launcher"
+        />
+    <item
+        android:id="@+id/main_menu"
+        android:title="메뉴"
+        android:icon="@mipmap/ic_launcher"
+        />
+
+</menu>
