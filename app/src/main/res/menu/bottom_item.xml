@@ -16,8 +16,8 @@
         android:icon="@mipmap/ic_launcher"
         />
     <item
-        android:id="@+id/main_menu"
-        android:title="메뉴"
+        android:id="@+id/main_faq"
+        android:title="FAQ"
         android:icon="@mipmap/ic_launcher"
         />
 

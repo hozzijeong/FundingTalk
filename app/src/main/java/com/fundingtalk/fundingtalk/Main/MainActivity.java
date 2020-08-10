@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 
 import com.fundingtalk.fundingtalk.AppHelper.BaseActivity;
 import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Main_Fragment;
+import com.fundingtalk.fundingtalk.Main.FAQ.Fragment.Faq_Main_Fragment;
 import com.fundingtalk.fundingtalk.Main.Investment.Fragment.Invest_Main_Fragment;
 import com.fundingtalk.fundingtalk.Main.Loan.Fragment.Loan_Main_Fragment;
 import com.fundingtalk.fundingtalk.R;
@@ -19,7 +20,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     public Custom_Main_Fragment custom_main_fragment;
     public Invest_Main_Fragment invest_main_fragment;
     public Loan_Main_Fragment loan_main_fragment;
-
+    public Faq_Main_Fragment faq_main_fragment;
     @BindView(R.id.main_bottom_navi) BottomNavigationView bottom_navi;
 
     @Override
@@ -40,7 +41,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         custom_main_fragment = new Custom_Main_Fragment();
         invest_main_fragment = new Invest_Main_Fragment();
         loan_main_fragment = new Loan_Main_Fragment();
-
+        faq_main_fragment = new Faq_Main_Fragment();
     }
 
     @Override
@@ -59,8 +60,9 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
                 // 개인 정보로 이동
                 changeFragment(R.id.main_layout,custom_main_fragment);
                 return true;
-            case R.id.main_menu:
-                // 메뉴 설정으로 이동
+            case R.id.main_faq:
+                // faq로 이동
+                changeFragment(R.id.main_layout,faq_main_fragment);
                 return true;
 
             default:return false;
