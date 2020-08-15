@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main.Investment.Decriptions.Second_desc"></activity>
+        <activity android:name=".Main.Investment.invest_finish"></activity>
+        <activity android:name=".Main.Investment.invest_input_file" />
+        <activity android:name=".Main.Investment.Decriptions.Second_desc" />
         <activity android:name=".Main.Investment.Decriptions.First_desc" />
         <activity android:name=".Splash.SplashActivity" />
         <activity android:name=".Login.LoginActivity" />

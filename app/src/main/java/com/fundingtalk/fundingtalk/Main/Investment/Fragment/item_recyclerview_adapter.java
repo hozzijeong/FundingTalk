@@ -68,6 +68,7 @@ public class item_recyclerview_adapter extends RecyclerView.Adapter<item_recycle
             money = itemView.findViewById(R.id.invest_money);
             desc = itemView.findViewById(R.id.invest_description);
 
+            //클릭 이벤트
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -84,18 +85,7 @@ public class item_recyclerview_adapter extends RecyclerView.Adapter<item_recycle
             money.setText(data.getmoney());
             desc.setText(data.getdescription());
 
-//            itemView.setOnClickListener(this);
-
         }
 
-        //클릭이벤트 추가
-//        public void onClick(View v) {
-//            switch (v.getId()) {
-//                case R.id.full:
-//                    Intent intent = new Intent(this, First_desc.class);
-////                    this.startActivity(intent);
-//                    break;
-//            }
-//        }
     }
 }
