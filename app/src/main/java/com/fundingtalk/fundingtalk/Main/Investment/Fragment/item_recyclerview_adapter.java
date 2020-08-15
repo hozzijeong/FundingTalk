@@ -1,5 +1,7 @@
 package com.fundingtalk.fundingtalk.Main.Investment.Fragment;
 
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.fundingtalk.fundingtalk.Main.Investment.Decriptions.First_desc;
 import com.fundingtalk.fundingtalk.R;
 
 import java.util.ArrayList;
@@ -53,6 +56,7 @@ public class item_recyclerview_adapter extends RecyclerView.Adapter<item_recycle
         private TextView month;
         private TextView money;
         private TextView desc;
+        private int count = 0;
 
 
         ItemViewHolder(View itemView) {
@@ -64,6 +68,13 @@ public class item_recyclerview_adapter extends RecyclerView.Adapter<item_recycle
             money = itemView.findViewById(R.id.invest_money);
             desc = itemView.findViewById(R.id.invest_description);
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // TODO : process click event.
+                    Log.d("hasdg","wlketngwlekjt");
+                }
+            });
         }
 
         void onBind(recyclerview_item data) {
@@ -73,6 +84,18 @@ public class item_recyclerview_adapter extends RecyclerView.Adapter<item_recycle
             money.setText(data.getmoney());
             desc.setText(data.getdescription());
 
+//            itemView.setOnClickListener(this);
+
         }
+
+        //클릭이벤트 추가
+//        public void onClick(View v) {
+//            switch (v.getId()) {
+//                case R.id.full:
+//                    Intent intent = new Intent(this, First_desc.class);
+////                    this.startActivity(intent);
+//                    break;
+//            }
+//        }
     }
 }
