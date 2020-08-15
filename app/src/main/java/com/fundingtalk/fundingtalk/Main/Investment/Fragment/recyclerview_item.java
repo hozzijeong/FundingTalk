@@ -1,16 +1,19 @@
 package com.fundingtalk.fundingtalk.Main.Investment.Fragment;
 import android.graphics.drawable.Drawable;
 
+//데이터 클래스
+
 public class recyclerview_item {
 
-    private Drawable iconDrawable ;
+//    private Drawable iconDrawable ;
+    private int invest_icon;
     private String invest_rate ;
     private String invest_month ;
     private String invest_money ;
     private String invest_description ;
 
-    public void setIcon(Drawable icon) {
-        iconDrawable = icon ;
+    public void setIcon(int icon) {
+        invest_icon = icon ;
     }
     public void setrate(String rate) {
         invest_rate = rate ;
@@ -25,8 +28,8 @@ public class recyclerview_item {
         invest_description = desc ;
     }
 
-    public Drawable getIcon() {
-        return this.iconDrawable ;
+    public int getIcon() {
+        return this.invest_icon ;
     }
     public String getrate() {
         return this.invest_rate ;
