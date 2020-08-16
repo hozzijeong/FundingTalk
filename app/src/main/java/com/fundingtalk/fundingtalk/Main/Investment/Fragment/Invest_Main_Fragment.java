@@ -76,25 +76,6 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
         String now_rate[] = getResources().getStringArray(R.array.now_rate);
         String now_desc[] = getResources().getStringArray(R.array.now_desc);
 
-//        List<String> listrate = Arrays.asList(
-//                "국화", "사막"
-//        );
-//
-//        List<String> listmonth = Arrays.asList(
-//                "이 꽃은 국화입니다.",
-//                "여기는 사막입니다."
-//        );
-//
-//        List<String> listmoney = Arrays.asList(
-//                "이 꽃은 국화입니다.1",
-//                "여기는 사막입니다.1"
-//        );
-//
-//        List<String> listdesc = Arrays.asList(
-//                "설명입니다",
-//                "설명입니다"
-//        );
-
         List<Integer> listResId = Arrays.asList(
                 R.drawable.testimg,
                 R.drawable.testimg
@@ -104,6 +85,7 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
             recyclerview_item data = new recyclerview_item();
 
             data.setIcon(listResId.get(i));
+            data.setname(now_name[i]);
             data.setrate(now_rate[i]);
             data.setmonth(now_month[i]);
             data.setmoney(now_money[i]);
@@ -134,6 +116,7 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
             recyclerview_item data = new recyclerview_item();
 
             data.setIcon(listResId.get(i));
+            data.setname(future_name[i]);
             data.setrate(future_rate[i]);
             data.setmonth(future_month[i]);
             data.setmoney(future_money[i]);
@@ -165,6 +148,7 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
             recyclerview_item data = new recyclerview_item();
 
             data.setIcon(listResId.get(i));
+            data.setname(past_name[i]);
             data.setrate(past_rate[i]);
             data.setmonth(past_month[i]);
             data.setmoney(past_money[i]);
@@ -177,4 +161,5 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
         // adapter의 값이 변경되었다는 것을 알려줍니다.
         adapter3.notifyDataSetChanged();
     }
+
 }
