@@ -18,121 +18,163 @@ import java.util.List;
 
 public class Invest_Main_Fragment extends Main_BaseFragment {
 
-    private item_recyclerview_adapter adapter;
-    private RecyclerView recyclerView;
+    private item_recyclerview_adapter adapter1;
+    private item_recyclerview_adapter adapter2;
+    private item_recyclerview_adapter adapter3;
+    private RecyclerView recyclerView1;
+    private RecyclerView recyclerView2;
+    private RecyclerView recyclerView3;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.main01_invest_fragment,container,false);
-        recyclerView = v.findViewById(R.id.invest_items);
+        recyclerView1 = v.findViewById(R.id.now_invest_items);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.getActivity());
-        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView1.setLayoutManager(linearLayoutManager);
 
-        adapter = new item_recyclerview_adapter();
-        recyclerView.setAdapter(adapter);
+        adapter1 = new item_recyclerview_adapter();
+        recyclerView1.setAdapter(adapter1);
 
-        getData();
+        now_getData();
+
+        //이까지가 모집중인 상품
+
+        recyclerView2 = v.findViewById(R.id.future_invest_items);
+
+        LinearLayoutManager linearLayoutManager2 = new LinearLayoutManager(this.getActivity());
+        recyclerView2.setLayoutManager(linearLayoutManager2);
+
+        adapter2 = new item_recyclerview_adapter();
+        recyclerView2.setAdapter(adapter2);
+
+        future_getData();
+
+        //이까지가 오픈예정
+
+        recyclerView3 = v.findViewById(R.id.past_invest_items);
+
+        LinearLayoutManager linearLayoutManager3 = new LinearLayoutManager(this.getActivity());
+        recyclerView3.setLayoutManager(linearLayoutManager3);
+
+        adapter3 = new item_recyclerview_adapter();
+        recyclerView3.setAdapter(adapter3);
+
+        past_getData();
+
+        //이까지가 마감된 상품
 
         return v;
     }
 
-    private void getData() {
-        // 임의의 데이터입니다.
-        List<String> listrate = Arrays.asList("국화", "사막", "수국", "해파리", "코알라", "등대", "펭귄", "튤립",
-                "국화", "사막", "수국", "해파리", "코알라", "등대", "펭귄", "튤립");
+    private void now_getData() { //현재진행중인 상품 정보추가
 
-        List<String> listmonth = Arrays.asList(
-                "이 꽃은 국화입니다.",
-                "여기는 사막입니다.",
-                "이 꽃은 수국입니다.",
-                "이 동물은 해파리입니다.",
-                "이 동물은 코알라입니다.",
-                "이것은 등대입니다.",
-                "이 동물은 펭귄입니다.",
-                "이 꽃은 튤립입니다.",
-                "이 꽃은 국화입니다.",
-                "여기는 사막입니다.",
-                "이 꽃은 수국입니다.",
-                "이 동물은 해파리입니다.",
-                "이 동물은 코알라입니다.",
-                "이것은 등대입니다.",
-                "이 동물은 펭귄입니다.",
-                "이 꽃은 튤립입니다."
-        );
+        String now_name[] = getResources().getStringArray(R.array.now_name);
+        String now_month[] = getResources().getStringArray(R.array.now_month);
+        String now_money[] = getResources().getStringArray(R.array.now_money);
+        String now_rate[] = getResources().getStringArray(R.array.now_rate);
+        String now_desc[] = getResources().getStringArray(R.array.now_desc);
 
-        List<String> listmoney = Arrays.asList(
-                "이 꽃은 국화입니다.1",
-                "여기는 사막입니다.1",
-                "이 꽃은 수국입니다.1",
-                "이 동물은 해파리입니다.1",
-                "이 동물은 코알라입니다.1",
-                "이것은 등대입니다.1",
-                "이 동물은 펭귄입니다.1",
-                "이 꽃은 튤립입니다.1",
-                "이 꽃은 국화입니다.1",
-                "여기는 사막입니다.1",
-                "이 꽃은 수국입니다.1",
-                "이 동물은 해파리입니다.1",
-                "이 동물은 코알라입니다.1",
-                "이것은 등대입니다.1",
-                "이 동물은 펭귄입니다.1",
-                "이 꽃은 튤립입니다.1"
-        );
-
-        List<String> listdesc = Arrays.asList(
-                "설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다",
-                "설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다",
-                "설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다",
-                "설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다",
-                "설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다",
-                "설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다",
-                "설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다",
-                "설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다",
-                "설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다",
-                "설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다",
-                "설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다",
-                "설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다",
-                "설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다",
-                "설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다",
-                "설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다",
-                "설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다설명입니다"
-        );
+//        List<String> listrate = Arrays.asList(
+//                "국화", "사막"
+//        );
+//
+//        List<String> listmonth = Arrays.asList(
+//                "이 꽃은 국화입니다.",
+//                "여기는 사막입니다."
+//        );
+//
+//        List<String> listmoney = Arrays.asList(
+//                "이 꽃은 국화입니다.1",
+//                "여기는 사막입니다.1"
+//        );
+//
+//        List<String> listdesc = Arrays.asList(
+//                "설명입니다",
+//                "설명입니다"
+//        );
 
         List<Integer> listResId = Arrays.asList(
                 R.drawable.testimg,
-                R.drawable.testimg,
-                R.drawable.testimg,
-                R.drawable.testimg,
-                R.drawable.testimg,
-                R.drawable.testimg,
-                R.drawable.testimg,
-                R.drawable.testimg,
-                R.drawable.testimg,
-                R.drawable.testimg,
-                R.drawable.testimg,
-                R.drawable.testimg,
-                R.drawable.testimg,
-                R.drawable.testimg,
-                R.drawable.testimg,
                 R.drawable.testimg
         );
-        for (int i = 0; i < listrate.size(); i++) {
+        for (int i = 0; i < now_name.length; i++) {
             // 각 List의 값들을 data 객체에 set 해줍니다.
             recyclerview_item data = new recyclerview_item();
 
             data.setIcon(listResId.get(i));
-            data.setrate(listrate.get(i));
-            data.setmonth(listmonth.get(i));
-            data.setmoney(listmoney.get(i));
-            data.setdescription(listdesc.get(i));
+            data.setrate(now_rate[i]);
+            data.setmonth(now_month[i]);
+            data.setmoney(now_money[i]);
+            data.setdescription(now_desc[i]);
 
             // 각 값이 들어간 data를 adapter에 추가합니다.
-            adapter.addItem(data);
+            adapter1.addItem(data);
         }
 
         // adapter의 값이 변경되었다는 것을 알려줍니다.
-        adapter.notifyDataSetChanged();
+        adapter1.notifyDataSetChanged();
+    }
+
+    private void future_getData() { //미래에 상품 정보추가
+
+        String future_name[] = getResources().getStringArray(R.array.future_name);
+        String future_month[] = getResources().getStringArray(R.array.future_month);
+        String future_money[] = getResources().getStringArray(R.array.future_money);
+        String future_rate[] = getResources().getStringArray(R.array.future_rate);
+        String future_desc[] = getResources().getStringArray(R.array.future_desc);
+
+        List<Integer> listResId = Arrays.asList(
+                R.drawable.testimg,
+                R.drawable.testimg
+        );
+        for (int i = 0; i < future_name.length; i++) {
+            // 각 List의 값들을 data 객체에 set 해줍니다.
+            recyclerview_item data = new recyclerview_item();
+
+            data.setIcon(listResId.get(i));
+            data.setrate(future_rate[i]);
+            data.setmonth(future_month[i]);
+            data.setmoney(future_money[i]);
+            data.setdescription(future_desc[i]);
+
+            // 각 값이 들어간 data를 adapter에 추가합니다.
+            adapter2.addItem(data);
+        }
+
+        // adapter의 값이 변경되었다는 것을 알려줍니다.
+        adapter2.notifyDataSetChanged();
+    }
+
+    private void past_getData() { //과거의 상품 정보추가
+
+        String past_name[] = getResources().getStringArray(R.array.past_name);
+        String past_month[] = getResources().getStringArray(R.array.past_month);
+        String past_money[] = getResources().getStringArray(R.array.past_money);
+        String past_rate[] = getResources().getStringArray(R.array.past_rate);
+        String past_desc[] = getResources().getStringArray(R.array.past_desc);
+
+        List<Integer> listResId = Arrays.asList(
+                R.drawable.testimg,
+                R.drawable.testimg,
+                R.drawable.testimg
+        );
+        for (int i = 0; i < past_name.length; i++) {
+            // 각 List의 값들을 data 객체에 set 해줍니다.
+            recyclerview_item data = new recyclerview_item();
+
+            data.setIcon(listResId.get(i));
+            data.setrate(past_rate[i]);
+            data.setmonth(past_month[i]);
+            data.setmoney(past_money[i]);
+            data.setdescription(past_desc[i]);
+
+            // 각 값이 들어간 data를 adapter에 추가합니다.
+            adapter3.addItem(data);
+        }
+
+        // adapter의 값이 변경되었다는 것을 알려줍니다.
+        adapter3.notifyDataSetChanged();
     }
 }
