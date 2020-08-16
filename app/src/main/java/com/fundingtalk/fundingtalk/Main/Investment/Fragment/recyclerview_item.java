@@ -5,7 +5,6 @@ import android.graphics.drawable.Drawable;
 
 public class recyclerview_item {
 
-//    private Drawable iconDrawable ;
     private int invest_icon;
     private String invest_name;
     private String invest_rate ;

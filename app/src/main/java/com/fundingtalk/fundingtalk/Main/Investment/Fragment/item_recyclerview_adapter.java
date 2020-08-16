@@ -1,5 +1,6 @@
 package com.fundingtalk.fundingtalk.Main.Investment.Fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -42,6 +44,16 @@ public class item_recyclerview_adapter extends RecyclerView.Adapter<item_recycle
         return listData.size();
     }
 
+    class ViewHolder extends RecyclerView.ViewHolder {
+
+        public final View mView;
+        public ViewHolder(View itemView) {
+            super(itemView);
+            mView = itemView;
+            // 레이아웃 객체화 findViewById
+        }
+    }
+
     void addItem(recyclerview_item data) {
         // 외부에서 item을 추가시킬 함수입니다.
         listData.add(data);
@@ -59,7 +71,6 @@ public class item_recyclerview_adapter extends RecyclerView.Adapter<item_recycle
         private TextView desc;
         private int count = 0;
 
-
         ItemViewHolder(View itemView) {
             super(itemView);
 
@@ -74,8 +85,12 @@ public class item_recyclerview_adapter extends RecyclerView.Adapter<item_recycle
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    // TODO : process click event.
-                    Log.d("hasdg","wlketngwlekjt");
+                    int pos = getAdapterPosition() ;
+                    if (pos != RecyclerView.NO_POSITION) {
+                        // TODO : use pos.
+                        recyclerview_item item = listData.get(pos) ;
+                        Log.d("hasdg", String.valueOf(pos));
+                    }
                 }
             });
         }
