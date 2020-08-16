@@ -1,19 +1,14 @@
 package com.fundingtalk.fundingtalk.Main.Investment.Fragment;
 
-import android.content.Context;
-import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.fundingtalk.fundingtalk.Main.Investment.Decriptions.First_desc;
 import com.fundingtalk.fundingtalk.R;
 
 import java.util.ArrayList;
@@ -44,20 +39,23 @@ public class item_recyclerview_adapter extends RecyclerView.Adapter<item_recycle
         return listData.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
-
-        public final View mView;
-        public ViewHolder(View itemView) {
-            super(itemView);
-            mView = itemView;
-            // 레이아웃 객체화 findViewById
-        }
-    }
-
     void addItem(recyclerview_item data) {
         // 외부에서 item을 추가시킬 함수입니다.
         listData.add(data);
     }
+
+    //버튼 외부 클릭 리스너
+    public interface OnItemClickListener {
+        void onItemClick(View v, int position) ;
+    }
+    private OnItemClickListener mListener = null ;
+
+    // OnItemClickListener 리스너 객체 참조를 어댑터에 전달하는 메서드
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.mListener = listener ;
+    }
+
+    //-----------
 
     // RecyclerView의 핵심인 ViewHolder 입니다.
     // 여기서 subView를 setting 해줍니다.
@@ -88,8 +86,11 @@ public class item_recyclerview_adapter extends RecyclerView.Adapter<item_recycle
                     int pos = getAdapterPosition() ;
                     if (pos != RecyclerView.NO_POSITION) {
                         // TODO : use pos.
-                        recyclerview_item item = listData.get(pos) ;
-                        Log.d("hasdg", String.valueOf(pos));
+//                        recyclerview_item item = listData.get(pos) ;
+//                        Log.d("hasdg", String.valueOf(pos));
+                        if (mListener != null) {
+                            mListener.onItemClick(v, pos) ;
+                        }
                     }
                 }
             });
@@ -106,4 +107,6 @@ public class item_recyclerview_adapter extends RecyclerView.Adapter<item_recycle
         }
 
     }
+
+
 }

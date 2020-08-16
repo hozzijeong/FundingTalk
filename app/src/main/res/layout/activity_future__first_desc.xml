@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main.Investment.Decriptions.Second_desc">
+    tools:context=".Main.Investment.Decriptions.future_First_desc">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.fundingtalk.fundingtalk.R;
 
-public class First_desc extends AppCompatActivity {
+public class future_Second_desc extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first_desc);
+        setContentView(R.layout.activity_future__second_desc);
     }
 }

@@ -1,6 +1,8 @@
 package com.fundingtalk.fundingtalk.Main.Investment.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
+import com.fundingtalk.fundingtalk.Main.Investment.Decriptions.*;
+import com.fundingtalk.fundingtalk.Main.MainActivity;
 import com.fundingtalk.fundingtalk.R;
 
 import java.util.Arrays;
@@ -29,6 +33,8 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.main01_invest_fragment,container,false);
+
+        //---
         recyclerView1 = v.findViewById(R.id.now_invest_items);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.getActivity());
@@ -36,6 +42,22 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
 
         adapter1 = new item_recyclerview_adapter();
         recyclerView1.setAdapter(adapter1);
+
+        adapter1.setOnItemClickListener(new item_recyclerview_adapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+                // TODO : 아이템 클릭 이벤트를 MainActivity에서 처리.
+                Log.d("이동", String.valueOf(position));
+                if(position == 0){
+                    Intent intent = new Intent(v.getContext(), now_First_desc.class);
+                    startActivity(intent);//액티비티 띄우기
+                }
+                if(position == 1){
+                    Intent intent = new Intent(v.getContext(), now_Second_desc.class);
+                    startActivity(intent);//액티비티 띄우기
+                }
+            }
+        }) ;
 
         now_getData();
 
@@ -48,6 +70,24 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
 
         adapter2 = new item_recyclerview_adapter();
         recyclerView2.setAdapter(adapter2);
+
+        adapter2.setOnItemClickListener(new item_recyclerview_adapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+                // TODO : 아이템 클릭 이벤트를 MainActivity에서 처리.
+//                Log.d("이동", String.valueOf(position));
+                //클릭하면 페이지 이동
+                if(position == 0){
+                    Intent intent = new Intent(v.getContext(), future_First_desc.class);
+                    startActivity(intent);//액티비티 띄우기
+                }
+                if(position == 1){
+                    Intent intent = new Intent(v.getContext(), future_Second_desc.class);
+                    startActivity(intent);//액티비티 띄우기
+                }
+            }
+
+        }) ;
 
         future_getData();
 
