@@ -34,10 +34,15 @@ public class invest_input_file extends AppCompatActivity {
         button1.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if ( Integer.parseInt(numberText.getText().toString()) <= 5000 ) { //나중에 DB값으로 바꾸기
-                    ok_money = 1;
+                try { //숫자말고 다른 것을 입력할때 튕기는것을 방지
+                    if ( (Integer.parseInt(numberText.getText().toString()) <= 5000) && (isInteger(numberText.getText().toString()) == true) ) { //나중에 DB값으로 바꾸기
+                        ok_money = 1;
 //                    Log.d("숫자입력", "숫자 완료");
+                    }
+                }
+                catch(NumberFormatException e){
+                    Toast myToast = Toast.makeText(getApplicationContext(),"투자금액을 제대로 입력해주세요", Toast.LENGTH_SHORT);
+                    myToast.show();
                 }
 
                 if ( confirmtext.getText().toString().equals("abc")) { //나중에 동의함으로 수정
@@ -94,5 +99,14 @@ public class invest_input_file extends AppCompatActivity {
 
         }
 
+    public static boolean isInteger(String input) {
+        try {
+            Integer.parseInt(input);
+            return true;
+        }
+        catch (NumberFormatException e) {
+            return false;
+        }
+    }
 
     }

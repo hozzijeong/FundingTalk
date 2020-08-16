@@ -17,7 +17,7 @@
             android:id="@+id/finish_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="김지원님 ???에 투자완료 되었습니다"
+            android:text="아파트에 투자완료 되었습니다"
             tools:layout_editor_absoluteX="43dp"
             tools:layout_editor_absoluteY="35dp" />
 
@@ -25,44 +25,38 @@
             android:id="@+id/rate_text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="예상이익금 : "
+            android:text="예상수익률 : 8.9%"
             tools:layout_editor_absoluteX="41dp"
             tools:layout_editor_absoluteY="77dp" />
-
-        //DB에서 계산된 값이 나와서 바뀌어야 될 값
-        <TextView
-            android:id="@+id/add_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="5000만원"
-            tools:layout_editor_absoluteX="58dp"
-            tools:layout_editor_absoluteY="134dp" />
 
         <TextView
             android:id="@+id/month_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="환매날짜 : "
+            android:text="투자금액 : 5000만원"
             tools:layout_editor_absoluteX="53dp"
             tools:layout_editor_absoluteY="207dp" />
 
-        //바뀔 값
-        <TextView
-            android:id="@+id/month_text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2020.05.20"
-            tools:layout_editor_absoluteX="78dp"
-            tools:layout_editor_absoluteY="254dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            //버튼을 누르면 메인액티비티로 이동
+            <Button
+                android:id="@+id/goto_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="메인으로"
+                tools:layout_editor_absoluteX="41dp"
+                tools:layout_editor_absoluteY="397dp" />
 
-        //버튼을 누르면 메인액티비티로 이동
-        <Button
-            android:id="@+id/goto_main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="메인으로"
-            tools:layout_editor_absoluteX="41dp"
-            tools:layout_editor_absoluteY="397dp" />
+            <Button
+                android:id="@+id/goto_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="마이페이지로"
+                tools:layout_editor_absoluteX="41dp"
+                tools:layout_editor_absoluteY="397dp" />
+        </LinearLayout>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
