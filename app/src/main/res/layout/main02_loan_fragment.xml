@@ -5,12 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login.LoginActivity">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Loan_Fragment"
+
+    <Button
+        android:id="@+id/loan_move_btn"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
         android:layout_centerInParent="true"
-        android:textSize="30sp"
+        android:text="한도 조회"
+        android:textSize="26sp"
+        android:visibility="invisible"
         />
+    <RelativeLayout
+        android:id="@+id/loan_go_login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="#3892C3"
+            android:layout_centerHorizontal="true"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="로그인 후 나만의 정보를\n확인하세요"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
 
 </RelativeLayout>

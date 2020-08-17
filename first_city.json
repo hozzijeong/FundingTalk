@@ -1,0 +1,41 @@
+{
+"city_info":
+[
+  {
+    "idx": 1,
+    "first_city": "서울특별시"
+  },
+  {
+    "idx": 2,
+    "first_city": "경기도"
+  },
+  {
+    "idx": 3,
+    "first_city": "인천광역시"
+  },
+  {
+    "idx": 4,
+    "first_city": "부산광역시"
+  },
+  {
+    "idx": 5,
+    "first_city": "대전광역시"
+  },
+  {
+    "idx": 6,
+    "first_city": "대구광역시"
+  },
+  {
+    "idx": 7,
+    "first_city": "울산광역시"
+  },
+  {
+    "idx": 8,
+    "first_city": "광주광역시"
+  },
+  {
+    "idx": 9,
+    "first_city": "세종특별자치시"
+  }
+]
+}

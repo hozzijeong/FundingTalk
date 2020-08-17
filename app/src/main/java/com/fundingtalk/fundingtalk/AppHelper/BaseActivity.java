@@ -1,5 +1,8 @@
 package com.fundingtalk.fundingtalk.AppHelper;
 
+import android.content.Context;
+import android.content.Intent;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -13,10 +16,14 @@ public class BaseActivity extends AppCompatActivity {
         this.fm = getSupportFragmentManager();
     }
 
-
     public void changeFragment(int resource,Fragment fragment){
         FragmentTransaction ft = fm.beginTransaction();
         ft.replace(resource,fragment);
         ft.commit();
+    }
+
+    public void changeActivity(Context context, Class cls){
+        Intent intent = new Intent(context,cls);
+        startActivity(intent);
     }
 }
