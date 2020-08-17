@@ -28,10 +28,10 @@
         <item>만기 일시상환</item>
     </string-array>
 
-    <string-array name="now_image">
-        <item>이미지1</item>
-        <item>이미지1</item>
-    </string-array>
+<!--    <string-array name="now_image">-->
+<!--        <item>이미지1</item>-->
+<!--        <item>이미지1</item>-->
+<!--    </string-array>-->
 
 <!--    오픈예정 투자중인 상품정보-->
 
@@ -60,10 +60,10 @@
         <item>만기 일시상환</item>
     </string-array>
 
-    <string-array name="future_image">
-        <item>MBTI 성격유형검사</item>
-        <item>멘사 IQ 테스트</item>
-    </string-array>
+<!--    <string-array name="future_image">-->
+<!--        <item>MBTI 성격유형검사</item>-->
+<!--        <item>멘사 IQ 테스트</item>-->
+<!--    </string-array>-->
 
     <!--    투자완료된 상품정보-->
 
@@ -97,8 +97,8 @@
         <item>만기 일시상환</item>
     </string-array>
 
-    <string-array name="past_image">
-        <item>MBTI 성격유형검사</item>
-        <item>멘사 IQ 테스트</item>
-    </string-array>
+<!--    <string-array name="past_image"> 안씀!!!!!!!!!!!1-->
+<!--        <item>MBTI 성격유형검사</item>-->
+<!--        <item>멘사 IQ 테스트</item>-->
+<!--    </string-array>-->
 </resources>

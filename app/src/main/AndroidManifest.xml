@@ -12,7 +12,9 @@
         <activity android:name=".Main.Investment.Decriptions.future_Second_desc"></activity>
         <activity android:name=".Main.Investment.Decriptions.future_First_desc" />
         <activity android:name=".Main.Investment.invest_finish" />
-        <activity android:name=".Main.Investment.invest_input_file" />
+        <activity android:name=".Main.Investment.invest_input_file" >
+
+        </activity>
         <activity android:name=".Main.Investment.Decriptions.now_Second_desc" />
         <activity android:name=".Main.Investment.Decriptions.now_First_desc" />
         <activity android:name=".Splash.SplashActivity" />
