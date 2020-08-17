@@ -4,12 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login.LoginActivity">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Invest_Fragment"
-        android:layout_centerInParent="true"
-        android:textSize="30sp"
+    tools:context=".Login.LoginActivity"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="50dp"
+        >
+        <TextView
+            android:id="@+id/loan_user_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="이름"
+            android:textSize="25sp"/>
+        <EditText
+            android:id="@+id/loan_user_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="이름 입력"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/loan_user_birth_tv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="생년월일"
+            android:textSize="25sp"/>
+        <EditText
+            android:id="@+id/loan_user_birth_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="생년월일 입력"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/loan_user_phone_tv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="전화번호"
+            android:textSize="25sp"/>
+        <EditText
+            android:id="@+id/loan_user_phone_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="번호 입력"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/loan_user_mail_tv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="E-메일"
+            android:textSize="25sp"/>
+        <EditText
+            android:id="@+id/loan_user_mail_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="메일 입력"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/loan_specific_btn"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="50dp"
+        android:layout_alignParentBottom="true"
+        android:text="다음 단계"
+        android:textSize="20sp"
         />
 </RelativeLayout>

@@ -18,6 +18,7 @@ import androidx.annotation.Nullable;
 
 import com.fundingtalk.fundingtalk.AppHelper.Loan_BaseFragment;
 import com.fundingtalk.fundingtalk.Main.Loan.Item.Apt_Info;
+import com.fundingtalk.fundingtalk.Main.Loan.Item.Calc;
 import com.fundingtalk.fundingtalk.Main.Loan.Item.City;
 import com.fundingtalk.fundingtalk.Main.Loan.Item.City_First;
 import com.fundingtalk.fundingtalk.Main.Loan.Item.City_Second;
@@ -57,8 +58,14 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
     @BindView(R.id.check_limit) Button check_limit;
     @BindView(R.id.check_address) Button check_address;
 
-    public int city_num = 0;
+    public static Double rate;
+    public static long pos_cost;
 
+    boolean login_temp_state = true;
+    public static boolean  counsel_state;
+
+    private int city_num = 0;
+    private Calc calc; // 계산식이 들어가 있는 클래스
     private Loan_Apt_Info loan_apt_info; // 최종적으로 선택된 아파트의 정보를 담는 class
     private City_First city; // 선택된 도시들의 정보를 담는 class innerclass로 second -> third가 존재
     private ArrayList<City> cities = new ArrayList<>(); // DB에서 파싱한 도시 정보를 저장하는 클래스 배열
@@ -67,6 +74,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
     private final String KEY = "q0HJwcj%2F%2F4%2FAVUrU4w5RtlIRXnl1vYUBEQQppg0cz2Hmy0pTeor3jCrjgRVwdE6a%2BVTAdWIzIqO7YacFNK7Rbg%3D%3D";
     private String base_url ="http://openapi.molit.go.kr/OpenAPI_ToolInstallPackage/service/rest/RTMSOBJSvc/getRTMSDataSvcAptTradeDev?";
     private FirebaseFirestore database; // 시/도, 시/군/구, 읍/면/동 들의 정보들이 저장된 fireStore와 연동하기 위한 변수
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -130,7 +138,6 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                 ArrayList<Apt_Info> temp = new ArrayList<>();
                 String input_name = specific_address.getText().toString();
                 String third_city = city.city_second.city_third.city_name.trim();
-
                 for(int i=0; i<apt_infos.size(); i++){
                     if(apt_infos.get(i).apt_name.contains(input_name)
                             && third_city.contains(apt_infos.get(i).local_dong.trim())){
@@ -144,19 +151,45 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                 // 그렇다면 배열을 따로 만들어서, 평균값이 구해진 아파트만 배열에 추가하는 방식으로 구현하기
                 if(temp!= null){
                     for (int i=0 ;i<temp.size(); i++){
-                        loanActivity.show_Log(temp.get(i).full_name);
+                        loanActivity.show_Log(temp.get(i).apt_name);
                     }
-                showSpecificApt(getAverage(temp));
+                    showSpecificApt(getAverage(temp));
                 }
+
                 break;
             case R.id.check_limit:
-                loan_apt_info.before_loan = Long.parseLong(before_loan.getText().toString().trim());
-                loan_apt_info.wish_loan = Long.parseLong(wish_loan.getText().toString().trim());
-                calculation(loan_apt_info.before_loan,loan_apt_info.wish_loan,
-                        loan_apt_info.real_cost,loan_apt_info.ltv);
+                calc.before_loan = Long.parseLong(before_loan.getText().toString().trim());
+                calc.wish_loan = Long.parseLong(wish_loan.getText().toString().trim());
+                calc.getStart_ltv();
                 /*
                     최소 조건을 입력 받고 조건에 해당하면 검색 가능하게끔 구현
+                    로그인 했을 경우와 하지 않았을 경우
                  */
+                calc.getApply_ltv();
+
+
+                //대출 가능 금액 산정 -> pos_cost;
+                if(calc.start_ltv<calc.min_ltv){
+                    counsel_state = true;
+                }else{
+                    counsel_state = false;
+                    long max_cost = calc.max_cost();
+                    if(login_temp_state) {
+                        if (max_cost >= calc.wish_loan) {
+                            pos_cost = calc.wish_loan;
+                        } else {
+                            pos_cost = calc.max_cost();
+                        }
+                        //대출 금리 산정
+                        rate = calc.calc_loan_interest_rate();
+                    }else{
+                        pos_cost = calc.max_cost();
+                        rate = calc.min_rate*100;
+                    }
+                }
+
+                loanActivity.changeFragment(R.id.loan_main_layout,loanActivity.loan_result_fragment);
+
                 break;
         }
     }
@@ -247,7 +280,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         AlertDialog.Builder ab = new AlertDialog.Builder(loanActivity);
         String[] aptname = new String[arrayList.size()];
         for(int i=0; i<arrayList.size(); i++){
-            aptname[i] = arrayList.get(i).apt_name +"/"+ arrayList.get(i).size;
+            aptname[i] = arrayList.get(i).full_name;
         }
         if(aptname.length == 0){
             ab.setMessage("매매정보가 없습니다.");
@@ -256,11 +289,13 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     long real_cost = arrayList.get(i).avg_cost;
-                    house_cost.setText(real_cost+" 원");
-                    // int로 변환 하는 과정에서 ","가 문제. substring사용?
+                    house_cost.setText(real_cost+" 만원");
                     loanActivity.show_Log(real_cost+"");
+                    //최종적으로 대출용 아파트의 정보 ( 실거래가와 LTV)를 저장하는 클래스 생성
                     loan_apt_info = new Loan_Apt_Info(real_cost,city.city_second.ltv);
-
+                    // 대출 최소 대출 금액을 먼저 입력하기 위해서...
+                    calc = new Calc(loan_apt_info.real_cost,loan_apt_info.ltv); // min 이랑 max ltv 설정 완료.
+                    check_limit.setEnabled(true);
                     dialogInterface.dismiss();
                 }
             });
@@ -279,6 +314,10 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         second_city.setEnabled(false);
         third_city.setEnabled(false);
         check_address.setEnabled(false);
+        check_limit.setEnabled(false);
+        house_cost.setText("");
+        before_loan.setText("");
+        wish_loan.setText("");
         city_num = 0;
     }
     private void getCity(long idx,String path){
@@ -411,12 +450,13 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         }
 
     }
-    //Comparator 를 만든다.
+
     private final static Comparator<Apt_Info> myComparator= new Comparator<Apt_Info>() {
         private final Collator collator = Collator.getInstance();
         @Override
         public int compare(Apt_Info object1,Apt_Info object2) {
-            return collator.compare(object1.getApt_name(), object2.getApt_name());
+            return collator.compare(object1.getApt_name()+"/"+object1.size,
+                    object2.getApt_name()+"/"+object2.size);
 
         }
     };
@@ -437,7 +477,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                 avg_cost += Long.parseLong(arrayList.get(i).deal_amount);
                 case_cnt++;
             }else{
-                avg_cost = (avg_cost/case_cnt)*10000;
+                avg_cost = (avg_cost/case_cnt);
                 avg_list.add(new Apt_Info(avg_cost,cmp1_name));
                 cnt = i;
                 case_cnt = 1;
@@ -461,29 +501,5 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                 -> 결국에는 대출 이자를 나타내느 것?
 
      */
-    private double max_interest(String ltv){
-        double interest = 0;
-        switch (ltv){
-            case "seoul":
-                interest = 0.9;
-                break;
-            case "specu-area":
-                interest = 0.85;
-                break;
-            case "revision-area":
-                interest = 0.85;
-                break;
-
-            case "except-area":
-                interest = 0.85;
-                break;
-    
-        }
-        return interest;
-    }
-    private void calculation(long before,long wish,long real,String ltv){
-        long max_loan_cost = (long) ((real-(real*max_interest(ltv)))*0.85);
-        loanActivity.show_Log("maxcost: "+max_loan_cost);
-    }
 
 }

@@ -4,12 +4,134 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login.LoginActivity">
+    tools:context=".Login.LoginActivity"
+    android:layout_margin="20dp"
+    >
+
     <TextView
+        android:id="@+id/address_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="주소 입력"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        />
+    <LinearLayout
+        android:id="@+id/address_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="3"
+        android:layout_below="@id/address_tv"
+        >
+
+        <Button
+            android:id="@+id/address_do"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="시/도 입력" />
+
+        <Button
+            android:id="@+id/address_si"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="시/군/구 입력"
+            />
+
+        <Button
+            android:id="@+id/address_gu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="읍/면/동 입력"
+            />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/address_specific"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/address_layout"
+        android:hint="아파트이름 / 전용면적 입력"
+        android:layout_toLeftOf="@id/check_address"
+        />
+    <Button
+        android:id="@+id/check_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Invest_Fragment"
-        android:layout_centerInParent="true"
-        android:textSize="30sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@id/address_specific"
+        android:text="조회하기"
         />
+    <TextView
+        android:id="@+id/house_cost_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/check_address"
+        android:text="담보 가격"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/cost_result"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/house_cost_tv"
+        android:layout_marginTop="0dp"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/before_loan_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/cost_result"
+        android:text="선순위 대출금액"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        />
+    <EditText
+        android:id="@+id/before_loan_et"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/before_loan_tv"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        android:hint="만원"
+
+        />
+    <TextView
+        android:id="@+id/wish_loan_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/before_loan_et"
+        android:text="대출액"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        />
+    <EditText
+        android:id="@+id/wish_loan_et"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/wish_loan_tv"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        android:hint="만원"
+        />
+    <Button
+        android:id="@+id/check_limit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/round_color_shape"
+        android:text="한도조회하기"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        />
+
+
+
 </RelativeLayout>
