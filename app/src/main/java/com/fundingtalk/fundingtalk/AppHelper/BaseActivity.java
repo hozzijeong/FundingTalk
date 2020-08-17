@@ -2,6 +2,7 @@ package com.fundingtalk.fundingtalk.AppHelper;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -25,5 +26,9 @@ public class BaseActivity extends AppCompatActivity {
     public void changeActivity(Context context, Class cls){
         Intent intent = new Intent(context,cls);
         startActivity(intent);
+    }
+
+    public void show_Log(String data){
+        Log.d("LOG",data);
     }
 }

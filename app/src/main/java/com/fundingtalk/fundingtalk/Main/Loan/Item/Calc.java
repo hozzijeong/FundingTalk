@@ -142,7 +142,7 @@ public class Calc extends Loan_Apt_Info{
 
         Double[][] rate_table;
         double rate = 0; // 이자를 더하는 변수
-        int cnt = 0; // 총 반복문의 횟수와 값을 어떻게 나눌건지
+        int cnt = 0; // 총 반복문의 횟수를 세는 변수
         // 쿼리문을 통해 값을 정리해야함?
         // min_ltv+0.5의 값이 apply_ltv를 넘어가지 않을때까지 반복문을 돌림.
         // 만약에 넘어갔을 경우 -> (apply_ltv - min_ltv)의 단위를 5의 몇 %인지로 나눠야함.
@@ -175,21 +175,34 @@ public class Calc extends Loan_Apt_Info{
             그때의 값이 몇부터 시작하는지 알아야 함.
          */
 
+        int check = -1;
+        for(int i=0; i<rate_table.length-1; i++){
+            if(start_ltv >=rate_table[i][0] && start_ltv<rate_table[i+1][0]){
+                check = i;
+            }
+        }
+
+        double start_rest = (rate_table[check+1][0] - start_ltv)*20*0.01;
+        double temp = rate_table[check][1];
+        double rest_temp = temp*start_rest;
+
+        check++;
         while (apply_ltv>start_ltv){
 
-            rate += rate_table[cnt][1];
+            rate += rate_table[check][1];
             cnt++;
             // start_ltv의 값이 안넘어야함.
             start_ltv += 5;
         }
 
         cnt--;
-        double temp = rate_table[cnt][1];
+        check --;
+        temp = rate_table[check][1];
         rate -= temp;
 
-        double rest = (apply_ltv - (start_ltv-5))*20*0.01; // 나머지 값 을 나타냄.(%)
-        double rest_temp = temp * rest;
+        double end_rest = (apply_ltv - (start_ltv-5))*20*0.01; // 나머지 값 을 나타냄.(%)
+        rest_temp = temp * end_rest;
         rate+= rest_temp;
-        return (rate*100/(cnt+rest))*0.01;
+        return (rate*100/(cnt+end_rest+start_rest))*0.01;
     }
 }
