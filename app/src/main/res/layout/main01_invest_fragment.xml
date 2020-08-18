@@ -18,13 +18,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            //리사이클러 뷰 추가
+
             <TextView
                 android:id="@+id/now_invest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="모집중인 상품"/>
+                android:text="모집중인 상품" />
 
-            //리사이클러 뷰 추가
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/now_invest_items"
                 android:layout_width="match_parent"

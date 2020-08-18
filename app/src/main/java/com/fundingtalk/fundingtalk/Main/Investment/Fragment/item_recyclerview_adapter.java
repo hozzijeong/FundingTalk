@@ -62,22 +62,22 @@ public class item_recyclerview_adapter extends RecyclerView.Adapter<item_recycle
     class ItemViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView imageView;
-        private TextView name;
-        private TextView rate;
-        private TextView month;
-        private TextView money;
-        private TextView desc;
-        private int count = 0;
+//        private TextView name;
+//        private TextView rate;
+//        private TextView month;
+//        private TextView money;
+//        private TextView desc;
+//        private int count = 0;
 
         ItemViewHolder(View itemView) {
             super(itemView);
 
             imageView = itemView.findViewById(R.id.imageView);
-            name = itemView.findViewById(R.id.invest_name);
-            rate = itemView.findViewById(R.id.invest_rating);
-            month = itemView.findViewById(R.id.invest_month);
-            money = itemView.findViewById(R.id.invest_money);
-            desc = itemView.findViewById(R.id.invest_description);
+//            name = itemView.findViewById(R.id.invest_name);
+//            rate = itemView.findViewById(R.id.invest_rating);
+//            month = itemView.findViewById(R.id.invest_month);
+//            money = itemView.findViewById(R.id.invest_money);
+//            desc = itemView.findViewById(R.id.invest_description);
 
             //클릭 이벤트
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -98,11 +98,11 @@ public class item_recyclerview_adapter extends RecyclerView.Adapter<item_recycle
 
         void onBind(recyclerview_item data) {
             imageView.setImageResource(data.getIcon());
-            name.setText(data.getname());
-            rate.setText(data.getrate());
-            month.setText(data.getmonth());
-            money.setText(data.getmoney());
-            desc.setText(data.getdescription());
+//            name.setText(data.getname());
+//            rate.setText(data.getrate());
+//            month.setText(data.getmonth());
+//            money.setText(data.getmoney());
+//            desc.setText(data.getdescription());
 
         }
 
