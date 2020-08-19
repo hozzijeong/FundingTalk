@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
+import com.fundingtalk.fundingtalk.Login.LoginActivity;
 import com.fundingtalk.fundingtalk.Main.Loan.LoanActivity;
 import com.fundingtalk.fundingtalk.R;
 
@@ -40,6 +41,7 @@ public class Loan_Main_Fragment extends Main_BaseFragment implements View.OnClic
                 mainActivity.show_Log("join");
                 break;
             case R.id.loan_go_login_btn:
+                mainActivity.changeActivity(mainActivity, LoginActivity.class);
                 mainActivity.show_Log("login");
                 break;
             case R.id.loan_move_btn:

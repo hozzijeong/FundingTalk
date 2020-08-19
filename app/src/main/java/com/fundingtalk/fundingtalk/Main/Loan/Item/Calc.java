@@ -136,10 +136,9 @@ public class Calc extends Loan_Apt_Info{
     public void getStart_ltv(){
         // 실제 ltv의 시작점 (%)를 얻는 메소드
         start_ltv = (double) (before_loan*100)/real_cost;
-    }
+}
     public Double calc_loan_interest_rate()
     {    // 대출 금리 산정 메소드
-
         Double[][] rate_table;
         double rate = 0; // 이자를 더하는 변수
         int cnt = 0; // 총 반복문의 횟수를 세는 변수
@@ -174,28 +173,36 @@ public class Calc extends Loan_Apt_Info{
             start_ltv 값이 40%를 넘겼을 때도 계산식 추가할 것.
             그때의 값이 몇부터 시작하는지 알아야 함.
          */
-
+        // check 에 i 값을 넣음으로 써, startLtv 의 이자를 몇%부터 넣어야 하는지 찾기.
         int check = -1;
         for(int i=0; i<rate_table.length-1; i++){
-            if(start_ltv >=rate_table[i][0] && start_ltv<rate_table[i+1][0]){
+            if(start_ltv>rate_table[i][0] && start_ltv<rate_table[i+1][0]){
+                check = i;
+            }
+            if(start_ltv == rate_table[i][0]){
                 check = i;
             }
         }
+        double start_rest = 0.0;
+        double temp;
+        double rest_temp;
+        // LTV가 딱 맞아 떨어지면, 대출 시작 점이 그떄부터 인거니까 check의 값을 해당 값과 맞춰 주면 됨.
+        if(check != -1){
+             start_rest = (rate_table[check+1][0] - start_ltv)*20*0.01;
+             temp = rate_table[check][1];
+             rest_temp = temp*start_rest;
+             check++; // 밑 구간의 값을 잘랐기 때문에 check ++;
+             start_ltv = rate_table[check][0]; // 밑 구간의 값을 계산했기 때문에, 0으로 초기화 시킴.
+        }
 
-        double start_rest = (rate_table[check+1][0] - start_ltv)*20*0.01;
-        double temp = rate_table[check][1];
-        double rest_temp = temp*start_rest;
-
-        check++;
         while (apply_ltv>start_ltv){
-
             rate += rate_table[check][1];
             cnt++;
             // start_ltv의 값이 안넘어야함.
             start_ltv += 5;
         }
 
-        cnt--;
+        cnt-=2;
         check --;
         temp = rate_table[check][1];
         rate -= temp;

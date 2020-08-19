@@ -137,21 +137,35 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
             case R.id.check_address:
                 ArrayList<Apt_Info> temp = new ArrayList<>();
                 String input_name = specific_address.getText().toString();
-                String third_city = city.city_second.city_third.city_name.trim();
-                for(int i=0; i<apt_infos.size(); i++){
-                    if(apt_infos.get(i).apt_name.contains(input_name)
-                            && third_city.contains(apt_infos.get(i).local_dong.trim())){
-                        temp.add(apt_infos.get(i));
+
+                // 여기서 이제 city fourth에 배열로 법정동 명들이 저장되어 있음
+                // apt_infos의 local_dong이 fourth_city에 있는 동 중에 하나라도 포함되어 있고,
+                // 아파트 이름이 포함되어 있으면 그때 temp.add를 하면 됨.
+                // 도시 검색에서 null이 적용됨. 이거한번 확인해 봐야함
+                // 아파트 인포에 값을 넣었고, city.citysecond.city-> 태평동이 나왔어.
+                // 그렇다면 이제 아파트 인포를 돌려서 법정동이 태평동인 것들과 아파트 이름을 포함한 아파트 값을 넣으면 됨.
+                // 반복문의 순서가 바뀌어야함.
+                for(int i=0; i<city.city_second.city_third.fourth_city.size(); i++){
+                    for(int j=0; j<apt_infos.size(); j++){
+                        if(city.city_second.city_third.fourth_city.get(i).city_name.trim().
+                                equals(apt_infos.get(j).local_dong)
+                                && apt_infos.get(j).apt_name.contains(input_name)){
+                            temp.add(apt_infos.get(j));
+                        }
                     }
                 }
+//
+
                 Collections.sort(temp ,myComparator); // "가나다" 순으로 정렬
                 // 정렬 후, 중복된 정보 삭제.
 
                 // 아파트 매매 가격 기준을 평균으로 나눔.(같은 아파트/평수일 경우에) 평균값을 산정한다.
                 // 그렇다면 배열을 따로 만들어서, 평균값이 구해진 아파트만 배열에 추가하는 방식으로 구현하기
                 if(temp!= null){
+                    // 아파트 이름 정렬
                     for (int i=0 ;i<temp.size(); i++){
                         loanActivity.show_Log(temp.get(i).apt_name);
+                        loanActivity.show_Log(temp.get(i).local_dong);
                     }
                     showSpecificApt(getAverage(temp));
                 }
@@ -166,7 +180,6 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                     로그인 했을 경우와 하지 않았을 경우
                  */
                 calc.getApply_ltv();
-
 
                 //대출 가능 금액 산정 -> pos_cost;
                 if(calc.start_ltv<calc.min_ltv){
@@ -202,7 +215,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         StrictMode.enableDefaults();
         String url = base_url+"ServiceKey="+KEY+
                 "&LAWD_CD="+city.city_second.local_code+
-                "&DEAL_YMD=202007&numOfRows=50";
+                "&DEAL_YMD=202007&numOfRows=100";
         loanActivity.show_Log(url);
         new Thread(new Runnable(){
             @Override
@@ -260,7 +273,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                     case 2:
                         city.city_second.city_third = new City_Third(items[i],index[i]);
                         third_city.setText(city.city_second.city_third.city_name);
-                        getAptDealInfo();
+                        getCity(city.city_second.city_third.index,"fourth_city_info");
                         check_address.setEnabled(true);
                         break;
                 }
@@ -289,6 +302,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     long real_cost = arrayList.get(i).avg_cost;
+                    specific_address.setText(arrayList.get(i).full_name);
                     house_cost.setText(real_cost+" 만원");
                     loanActivity.show_Log(real_cost+"");
                     //최종적으로 대출용 아파트의 정보 ( 실거래가와 LTV)를 저장하는 클래스 생성
@@ -321,7 +335,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         city_num = 0;
     }
     private void getCity(long idx,String path){
-        cities.clear();
+
         /*
             이전에 있던 도시 정보들을 깔끔하게 지워주고,
             부모 idx값 과 두 번째 도시인지 세 번재 도시인지 문서 경로를 입력받아
@@ -335,20 +349,39 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if(task.isSuccessful()){
-                            if(path.equals("second_city_info")){
-                                city.second_info.clear();
-                                int cnt = 0;
-                                for(QueryDocumentSnapshot doc:task.getResult()){
-                                    cities.add(new City(doc.getString("second_city"),doc.getLong("idx"),
-                                            doc.getLong("local_code"),doc.getString("ltv")));
-                                    city.second_info.add(cities.get(cnt));
-                                    cnt++;
-                                }
-                            }else if(path.equals("third_city_info")){
-                                for(QueryDocumentSnapshot doc: task.getResult()){
-                                    cities.add(new City(doc.getString("third_city"),
-                                            doc.getLong("idx")));
-                                }
+                            switch (path){
+                                case "second_city_info":
+                                    cities.clear();
+                                    city.second_info.clear();
+                                    int cnt = 0;
+                                    for(QueryDocumentSnapshot doc:task.getResult()){
+                                        cities.add(new City(doc.getString("second_city"),doc.getLong("idx"),
+                                                doc.getLong("local_code"),doc.getString("ltv")));
+                                        city.second_info.add(cities.get(cnt));
+                                        cnt++;
+                                    }
+                                    break;
+                                case "third_city_info":
+                                    cities.clear();
+                                    for(QueryDocumentSnapshot doc: task.getResult()){
+                                        cities.add(new City(doc.getString("third_city"),
+                                                doc.getLong("idx")));
+                                    }
+                                    break;
+                                case "fourth_city_info":
+                                    for(QueryDocumentSnapshot doc:task.getResult()){
+                                        // 도시 이름을 city가 아니라 idx 로 설정했음 (내잘못...)
+                                        // 태평동을 먹었는데?
+                                        city.city_second.city_third.fourth_city.
+                                                add(new City(doc.getString("fourth_idx"),doc.getLong("idx")));
+                                    }
+
+                                    for(int i=0; i<city.city_second.city_third.fourth_city.size(); i++){
+                                        loanActivity.show_Log("법정동: "+city.city_second.city_third.fourth_city.get(i).city_name);
+                                    }
+
+                                    getAptDealInfo();
+                                    break;
                             }
                         }
                     }
@@ -382,28 +415,21 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
             내가 필요한 정보는 아파트의 이름과 거래 금액이기 때문에 해당 정보들만
             cities 배열에 add 하고 나머지는 add하지 않는다.
          */
-
         try {
             URL url = new URL(base_url);
-
             InputStream is = url.openStream();
-
             XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
             factory.setNamespaceAware(true);
             XmlPullParser parser = factory.newPullParser();
-
             parser.setInput(new InputStreamReader(is, "utf-8"));
-
             int parserEvent = parser.getEventType();
             Apt_Info apt_info = null;
             String tag = "";
             while(parserEvent != XmlPullParser.END_DOCUMENT){
                 switch (parserEvent){
                     case XmlPullParser.START_DOCUMENT:
-
                         Log.d("LOG","파싱 시작");
                         break;
-
                     case XmlPullParser.START_TAG:
                         //아파트 정보를 얻을 때 해당 법정동 "동" 까지 확인하기.
                         tag = parser.getName();
@@ -424,7 +450,6 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                             loanActivity.show_Log("사이즈: "+apt_info.size);
                         }else if(tag.equals("법정동")){
                             String temp = parser.nextText();
-                            temp = temp.substring(0,temp.length()-1);
                             apt_info.local_dong = temp.trim();
                             loanActivity.show_Log("법정동: "+apt_info.local_dong);
                         }
@@ -461,45 +486,47 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         }
     };
     private ArrayList<Apt_Info> getAverage(ArrayList<Apt_Info> arrayList){
+        // arrayList = 정렬된 아파트의 이름들,(중복된 것들있음)
         ArrayList<Apt_Info> avg_list = new ArrayList<>();
         int size = arrayList.size();
         int cnt = 0;
         int case_cnt = 1;
-        for(int i=1; i<size; i++){
-            String cmp1_name = arrayList.get(cnt).apt_name+ "/"+arrayList.get(cnt).size;
-            String cmp2_name = arrayList.get(i).apt_name+ "/"+arrayList.get(i).size;
-            int idx1 = cmp1_name.indexOf(".");
-            int idx2 = cmp2_name.indexOf(".");
-            cmp1_name = cmp1_name.substring(0,idx1);
-            cmp2_name = cmp2_name.substring(0,idx2);
-            long avg_cost = Long.parseLong(arrayList.get(cnt).deal_amount);
-            if(cmp1_name.equals(cmp2_name)){
-                avg_cost += Long.parseLong(arrayList.get(i).deal_amount);
-                case_cnt++;
-            }else{
-                avg_cost = (avg_cost/case_cnt);
-                avg_list.add(new Apt_Info(avg_cost,cmp1_name));
-                cnt = i;
-                case_cnt = 1;
+        long avg_cost = 0;
+        long main_cost = 0;
+
+        if(size >1){
+            for(int i=1; i<size; i++){
+                // 아파트 평균값 계산식 다시 해보기
+                String cmp1_name = arrayList.get(cnt).apt_name+ "/"+arrayList.get(cnt).size;
+                String cmp2_name = arrayList.get(i).apt_name+ "/"+arrayList.get(i).size;
+                int idx1 = cmp1_name.indexOf(".");
+                int idx2 = cmp2_name.indexOf(".");
+                cmp1_name = cmp1_name.substring(0,idx1);
+                cmp2_name = cmp2_name.substring(0,idx2);
+                main_cost = Long.parseLong(arrayList.get(cnt).deal_amount); // 여기서 값이 계속 초기화가 됨.
+                if(cmp1_name.equals(cmp2_name)){
+                    avg_cost += Long.parseLong(arrayList.get(i).deal_amount);
+                    case_cnt++;
+                }else{
+                    avg_cost = ((avg_cost+main_cost)/case_cnt);
+                    String full_name = arrayList.get(cnt).apt_name+"(전용면적: "+arrayList.get(cnt).size+"㎡)";
+                    avg_list.add(new Apt_Info(avg_cost,full_name));
+                    cnt = i;
+                    case_cnt = 1;
+                    main_cost = 0;
+                    avg_cost = 0;
+                }
             }
+        }else if(size == 1){
+            String full_name = arrayList.get(0).apt_name+"(전용면적: "+arrayList.get(0).size+"㎡)";
+            avg_cost = Long.parseLong(arrayList.get(0).deal_amount);
+            avg_list.add(new Apt_Info(avg_cost,full_name));
         }
         for(int i=0; i<avg_list.size(); i++){
             loanActivity.show_Log(avg_list.get(i).full_name+"/"+avg_list.get(i).avg_cost);
         }
+
         return avg_list;
     }
-    /*
-        이 밑으로는 계산식 관련된 함수인데, 잘 모르겠어서... 내일 같이 질문하는 걸루 ..ㅎ
-
-        로그인이 안된 경우 나타내는 값
-            1. 대출 최고 금액 (LTV와, 아파트 비용, 선순위 대출 값을 고려하지 않은 LTV 최고 대출 금액 제시 )
-            2. 대출 최저 금리 (대출 최저 금리 표시/ LTV %를 따로 구분하지 않음
-
-        로그인이 되어있을 경우
-            1. 대출 가능 금액(실거래가, 지역 최대 LTV, 선순위 대출을 고려하여 대출 가능 금액 제시 )
-            2. 대출 금리 산정 -> 최대 적용 가중 금리 적용 후, 나머지 부분은 그 다음 가중 금리 적용)
-                -> 결국에는 대출 이자를 나타내느 것?
-
-     */
 
 }

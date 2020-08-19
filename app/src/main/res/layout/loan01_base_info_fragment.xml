@@ -1,76 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login.LoginActivity"
     android:orientation="vertical"
+    android:background="@drawable/loan_base_back"
     >
+    <Button
+        android:id="@+id/loan_back_activity"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:background="@drawable/back"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="160dp"
+        />
+
     <LinearLayout
+        android:id="@+id/base_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="40dp"
         android:orientation="vertical"
-        android:layout_margin="50dp"
-        >
-        <TextView
-            android:id="@+id/loan_user_name_tv"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="이름"
-            android:textSize="25sp"/>
+        android:weightSum="4">
+
         <EditText
             android:id="@+id/loan_user_name_et"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/loan_base_frame"
             android:hint="이름 입력"
-            android:textSize="18sp"
-            />
-        <TextView
-            android:id="@+id/loan_user_birth_tv"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="생년월일"
-            android:textSize="25sp"/>
+            android:paddingLeft="20dp"
+            android:textSize="18sp" />
+
         <EditText
             android:id="@+id/loan_user_birth_et"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="생년월일 입력"
-            android:textSize="18sp"/>
-        <TextView
-            android:id="@+id/loan_user_phone_tv"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="전화번호"
-            android:textSize="25sp"/>
+            android:layout_height="0dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/loan_base_frame"
+            android:hint="YYYY/MM/DD"
+            android:paddingLeft="20dp"
+            android:textSize="18sp"
+
+            />
+
         <EditText
             android:id="@+id/loan_user_phone_et"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="번호 입력"
-            android:textSize="18sp"/>
-        <TextView
-            android:id="@+id/loan_user_mail_tv"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="E-메일"
-            android:textSize="25sp"/>
+            android:layout_height="0dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/loan_base_frame"
+            android:hint="-제외하고 입력해주세요"
+            android:paddingLeft="20dp"
+            android:textSize="18sp"
+
+            />
+
         <EditText
             android:id="@+id/loan_user_mail_et"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/loan_base_frame"
             android:hint="메일 입력"
-            android:textSize="18sp"/>
+            android:paddingLeft="20dp"
+            android:textSize="18sp"
+
+            />
+
     </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/loan_live_state_rg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_below="@id/base_layout"
+        android:layout_marginTop="65dp"
+        >
+            <RadioButton
+                android:id="@+id/loan_live_ok"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="예"
+                android:buttonTint="#4F79E0"
+                />
+            <RadioButton
+                android:id="@+id/loan_live_no"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:buttonTint="#4F79E0"
+                android:text="아니오"
+                />
+        </RadioGroup>
+
+    <EditText
+        android:id="@+id/loan_user_use_et"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/loan_live_state_rg"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/loan_base_frame"
+        android:hint="용도 입력"
+        android:paddingLeft="20dp"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/loan_specific_btn"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_margin="50dp"
-        android:layout_alignParentBottom="true"
-        android:text="다음 단계"
-        android:textSize="20sp"
-        />
-</RelativeLayout>
+        android:layout_height="60dp"
+        android:background="@drawable/next"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="150dp"
+
+        android:textSize="20sp"/>
+</LinearLayout>
