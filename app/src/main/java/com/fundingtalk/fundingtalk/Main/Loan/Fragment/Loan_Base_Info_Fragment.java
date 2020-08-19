@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -27,8 +26,8 @@ public class Loan_Base_Info_Fragment extends Loan_BaseFragment implements View.O
     @BindView(R.id.loan_user_mail_et) EditText mail;
     @BindView(R.id.loan_specific_btn) Button next_page;
     @BindView(R.id.loan_user_use_et) EditText use;
-    @BindView(R.id.loan_live_ok) RadioButton ok;
-    @BindView(R.id.loan_live_no) RadioButton no;
+//    @BindView(R.id.loan_live_ok) RadioButton ok;
+//    @BindView(R.id.loan_live_no) RadioButton no;
     @BindView(R.id.loan_back_activity) Button back;
     private boolean possible;
     @Nullable
@@ -60,9 +59,9 @@ public class Loan_Base_Info_Fragment extends Loan_BaseFragment implements View.O
             check_cnt++;
         }
         loanActivity.show_Log("mail: "+check_cnt);
-        if(ok.isChecked() || no.isChecked()){
-            check_cnt++;
-        }
+//        if(ok.isChecked() || no.isChecked()){
+//            check_cnt++;
+//        }
         loanActivity.show_Log("check: "+check_cnt);
         if(!(use.getText().toString().contains("주택")
                 && use.getText().toString().contains("구매"))){

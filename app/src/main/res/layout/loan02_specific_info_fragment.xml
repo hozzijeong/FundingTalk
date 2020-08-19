@@ -5,23 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login.LoginActivity"
-    android:layout_margin="20dp"
+    android:background="@drawable/loan_bg_3"
     >
 
     <TextView
         android:id="@+id/address_tv"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="211px"
+        android:layout_height="63px"
         android:text="주소 입력"
-        android:textSize="25sp"
+        android:fontFamily="@font/nanumbarungothicbold"
+        android:textSize="55px"
+        android:layout_marginTop="392px"
+        android:layout_marginStart="116px"
         android:gravity="center_vertical"
         />
     <LinearLayout
         android:id="@+id/address_layout"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="1282px"
+        android:layout_height="98px"
         android:weightSum="3"
+        android:layout_marginStart="115px"
+        android:layout_marginEnd="76px"
         android:layout_below="@id/address_tv"
+        android:layout_marginTop="50px"
         >
 
         <Button
@@ -29,7 +35,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="시/도 입력" />
+            android:hint="시/도 입력"
+            android:textSize="43px"
+            android:fontFamily="@font/nanumbarungothic"
+            android:background="@drawable/loan_check_3"
+            android:layout_marginRight="23px"
+            />
 
         <Button
             android:id="@+id/address_si"
@@ -37,6 +48,10 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:hint="시/군/구 입력"
+            android:textSize="43px"
+            android:layout_marginRight="23px"
+            android:fontFamily="@font/nanumbarungothic"
+            android:background="@drawable/loan_check_3"
             />
 
         <Button
@@ -45,23 +60,35 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:hint="읍/면/동 입력"
+            android:textSize="43px"
+            android:fontFamily="@font/nanumbarungothic"
+            android:background="@drawable/loan_check_3"
             />
     </LinearLayout>
     <EditText
         android:id="@+id/address_specific"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/address_layout"
         android:hint="아파트이름 / 전용면적 입력"
+        android:textSize="41px"
+        android:fontFamily="@font/nanumbarungothic"
+        android:layout_marginStart="116px"
+        android:layout_marginTop="126px"
+        android:layout_marginEnd="126px"
         android:layout_toLeftOf="@id/check_address"
         />
     <Button
         android:id="@+id/check_address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="241px"
+        android:layout_height="92px"
         android:layout_alignParentEnd="true"
+        android:layout_marginEnd="77px"
+        android:background="@drawable/loan_search_3"
         android:layout_alignBottom="@id/address_specific"
         android:text="조회하기"
+        android:textSize="41px"
+        android:fontFamily="@font/nanumbarungothic"
         />
     <TextView
         android:id="@+id/house_cost_tv"

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,27 +20,29 @@ import butterknife.ButterKnife;
 
 public class Loan_Main_Fragment extends Main_BaseFragment implements View.OnClickListener {
     // MainActivity에 뿌리를 두고 있음
-    @BindView(R.id.loan_go_join_btn) Button join;
     @BindView(R.id.loan_go_login_btn) Button login;
     @BindView(R.id.loan_move_btn) Button move;
-
+    @BindView(R.id.loan_base1_layout) RelativeLayout main_layout;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.main02_loan_fragment,container,false);
         ButterKnife.bind(this,v);
-        join.setOnClickListener(this);
         login.setOnClickListener(this);
         move.setOnClickListener(this);
+        if (LoginActivity.login_state){
+            main_layout.setBackgroundResource(R.drawable.loan_bg_1_1);
+            login.setVisibility(View.INVISIBLE);
+        }else{
+            main_layout.setBackgroundResource(R.drawable.loan_bg_1);
+            login.setVisibility(View.VISIBLE);
+        }
         return v;
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.loan_go_join_btn:
-                mainActivity.show_Log("join");
-                break;
             case R.id.loan_go_login_btn:
                 mainActivity.changeActivity(mainActivity, LoginActivity.class);
                 mainActivity.show_Log("login");
