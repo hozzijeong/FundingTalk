@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "646585301469",
+    "firebase_url": "https://fundingtalk.firebaseio.com",
+    "project_id": "fundingtalk",
+    "storage_bucket": "fundingtalk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646585301469:android:ba608989c3e41ba7761e34",
+        "android_client_info": {
+          "package_name": "com.fundingtalk.fundingtalk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "646585301469-gmdmrhbi2msgm4u7p8jb3637t4vtj0eb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM8DnyCFH0bvhqexUKn8karDRzrlomiTc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "646585301469-gmdmrhbi2msgm4u7p8jb3637t4vtj0eb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

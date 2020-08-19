@@ -4,21 +4,49 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
+import com.fundingtalk.fundingtalk.Login.LoginActivity;
+import com.fundingtalk.fundingtalk.Main.Loan.LoanActivity;
 import com.fundingtalk.fundingtalk.R;
 
-public class Loan_Main_Fragment extends Main_BaseFragment {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+public class Loan_Main_Fragment extends Main_BaseFragment implements View.OnClickListener {
+    // MainActivity에 뿌리를 두고 있음
+    @BindView(R.id.loan_go_join_btn) Button join;
+    @BindView(R.id.loan_go_login_btn) Button login;
+    @BindView(R.id.loan_move_btn) Button move;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.main02_loan_fragment,container,false);
-
+        ButterKnife.bind(this,v);
+        join.setOnClickListener(this);
+        login.setOnClickListener(this);
+        move.setOnClickListener(this);
         return v;
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.loan_go_join_btn:
+                mainActivity.show_Log("join");
+                break;
+            case R.id.loan_go_login_btn:
+                mainActivity.changeActivity(mainActivity, LoginActivity.class);
+                mainActivity.show_Log("login");
+                break;
+            case R.id.loan_move_btn:
+                mainActivity.changeActivity(mainActivity, LoanActivity.class);
+                break;
+        }
+    }
 }

@@ -1,0 +1,118 @@
+idx,parent_idx,second_city,local_code,ltv
+1,1,종로구,11110,seoul
+2,1,중구,11140,seoul
+3,1,용산구,11170,seoul
+4,1,성동구,11200,seoul
+5,1,광진구,11215,seoul
+6,1,동대문구,11230,seoul
+7,1,중랑구,11260,seoul
+8,1,성북구,11290,seoul
+9,1,강북구,11305,seoul
+10,1,도봉구,11320,seoul
+11,1,노원구,11350,seoul
+12,1,은평구,11380,seoul
+13,1,서대문구,11410,seoul
+14,1,마포구,11440,seoul
+15,1,양천구,11470,seoul
+16,1,강서구,11500,seoul
+17,1,구로구,11530,seoul
+18,1,금천구,11545,seoul
+19,1,영등포구,11560,seoul
+20,1,동작구,11590,seoul
+21,1,관악구,11620,seoul
+22,1,서초구,11650,seoul
+23,1,강남구,11680,seoul
+24,1,송파구,11710,seoul
+25,1,강동구,11740,seoul
+26,2,수원시 장안구,41111,specu-area
+27,2,수원시 권선구,41113,specu-area
+28,2,수원시 팔달구,41115,specu-area
+29,2,수원시 영통구,41117,specu-area
+30,2,성남시 수정구,41131,specu-area
+31,2,성남시 중원구,41133,revision-area
+32,2,성남시 분당구,41135,specu-area
+33,2,의정부시,41150,revision-area
+34,2,안양시 만안구,41171,specu-area
+35,2,안양시 동안구,41173,specu-area
+36,2,부천시,41190,revision-area
+37,2,광명시,41210,specu-area
+38,2,평택시,41220,revision-area
+39,2,동두천시,41250,except-area
+40,2,안산시 상록구,41271,revision-area
+41,2,안산시 단원구,41273,specu-area
+42,2,고양시 일산서구,41287,revision-area
+43,2,과천시,41290,specu-area
+44,2,구리시,41310,specu-area
+45,2,남양주시,41360,except-area
+46,2,오산시,41370,revision-area
+47,2,시흥시,41390,revision-area
+48,2,군포시,41410,specu-area
+49,2,의왕시,41430,specu-area
+50,2,하남시,41450,specu-area
+51,2,용인시 처인구,41461,except-area
+52,2,용인시 기흥구,41463,specu-area
+53,2,용인시 수지구,41465,specu-area
+54,2,파주시,41480,except-area
+55,2,이천시,41500,except-area
+56,2,안성시,41550,except-area
+57,2,김포시,41570,except-area
+58,2,화성시,41590,revision-area
+59,2,광주시,41610,except-area
+60,2,양주시,41630,revision-area
+61,2,포천시,41650,except-area
+62,2,여주시,41670,except-area
+63,2,연천군,41800,except-area
+64,2,가평군,41820,except-area
+65,2,양평군,41830,except-area
+66,3,중구,28110,revision-area
+67,3,동구,28140,revision-area
+68,3,남구,28170,revision-area
+69,3,연수구,28185,specu-area
+70,3,남동구,28200,revision-area
+71,3,부평구,28237,revision-area
+72,3,계양구,28245,revision-area
+73,3,서구,28260,specu-area
+74,3,강화군,28710,except-area
+75,3,옹진군,28720,except-area
+76,4,중구,26110,except-area
+77,4,서구,26140,except-area
+78,4,동구,26170,except-area
+79,4,영도구,26200,except-area
+80,4,부산진구,26230,except-area
+81,4,동래구,26260,except-area
+82,4,남구,26290,except-area
+83,4,북구,26320,except-area
+84,4,해운대구,26350,except-area
+85,4,사하구,26380,except-area
+86,4,금정구,26410,except-area
+87,4,강서구,26440,except-area
+88,4,연제구,26470,except-area
+89,4,수영구,26500,except-area
+90,4,사상구,26530,except-area
+91,4,기장군,26710,except-area
+92,5,동구,30110,specu-area
+93,5,중구,30140,revision-area
+94,5,서구,30170,specu-area
+95,5,유성구,30200,specu-area
+96,5,대덕구,30230,revision-area
+97,6,중구,27110,except-area
+98,6,동구,27140,except-area
+99,6,서구,27170,except-area
+100,6,남구,27200,except-area
+101,6,북구,27230,except-area
+102,6,수성구,27260,specu-area
+103,6,달서구,27290,except-area
+104,6,달성군,27710,except-area
+105,7,중구,31110,except-area
+106,7,남구,31140,except-area
+107,7,동구,31170,except-area
+108,7,북구,31200,except-area
+109,7,울주군,31710,except-area
+110,8,동구,29110,except-area
+111,8,서구,29140,except-area
+112,8,남구,29155,except-area
+113,8,북구,29170,except-area
+114,8,광산구,29200,except-area
+115,9,.,36110,specu-area
+116,2,고양시 덕양구,41281,revision-area
+117,2,고양시 일산동구,41285,revision-area

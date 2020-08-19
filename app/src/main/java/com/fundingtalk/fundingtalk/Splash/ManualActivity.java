@@ -3,21 +3,17 @@ package com.fundingtalk.fundingtalk.Splash;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.fundingtalk.fundingtalk.AppHelper.BaseActivity;
 import com.fundingtalk.fundingtalk.R;
-import com.fundingtalk.fundingtalk.Splash.Fragment1;
-import com.fundingtalk.fundingtalk.Splash.Fragment2;
-import com.fundingtalk.fundingtalk.Splash.Fragment3;
-import com.fundingtalk.fundingtalk.Splash.Fragment4;
 
 import java.util.ArrayList;
 
-public class ManualActivity extends AppCompatActivity {
+public class ManualActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

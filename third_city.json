@@ -1,0 +1,8709 @@
+{
+"city_info":[
+  {
+    "idx": 1,
+    "parent_idx": 1,
+    "third_city": "청운효자동"
+  },
+  {
+    "idx": 2,
+    "parent_idx": 1,
+    "third_city": "사직동"
+  },
+  {
+    "idx": 3,
+    "parent_idx": 1,
+    "third_city": "삼청동"
+  },
+  {
+    "idx": 4,
+    "parent_idx": 1,
+    "third_city": "부암동"
+  },
+  {
+    "idx": 5,
+    "parent_idx": 1,
+    "third_city": "평창동"
+  },
+  {
+    "idx": 6,
+    "parent_idx": 1,
+    "third_city": "무악동"
+  },
+  {
+    "idx": 7,
+    "parent_idx": 1,
+    "third_city": "교남동"
+  },
+  {
+    "idx": 8,
+    "parent_idx": 1,
+    "third_city": "가회동"
+  },
+  {
+    "idx": 9,
+    "parent_idx": 1,
+    "third_city": "종로1.2.3.4가동"
+  },
+  {
+    "idx": 10,
+    "parent_idx": 1,
+    "third_city": "종로5.6가동"
+  },
+  {
+    "idx": 11,
+    "parent_idx": 1,
+    "third_city": "이화동"
+  },
+  {
+    "idx": 12,
+    "parent_idx": 1,
+    "third_city": "혜화동"
+  },
+  {
+    "idx": 13,
+    "parent_idx": 1,
+    "third_city": "창신제1동"
+  },
+  {
+    "idx": 14,
+    "parent_idx": 1,
+    "third_city": "창신제2동"
+  },
+  {
+    "idx": 15,
+    "parent_idx": 1,
+    "third_city": "창신제3동"
+  },
+  {
+    "idx": 16,
+    "parent_idx": 1,
+    "third_city": "숭인제1동"
+  },
+  {
+    "idx": 17,
+    "parent_idx": 1,
+    "third_city": "숭인제2동"
+  },
+  {
+    "idx": 18,
+    "parent_idx": 2,
+    "third_city": "소공동"
+  },
+  {
+    "idx": 19,
+    "parent_idx": 2,
+    "third_city": "회현동"
+  },
+  {
+    "idx": 20,
+    "parent_idx": 2,
+    "third_city": "명동"
+  },
+  {
+    "idx": 21,
+    "parent_idx": 2,
+    "third_city": "필동"
+  },
+  {
+    "idx": 22,
+    "parent_idx": 2,
+    "third_city": "장충동"
+  },
+  {
+    "idx": 23,
+    "parent_idx": 2,
+    "third_city": "광희동"
+  },
+  {
+    "idx": 24,
+    "parent_idx": 2,
+    "third_city": "을지로동"
+  },
+  {
+    "idx": 25,
+    "parent_idx": 2,
+    "third_city": "신당동"
+  },
+  {
+    "idx": 26,
+    "parent_idx": 2,
+    "third_city": "다산동"
+  },
+  {
+    "idx": 27,
+    "parent_idx": 2,
+    "third_city": "약수동"
+  },
+  {
+    "idx": 28,
+    "parent_idx": 2,
+    "third_city": "청구동"
+  },
+  {
+    "idx": 29,
+    "parent_idx": 2,
+    "third_city": "신당제5동"
+  },
+  {
+    "idx": 30,
+    "parent_idx": 2,
+    "third_city": "동화동"
+  },
+  {
+    "idx": 31,
+    "parent_idx": 2,
+    "third_city": "황학동"
+  },
+  {
+    "idx": 32,
+    "parent_idx": 2,
+    "third_city": "중림동"
+  },
+  {
+    "idx": 33,
+    "parent_idx": 3,
+    "third_city": "후암동"
+  },
+  {
+    "idx": 34,
+    "parent_idx": 3,
+    "third_city": "용산2가동"
+  },
+  {
+    "idx": 35,
+    "parent_idx": 3,
+    "third_city": "남영동"
+  },
+  {
+    "idx": 36,
+    "parent_idx": 3,
+    "third_city": "청파동"
+  },
+  {
+    "idx": 37,
+    "parent_idx": 3,
+    "third_city": "원효로제1동"
+  },
+  {
+    "idx": 38,
+    "parent_idx": 3,
+    "third_city": "원효로제2동"
+  },
+  {
+    "idx": 39,
+    "parent_idx": 3,
+    "third_city": "효창동"
+  },
+  {
+    "idx": 40,
+    "parent_idx": 3,
+    "third_city": "용문동"
+  },
+  {
+    "idx": 41,
+    "parent_idx": 3,
+    "third_city": "한강로동"
+  },
+  {
+    "idx": 42,
+    "parent_idx": 3,
+    "third_city": "이촌제1동"
+  },
+  {
+    "idx": 43,
+    "parent_idx": 3,
+    "third_city": "이촌제2동"
+  },
+  {
+    "idx": 44,
+    "parent_idx": 3,
+    "third_city": "이태원제1동"
+  },
+  {
+    "idx": 45,
+    "parent_idx": 3,
+    "third_city": "이태원제2동"
+  },
+  {
+    "idx": 46,
+    "parent_idx": 3,
+    "third_city": "한남동"
+  },
+  {
+    "idx": 47,
+    "parent_idx": 3,
+    "third_city": "서빙고동"
+  },
+  {
+    "idx": 48,
+    "parent_idx": 3,
+    "third_city": "보광동"
+  },
+  {
+    "idx": 49,
+    "parent_idx": 4,
+    "third_city": "왕십리제2동"
+  },
+  {
+    "idx": 50,
+    "parent_idx": 4,
+    "third_city": "왕십리도선동"
+  },
+  {
+    "idx": 51,
+    "parent_idx": 4,
+    "third_city": "마장동"
+  },
+  {
+    "idx": 52,
+    "parent_idx": 4,
+    "third_city": "사근동"
+  },
+  {
+    "idx": 53,
+    "parent_idx": 4,
+    "third_city": "행당제1동"
+  },
+  {
+    "idx": 54,
+    "parent_idx": 4,
+    "third_city": "행당제2동"
+  },
+  {
+    "idx": 55,
+    "parent_idx": 4,
+    "third_city": "응봉동"
+  },
+  {
+    "idx": 56,
+    "parent_idx": 4,
+    "third_city": "금호1가동"
+  },
+  {
+    "idx": 57,
+    "parent_idx": 4,
+    "third_city": "금호2.3가동"
+  },
+  {
+    "idx": 58,
+    "parent_idx": 4,
+    "third_city": "금호4가동"
+  },
+  {
+    "idx": 59,
+    "parent_idx": 4,
+    "third_city": "옥수동"
+  },
+  {
+    "idx": 60,
+    "parent_idx": 4,
+    "third_city": "성수1가제1동"
+  },
+  {
+    "idx": 61,
+    "parent_idx": 4,
+    "third_city": "성수1가제2동"
+  },
+  {
+    "idx": 62,
+    "parent_idx": 4,
+    "third_city": "성수2가제1동"
+  },
+  {
+    "idx": 63,
+    "parent_idx": 4,
+    "third_city": "성수2가제3동"
+  },
+  {
+    "idx": 64,
+    "parent_idx": 4,
+    "third_city": "송정동"
+  },
+  {
+    "idx": 65,
+    "parent_idx": 4,
+    "third_city": "용답동"
+  },
+  {
+    "idx": 66,
+    "parent_idx": 5,
+    "third_city": "화양동"
+  },
+  {
+    "idx": 67,
+    "parent_idx": 5,
+    "third_city": "군자동"
+  },
+  {
+    "idx": 68,
+    "parent_idx": 5,
+    "third_city": "중곡제1동"
+  },
+  {
+    "idx": 69,
+    "parent_idx": 5,
+    "third_city": "중곡제2동"
+  },
+  {
+    "idx": 70,
+    "parent_idx": 5,
+    "third_city": "중곡제3동"
+  },
+  {
+    "idx": 71,
+    "parent_idx": 5,
+    "third_city": "중곡제4동"
+  },
+  {
+    "idx": 72,
+    "parent_idx": 5,
+    "third_city": "능동"
+  },
+  {
+    "idx": 73,
+    "parent_idx": 5,
+    "third_city": "광장동"
+  },
+  {
+    "idx": 74,
+    "parent_idx": 5,
+    "third_city": "자양제1동"
+  },
+  {
+    "idx": 75,
+    "parent_idx": 5,
+    "third_city": "자양제2동"
+  },
+  {
+    "idx": 76,
+    "parent_idx": 5,
+    "third_city": "자양제3동"
+  },
+  {
+    "idx": 77,
+    "parent_idx": 5,
+    "third_city": "자양제4동"
+  },
+  {
+    "idx": 78,
+    "parent_idx": 5,
+    "third_city": "구의제1동"
+  },
+  {
+    "idx": 79,
+    "parent_idx": 5,
+    "third_city": "구의제2동"
+  },
+  {
+    "idx": 80,
+    "parent_idx": 5,
+    "third_city": "구의제3동"
+  },
+  {
+    "idx": 81,
+    "parent_idx": 6,
+    "third_city": "용신동"
+  },
+  {
+    "idx": 82,
+    "parent_idx": 6,
+    "third_city": "제기동"
+  },
+  {
+    "idx": 83,
+    "parent_idx": 6,
+    "third_city": "전농제1동"
+  },
+  {
+    "idx": 84,
+    "parent_idx": 6,
+    "third_city": "전농제2동"
+  },
+  {
+    "idx": 85,
+    "parent_idx": 6,
+    "third_city": "답십리제1동"
+  },
+  {
+    "idx": 86,
+    "parent_idx": 6,
+    "third_city": "답십리제2동"
+  },
+  {
+    "idx": 87,
+    "parent_idx": 6,
+    "third_city": "장안제1동"
+  },
+  {
+    "idx": 88,
+    "parent_idx": 6,
+    "third_city": "장안제2동"
+  },
+  {
+    "idx": 89,
+    "parent_idx": 6,
+    "third_city": "청량리동"
+  },
+  {
+    "idx": 90,
+    "parent_idx": 6,
+    "third_city": "회기동"
+  },
+  {
+    "idx": 91,
+    "parent_idx": 6,
+    "third_city": "휘경제1동"
+  },
+  {
+    "idx": 92,
+    "parent_idx": 6,
+    "third_city": "휘경제2동"
+  },
+  {
+    "idx": 93,
+    "parent_idx": 6,
+    "third_city": "이문제1동"
+  },
+  {
+    "idx": 94,
+    "parent_idx": 6,
+    "third_city": "이문제2동"
+  },
+  {
+    "idx": 95,
+    "parent_idx": 7,
+    "third_city": "면목제2동"
+  },
+  {
+    "idx": 96,
+    "parent_idx": 7,
+    "third_city": "면목제4동"
+  },
+  {
+    "idx": 97,
+    "parent_idx": 7,
+    "third_city": "면목제5동"
+  },
+  {
+    "idx": 98,
+    "parent_idx": 7,
+    "third_city": "면목본동"
+  },
+  {
+    "idx": 99,
+    "parent_idx": 7,
+    "third_city": "면목제7동"
+  },
+  {
+    "idx": 100,
+    "parent_idx": 7,
+    "third_city": "면목제3.8동"
+  },
+  {
+    "idx": 101,
+    "parent_idx": 7,
+    "third_city": "상봉제1동"
+  },
+  {
+    "idx": 102,
+    "parent_idx": 7,
+    "third_city": "상봉제2동"
+  },
+  {
+    "idx": 103,
+    "parent_idx": 7,
+    "third_city": "중화제1동"
+  },
+  {
+    "idx": 104,
+    "parent_idx": 7,
+    "third_city": "중화제2동"
+  },
+  {
+    "idx": 105,
+    "parent_idx": 7,
+    "third_city": "묵제1동"
+  },
+  {
+    "idx": 106,
+    "parent_idx": 7,
+    "third_city": "묵제2동"
+  },
+  {
+    "idx": 107,
+    "parent_idx": 7,
+    "third_city": "망우본동"
+  },
+  {
+    "idx": 108,
+    "parent_idx": 7,
+    "third_city": "망우제3동"
+  },
+  {
+    "idx": 109,
+    "parent_idx": 7,
+    "third_city": "신내1동"
+  },
+  {
+    "idx": 110,
+    "parent_idx": 7,
+    "third_city": "신내2동"
+  },
+  {
+    "idx": 111,
+    "parent_idx": 8,
+    "third_city": "성북동"
+  },
+  {
+    "idx": 112,
+    "parent_idx": 8,
+    "third_city": "삼선동"
+  },
+  {
+    "idx": 113,
+    "parent_idx": 8,
+    "third_city": "동선동"
+  },
+  {
+    "idx": 114,
+    "parent_idx": 8,
+    "third_city": "돈암제1동"
+  },
+  {
+    "idx": 115,
+    "parent_idx": 8,
+    "third_city": "돈암제2동"
+  },
+  {
+    "idx": 116,
+    "parent_idx": 8,
+    "third_city": "안암동"
+  },
+  {
+    "idx": 117,
+    "parent_idx": 8,
+    "third_city": "보문동"
+  },
+  {
+    "idx": 118,
+    "parent_idx": 8,
+    "third_city": "정릉제1동"
+  },
+  {
+    "idx": 119,
+    "parent_idx": 8,
+    "third_city": "정릉제2동"
+  },
+  {
+    "idx": 120,
+    "parent_idx": 8,
+    "third_city": "정릉제3동"
+  },
+  {
+    "idx": 121,
+    "parent_idx": 8,
+    "third_city": "정릉제4동"
+  },
+  {
+    "idx": 122,
+    "parent_idx": 8,
+    "third_city": "길음제1동"
+  },
+  {
+    "idx": 123,
+    "parent_idx": 8,
+    "third_city": "길음제2동"
+  },
+  {
+    "idx": 124,
+    "parent_idx": 8,
+    "third_city": "종암동"
+  },
+  {
+    "idx": 125,
+    "parent_idx": 8,
+    "third_city": "월곡제1동"
+  },
+  {
+    "idx": 126,
+    "parent_idx": 8,
+    "third_city": "월곡제2동"
+  },
+  {
+    "idx": 127,
+    "parent_idx": 8,
+    "third_city": "장위제1동"
+  },
+  {
+    "idx": 128,
+    "parent_idx": 8,
+    "third_city": "장위제2동"
+  },
+  {
+    "idx": 129,
+    "parent_idx": 8,
+    "third_city": "장위제3동"
+  },
+  {
+    "idx": 130,
+    "parent_idx": 8,
+    "third_city": "석관동"
+  },
+  {
+    "idx": 131,
+    "parent_idx": 9,
+    "third_city": "삼양동"
+  },
+  {
+    "idx": 132,
+    "parent_idx": 9,
+    "third_city": "미아동"
+  },
+  {
+    "idx": 133,
+    "parent_idx": 9,
+    "third_city": "송중동"
+  },
+  {
+    "idx": 134,
+    "parent_idx": 9,
+    "third_city": "송천동"
+  },
+  {
+    "idx": 135,
+    "parent_idx": 9,
+    "third_city": "삼각산동"
+  },
+  {
+    "idx": 136,
+    "parent_idx": 9,
+    "third_city": "번제1동"
+  },
+  {
+    "idx": 137,
+    "parent_idx": 9,
+    "third_city": "번제2동"
+  },
+  {
+    "idx": 138,
+    "parent_idx": 9,
+    "third_city": "번제3동"
+  },
+  {
+    "idx": 139,
+    "parent_idx": 9,
+    "third_city": "수유제1동"
+  },
+  {
+    "idx": 140,
+    "parent_idx": 9,
+    "third_city": "수유제2동"
+  },
+  {
+    "idx": 141,
+    "parent_idx": 9,
+    "third_city": "수유제3동"
+  },
+  {
+    "idx": 142,
+    "parent_idx": 9,
+    "third_city": "우이동"
+  },
+  {
+    "idx": 143,
+    "parent_idx": 9,
+    "third_city": "인수동"
+  },
+  {
+    "idx": 144,
+    "parent_idx": 10,
+    "third_city": "창제1동"
+  },
+  {
+    "idx": 145,
+    "parent_idx": 10,
+    "third_city": "창제2동"
+  },
+  {
+    "idx": 146,
+    "parent_idx": 10,
+    "third_city": "창제3동"
+  },
+  {
+    "idx": 147,
+    "parent_idx": 10,
+    "third_city": "창제4동"
+  },
+  {
+    "idx": 148,
+    "parent_idx": 10,
+    "third_city": "창제5동"
+  },
+  {
+    "idx": 149,
+    "parent_idx": 10,
+    "third_city": "도봉제1동"
+  },
+  {
+    "idx": 150,
+    "parent_idx": 10,
+    "third_city": "도봉제2동"
+  },
+  {
+    "idx": 151,
+    "parent_idx": 10,
+    "third_city": "쌍문제1동"
+  },
+  {
+    "idx": 152,
+    "parent_idx": 10,
+    "third_city": "쌍문제2동"
+  },
+  {
+    "idx": 153,
+    "parent_idx": 10,
+    "third_city": "쌍문제3동"
+  },
+  {
+    "idx": 154,
+    "parent_idx": 10,
+    "third_city": "쌍문제4동"
+  },
+  {
+    "idx": 155,
+    "parent_idx": 10,
+    "third_city": "방학제1동"
+  },
+  {
+    "idx": 156,
+    "parent_idx": 10,
+    "third_city": "방학제2동"
+  },
+  {
+    "idx": 157,
+    "parent_idx": 10,
+    "third_city": "방학제3동"
+  },
+  {
+    "idx": 158,
+    "parent_idx": 11,
+    "third_city": "월계1동"
+  },
+  {
+    "idx": 159,
+    "parent_idx": 11,
+    "third_city": "월계2동"
+  },
+  {
+    "idx": 160,
+    "parent_idx": 11,
+    "third_city": "월계3동"
+  },
+  {
+    "idx": 161,
+    "parent_idx": 11,
+    "third_city": "공릉1동"
+  },
+  {
+    "idx": 162,
+    "parent_idx": 11,
+    "third_city": "공릉2동"
+  },
+  {
+    "idx": 163,
+    "parent_idx": 11,
+    "third_city": "하계1동"
+  },
+  {
+    "idx": 164,
+    "parent_idx": 11,
+    "third_city": "하계2동"
+  },
+  {
+    "idx": 165,
+    "parent_idx": 11,
+    "third_city": "중계본동"
+  },
+  {
+    "idx": 166,
+    "parent_idx": 11,
+    "third_city": "중계1동"
+  },
+  {
+    "idx": 167,
+    "parent_idx": 11,
+    "third_city": "중계4동"
+  },
+  {
+    "idx": 168,
+    "parent_idx": 11,
+    "third_city": "중계2.3동"
+  },
+  {
+    "idx": 169,
+    "parent_idx": 11,
+    "third_city": "상계1동"
+  },
+  {
+    "idx": 170,
+    "parent_idx": 11,
+    "third_city": "상계2동"
+  },
+  {
+    "idx": 171,
+    "parent_idx": 11,
+    "third_city": "상계3.4동"
+  },
+  {
+    "idx": 172,
+    "parent_idx": 11,
+    "third_city": "상계5동"
+  },
+  {
+    "idx": 173,
+    "parent_idx": 11,
+    "third_city": "상계6.7동"
+  },
+  {
+    "idx": 174,
+    "parent_idx": 11,
+    "third_city": "상계8동"
+  },
+  {
+    "idx": 175,
+    "parent_idx": 11,
+    "third_city": "상계9동"
+  },
+  {
+    "idx": 176,
+    "parent_idx": 11,
+    "third_city": "상계10동"
+  },
+  {
+    "idx": 177,
+    "parent_idx": 12,
+    "third_city": "녹번동"
+  },
+  {
+    "idx": 178,
+    "parent_idx": 12,
+    "third_city": "불광제1동"
+  },
+  {
+    "idx": 179,
+    "parent_idx": 12,
+    "third_city": "불광제2동"
+  },
+  {
+    "idx": 180,
+    "parent_idx": 12,
+    "third_city": "갈현제1동"
+  },
+  {
+    "idx": 181,
+    "parent_idx": 12,
+    "third_city": "갈현제2동"
+  },
+  {
+    "idx": 182,
+    "parent_idx": 12,
+    "third_city": "구산동"
+  },
+  {
+    "idx": 183,
+    "parent_idx": 12,
+    "third_city": "대조동"
+  },
+  {
+    "idx": 184,
+    "parent_idx": 12,
+    "third_city": "응암제1동"
+  },
+  {
+    "idx": 185,
+    "parent_idx": 12,
+    "third_city": "응암제2동"
+  },
+  {
+    "idx": 186,
+    "parent_idx": 12,
+    "third_city": "응암제3동"
+  },
+  {
+    "idx": 187,
+    "parent_idx": 12,
+    "third_city": "역촌동"
+  },
+  {
+    "idx": 188,
+    "parent_idx": 12,
+    "third_city": "신사제1동"
+  },
+  {
+    "idx": 189,
+    "parent_idx": 12,
+    "third_city": "신사제2동"
+  },
+  {
+    "idx": 190,
+    "parent_idx": 12,
+    "third_city": "증산동"
+  },
+  {
+    "idx": 191,
+    "parent_idx": 12,
+    "third_city": "수색동"
+  },
+  {
+    "idx": 192,
+    "parent_idx": 12,
+    "third_city": "진관동"
+  },
+  {
+    "idx": 193,
+    "parent_idx": 13,
+    "third_city": "천연동"
+  },
+  {
+    "idx": 194,
+    "parent_idx": 13,
+    "third_city": "북아현동"
+  },
+  {
+    "idx": 195,
+    "parent_idx": 13,
+    "third_city": "충현동"
+  },
+  {
+    "idx": 196,
+    "parent_idx": 13,
+    "third_city": "신촌동"
+  },
+  {
+    "idx": 197,
+    "parent_idx": 13,
+    "third_city": "연희동"
+  },
+  {
+    "idx": 198,
+    "parent_idx": 13,
+    "third_city": "홍제제1동"
+  },
+  {
+    "idx": 199,
+    "parent_idx": 13,
+    "third_city": "홍제제3동"
+  },
+  {
+    "idx": 200,
+    "parent_idx": 13,
+    "third_city": "홍제제2동"
+  },
+  {
+    "idx": 201,
+    "parent_idx": 13,
+    "third_city": "홍은제1동"
+  },
+  {
+    "idx": 202,
+    "parent_idx": 13,
+    "third_city": "홍은제2동"
+  },
+  {
+    "idx": 203,
+    "parent_idx": 13,
+    "third_city": "남가좌제1동"
+  },
+  {
+    "idx": 204,
+    "parent_idx": 13,
+    "third_city": "남가좌제2동"
+  },
+  {
+    "idx": 205,
+    "parent_idx": 13,
+    "third_city": "북가좌제1동"
+  },
+  {
+    "idx": 206,
+    "parent_idx": 13,
+    "third_city": "북가좌제2동"
+  },
+  {
+    "idx": 207,
+    "parent_idx": 14,
+    "third_city": "아현동"
+  },
+  {
+    "idx": 208,
+    "parent_idx": 14,
+    "third_city": "공덕동"
+  },
+  {
+    "idx": 209,
+    "parent_idx": 14,
+    "third_city": "도화동"
+  },
+  {
+    "idx": 210,
+    "parent_idx": 14,
+    "third_city": "용강동"
+  },
+  {
+    "idx": 211,
+    "parent_idx": 14,
+    "third_city": "대흥동"
+  },
+  {
+    "idx": 212,
+    "parent_idx": 14,
+    "third_city": "염리동"
+  },
+  {
+    "idx": 213,
+    "parent_idx": 14,
+    "third_city": "신수동"
+  },
+  {
+    "idx": 214,
+    "parent_idx": 14,
+    "third_city": "서강동"
+  },
+  {
+    "idx": 215,
+    "parent_idx": 14,
+    "third_city": "서교동"
+  },
+  {
+    "idx": 216,
+    "parent_idx": 14,
+    "third_city": "합정동"
+  },
+  {
+    "idx": 217,
+    "parent_idx": 14,
+    "third_city": "망원제1동"
+  },
+  {
+    "idx": 218,
+    "parent_idx": 14,
+    "third_city": "망원제2동"
+  },
+  {
+    "idx": 219,
+    "parent_idx": 14,
+    "third_city": "연남동"
+  },
+  {
+    "idx": 220,
+    "parent_idx": 14,
+    "third_city": "성산제1동"
+  },
+  {
+    "idx": 221,
+    "parent_idx": 14,
+    "third_city": "성산제2동"
+  },
+  {
+    "idx": 222,
+    "parent_idx": 14,
+    "third_city": "상암동"
+  },
+  {
+    "idx": 223,
+    "parent_idx": 15,
+    "third_city": "목1동"
+  },
+  {
+    "idx": 224,
+    "parent_idx": 15,
+    "third_city": "목2동"
+  },
+  {
+    "idx": 225,
+    "parent_idx": 15,
+    "third_city": "목3동"
+  },
+  {
+    "idx": 226,
+    "parent_idx": 15,
+    "third_city": "목4동"
+  },
+  {
+    "idx": 227,
+    "parent_idx": 15,
+    "third_city": "목5동"
+  },
+  {
+    "idx": 228,
+    "parent_idx": 15,
+    "third_city": "신월1동"
+  },
+  {
+    "idx": 229,
+    "parent_idx": 15,
+    "third_city": "신월2동"
+  },
+  {
+    "idx": 230,
+    "parent_idx": 15,
+    "third_city": "신월3동"
+  },
+  {
+    "idx": 231,
+    "parent_idx": 15,
+    "third_city": "신월4동"
+  },
+  {
+    "idx": 232,
+    "parent_idx": 15,
+    "third_city": "신월5동"
+  },
+  {
+    "idx": 233,
+    "parent_idx": 15,
+    "third_city": "신월6동"
+  },
+  {
+    "idx": 234,
+    "parent_idx": 15,
+    "third_city": "신월7동"
+  },
+  {
+    "idx": 235,
+    "parent_idx": 15,
+    "third_city": "신정1동"
+  },
+  {
+    "idx": 236,
+    "parent_idx": 15,
+    "third_city": "신정2동"
+  },
+  {
+    "idx": 237,
+    "parent_idx": 15,
+    "third_city": "신정3동"
+  },
+  {
+    "idx": 238,
+    "parent_idx": 15,
+    "third_city": "신정4동"
+  },
+  {
+    "idx": 239,
+    "parent_idx": 15,
+    "third_city": "신정6동"
+  },
+  {
+    "idx": 240,
+    "parent_idx": 15,
+    "third_city": "신정7동"
+  },
+  {
+    "idx": 241,
+    "parent_idx": 16,
+    "third_city": "염창동"
+  },
+  {
+    "idx": 242,
+    "parent_idx": 16,
+    "third_city": "등촌제1동"
+  },
+  {
+    "idx": 243,
+    "parent_idx": 16,
+    "third_city": "등촌제2동"
+  },
+  {
+    "idx": 244,
+    "parent_idx": 16,
+    "third_city": "등촌제3동"
+  },
+  {
+    "idx": 245,
+    "parent_idx": 16,
+    "third_city": "화곡제1동"
+  },
+  {
+    "idx": 246,
+    "parent_idx": 16,
+    "third_city": "화곡제2동"
+  },
+  {
+    "idx": 247,
+    "parent_idx": 16,
+    "third_city": "화곡제3동"
+  },
+  {
+    "idx": 248,
+    "parent_idx": 16,
+    "third_city": "화곡제4동"
+  },
+  {
+    "idx": 249,
+    "parent_idx": 16,
+    "third_city": "화곡본동"
+  },
+  {
+    "idx": 250,
+    "parent_idx": 16,
+    "third_city": "화곡제6동"
+  },
+  {
+    "idx": 251,
+    "parent_idx": 16,
+    "third_city": "화곡제8동"
+  },
+  {
+    "idx": 252,
+    "parent_idx": 16,
+    "third_city": "가양제1동"
+  },
+  {
+    "idx": 253,
+    "parent_idx": 16,
+    "third_city": "가양제2동"
+  },
+  {
+    "idx": 254,
+    "parent_idx": 16,
+    "third_city": "가양제3동"
+  },
+  {
+    "idx": 255,
+    "parent_idx": 16,
+    "third_city": "발산제1동"
+  },
+  {
+    "idx": 256,
+    "parent_idx": 16,
+    "third_city": "우장산동"
+  },
+  {
+    "idx": 257,
+    "parent_idx": 16,
+    "third_city": "공항동"
+  },
+  {
+    "idx": 258,
+    "parent_idx": 16,
+    "third_city": "방화제1동"
+  },
+  {
+    "idx": 259,
+    "parent_idx": 16,
+    "third_city": "방화제2동"
+  },
+  {
+    "idx": 260,
+    "parent_idx": 16,
+    "third_city": "방화제3동"
+  },
+  {
+    "idx": 261,
+    "parent_idx": 17,
+    "third_city": "신도림동"
+  },
+  {
+    "idx": 262,
+    "parent_idx": 17,
+    "third_city": "구로제1동"
+  },
+  {
+    "idx": 263,
+    "parent_idx": 17,
+    "third_city": "구로제2동"
+  },
+  {
+    "idx": 264,
+    "parent_idx": 17,
+    "third_city": "구로제3동"
+  },
+  {
+    "idx": 265,
+    "parent_idx": 17,
+    "third_city": "구로제4동"
+  },
+  {
+    "idx": 266,
+    "parent_idx": 17,
+    "third_city": "구로제5동"
+  },
+  {
+    "idx": 267,
+    "parent_idx": 17,
+    "third_city": "가리봉동"
+  },
+  {
+    "idx": 268,
+    "parent_idx": 17,
+    "third_city": "고척제1동"
+  },
+  {
+    "idx": 269,
+    "parent_idx": 17,
+    "third_city": "고척제2동"
+  },
+  {
+    "idx": 270,
+    "parent_idx": 17,
+    "third_city": "개봉제1동"
+  },
+  {
+    "idx": 271,
+    "parent_idx": 17,
+    "third_city": "개봉제2동"
+  },
+  {
+    "idx": 272,
+    "parent_idx": 17,
+    "third_city": "개봉제3동"
+  },
+  {
+    "idx": 273,
+    "parent_idx": 17,
+    "third_city": "오류제1동"
+  },
+  {
+    "idx": 274,
+    "parent_idx": 17,
+    "third_city": "오류제2동"
+  },
+  {
+    "idx": 275,
+    "parent_idx": 17,
+    "third_city": "수궁동"
+  },
+  {
+    "idx": 276,
+    "parent_idx": 18,
+    "third_city": "가산동"
+  },
+  {
+    "idx": 277,
+    "parent_idx": 18,
+    "third_city": "독산제1동"
+  },
+  {
+    "idx": 278,
+    "parent_idx": 18,
+    "third_city": "독산제2동"
+  },
+  {
+    "idx": 279,
+    "parent_idx": 18,
+    "third_city": "독산제3동"
+  },
+  {
+    "idx": 280,
+    "parent_idx": 18,
+    "third_city": "독산제4동"
+  },
+  {
+    "idx": 281,
+    "parent_idx": 18,
+    "third_city": "시흥제1동"
+  },
+  {
+    "idx": 282,
+    "parent_idx": 18,
+    "third_city": "시흥제2동"
+  },
+  {
+    "idx": 283,
+    "parent_idx": 18,
+    "third_city": "시흥제3동"
+  },
+  {
+    "idx": 284,
+    "parent_idx": 18,
+    "third_city": "시흥제4동"
+  },
+  {
+    "idx": 285,
+    "parent_idx": 18,
+    "third_city": "시흥제5동"
+  },
+  {
+    "idx": 286,
+    "parent_idx": 19,
+    "third_city": "영등포본동"
+  },
+  {
+    "idx": 287,
+    "parent_idx": 19,
+    "third_city": "영등포동"
+  },
+  {
+    "idx": 288,
+    "parent_idx": 19,
+    "third_city": "여의동"
+  },
+  {
+    "idx": 289,
+    "parent_idx": 19,
+    "third_city": "당산제1동"
+  },
+  {
+    "idx": 290,
+    "parent_idx": 19,
+    "third_city": "당산제2동"
+  },
+  {
+    "idx": 291,
+    "parent_idx": 19,
+    "third_city": "도림동"
+  },
+  {
+    "idx": 292,
+    "parent_idx": 19,
+    "third_city": "문래동"
+  },
+  {
+    "idx": 293,
+    "parent_idx": 19,
+    "third_city": "양평제1동"
+  },
+  {
+    "idx": 294,
+    "parent_idx": 19,
+    "third_city": "양평제2동"
+  },
+  {
+    "idx": 295,
+    "parent_idx": 19,
+    "third_city": "신길제1동"
+  },
+  {
+    "idx": 296,
+    "parent_idx": 19,
+    "third_city": "신길제3동"
+  },
+  {
+    "idx": 297,
+    "parent_idx": 19,
+    "third_city": "신길제4동"
+  },
+  {
+    "idx": 298,
+    "parent_idx": 19,
+    "third_city": "신길제5동"
+  },
+  {
+    "idx": 299,
+    "parent_idx": 19,
+    "third_city": "신길제6동"
+  },
+  {
+    "idx": 300,
+    "parent_idx": 19,
+    "third_city": "신길제7동"
+  },
+  {
+    "idx": 301,
+    "parent_idx": 19,
+    "third_city": "대림제1동"
+  },
+  {
+    "idx": 302,
+    "parent_idx": 19,
+    "third_city": "대림제2동"
+  },
+  {
+    "idx": 303,
+    "parent_idx": 19,
+    "third_city": "대림제3동"
+  },
+  {
+    "idx": 304,
+    "parent_idx": 20,
+    "third_city": "노량진제1동"
+  },
+  {
+    "idx": 305,
+    "parent_idx": 20,
+    "third_city": "노량진제2동"
+  },
+  {
+    "idx": 306,
+    "parent_idx": 20,
+    "third_city": "상도제1동"
+  },
+  {
+    "idx": 307,
+    "parent_idx": 20,
+    "third_city": "상도제2동"
+  },
+  {
+    "idx": 308,
+    "parent_idx": 20,
+    "third_city": "상도제3동"
+  },
+  {
+    "idx": 309,
+    "parent_idx": 20,
+    "third_city": "상도제4동"
+  },
+  {
+    "idx": 310,
+    "parent_idx": 20,
+    "third_city": "흑석동"
+  },
+  {
+    "idx": 311,
+    "parent_idx": 20,
+    "third_city": "사당제1동"
+  },
+  {
+    "idx": 312,
+    "parent_idx": 20,
+    "third_city": "사당제2동"
+  },
+  {
+    "idx": 313,
+    "parent_idx": 20,
+    "third_city": "사당제3동"
+  },
+  {
+    "idx": 314,
+    "parent_idx": 20,
+    "third_city": "사당제4동"
+  },
+  {
+    "idx": 315,
+    "parent_idx": 20,
+    "third_city": "사당제5동"
+  },
+  {
+    "idx": 316,
+    "parent_idx": 20,
+    "third_city": "대방동"
+  },
+  {
+    "idx": 317,
+    "parent_idx": 20,
+    "third_city": "신대방제1동"
+  },
+  {
+    "idx": 318,
+    "parent_idx": 20,
+    "third_city": "신대방제2동"
+  },
+  {
+    "idx": 319,
+    "parent_idx": 21,
+    "third_city": "보라매동"
+  },
+  {
+    "idx": 320,
+    "parent_idx": 21,
+    "third_city": "청림동"
+  },
+  {
+    "idx": 321,
+    "parent_idx": 21,
+    "third_city": "성현동"
+  },
+  {
+    "idx": 322,
+    "parent_idx": 21,
+    "third_city": "행운동"
+  },
+  {
+    "idx": 323,
+    "parent_idx": 21,
+    "third_city": "낙성대동"
+  },
+  {
+    "idx": 324,
+    "parent_idx": 21,
+    "third_city": "청룡동"
+  },
+  {
+    "idx": 325,
+    "parent_idx": 21,
+    "third_city": "은천동"
+  },
+  {
+    "idx": 326,
+    "parent_idx": 21,
+    "third_city": "중앙동"
+  },
+  {
+    "idx": 327,
+    "parent_idx": 21,
+    "third_city": "인헌동"
+  },
+  {
+    "idx": 328,
+    "parent_idx": 21,
+    "third_city": "남현동"
+  },
+  {
+    "idx": 329,
+    "parent_idx": 21,
+    "third_city": "서원동"
+  },
+  {
+    "idx": 330,
+    "parent_idx": 21,
+    "third_city": "신원동"
+  },
+  {
+    "idx": 331,
+    "parent_idx": 21,
+    "third_city": "서림동"
+  },
+  {
+    "idx": 332,
+    "parent_idx": 21,
+    "third_city": "신사동"
+  },
+  {
+    "idx": 333,
+    "parent_idx": 21,
+    "third_city": "신림동"
+  },
+  {
+    "idx": 334,
+    "parent_idx": 21,
+    "third_city": "난향동"
+  },
+  {
+    "idx": 335,
+    "parent_idx": 21,
+    "third_city": "조원동"
+  },
+  {
+    "idx": 336,
+    "parent_idx": 21,
+    "third_city": "대학동"
+  },
+  {
+    "idx": 337,
+    "parent_idx": 21,
+    "third_city": "삼성동"
+  },
+  {
+    "idx": 338,
+    "parent_idx": 21,
+    "third_city": "미성동"
+  },
+  {
+    "idx": 339,
+    "parent_idx": 21,
+    "third_city": "난곡동"
+  },
+  {
+    "idx": 340,
+    "parent_idx": 22,
+    "third_city": "서초1동"
+  },
+  {
+    "idx": 341,
+    "parent_idx": 22,
+    "third_city": "서초2동"
+  },
+  {
+    "idx": 342,
+    "parent_idx": 22,
+    "third_city": "서초3동"
+  },
+  {
+    "idx": 343,
+    "parent_idx": 22,
+    "third_city": "서초4동"
+  },
+  {
+    "idx": 344,
+    "parent_idx": 22,
+    "third_city": "잠원동"
+  },
+  {
+    "idx": 345,
+    "parent_idx": 22,
+    "third_city": "반포본동"
+  },
+  {
+    "idx": 346,
+    "parent_idx": 22,
+    "third_city": "반포1동"
+  },
+  {
+    "idx": 347,
+    "parent_idx": 22,
+    "third_city": "반포2동"
+  },
+  {
+    "idx": 348,
+    "parent_idx": 22,
+    "third_city": "반포3동"
+  },
+  {
+    "idx": 349,
+    "parent_idx": 22,
+    "third_city": "반포4동"
+  },
+  {
+    "idx": 350,
+    "parent_idx": 22,
+    "third_city": "방배본동"
+  },
+  {
+    "idx": 351,
+    "parent_idx": 22,
+    "third_city": "방배1동"
+  },
+  {
+    "idx": 352,
+    "parent_idx": 22,
+    "third_city": "방배2동"
+  },
+  {
+    "idx": 353,
+    "parent_idx": 22,
+    "third_city": "방배3동"
+  },
+  {
+    "idx": 354,
+    "parent_idx": 22,
+    "third_city": "방배4동"
+  },
+  {
+    "idx": 355,
+    "parent_idx": 22,
+    "third_city": "양재1동"
+  },
+  {
+    "idx": 356,
+    "parent_idx": 22,
+    "third_city": "양재2동"
+  },
+  {
+    "idx": 357,
+    "parent_idx": 22,
+    "third_city": "내곡동"
+  },
+  {
+    "idx": 358,
+    "parent_idx": 23,
+    "third_city": "신사동"
+  },
+  {
+    "idx": 359,
+    "parent_idx": 23,
+    "third_city": "논현1동"
+  },
+  {
+    "idx": 360,
+    "parent_idx": 23,
+    "third_city": "논현2동"
+  },
+  {
+    "idx": 361,
+    "parent_idx": 23,
+    "third_city": "압구정동"
+  },
+  {
+    "idx": 362,
+    "parent_idx": 23,
+    "third_city": "청담동"
+  },
+  {
+    "idx": 363,
+    "parent_idx": 23,
+    "third_city": "삼성1동"
+  },
+  {
+    "idx": 364,
+    "parent_idx": 23,
+    "third_city": "삼성2동"
+  },
+  {
+    "idx": 365,
+    "parent_idx": 23,
+    "third_city": "대치1동"
+  },
+  {
+    "idx": 366,
+    "parent_idx": 23,
+    "third_city": "대치2동"
+  },
+  {
+    "idx": 367,
+    "parent_idx": 23,
+    "third_city": "대치4동"
+  },
+  {
+    "idx": 368,
+    "parent_idx": 23,
+    "third_city": "역삼1동"
+  },
+  {
+    "idx": 369,
+    "parent_idx": 23,
+    "third_city": "역삼2동"
+  },
+  {
+    "idx": 370,
+    "parent_idx": 23,
+    "third_city": "도곡1동"
+  },
+  {
+    "idx": 371,
+    "parent_idx": 23,
+    "third_city": "도곡2동"
+  },
+  {
+    "idx": 372,
+    "parent_idx": 23,
+    "third_city": "개포1동"
+  },
+  {
+    "idx": 373,
+    "parent_idx": 23,
+    "third_city": "개포2동"
+  },
+  {
+    "idx": 374,
+    "parent_idx": 23,
+    "third_city": "개포4동"
+  },
+  {
+    "idx": 375,
+    "parent_idx": 23,
+    "third_city": "세곡동"
+  },
+  {
+    "idx": 376,
+    "parent_idx": 23,
+    "third_city": "일원본동"
+  },
+  {
+    "idx": 377,
+    "parent_idx": 23,
+    "third_city": "일원1동"
+  },
+  {
+    "idx": 378,
+    "parent_idx": 23,
+    "third_city": "일원2동"
+  },
+  {
+    "idx": 379,
+    "parent_idx": 23,
+    "third_city": "수서동"
+  },
+  {
+    "idx": 380,
+    "parent_idx": 24,
+    "third_city": "풍납1동"
+  },
+  {
+    "idx": 381,
+    "parent_idx": 24,
+    "third_city": "풍납2동"
+  },
+  {
+    "idx": 382,
+    "parent_idx": 24,
+    "third_city": "거여1동"
+  },
+  {
+    "idx": 383,
+    "parent_idx": 24,
+    "third_city": "거여2동"
+  },
+  {
+    "idx": 384,
+    "parent_idx": 24,
+    "third_city": "마천1동"
+  },
+  {
+    "idx": 385,
+    "parent_idx": 24,
+    "third_city": "마천2동"
+  },
+  {
+    "idx": 386,
+    "parent_idx": 24,
+    "third_city": "방이1동"
+  },
+  {
+    "idx": 387,
+    "parent_idx": 24,
+    "third_city": "방이2동"
+  },
+  {
+    "idx": 388,
+    "parent_idx": 24,
+    "third_city": "오륜동"
+  },
+  {
+    "idx": 389,
+    "parent_idx": 24,
+    "third_city": "오금동"
+  },
+  {
+    "idx": 390,
+    "parent_idx": 24,
+    "third_city": "송파1동"
+  },
+  {
+    "idx": 391,
+    "parent_idx": 24,
+    "third_city": "송파2동"
+  },
+  {
+    "idx": 392,
+    "parent_idx": 24,
+    "third_city": "석촌동"
+  },
+  {
+    "idx": 393,
+    "parent_idx": 24,
+    "third_city": "삼전동"
+  },
+  {
+    "idx": 394,
+    "parent_idx": 24,
+    "third_city": "가락본동"
+  },
+  {
+    "idx": 395,
+    "parent_idx": 24,
+    "third_city": "가락1동"
+  },
+  {
+    "idx": 396,
+    "parent_idx": 24,
+    "third_city": "가락2동"
+  },
+  {
+    "idx": 397,
+    "parent_idx": 24,
+    "third_city": "문정1동"
+  },
+  {
+    "idx": 398,
+    "parent_idx": 24,
+    "third_city": "문정2동"
+  },
+  {
+    "idx": 399,
+    "parent_idx": 24,
+    "third_city": "장지동"
+  },
+  {
+    "idx": 400,
+    "parent_idx": 24,
+    "third_city": "위례동"
+  },
+  {
+    "idx": 401,
+    "parent_idx": 24,
+    "third_city": "잠실본동"
+  },
+  {
+    "idx": 402,
+    "parent_idx": 24,
+    "third_city": "잠실2동"
+  },
+  {
+    "idx": 403,
+    "parent_idx": 24,
+    "third_city": "잠실3동"
+  },
+  {
+    "idx": 404,
+    "parent_idx": 24,
+    "third_city": "잠실4동"
+  },
+  {
+    "idx": 405,
+    "parent_idx": 24,
+    "third_city": "잠실6동"
+  },
+  {
+    "idx": 406,
+    "parent_idx": 24,
+    "third_city": "잠실7동"
+  },
+  {
+    "idx": 407,
+    "parent_idx": 25,
+    "third_city": "강일동"
+  },
+  {
+    "idx": 408,
+    "parent_idx": 25,
+    "third_city": "상일동"
+  },
+  {
+    "idx": 409,
+    "parent_idx": 25,
+    "third_city": "명일제1동"
+  },
+  {
+    "idx": 410,
+    "parent_idx": 25,
+    "third_city": "명일제2동"
+  },
+  {
+    "idx": 411,
+    "parent_idx": 25,
+    "third_city": "고덕제1동"
+  },
+  {
+    "idx": 412,
+    "parent_idx": 25,
+    "third_city": "고덕제2동"
+  },
+  {
+    "idx": 413,
+    "parent_idx": 25,
+    "third_city": "암사제1동"
+  },
+  {
+    "idx": 414,
+    "parent_idx": 25,
+    "third_city": "암사제2동"
+  },
+  {
+    "idx": 415,
+    "parent_idx": 25,
+    "third_city": "암사제3동"
+  },
+  {
+    "idx": 416,
+    "parent_idx": 25,
+    "third_city": "천호제1동"
+  },
+  {
+    "idx": 417,
+    "parent_idx": 25,
+    "third_city": "천호제2동"
+  },
+  {
+    "idx": 418,
+    "parent_idx": 25,
+    "third_city": "천호제3동"
+  },
+  {
+    "idx": 419,
+    "parent_idx": 25,
+    "third_city": "성내제1동"
+  },
+  {
+    "idx": 420,
+    "parent_idx": 25,
+    "third_city": "성내제2동"
+  },
+  {
+    "idx": 421,
+    "parent_idx": 25,
+    "third_city": "성내제3동"
+  },
+  {
+    "idx": 422,
+    "parent_idx": 25,
+    "third_city": "길동"
+  },
+  {
+    "idx": 423,
+    "parent_idx": 25,
+    "third_city": "둔촌제1동"
+  },
+  {
+    "idx": 424,
+    "parent_idx": 25,
+    "third_city": "둔촌제2동"
+  },
+  {
+    "idx": 425,
+    "parent_idx": 76,
+    "third_city": "중앙동"
+  },
+  {
+    "idx": 426,
+    "parent_idx": 76,
+    "third_city": "동광동"
+  },
+  {
+    "idx": 427,
+    "parent_idx": 76,
+    "third_city": "대청동"
+  },
+  {
+    "idx": 428,
+    "parent_idx": 76,
+    "third_city": "보수동"
+  },
+  {
+    "idx": 429,
+    "parent_idx": 76,
+    "third_city": "부평동"
+  },
+  {
+    "idx": 430,
+    "parent_idx": 76,
+    "third_city": "광복동"
+  },
+  {
+    "idx": 431,
+    "parent_idx": 76,
+    "third_city": "남포동"
+  },
+  {
+    "idx": 432,
+    "parent_idx": 76,
+    "third_city": "영주제1동"
+  },
+  {
+    "idx": 433,
+    "parent_idx": 76,
+    "third_city": "영주제1동"
+  },
+  {
+    "idx": 434,
+    "parent_idx": 76,
+    "third_city": "영주제2동"
+  },
+  {
+    "idx": 435,
+    "parent_idx": 77,
+    "third_city": "동대신제1동"
+  },
+  {
+    "idx": 436,
+    "parent_idx": 77,
+    "third_city": "동대신제2동"
+  },
+  {
+    "idx": 437,
+    "parent_idx": 77,
+    "third_city": "동대신제3동"
+  },
+  {
+    "idx": 438,
+    "parent_idx": 77,
+    "third_city": "서대신제1동"
+  },
+  {
+    "idx": 439,
+    "parent_idx": 77,
+    "third_city": "서대신제3동"
+  },
+  {
+    "idx": 440,
+    "parent_idx": 77,
+    "third_city": "서대신제4동"
+  },
+  {
+    "idx": 441,
+    "parent_idx": 77,
+    "third_city": "부민동"
+  },
+  {
+    "idx": 442,
+    "parent_idx": 77,
+    "third_city": "아미동"
+  },
+  {
+    "idx": 443,
+    "parent_idx": 77,
+    "third_city": "초장동"
+  },
+  {
+    "idx": 444,
+    "parent_idx": 77,
+    "third_city": "충무동"
+  },
+  {
+    "idx": 445,
+    "parent_idx": 77,
+    "third_city": "남부민제1동"
+  },
+  {
+    "idx": 446,
+    "parent_idx": 77,
+    "third_city": "남부민제2동"
+  },
+  {
+    "idx": 447,
+    "parent_idx": 77,
+    "third_city": "암남동"
+  },
+  {
+    "idx": 448,
+    "parent_idx": 78,
+    "third_city": "초량제1동"
+  },
+  {
+    "idx": 449,
+    "parent_idx": 78,
+    "third_city": "초량제2동"
+  },
+  {
+    "idx": 450,
+    "parent_idx": 78,
+    "third_city": "초량제3동"
+  },
+  {
+    "idx": 451,
+    "parent_idx": 78,
+    "third_city": "초량제6동"
+  },
+  {
+    "idx": 452,
+    "parent_idx": 78,
+    "third_city": "수정제1동"
+  },
+  {
+    "idx": 453,
+    "parent_idx": 78,
+    "third_city": "수정제2동"
+  },
+  {
+    "idx": 454,
+    "parent_idx": 78,
+    "third_city": "수정제4동"
+  },
+  {
+    "idx": 455,
+    "parent_idx": 78,
+    "third_city": "수정제5동"
+  },
+  {
+    "idx": 456,
+    "parent_idx": 78,
+    "third_city": "좌천동"
+  },
+  {
+    "idx": 457,
+    "parent_idx": 78,
+    "third_city": "범일제1동"
+  },
+  {
+    "idx": 458,
+    "parent_idx": 78,
+    "third_city": "범일제2동"
+  },
+  {
+    "idx": 459,
+    "parent_idx": 78,
+    "third_city": "범일제5동"
+  },
+  {
+    "idx": 460,
+    "parent_idx": 79,
+    "third_city": "남항동"
+  },
+  {
+    "idx": 461,
+    "parent_idx": 79,
+    "third_city": "영선제1동"
+  },
+  {
+    "idx": 462,
+    "parent_idx": 79,
+    "third_city": "영선제2동"
+  },
+  {
+    "idx": 463,
+    "parent_idx": 79,
+    "third_city": "신선동"
+  },
+  {
+    "idx": 464,
+    "parent_idx": 79,
+    "third_city": "봉래제1동"
+  },
+  {
+    "idx": 465,
+    "parent_idx": 79,
+    "third_city": "봉래제2동"
+  },
+  {
+    "idx": 466,
+    "parent_idx": 79,
+    "third_city": "청학제1동"
+  },
+  {
+    "idx": 467,
+    "parent_idx": 79,
+    "third_city": "청학제2동"
+  },
+  {
+    "idx": 468,
+    "parent_idx": 79,
+    "third_city": "동삼제1동"
+  },
+  {
+    "idx": 469,
+    "parent_idx": 79,
+    "third_city": "동삼제2동"
+  },
+  {
+    "idx": 470,
+    "parent_idx": 79,
+    "third_city": "동삼제3동"
+  },
+  {
+    "idx": 471,
+    "parent_idx": 80,
+    "third_city": "부전제1동"
+  },
+  {
+    "idx": 472,
+    "parent_idx": 80,
+    "third_city": "부전제2동"
+  },
+  {
+    "idx": 473,
+    "parent_idx": 80,
+    "third_city": "연지동"
+  },
+  {
+    "idx": 474,
+    "parent_idx": 80,
+    "third_city": "초읍동"
+  },
+  {
+    "idx": 475,
+    "parent_idx": 80,
+    "third_city": "양정제1동"
+  },
+  {
+    "idx": 476,
+    "parent_idx": 80,
+    "third_city": "양정제2동"
+  },
+  {
+    "idx": 477,
+    "parent_idx": 80,
+    "third_city": "전포제1동"
+  },
+  {
+    "idx": 478,
+    "parent_idx": 80,
+    "third_city": "전포제2동"
+  },
+  {
+    "idx": 479,
+    "parent_idx": 80,
+    "third_city": "부암제1동"
+  },
+  {
+    "idx": 480,
+    "parent_idx": 80,
+    "third_city": "부암제3동"
+  },
+  {
+    "idx": 481,
+    "parent_idx": 80,
+    "third_city": "당감제1동"
+  },
+  {
+    "idx": 482,
+    "parent_idx": 80,
+    "third_city": "당감제2동"
+  },
+  {
+    "idx": 483,
+    "parent_idx": 80,
+    "third_city": "당감제4동"
+  },
+  {
+    "idx": 484,
+    "parent_idx": 80,
+    "third_city": "가야제1동"
+  },
+  {
+    "idx": 485,
+    "parent_idx": 80,
+    "third_city": "가야제2동"
+  },
+  {
+    "idx": 486,
+    "parent_idx": 80,
+    "third_city": "개금제1동"
+  },
+  {
+    "idx": 487,
+    "parent_idx": 80,
+    "third_city": "개금제2동"
+  },
+  {
+    "idx": 488,
+    "parent_idx": 80,
+    "third_city": "개금제3동"
+  },
+  {
+    "idx": 489,
+    "parent_idx": 80,
+    "third_city": "범천제1동"
+  },
+  {
+    "idx": 490,
+    "parent_idx": 80,
+    "third_city": "범천제2동"
+  },
+  {
+    "idx": 491,
+    "parent_idx": 81,
+    "third_city": "수민동"
+  },
+  {
+    "idx": 492,
+    "parent_idx": 81,
+    "third_city": "복산동"
+  },
+  {
+    "idx": 493,
+    "parent_idx": 81,
+    "third_city": "명륜동"
+  },
+  {
+    "idx": 494,
+    "parent_idx": 81,
+    "third_city": "온천제1동"
+  },
+  {
+    "idx": 495,
+    "parent_idx": 81,
+    "third_city": "온천제2동"
+  },
+  {
+    "idx": 496,
+    "parent_idx": 81,
+    "third_city": "온천제3동"
+  },
+  {
+    "idx": 497,
+    "parent_idx": 81,
+    "third_city": "사직제1동"
+  },
+  {
+    "idx": 498,
+    "parent_idx": 81,
+    "third_city": "사직제2동"
+  },
+  {
+    "idx": 499,
+    "parent_idx": 81,
+    "third_city": "사직제3동"
+  },
+  {
+    "idx": 500,
+    "parent_idx": 81,
+    "third_city": "안락제1동"
+  },
+  {
+    "idx": 501,
+    "parent_idx": 81,
+    "third_city": "안락제2동"
+  },
+  {
+    "idx": 502,
+    "parent_idx": 81,
+    "third_city": "명장제1동"
+  },
+  {
+    "idx": 503,
+    "parent_idx": 81,
+    "third_city": "명장제2동"
+  },
+  {
+    "idx": 504,
+    "parent_idx": 82,
+    "third_city": "대연제1동"
+  },
+  {
+    "idx": 505,
+    "parent_idx": 82,
+    "third_city": "대연제3동"
+  },
+  {
+    "idx": 506,
+    "parent_idx": 82,
+    "third_city": "대연제4동"
+  },
+  {
+    "idx": 507,
+    "parent_idx": 82,
+    "third_city": "대연제5동"
+  },
+  {
+    "idx": 508,
+    "parent_idx": 82,
+    "third_city": "대연제6동"
+  },
+  {
+    "idx": 509,
+    "parent_idx": 82,
+    "third_city": "용호제1동"
+  },
+  {
+    "idx": 510,
+    "parent_idx": 82,
+    "third_city": "용호제2동"
+  },
+  {
+    "idx": 511,
+    "parent_idx": 82,
+    "third_city": "용호제3동"
+  },
+  {
+    "idx": 512,
+    "parent_idx": 82,
+    "third_city": "용호제4동"
+  },
+  {
+    "idx": 513,
+    "parent_idx": 82,
+    "third_city": "용당동"
+  },
+  {
+    "idx": 514,
+    "parent_idx": 82,
+    "third_city": "감만제1동"
+  },
+  {
+    "idx": 515,
+    "parent_idx": 82,
+    "third_city": "감만제2동"
+  },
+  {
+    "idx": 516,
+    "parent_idx": 82,
+    "third_city": "우암동"
+  },
+  {
+    "idx": 517,
+    "parent_idx": 82,
+    "third_city": "문현제1동"
+  },
+  {
+    "idx": 518,
+    "parent_idx": 82,
+    "third_city": "문현제2동"
+  },
+  {
+    "idx": 519,
+    "parent_idx": 82,
+    "third_city": "문현제3동"
+  },
+  {
+    "idx": 520,
+    "parent_idx": 82,
+    "third_city": "문현제4동"
+  },
+  {
+    "idx": 521,
+    "parent_idx": 83,
+    "third_city": "구포제1동"
+  },
+  {
+    "idx": 522,
+    "parent_idx": 83,
+    "third_city": "구포제2동"
+  },
+  {
+    "idx": 523,
+    "parent_idx": 83,
+    "third_city": "구포제3동"
+  },
+  {
+    "idx": 524,
+    "parent_idx": 83,
+    "third_city": "금곡동"
+  },
+  {
+    "idx": 525,
+    "parent_idx": 83,
+    "third_city": "화명제1동"
+  },
+  {
+    "idx": 526,
+    "parent_idx": 83,
+    "third_city": "화명제2동"
+  },
+  {
+    "idx": 527,
+    "parent_idx": 83,
+    "third_city": "화명제3동"
+  },
+  {
+    "idx": 528,
+    "parent_idx": 83,
+    "third_city": "덕천제1동"
+  },
+  {
+    "idx": 529,
+    "parent_idx": 83,
+    "third_city": "덕천제2동"
+  },
+  {
+    "idx": 530,
+    "parent_idx": 83,
+    "third_city": "덕천제3동"
+  },
+  {
+    "idx": 531,
+    "parent_idx": 83,
+    "third_city": "만덕제1동"
+  },
+  {
+    "idx": 532,
+    "parent_idx": 83,
+    "third_city": "만덕제2동"
+  },
+  {
+    "idx": 533,
+    "parent_idx": 83,
+    "third_city": "만덕제3동"
+  },
+  {
+    "idx": 534,
+    "parent_idx": 84,
+    "third_city": "우제1동"
+  },
+  {
+    "idx": 535,
+    "parent_idx": 84,
+    "third_city": "우제2동"
+  },
+  {
+    "idx": 536,
+    "parent_idx": 84,
+    "third_city": "우제3동"
+  },
+  {
+    "idx": 537,
+    "parent_idx": 84,
+    "third_city": "중제1동"
+  },
+  {
+    "idx": 538,
+    "parent_idx": 84,
+    "third_city": "중제2동"
+  },
+  {
+    "idx": 539,
+    "parent_idx": 84,
+    "third_city": "좌제1동"
+  },
+  {
+    "idx": 540,
+    "parent_idx": 84,
+    "third_city": "좌제2동"
+  },
+  {
+    "idx": 541,
+    "parent_idx": 84,
+    "third_city": "좌제3동"
+  },
+  {
+    "idx": 542,
+    "parent_idx": 84,
+    "third_city": "좌제4동"
+  },
+  {
+    "idx": 543,
+    "parent_idx": 84,
+    "third_city": "송정동"
+  },
+  {
+    "idx": 544,
+    "parent_idx": 84,
+    "third_city": "반여제1동"
+  },
+  {
+    "idx": 545,
+    "parent_idx": 84,
+    "third_city": "반여제2동"
+  },
+  {
+    "idx": 546,
+    "parent_idx": 84,
+    "third_city": "반여제3동"
+  },
+  {
+    "idx": 547,
+    "parent_idx": 84,
+    "third_city": "반여제4동"
+  },
+  {
+    "idx": 548,
+    "parent_idx": 84,
+    "third_city": "반송제1동"
+  },
+  {
+    "idx": 549,
+    "parent_idx": 84,
+    "third_city": "반송제2동"
+  },
+  {
+    "idx": 550,
+    "parent_idx": 84,
+    "third_city": "재송제1동"
+  },
+  {
+    "idx": 551,
+    "parent_idx": 84,
+    "third_city": "재송제2동"
+  },
+  {
+    "idx": 552,
+    "parent_idx": 85,
+    "third_city": "괴정제1동"
+  },
+  {
+    "idx": 553,
+    "parent_idx": 85,
+    "third_city": "괴정제2동"
+  },
+  {
+    "idx": 554,
+    "parent_idx": 85,
+    "third_city": "괴정제3동"
+  },
+  {
+    "idx": 555,
+    "parent_idx": 85,
+    "third_city": "괴정제4동"
+  },
+  {
+    "idx": 556,
+    "parent_idx": 85,
+    "third_city": "당리동"
+  },
+  {
+    "idx": 557,
+    "parent_idx": 85,
+    "third_city": "하단제1동"
+  },
+  {
+    "idx": 558,
+    "parent_idx": 85,
+    "third_city": "하단제2동"
+  },
+  {
+    "idx": 559,
+    "parent_idx": 85,
+    "third_city": "신평제1동"
+  },
+  {
+    "idx": 560,
+    "parent_idx": 85,
+    "third_city": "신평제2동"
+  },
+  {
+    "idx": 561,
+    "parent_idx": 85,
+    "third_city": "장림제1동"
+  },
+  {
+    "idx": 562,
+    "parent_idx": 85,
+    "third_city": "장림제2동"
+  },
+  {
+    "idx": 563,
+    "parent_idx": 85,
+    "third_city": "다대제1동"
+  },
+  {
+    "idx": 564,
+    "parent_idx": 85,
+    "third_city": "다대제2동"
+  },
+  {
+    "idx": 565,
+    "parent_idx": 85,
+    "third_city": "구평동"
+  },
+  {
+    "idx": 566,
+    "parent_idx": 85,
+    "third_city": "감천제1동"
+  },
+  {
+    "idx": 567,
+    "parent_idx": 85,
+    "third_city": "감천제2동"
+  },
+  {
+    "idx": 568,
+    "parent_idx": 86,
+    "third_city": "서제1동"
+  },
+  {
+    "idx": 569,
+    "parent_idx": 86,
+    "third_city": "서제2동"
+  },
+  {
+    "idx": 570,
+    "parent_idx": 86,
+    "third_city": "서제3동"
+  },
+  {
+    "idx": 571,
+    "parent_idx": 86,
+    "third_city": "금사동"
+  },
+  {
+    "idx": 572,
+    "parent_idx": 86,
+    "third_city": "부곡제1동"
+  },
+  {
+    "idx": 573,
+    "parent_idx": 86,
+    "third_city": "부곡제2동"
+  },
+  {
+    "idx": 574,
+    "parent_idx": 86,
+    "third_city": "부곡제3동"
+  },
+  {
+    "idx": 575,
+    "parent_idx": 86,
+    "third_city": "부곡제4동"
+  },
+  {
+    "idx": 576,
+    "parent_idx": 86,
+    "third_city": "장전제1동"
+  },
+  {
+    "idx": 577,
+    "parent_idx": 86,
+    "third_city": "장전제2동"
+  },
+  {
+    "idx": 578,
+    "parent_idx": 86,
+    "third_city": "장전제3동"
+  },
+  {
+    "idx": 579,
+    "parent_idx": 86,
+    "third_city": "선두구동"
+  },
+  {
+    "idx": 580,
+    "parent_idx": 86,
+    "third_city": "청룡노포동"
+  },
+  {
+    "idx": 581,
+    "parent_idx": 86,
+    "third_city": "남산동"
+  },
+  {
+    "idx": 582,
+    "parent_idx": 86,
+    "third_city": "구서제1동"
+  },
+  {
+    "idx": 583,
+    "parent_idx": 86,
+    "third_city": "구서제2동"
+  },
+  {
+    "idx": 584,
+    "parent_idx": 86,
+    "third_city": "금성동"
+  },
+  {
+    "idx": 585,
+    "parent_idx": 87,
+    "third_city": "대저1동"
+  },
+  {
+    "idx": 586,
+    "parent_idx": 87,
+    "third_city": "대저2동"
+  },
+  {
+    "idx": 587,
+    "parent_idx": 87,
+    "third_city": "강동동"
+  },
+  {
+    "idx": 588,
+    "parent_idx": 87,
+    "third_city": "명지1동"
+  },
+  {
+    "idx": 589,
+    "parent_idx": 87,
+    "third_city": "명지2동"
+  },
+  {
+    "idx": 590,
+    "parent_idx": 87,
+    "third_city": "가락동"
+  },
+  {
+    "idx": 591,
+    "parent_idx": 87,
+    "third_city": "녹산동"
+  },
+  {
+    "idx": 592,
+    "parent_idx": 87,
+    "third_city": "가덕도동"
+  },
+  {
+    "idx": 593,
+    "parent_idx": 88,
+    "third_city": "거제제1동"
+  },
+  {
+    "idx": 594,
+    "parent_idx": 88,
+    "third_city": "거제제2동"
+  },
+  {
+    "idx": 595,
+    "parent_idx": 88,
+    "third_city": "거제제3동"
+  },
+  {
+    "idx": 596,
+    "parent_idx": 88,
+    "third_city": "거제제4동"
+  },
+  {
+    "idx": 597,
+    "parent_idx": 88,
+    "third_city": "연산제1동"
+  },
+  {
+    "idx": 598,
+    "parent_idx": 88,
+    "third_city": "연산제2동"
+  },
+  {
+    "idx": 599,
+    "parent_idx": 88,
+    "third_city": "연산제3동"
+  },
+  {
+    "idx": 600,
+    "parent_idx": 88,
+    "third_city": "연산제4동"
+  },
+  {
+    "idx": 601,
+    "parent_idx": 88,
+    "third_city": "연산제5동"
+  },
+  {
+    "idx": 602,
+    "parent_idx": 88,
+    "third_city": "연산제6동"
+  },
+  {
+    "idx": 603,
+    "parent_idx": 88,
+    "third_city": "연산제8동"
+  },
+  {
+    "idx": 604,
+    "parent_idx": 88,
+    "third_city": "연산제9동"
+  },
+  {
+    "idx": 605,
+    "parent_idx": 89,
+    "third_city": "남천제1동"
+  },
+  {
+    "idx": 606,
+    "parent_idx": 89,
+    "third_city": "남천제2동"
+  },
+  {
+    "idx": 607,
+    "parent_idx": 89,
+    "third_city": "수영동"
+  },
+  {
+    "idx": 608,
+    "parent_idx": 89,
+    "third_city": "망미제1동"
+  },
+  {
+    "idx": 609,
+    "parent_idx": 89,
+    "third_city": "망미제2동"
+  },
+  {
+    "idx": 610,
+    "parent_idx": 89,
+    "third_city": "광안제1동"
+  },
+  {
+    "idx": 611,
+    "parent_idx": 89,
+    "third_city": "광안제2동"
+  },
+  {
+    "idx": 612,
+    "parent_idx": 89,
+    "third_city": "광안제3동"
+  },
+  {
+    "idx": 613,
+    "parent_idx": 89,
+    "third_city": "광안제4동"
+  },
+  {
+    "idx": 614,
+    "parent_idx": 89,
+    "third_city": "민락동"
+  },
+  {
+    "idx": 615,
+    "parent_idx": 90,
+    "third_city": "삼락동"
+  },
+  {
+    "idx": 616,
+    "parent_idx": 90,
+    "third_city": "모라제1동"
+  },
+  {
+    "idx": 617,
+    "parent_idx": 90,
+    "third_city": "모라제3동"
+  },
+  {
+    "idx": 618,
+    "parent_idx": 90,
+    "third_city": "덕포제1동"
+  },
+  {
+    "idx": 619,
+    "parent_idx": 90,
+    "third_city": "덕포제2동"
+  },
+  {
+    "idx": 620,
+    "parent_idx": 90,
+    "third_city": "괘법동"
+  },
+  {
+    "idx": 621,
+    "parent_idx": 90,
+    "third_city": "감전동"
+  },
+  {
+    "idx": 622,
+    "parent_idx": 90,
+    "third_city": "주례제1동"
+  },
+  {
+    "idx": 623,
+    "parent_idx": 90,
+    "third_city": "주례제2동"
+  },
+  {
+    "idx": 624,
+    "parent_idx": 90,
+    "third_city": "주례제3동"
+  },
+  {
+    "idx": 625,
+    "parent_idx": 90,
+    "third_city": "학장동"
+  },
+  {
+    "idx": 626,
+    "parent_idx": 90,
+    "third_city": "엄궁동"
+  },
+  {
+    "idx": 627,
+    "parent_idx": 91,
+    "third_city": "기장읍"
+  },
+  {
+    "idx": 628,
+    "parent_idx": 91,
+    "third_city": "장안읍"
+  },
+  {
+    "idx": 629,
+    "parent_idx": 91,
+    "third_city": "정관읍"
+  },
+  {
+    "idx": 630,
+    "parent_idx": 91,
+    "third_city": "일광면"
+  },
+  {
+    "idx": 631,
+    "parent_idx": 91,
+    "third_city": "철마면"
+  },
+  {
+    "idx": 632,
+    "parent_idx": 97,
+    "third_city": "동인동"
+  },
+  {
+    "idx": 633,
+    "parent_idx": 97,
+    "third_city": "삼덕동"
+  },
+  {
+    "idx": 634,
+    "parent_idx": 97,
+    "third_city": "성내1동"
+  },
+  {
+    "idx": 635,
+    "parent_idx": 97,
+    "third_city": "성내2동"
+  },
+  {
+    "idx": 636,
+    "parent_idx": 97,
+    "third_city": "성내3동"
+  },
+  {
+    "idx": 637,
+    "parent_idx": 97,
+    "third_city": "대신동"
+  },
+  {
+    "idx": 638,
+    "parent_idx": 97,
+    "third_city": "남산1동"
+  },
+  {
+    "idx": 639,
+    "parent_idx": 97,
+    "third_city": "남산2동"
+  },
+  {
+    "idx": 640,
+    "parent_idx": 97,
+    "third_city": "남산3동"
+  },
+  {
+    "idx": 641,
+    "parent_idx": 97,
+    "third_city": "남산4동"
+  },
+  {
+    "idx": 642,
+    "parent_idx": 97,
+    "third_city": "대봉1동"
+  },
+  {
+    "idx": 643,
+    "parent_idx": 97,
+    "third_city": "대봉2동"
+  },
+  {
+    "idx": 644,
+    "parent_idx": 98,
+    "third_city": "신암1동"
+  },
+  {
+    "idx": 645,
+    "parent_idx": 98,
+    "third_city": "신암2동"
+  },
+  {
+    "idx": 646,
+    "parent_idx": 98,
+    "third_city": "신암3동"
+  },
+  {
+    "idx": 647,
+    "parent_idx": 98,
+    "third_city": "신암4동"
+  },
+  {
+    "idx": 648,
+    "parent_idx": 98,
+    "third_city": "신암5동"
+  },
+  {
+    "idx": 649,
+    "parent_idx": 98,
+    "third_city": "신천1.2동"
+  },
+  {
+    "idx": 650,
+    "parent_idx": 98,
+    "third_city": "신천3동"
+  },
+  {
+    "idx": 651,
+    "parent_idx": 98,
+    "third_city": "신천4동"
+  },
+  {
+    "idx": 652,
+    "parent_idx": 98,
+    "third_city": "효목1동"
+  },
+  {
+    "idx": 653,
+    "parent_idx": 98,
+    "third_city": "효목2동"
+  },
+  {
+    "idx": 654,
+    "parent_idx": 98,
+    "third_city": "도평동"
+  },
+  {
+    "idx": 655,
+    "parent_idx": 98,
+    "third_city": "불로.봉무동"
+  },
+  {
+    "idx": 656,
+    "parent_idx": 98,
+    "third_city": "지저동"
+  },
+  {
+    "idx": 657,
+    "parent_idx": 98,
+    "third_city": "동촌동"
+  },
+  {
+    "idx": 658,
+    "parent_idx": 98,
+    "third_city": "방촌동"
+  },
+  {
+    "idx": 659,
+    "parent_idx": 98,
+    "third_city": "해안동"
+  },
+  {
+    "idx": 660,
+    "parent_idx": 98,
+    "third_city": "안심1동"
+  },
+  {
+    "idx": 661,
+    "parent_idx": 98,
+    "third_city": "안심2동"
+  },
+  {
+    "idx": 662,
+    "parent_idx": 98,
+    "third_city": "안심3.4동"
+  },
+  {
+    "idx": 663,
+    "parent_idx": 98,
+    "third_city": "공산동"
+  },
+  {
+    "idx": 664,
+    "parent_idx": 99,
+    "third_city": "내당1동"
+  },
+  {
+    "idx": 665,
+    "parent_idx": 99,
+    "third_city": "내당2.3동"
+  },
+  {
+    "idx": 666,
+    "parent_idx": 99,
+    "third_city": "내당4동"
+  },
+  {
+    "idx": 667,
+    "parent_idx": 99,
+    "third_city": "비산1동"
+  },
+  {
+    "idx": 668,
+    "parent_idx": 99,
+    "third_city": "비산2.3동"
+  },
+  {
+    "idx": 669,
+    "parent_idx": 99,
+    "third_city": "비산4동"
+  },
+  {
+    "idx": 670,
+    "parent_idx": 99,
+    "third_city": "비산5동"
+  },
+  {
+    "idx": 671,
+    "parent_idx": 99,
+    "third_city": "비산6동"
+  },
+  {
+    "idx": 672,
+    "parent_idx": 99,
+    "third_city": "비산7동"
+  },
+  {
+    "idx": 673,
+    "parent_idx": 99,
+    "third_city": "평리1동"
+  },
+  {
+    "idx": 674,
+    "parent_idx": 99,
+    "third_city": "평리2동"
+  },
+  {
+    "idx": 675,
+    "parent_idx": 99,
+    "third_city": "평리3동"
+  },
+  {
+    "idx": 676,
+    "parent_idx": 99,
+    "third_city": "평리4동"
+  },
+  {
+    "idx": 677,
+    "parent_idx": 99,
+    "third_city": "평리5동"
+  },
+  {
+    "idx": 678,
+    "parent_idx": 99,
+    "third_city": "평리6동"
+  },
+  {
+    "idx": 679,
+    "parent_idx": 99,
+    "third_city": "상중이동"
+  },
+  {
+    "idx": 680,
+    "parent_idx": 99,
+    "third_city": "원대동"
+  },
+  {
+    "idx": 681,
+    "parent_idx": 100,
+    "third_city": "이천동"
+  },
+  {
+    "idx": 682,
+    "parent_idx": 100,
+    "third_city": "봉덕1동"
+  },
+  {
+    "idx": 683,
+    "parent_idx": 100,
+    "third_city": "봉덕2동"
+  },
+  {
+    "idx": 684,
+    "parent_idx": 100,
+    "third_city": "봉덕3동"
+  },
+  {
+    "idx": 685,
+    "parent_idx": 100,
+    "third_city": "대명1동"
+  },
+  {
+    "idx": 686,
+    "parent_idx": 100,
+    "third_city": "대명2동"
+  },
+  {
+    "idx": 687,
+    "parent_idx": 100,
+    "third_city": "대명3동"
+  },
+  {
+    "idx": 688,
+    "parent_idx": 100,
+    "third_city": "대명4동"
+  },
+  {
+    "idx": 689,
+    "parent_idx": 100,
+    "third_city": "대명5동"
+  },
+  {
+    "idx": 690,
+    "parent_idx": 100,
+    "third_city": "대명6동"
+  },
+  {
+    "idx": 691,
+    "parent_idx": 100,
+    "third_city": "대명9동"
+  },
+  {
+    "idx": 692,
+    "parent_idx": 100,
+    "third_city": "대명10동"
+  },
+  {
+    "idx": 693,
+    "parent_idx": 100,
+    "third_city": "대명11동"
+  },
+  {
+    "idx": 694,
+    "parent_idx": 101,
+    "third_city": "고성동"
+  },
+  {
+    "idx": 695,
+    "parent_idx": 101,
+    "third_city": "칠성동"
+  },
+  {
+    "idx": 696,
+    "parent_idx": 101,
+    "third_city": "침산1동"
+  },
+  {
+    "idx": 697,
+    "parent_idx": 101,
+    "third_city": "침산2동"
+  },
+  {
+    "idx": 698,
+    "parent_idx": 101,
+    "third_city": "침산3동"
+  },
+  {
+    "idx": 699,
+    "parent_idx": 101,
+    "third_city": "산격1동"
+  },
+  {
+    "idx": 700,
+    "parent_idx": 101,
+    "third_city": "산격2동"
+  },
+  {
+    "idx": 701,
+    "parent_idx": 101,
+    "third_city": "산격3동"
+  },
+  {
+    "idx": 702,
+    "parent_idx": 101,
+    "third_city": "산격4동"
+  },
+  {
+    "idx": 703,
+    "parent_idx": 101,
+    "third_city": "대현동"
+  },
+  {
+    "idx": 704,
+    "parent_idx": 101,
+    "third_city": "복현1동"
+  },
+  {
+    "idx": 705,
+    "parent_idx": 101,
+    "third_city": "복현2동"
+  },
+  {
+    "idx": 706,
+    "parent_idx": 101,
+    "third_city": "검단동"
+  },
+  {
+    "idx": 707,
+    "parent_idx": 101,
+    "third_city": "무태조야동"
+  },
+  {
+    "idx": 708,
+    "parent_idx": 101,
+    "third_city": "관문동"
+  },
+  {
+    "idx": 709,
+    "parent_idx": 101,
+    "third_city": "태전1동"
+  },
+  {
+    "idx": 710,
+    "parent_idx": 101,
+    "third_city": "태전2동"
+  },
+  {
+    "idx": 711,
+    "parent_idx": 101,
+    "third_city": "구암동"
+  },
+  {
+    "idx": 712,
+    "parent_idx": 101,
+    "third_city": "관음동"
+  },
+  {
+    "idx": 713,
+    "parent_idx": 101,
+    "third_city": "읍내동"
+  },
+  {
+    "idx": 714,
+    "parent_idx": 101,
+    "third_city": "동천동"
+  },
+  {
+    "idx": 715,
+    "parent_idx": 101,
+    "third_city": "노원동"
+  },
+  {
+    "idx": 716,
+    "parent_idx": 101,
+    "third_city": "국우동"
+  },
+  {
+    "idx": 717,
+    "parent_idx": 102,
+    "third_city": "범어1동"
+  },
+  {
+    "idx": 718,
+    "parent_idx": 102,
+    "third_city": "범어2동"
+  },
+  {
+    "idx": 719,
+    "parent_idx": 102,
+    "third_city": "범어3동"
+  },
+  {
+    "idx": 720,
+    "parent_idx": 102,
+    "third_city": "범어4동"
+  },
+  {
+    "idx": 721,
+    "parent_idx": 102,
+    "third_city": "만촌1동"
+  },
+  {
+    "idx": 722,
+    "parent_idx": 102,
+    "third_city": "만촌2동"
+  },
+  {
+    "idx": 723,
+    "parent_idx": 102,
+    "third_city": "만촌3동"
+  },
+  {
+    "idx": 724,
+    "parent_idx": 102,
+    "third_city": "수성1가동"
+  },
+  {
+    "idx": 725,
+    "parent_idx": 102,
+    "third_city": "수성2.3가동"
+  },
+  {
+    "idx": 726,
+    "parent_idx": 102,
+    "third_city": "수성4가동"
+  },
+  {
+    "idx": 727,
+    "parent_idx": 102,
+    "third_city": "황금1동"
+  },
+  {
+    "idx": 728,
+    "parent_idx": 102,
+    "third_city": "황금2동"
+  },
+  {
+    "idx": 729,
+    "parent_idx": 102,
+    "third_city": "중동"
+  },
+  {
+    "idx": 730,
+    "parent_idx": 102,
+    "third_city": "상동"
+  },
+  {
+    "idx": 731,
+    "parent_idx": 102,
+    "third_city": "파동"
+  },
+  {
+    "idx": 732,
+    "parent_idx": 102,
+    "third_city": "두산동"
+  },
+  {
+    "idx": 733,
+    "parent_idx": 102,
+    "third_city": "지산1동"
+  },
+  {
+    "idx": 734,
+    "parent_idx": 102,
+    "third_city": "지산2동"
+  },
+  {
+    "idx": 735,
+    "parent_idx": 102,
+    "third_city": "범물1동"
+  },
+  {
+    "idx": 736,
+    "parent_idx": 102,
+    "third_city": "범물2동"
+  },
+  {
+    "idx": 737,
+    "parent_idx": 102,
+    "third_city": "고산1동"
+  },
+  {
+    "idx": 738,
+    "parent_idx": 102,
+    "third_city": "고산2동"
+  },
+  {
+    "idx": 739,
+    "parent_idx": 102,
+    "third_city": "고산3동"
+  },
+  {
+    "idx": 740,
+    "parent_idx": 103,
+    "third_city": "성당동"
+  },
+  {
+    "idx": 741,
+    "parent_idx": 103,
+    "third_city": "두류1.2동"
+  },
+  {
+    "idx": 742,
+    "parent_idx": 103,
+    "third_city": "두류3동"
+  },
+  {
+    "idx": 743,
+    "parent_idx": 103,
+    "third_city": "감삼동"
+  },
+  {
+    "idx": 744,
+    "parent_idx": 103,
+    "third_city": "죽전동"
+  },
+  {
+    "idx": 745,
+    "parent_idx": 103,
+    "third_city": "장기동"
+  },
+  {
+    "idx": 746,
+    "parent_idx": 103,
+    "third_city": "용산1동"
+  },
+  {
+    "idx": 747,
+    "parent_idx": 103,
+    "third_city": "용산2동"
+  },
+  {
+    "idx": 748,
+    "parent_idx": 103,
+    "third_city": "이곡1동"
+  },
+  {
+    "idx": 749,
+    "parent_idx": 103,
+    "third_city": "이곡2동"
+  },
+  {
+    "idx": 750,
+    "parent_idx": 103,
+    "third_city": "신당동"
+  },
+  {
+    "idx": 751,
+    "parent_idx": 103,
+    "third_city": "본리동"
+  },
+  {
+    "idx": 752,
+    "parent_idx": 103,
+    "third_city": "월성1동"
+  },
+  {
+    "idx": 753,
+    "parent_idx": 103,
+    "third_city": "월성2동"
+  },
+  {
+    "idx": 754,
+    "parent_idx": 103,
+    "third_city": "진천동"
+  },
+  {
+    "idx": 755,
+    "parent_idx": 103,
+    "third_city": "진천동"
+  },
+  {
+    "idx": 756,
+    "parent_idx": 103,
+    "third_city": "상인1동"
+  },
+  {
+    "idx": 757,
+    "parent_idx": 103,
+    "third_city": "상인2동"
+  },
+  {
+    "idx": 758,
+    "parent_idx": 103,
+    "third_city": "상인3동"
+  },
+  {
+    "idx": 759,
+    "parent_idx": 103,
+    "third_city": "도원동"
+  },
+  {
+    "idx": 760,
+    "parent_idx": 103,
+    "third_city": "송현1동"
+  },
+  {
+    "idx": 761,
+    "parent_idx": 103,
+    "third_city": "송현2동"
+  },
+  {
+    "idx": 762,
+    "parent_idx": 103,
+    "third_city": "본동"
+  },
+  {
+    "idx": 763,
+    "parent_idx": 104,
+    "third_city": "화원읍"
+  },
+  {
+    "idx": 764,
+    "parent_idx": 104,
+    "third_city": "논공읍"
+  },
+  {
+    "idx": 765,
+    "parent_idx": 104,
+    "third_city": "논공읍공단출장소"
+  },
+  {
+    "idx": 766,
+    "parent_idx": 104,
+    "third_city": "다사읍"
+  },
+  {
+    "idx": 767,
+    "parent_idx": 104,
+    "third_city": "다사읍서재출장소"
+  },
+  {
+    "idx": 768,
+    "parent_idx": 104,
+    "third_city": "가창면"
+  },
+  {
+    "idx": 769,
+    "parent_idx": 104,
+    "third_city": "하빈면"
+  },
+  {
+    "idx": 770,
+    "parent_idx": 104,
+    "third_city": "옥포면"
+  },
+  {
+    "idx": 771,
+    "parent_idx": 104,
+    "third_city": "현풍면"
+  },
+  {
+    "idx": 772,
+    "parent_idx": 104,
+    "third_city": "유가면"
+  },
+  {
+    "idx": 773,
+    "parent_idx": 104,
+    "third_city": "구지면"
+  },
+  {
+    "idx": 774,
+    "parent_idx": 66,
+    "third_city": "연안동"
+  },
+  {
+    "idx": 775,
+    "parent_idx": 66,
+    "third_city": "신포동"
+  },
+  {
+    "idx": 776,
+    "parent_idx": 66,
+    "third_city": "신흥동"
+  },
+  {
+    "idx": 777,
+    "parent_idx": 66,
+    "third_city": "도원동"
+  },
+  {
+    "idx": 778,
+    "parent_idx": 66,
+    "third_city": "율목동"
+  },
+  {
+    "idx": 779,
+    "parent_idx": 66,
+    "third_city": "동인천동"
+  },
+  {
+    "idx": 780,
+    "parent_idx": 66,
+    "third_city": "북성동"
+  },
+  {
+    "idx": 781,
+    "parent_idx": 66,
+    "third_city": "송월동"
+  },
+  {
+    "idx": 782,
+    "parent_idx": 66,
+    "third_city": "영종동"
+  },
+  {
+    "idx": 783,
+    "parent_idx": 66,
+    "third_city": "영종1동"
+  },
+  {
+    "idx": 784,
+    "parent_idx": 66,
+    "third_city": "운서동"
+  },
+  {
+    "idx": 785,
+    "parent_idx": 66,
+    "third_city": "용유동"
+  },
+  {
+    "idx": 786,
+    "parent_idx": 67,
+    "third_city": "만석동"
+  },
+  {
+    "idx": 787,
+    "parent_idx": 67,
+    "third_city": "화수1.화평동"
+  },
+  {
+    "idx": 788,
+    "parent_idx": 67,
+    "third_city": "화수2동"
+  },
+  {
+    "idx": 789,
+    "parent_idx": 67,
+    "third_city": "송현1.2동"
+  },
+  {
+    "idx": 790,
+    "parent_idx": 67,
+    "third_city": "송현3동"
+  },
+  {
+    "idx": 791,
+    "parent_idx": 67,
+    "third_city": "송림1동"
+  },
+  {
+    "idx": 792,
+    "parent_idx": 67,
+    "third_city": "송림2동"
+  },
+  {
+    "idx": 793,
+    "parent_idx": 67,
+    "third_city": "송림3.5동"
+  },
+  {
+    "idx": 794,
+    "parent_idx": 67,
+    "third_city": "송림4동"
+  },
+  {
+    "idx": 795,
+    "parent_idx": 67,
+    "third_city": "송림6동"
+  },
+  {
+    "idx": 796,
+    "parent_idx": 67,
+    "third_city": "금창동"
+  },
+  {
+    "idx": 797,
+    "parent_idx": 68,
+    "third_city": "숭의2동"
+  },
+  {
+    "idx": 798,
+    "parent_idx": 68,
+    "third_city": "숭의1,3동"
+  },
+  {
+    "idx": 799,
+    "parent_idx": 68,
+    "third_city": "숭의4동"
+  },
+  {
+    "idx": 800,
+    "parent_idx": 68,
+    "third_city": "용현1,4동"
+  },
+  {
+    "idx": 801,
+    "parent_idx": 68,
+    "third_city": "용현2동"
+  },
+  {
+    "idx": 802,
+    "parent_idx": 68,
+    "third_city": "용현3동"
+  },
+  {
+    "idx": 803,
+    "parent_idx": 68,
+    "third_city": "용현5동"
+  },
+  {
+    "idx": 804,
+    "parent_idx": 68,
+    "third_city": "학익1동"
+  },
+  {
+    "idx": 805,
+    "parent_idx": 68,
+    "third_city": "학익2동"
+  },
+  {
+    "idx": 806,
+    "parent_idx": 68,
+    "third_city": "도화1동"
+  },
+  {
+    "idx": 807,
+    "parent_idx": 68,
+    "third_city": "도화2,3동"
+  },
+  {
+    "idx": 808,
+    "parent_idx": 68,
+    "third_city": "주안1동"
+  },
+  {
+    "idx": 809,
+    "parent_idx": 68,
+    "third_city": "주안2동"
+  },
+  {
+    "idx": 810,
+    "parent_idx": 68,
+    "third_city": "주안3동"
+  },
+  {
+    "idx": 811,
+    "parent_idx": 68,
+    "third_city": "주안4동"
+  },
+  {
+    "idx": 812,
+    "parent_idx": 68,
+    "third_city": "주안5동"
+  },
+  {
+    "idx": 813,
+    "parent_idx": 68,
+    "third_city": "주안6동"
+  },
+  {
+    "idx": 814,
+    "parent_idx": 68,
+    "third_city": "주안7동"
+  },
+  {
+    "idx": 815,
+    "parent_idx": 68,
+    "third_city": "주안8동"
+  },
+  {
+    "idx": 816,
+    "parent_idx": 68,
+    "third_city": "관교동"
+  },
+  {
+    "idx": 817,
+    "parent_idx": 68,
+    "third_city": "문학동"
+  },
+  {
+    "idx": 818,
+    "parent_idx": 69,
+    "third_city": "옥련1동"
+  },
+  {
+    "idx": 819,
+    "parent_idx": 69,
+    "third_city": "옥련2동"
+  },
+  {
+    "idx": 820,
+    "parent_idx": 69,
+    "third_city": "선학동"
+  },
+  {
+    "idx": 821,
+    "parent_idx": 69,
+    "third_city": "연수1동"
+  },
+  {
+    "idx": 822,
+    "parent_idx": 69,
+    "third_city": "연수2동"
+  },
+  {
+    "idx": 823,
+    "parent_idx": 69,
+    "third_city": "연수3동"
+  },
+  {
+    "idx": 824,
+    "parent_idx": 69,
+    "third_city": "청학동"
+  },
+  {
+    "idx": 825,
+    "parent_idx": 69,
+    "third_city": "동춘1동"
+  },
+  {
+    "idx": 826,
+    "parent_idx": 69,
+    "third_city": "동춘2동"
+  },
+  {
+    "idx": 827,
+    "parent_idx": 69,
+    "third_city": "동춘3동"
+  },
+  {
+    "idx": 828,
+    "parent_idx": 69,
+    "third_city": "송도1동"
+  },
+  {
+    "idx": 829,
+    "parent_idx": 69,
+    "third_city": "송도2동"
+  },
+  {
+    "idx": 830,
+    "parent_idx": 69,
+    "third_city": "송도3동"
+  },
+  {
+    "idx": 831,
+    "parent_idx": 70,
+    "third_city": "구월1동"
+  },
+  {
+    "idx": 832,
+    "parent_idx": 70,
+    "third_city": "구월2동"
+  },
+  {
+    "idx": 833,
+    "parent_idx": 70,
+    "third_city": "구월3동"
+  },
+  {
+    "idx": 834,
+    "parent_idx": 70,
+    "third_city": "구월4동"
+  },
+  {
+    "idx": 835,
+    "parent_idx": 70,
+    "third_city": "간석1동"
+  },
+  {
+    "idx": 836,
+    "parent_idx": 70,
+    "third_city": "간석2동"
+  },
+  {
+    "idx": 837,
+    "parent_idx": 70,
+    "third_city": "간석3동"
+  },
+  {
+    "idx": 838,
+    "parent_idx": 70,
+    "third_city": "간석4동"
+  },
+  {
+    "idx": 839,
+    "parent_idx": 70,
+    "third_city": "만수1동"
+  },
+  {
+    "idx": 840,
+    "parent_idx": 70,
+    "third_city": "만수2동"
+  },
+  {
+    "idx": 841,
+    "parent_idx": 70,
+    "third_city": "만수3동"
+  },
+  {
+    "idx": 842,
+    "parent_idx": 70,
+    "third_city": "만수4동"
+  },
+  {
+    "idx": 843,
+    "parent_idx": 70,
+    "third_city": "만수5동"
+  },
+  {
+    "idx": 844,
+    "parent_idx": 70,
+    "third_city": "만수6동"
+  },
+  {
+    "idx": 845,
+    "parent_idx": 70,
+    "third_city": "장수서창동"
+  },
+  {
+    "idx": 846,
+    "parent_idx": 70,
+    "third_city": "남촌도림동"
+  },
+  {
+    "idx": 847,
+    "parent_idx": 70,
+    "third_city": "논현1동"
+  },
+  {
+    "idx": 848,
+    "parent_idx": 70,
+    "third_city": "논현2동"
+  },
+  {
+    "idx": 849,
+    "parent_idx": 70,
+    "third_city": "논현고잔동"
+  },
+  {
+    "idx": 850,
+    "parent_idx": 71,
+    "third_city": "부평1동"
+  },
+  {
+    "idx": 851,
+    "parent_idx": 71,
+    "third_city": "부평2동"
+  },
+  {
+    "idx": 852,
+    "parent_idx": 71,
+    "third_city": "부평3동"
+  },
+  {
+    "idx": 853,
+    "parent_idx": 71,
+    "third_city": "부평4동"
+  },
+  {
+    "idx": 854,
+    "parent_idx": 71,
+    "third_city": "부평5동"
+  },
+  {
+    "idx": 855,
+    "parent_idx": 71,
+    "third_city": "부평6동"
+  },
+  {
+    "idx": 856,
+    "parent_idx": 71,
+    "third_city": "산곡1동"
+  },
+  {
+    "idx": 857,
+    "parent_idx": 71,
+    "third_city": "산곡2동"
+  },
+  {
+    "idx": 858,
+    "parent_idx": 71,
+    "third_city": "산곡3동"
+  },
+  {
+    "idx": 859,
+    "parent_idx": 71,
+    "third_city": "산곡4동"
+  },
+  {
+    "idx": 860,
+    "parent_idx": 71,
+    "third_city": "청천1동"
+  },
+  {
+    "idx": 861,
+    "parent_idx": 71,
+    "third_city": "청천2동"
+  },
+  {
+    "idx": 862,
+    "parent_idx": 71,
+    "third_city": "갈산1동"
+  },
+  {
+    "idx": 863,
+    "parent_idx": 71,
+    "third_city": "갈산2동"
+  },
+  {
+    "idx": 864,
+    "parent_idx": 71,
+    "third_city": "삼산1동"
+  },
+  {
+    "idx": 865,
+    "parent_idx": 71,
+    "third_city": "삼산2동"
+  },
+  {
+    "idx": 866,
+    "parent_idx": 71,
+    "third_city": "부개1동"
+  },
+  {
+    "idx": 867,
+    "parent_idx": 71,
+    "third_city": "부개2동"
+  },
+  {
+    "idx": 868,
+    "parent_idx": 71,
+    "third_city": "부개3동"
+  },
+  {
+    "idx": 869,
+    "parent_idx": 71,
+    "third_city": "일신동"
+  },
+  {
+    "idx": 870,
+    "parent_idx": 71,
+    "third_city": "십정1동"
+  },
+  {
+    "idx": 871,
+    "parent_idx": 71,
+    "third_city": "십정2동"
+  },
+  {
+    "idx": 872,
+    "parent_idx": 72,
+    "third_city": "효성1동"
+  },
+  {
+    "idx": 873,
+    "parent_idx": 72,
+    "third_city": "효성2동"
+  },
+  {
+    "idx": 874,
+    "parent_idx": 72,
+    "third_city": "계산1동"
+  },
+  {
+    "idx": 875,
+    "parent_idx": 72,
+    "third_city": "계산2동"
+  },
+  {
+    "idx": 876,
+    "parent_idx": 72,
+    "third_city": "계산3동"
+  },
+  {
+    "idx": 877,
+    "parent_idx": 72,
+    "third_city": "계산4동"
+  },
+  {
+    "idx": 878,
+    "parent_idx": 72,
+    "third_city": "작전1동"
+  },
+  {
+    "idx": 879,
+    "parent_idx": 72,
+    "third_city": "작전2동"
+  },
+  {
+    "idx": 880,
+    "parent_idx": 72,
+    "third_city": "작전서운동"
+  },
+  {
+    "idx": 881,
+    "parent_idx": 72,
+    "third_city": "계양1동"
+  },
+  {
+    "idx": 882,
+    "parent_idx": 72,
+    "third_city": "계양2동"
+  },
+  {
+    "idx": 883,
+    "parent_idx": 72,
+    "third_city": "계양3동"
+  },
+  {
+    "idx": 884,
+    "parent_idx": 73,
+    "third_city": "검암경서동"
+  },
+  {
+    "idx": 885,
+    "parent_idx": 73,
+    "third_city": "연희동"
+  },
+  {
+    "idx": 886,
+    "parent_idx": 73,
+    "third_city": "청라1동"
+  },
+  {
+    "idx": 887,
+    "parent_idx": 73,
+    "third_city": "청라2동"
+  },
+  {
+    "idx": 888,
+    "parent_idx": 73,
+    "third_city": "청라3동"
+  },
+  {
+    "idx": 889,
+    "parent_idx": 73,
+    "third_city": "가정1동"
+  },
+  {
+    "idx": 890,
+    "parent_idx": 73,
+    "third_city": "가정2동"
+  },
+  {
+    "idx": 891,
+    "parent_idx": 73,
+    "third_city": "가정3동"
+  },
+  {
+    "idx": 892,
+    "parent_idx": 73,
+    "third_city": "석남1동"
+  },
+  {
+    "idx": 893,
+    "parent_idx": 73,
+    "third_city": "석남2동"
+  },
+  {
+    "idx": 894,
+    "parent_idx": 73,
+    "third_city": "석남3동"
+  },
+  {
+    "idx": 895,
+    "parent_idx": 73,
+    "third_city": "신현원창동"
+  },
+  {
+    "idx": 896,
+    "parent_idx": 73,
+    "third_city": "가좌1동"
+  },
+  {
+    "idx": 897,
+    "parent_idx": 73,
+    "third_city": "가좌2동"
+  },
+  {
+    "idx": 898,
+    "parent_idx": 73,
+    "third_city": "가좌3동"
+  },
+  {
+    "idx": 899,
+    "parent_idx": 73,
+    "third_city": "가좌4동"
+  },
+  {
+    "idx": 900,
+    "parent_idx": 73,
+    "third_city": "검단1동"
+  },
+  {
+    "idx": 901,
+    "parent_idx": 73,
+    "third_city": "검단2동"
+  },
+  {
+    "idx": 902,
+    "parent_idx": 73,
+    "third_city": "검단3동"
+  },
+  {
+    "idx": 903,
+    "parent_idx": 73,
+    "third_city": "검단4동"
+  },
+  {
+    "idx": 904,
+    "parent_idx": 73,
+    "third_city": "검단5동"
+  },
+  {
+    "idx": 905,
+    "parent_idx": 74,
+    "third_city": "강화읍"
+  },
+  {
+    "idx": 906,
+    "parent_idx": 74,
+    "third_city": "선원면"
+  },
+  {
+    "idx": 907,
+    "parent_idx": 74,
+    "third_city": "불은면"
+  },
+  {
+    "idx": 908,
+    "parent_idx": 74,
+    "third_city": "길상면"
+  },
+  {
+    "idx": 909,
+    "parent_idx": 74,
+    "third_city": "화도면"
+  },
+  {
+    "idx": 910,
+    "parent_idx": 74,
+    "third_city": "양도면"
+  },
+  {
+    "idx": 911,
+    "parent_idx": 74,
+    "third_city": "내가면"
+  },
+  {
+    "idx": 912,
+    "parent_idx": 74,
+    "third_city": "하점면"
+  },
+  {
+    "idx": 913,
+    "parent_idx": 74,
+    "third_city": "양사면"
+  },
+  {
+    "idx": 914,
+    "parent_idx": 74,
+    "third_city": "송해면"
+  },
+  {
+    "idx": 915,
+    "parent_idx": 74,
+    "third_city": "교동면"
+  },
+  {
+    "idx": 916,
+    "parent_idx": 74,
+    "third_city": "삼산면"
+  },
+  {
+    "idx": 917,
+    "parent_idx": 74,
+    "third_city": "서도면"
+  },
+  {
+    "idx": 918,
+    "parent_idx": 74,
+    "third_city": "서도면볼음출장소"
+  },
+  {
+    "idx": 919,
+    "parent_idx": 75,
+    "third_city": "북도면"
+  },
+  {
+    "idx": 920,
+    "parent_idx": 75,
+    "third_city": "북도면장봉출장소"
+  },
+  {
+    "idx": 921,
+    "parent_idx": 75,
+    "third_city": "백령면"
+  },
+  {
+    "idx": 922,
+    "parent_idx": 75,
+    "third_city": "대청면"
+  },
+  {
+    "idx": 923,
+    "parent_idx": 75,
+    "third_city": "대청면소청출장소"
+  },
+  {
+    "idx": 924,
+    "parent_idx": 75,
+    "third_city": "덕적면"
+  },
+  {
+    "idx": 925,
+    "parent_idx": 75,
+    "third_city": "영흥면"
+  },
+  {
+    "idx": 926,
+    "parent_idx": 75,
+    "third_city": "자월면"
+  },
+  {
+    "idx": 927,
+    "parent_idx": 75,
+    "third_city": "연평면"
+  },
+  {
+    "idx": 928,
+    "parent_idx": 110,
+    "third_city": "충장동"
+  },
+  {
+    "idx": 929,
+    "parent_idx": 110,
+    "third_city": "동명동"
+  },
+  {
+    "idx": 930,
+    "parent_idx": 110,
+    "third_city": "계림1동"
+  },
+  {
+    "idx": 931,
+    "parent_idx": 110,
+    "third_city": "계림2동"
+  },
+  {
+    "idx": 932,
+    "parent_idx": 110,
+    "third_city": "산수1동"
+  },
+  {
+    "idx": 933,
+    "parent_idx": 110,
+    "third_city": "산수2동"
+  },
+  {
+    "idx": 934,
+    "parent_idx": 110,
+    "third_city": "지산1동"
+  },
+  {
+    "idx": 935,
+    "parent_idx": 110,
+    "third_city": "지산2동"
+  },
+  {
+    "idx": 936,
+    "parent_idx": 110,
+    "third_city": "서남동"
+  },
+  {
+    "idx": 937,
+    "parent_idx": 110,
+    "third_city": "학동"
+  },
+  {
+    "idx": 938,
+    "parent_idx": 110,
+    "third_city": "학운동"
+  },
+  {
+    "idx": 939,
+    "parent_idx": 110,
+    "third_city": "지원1동"
+  },
+  {
+    "idx": 940,
+    "parent_idx": 110,
+    "third_city": "지원2동"
+  },
+  {
+    "idx": 941,
+    "parent_idx": 111,
+    "third_city": "양동"
+  },
+  {
+    "idx": 942,
+    "parent_idx": 111,
+    "third_city": "양3동"
+  },
+  {
+    "idx": 943,
+    "parent_idx": 111,
+    "third_city": "농성1동"
+  },
+  {
+    "idx": 944,
+    "parent_idx": 111,
+    "third_city": "농성2동"
+  },
+  {
+    "idx": 945,
+    "parent_idx": 111,
+    "third_city": "광천동"
+  },
+  {
+    "idx": 946,
+    "parent_idx": 111,
+    "third_city": "유덕동"
+  },
+  {
+    "idx": 947,
+    "parent_idx": 111,
+    "third_city": "치평동"
+  },
+  {
+    "idx": 948,
+    "parent_idx": 111,
+    "third_city": "상무1동"
+  },
+  {
+    "idx": 949,
+    "parent_idx": 111,
+    "third_city": "상무2동"
+  },
+  {
+    "idx": 950,
+    "parent_idx": 111,
+    "third_city": "화정1동"
+  },
+  {
+    "idx": 951,
+    "parent_idx": 111,
+    "third_city": "화정2동"
+  },
+  {
+    "idx": 952,
+    "parent_idx": 111,
+    "third_city": "화정3동"
+  },
+  {
+    "idx": 953,
+    "parent_idx": 111,
+    "third_city": "화정4동"
+  },
+  {
+    "idx": 954,
+    "parent_idx": 111,
+    "third_city": "서창동"
+  },
+  {
+    "idx": 955,
+    "parent_idx": 111,
+    "third_city": "금호1동"
+  },
+  {
+    "idx": 956,
+    "parent_idx": 111,
+    "third_city": "금호2동"
+  },
+  {
+    "idx": 957,
+    "parent_idx": 111,
+    "third_city": "풍암동"
+  },
+  {
+    "idx": 958,
+    "parent_idx": 111,
+    "third_city": "동천동"
+  },
+  {
+    "idx": 959,
+    "parent_idx": 112,
+    "third_city": "양림동"
+  },
+  {
+    "idx": 960,
+    "parent_idx": 112,
+    "third_city": "방림1동"
+  },
+  {
+    "idx": 961,
+    "parent_idx": 112,
+    "third_city": "방림2동"
+  },
+  {
+    "idx": 962,
+    "parent_idx": 112,
+    "third_city": "봉선1동"
+  },
+  {
+    "idx": 963,
+    "parent_idx": 112,
+    "third_city": "봉선2동"
+  },
+  {
+    "idx": 964,
+    "parent_idx": 112,
+    "third_city": "사직동"
+  },
+  {
+    "idx": 965,
+    "parent_idx": 112,
+    "third_city": "월산동"
+  },
+  {
+    "idx": 966,
+    "parent_idx": 112,
+    "third_city": "월산4동"
+  },
+  {
+    "idx": 967,
+    "parent_idx": 112,
+    "third_city": "월산5동"
+  },
+  {
+    "idx": 968,
+    "parent_idx": 112,
+    "third_city": "백운1동"
+  },
+  {
+    "idx": 969,
+    "parent_idx": 112,
+    "third_city": "백운2동"
+  },
+  {
+    "idx": 970,
+    "parent_idx": 112,
+    "third_city": "주월1동"
+  },
+  {
+    "idx": 971,
+    "parent_idx": 112,
+    "third_city": "주월2동"
+  },
+  {
+    "idx": 972,
+    "parent_idx": 112,
+    "third_city": "효덕동"
+  },
+  {
+    "idx": 973,
+    "parent_idx": 112,
+    "third_city": "송암동"
+  },
+  {
+    "idx": 974,
+    "parent_idx": 112,
+    "third_city": "대촌동"
+  },
+  {
+    "idx": 975,
+    "parent_idx": 113,
+    "third_city": "중흥1동"
+  },
+  {
+    "idx": 976,
+    "parent_idx": 113,
+    "third_city": "중흥2동"
+  },
+  {
+    "idx": 977,
+    "parent_idx": 113,
+    "third_city": "중흥3동"
+  },
+  {
+    "idx": 978,
+    "parent_idx": 113,
+    "third_city": "중앙동"
+  },
+  {
+    "idx": 979,
+    "parent_idx": 113,
+    "third_city": "임동"
+  },
+  {
+    "idx": 980,
+    "parent_idx": 113,
+    "third_city": "신안동"
+  },
+  {
+    "idx": 981,
+    "parent_idx": 113,
+    "third_city": "용봉동"
+  },
+  {
+    "idx": 982,
+    "parent_idx": 113,
+    "third_city": "운암1동"
+  },
+  {
+    "idx": 983,
+    "parent_idx": 113,
+    "third_city": "운암2동"
+  },
+  {
+    "idx": 984,
+    "parent_idx": 113,
+    "third_city": "운암3동"
+  },
+  {
+    "idx": 985,
+    "parent_idx": 113,
+    "third_city": "동림동"
+  },
+  {
+    "idx": 986,
+    "parent_idx": 113,
+    "third_city": "우산동"
+  },
+  {
+    "idx": 987,
+    "parent_idx": 113,
+    "third_city": "풍향동"
+  },
+  {
+    "idx": 988,
+    "parent_idx": 113,
+    "third_city": "문화동"
+  },
+  {
+    "idx": 989,
+    "parent_idx": 113,
+    "third_city": "문흥1동"
+  },
+  {
+    "idx": 990,
+    "parent_idx": 113,
+    "third_city": "문흥2동"
+  },
+  {
+    "idx": 991,
+    "parent_idx": 113,
+    "third_city": "두암1동"
+  },
+  {
+    "idx": 992,
+    "parent_idx": 113,
+    "third_city": "두암2동"
+  },
+  {
+    "idx": 993,
+    "parent_idx": 113,
+    "third_city": "두암3동"
+  },
+  {
+    "idx": 994,
+    "parent_idx": 113,
+    "third_city": "삼각동"
+  },
+  {
+    "idx": 995,
+    "parent_idx": 113,
+    "third_city": "일곡동"
+  },
+  {
+    "idx": 996,
+    "parent_idx": 113,
+    "third_city": "매곡동"
+  },
+  {
+    "idx": 997,
+    "parent_idx": 113,
+    "third_city": "오치1동"
+  },
+  {
+    "idx": 998,
+    "parent_idx": 113,
+    "third_city": "오치2동"
+  },
+  {
+    "idx": 999,
+    "parent_idx": 113,
+    "third_city": "석곡동"
+  },
+  {
+    "idx": 1000,
+    "parent_idx": 113,
+    "third_city": "건국동"
+  },
+  {
+    "idx": 1001,
+    "parent_idx": 113,
+    "third_city": "양산동"
+  },
+  {
+    "idx": 1002,
+    "parent_idx": 114,
+    "third_city": "송정1동"
+  },
+  {
+    "idx": 1003,
+    "parent_idx": 114,
+    "third_city": "송정2동"
+  },
+  {
+    "idx": 1004,
+    "parent_idx": 114,
+    "third_city": "도산동"
+  },
+  {
+    "idx": 1005,
+    "parent_idx": 114,
+    "third_city": "신흥동"
+  },
+  {
+    "idx": 1006,
+    "parent_idx": 114,
+    "third_city": "어룡동"
+  },
+  {
+    "idx": 1007,
+    "parent_idx": 114,
+    "third_city": "우산동"
+  },
+  {
+    "idx": 1008,
+    "parent_idx": 114,
+    "third_city": "월곡1동"
+  },
+  {
+    "idx": 1009,
+    "parent_idx": 114,
+    "third_city": "월곡2동"
+  },
+  {
+    "idx": 1010,
+    "parent_idx": 114,
+    "third_city": "비아동"
+  },
+  {
+    "idx": 1011,
+    "parent_idx": 114,
+    "third_city": "첨단1동"
+  },
+  {
+    "idx": 1012,
+    "parent_idx": 114,
+    "third_city": "첨단2동"
+  },
+  {
+    "idx": 1013,
+    "parent_idx": 114,
+    "third_city": "신가동"
+  },
+  {
+    "idx": 1014,
+    "parent_idx": 114,
+    "third_city": "운남동"
+  },
+  {
+    "idx": 1015,
+    "parent_idx": 114,
+    "third_city": "수완동"
+  },
+  {
+    "idx": 1016,
+    "parent_idx": 114,
+    "third_city": "하남동"
+  },
+  {
+    "idx": 1017,
+    "parent_idx": 114,
+    "third_city": "임곡동"
+  },
+  {
+    "idx": 1018,
+    "parent_idx": 114,
+    "third_city": "동곡동"
+  },
+  {
+    "idx": 1019,
+    "parent_idx": 114,
+    "third_city": "평동"
+  },
+  {
+    "idx": 1020,
+    "parent_idx": 114,
+    "third_city": "삼도동"
+  },
+  {
+    "idx": 1021,
+    "parent_idx": 114,
+    "third_city": "본량동"
+  },
+  {
+    "idx": 1022,
+    "parent_idx": 114,
+    "third_city": "신창동"
+  },
+  {
+    "idx": 1023,
+    "parent_idx": 92,
+    "third_city": "중앙동"
+  },
+  {
+    "idx": 1024,
+    "parent_idx": 92,
+    "third_city": "효동"
+  },
+  {
+    "idx": 1025,
+    "parent_idx": 92,
+    "third_city": "신인동"
+  },
+  {
+    "idx": 1026,
+    "parent_idx": 92,
+    "third_city": "판암1동"
+  },
+  {
+    "idx": 1027,
+    "parent_idx": 92,
+    "third_city": "판암2동"
+  },
+  {
+    "idx": 1028,
+    "parent_idx": 92,
+    "third_city": "용운동"
+  },
+  {
+    "idx": 1029,
+    "parent_idx": 92,
+    "third_city": "대동"
+  },
+  {
+    "idx": 1030,
+    "parent_idx": 92,
+    "third_city": "자양동"
+  },
+  {
+    "idx": 1031,
+    "parent_idx": 92,
+    "third_city": "가양1동"
+  },
+  {
+    "idx": 1032,
+    "parent_idx": 92,
+    "third_city": "가양2동"
+  },
+  {
+    "idx": 1033,
+    "parent_idx": 92,
+    "third_city": "용전동"
+  },
+  {
+    "idx": 1034,
+    "parent_idx": 92,
+    "third_city": "성남동"
+  },
+  {
+    "idx": 1035,
+    "parent_idx": 92,
+    "third_city": "홍도동"
+  },
+  {
+    "idx": 1036,
+    "parent_idx": 92,
+    "third_city": "삼성동"
+  },
+  {
+    "idx": 1037,
+    "parent_idx": 92,
+    "third_city": "대청동"
+  },
+  {
+    "idx": 1038,
+    "parent_idx": 92,
+    "third_city": "산내동"
+  },
+  {
+    "idx": 1039,
+    "parent_idx": 93,
+    "third_city": "은행선화동"
+  },
+  {
+    "idx": 1040,
+    "parent_idx": 93,
+    "third_city": "목동"
+  },
+  {
+    "idx": 1041,
+    "parent_idx": 93,
+    "third_city": "중촌동"
+  },
+  {
+    "idx": 1042,
+    "parent_idx": 93,
+    "third_city": "대흥동"
+  },
+  {
+    "idx": 1043,
+    "parent_idx": 93,
+    "third_city": "문창동"
+  },
+  {
+    "idx": 1044,
+    "parent_idx": 93,
+    "third_city": "석교동"
+  },
+  {
+    "idx": 1045,
+    "parent_idx": 93,
+    "third_city": "대사동"
+  },
+  {
+    "idx": 1046,
+    "parent_idx": 93,
+    "third_city": "부사동"
+  },
+  {
+    "idx": 1047,
+    "parent_idx": 93,
+    "third_city": "용두동"
+  },
+  {
+    "idx": 1048,
+    "parent_idx": 93,
+    "third_city": "오류동"
+  },
+  {
+    "idx": 1049,
+    "parent_idx": 93,
+    "third_city": "태평1동"
+  },
+  {
+    "idx": 1050,
+    "parent_idx": 93,
+    "third_city": "태평2동"
+  },
+  {
+    "idx": 1051,
+    "parent_idx": 93,
+    "third_city": "유천1동"
+  },
+  {
+    "idx": 1052,
+    "parent_idx": 93,
+    "third_city": "유천2동"
+  },
+  {
+    "idx": 1053,
+    "parent_idx": 93,
+    "third_city": "문화1동"
+  },
+  {
+    "idx": 1054,
+    "parent_idx": 93,
+    "third_city": "문화2동"
+  },
+  {
+    "idx": 1055,
+    "parent_idx": 93,
+    "third_city": "산성동"
+  },
+  {
+    "idx": 1056,
+    "parent_idx": 94,
+    "third_city": "복수동"
+  },
+  {
+    "idx": 1057,
+    "parent_idx": 94,
+    "third_city": "도마1동"
+  },
+  {
+    "idx": 1058,
+    "parent_idx": 94,
+    "third_city": "도마2동"
+  },
+  {
+    "idx": 1059,
+    "parent_idx": 94,
+    "third_city": "정림동"
+  },
+  {
+    "idx": 1060,
+    "parent_idx": 94,
+    "third_city": "변동"
+  },
+  {
+    "idx": 1061,
+    "parent_idx": 94,
+    "third_city": "용문동"
+  },
+  {
+    "idx": 1062,
+    "parent_idx": 94,
+    "third_city": "탄방동"
+  },
+  {
+    "idx": 1063,
+    "parent_idx": 94,
+    "third_city": "괴정동"
+  },
+  {
+    "idx": 1064,
+    "parent_idx": 94,
+    "third_city": "가장동"
+  },
+  {
+    "idx": 1065,
+    "parent_idx": 94,
+    "third_city": "내동"
+  },
+  {
+    "idx": 1066,
+    "parent_idx": 94,
+    "third_city": "갈마1동"
+  },
+  {
+    "idx": 1067,
+    "parent_idx": 94,
+    "third_city": "갈마2동"
+  },
+  {
+    "idx": 1068,
+    "parent_idx": 94,
+    "third_city": "월평1동"
+  },
+  {
+    "idx": 1069,
+    "parent_idx": 94,
+    "third_city": "월평2동"
+  },
+  {
+    "idx": 1070,
+    "parent_idx": 94,
+    "third_city": "월평3동"
+  },
+  {
+    "idx": 1071,
+    "parent_idx": 94,
+    "third_city": "가수원동"
+  },
+  {
+    "idx": 1072,
+    "parent_idx": 94,
+    "third_city": "관저1동"
+  },
+  {
+    "idx": 1073,
+    "parent_idx": 94,
+    "third_city": "관저2동"
+  },
+  {
+    "idx": 1074,
+    "parent_idx": 94,
+    "third_city": "기성동"
+  },
+  {
+    "idx": 1075,
+    "parent_idx": 94,
+    "third_city": "둔산1동"
+  },
+  {
+    "idx": 1076,
+    "parent_idx": 94,
+    "third_city": "둔산2동"
+  },
+  {
+    "idx": 1077,
+    "parent_idx": 94,
+    "third_city": "만년동"
+  },
+  {
+    "idx": 1078,
+    "parent_idx": 94,
+    "third_city": "둔산3동"
+  },
+  {
+    "idx": 1079,
+    "parent_idx": 95,
+    "third_city": "진잠동"
+  },
+  {
+    "idx": 1080,
+    "parent_idx": 95,
+    "third_city": "온천1동"
+  },
+  {
+    "idx": 1081,
+    "parent_idx": 95,
+    "third_city": "온천2동"
+  },
+  {
+    "idx": 1082,
+    "parent_idx": 95,
+    "third_city": "온천2동"
+  },
+  {
+    "idx": 1083,
+    "parent_idx": 95,
+    "third_city": "노은1동"
+  },
+  {
+    "idx": 1084,
+    "parent_idx": 95,
+    "third_city": "노은2동"
+  },
+  {
+    "idx": 1085,
+    "parent_idx": 95,
+    "third_city": "노은3동"
+  },
+  {
+    "idx": 1086,
+    "parent_idx": 95,
+    "third_city": "신성동"
+  },
+  {
+    "idx": 1087,
+    "parent_idx": 95,
+    "third_city": "전민동"
+  },
+  {
+    "idx": 1088,
+    "parent_idx": 95,
+    "third_city": "구즉동"
+  },
+  {
+    "idx": 1089,
+    "parent_idx": 95,
+    "third_city": "관평동"
+  },
+  {
+    "idx": 1090,
+    "parent_idx": 95,
+    "third_city": "원신흥동"
+  },
+  {
+    "idx": 1091,
+    "parent_idx": 96,
+    "third_city": "오정동"
+  },
+  {
+    "idx": 1092,
+    "parent_idx": 96,
+    "third_city": "대화동"
+  },
+  {
+    "idx": 1093,
+    "parent_idx": 96,
+    "third_city": "회덕동"
+  },
+  {
+    "idx": 1094,
+    "parent_idx": 96,
+    "third_city": "비래동"
+  },
+  {
+    "idx": 1095,
+    "parent_idx": 96,
+    "third_city": "송촌동"
+  },
+  {
+    "idx": 1096,
+    "parent_idx": 96,
+    "third_city": "중리동"
+  },
+  {
+    "idx": 1097,
+    "parent_idx": 96,
+    "third_city": "신탄진동"
+  },
+  {
+    "idx": 1098,
+    "parent_idx": 96,
+    "third_city": "석봉동"
+  },
+  {
+    "idx": 1099,
+    "parent_idx": 96,
+    "third_city": "덕암동"
+  },
+  {
+    "idx": 1100,
+    "parent_idx": 96,
+    "third_city": "목상동"
+  },
+  {
+    "idx": 1101,
+    "parent_idx": 96,
+    "third_city": "법1동"
+  },
+  {
+    "idx": 1102,
+    "parent_idx": 96,
+    "third_city": "법2동"
+  },
+  {
+    "idx": 1103,
+    "parent_idx": 105,
+    "third_city": "학성동"
+  },
+  {
+    "idx": 1104,
+    "parent_idx": 105,
+    "third_city": "반구1동"
+  },
+  {
+    "idx": 1105,
+    "parent_idx": 105,
+    "third_city": "반구2동"
+  },
+  {
+    "idx": 1106,
+    "parent_idx": 105,
+    "third_city": "복산1동"
+  },
+  {
+    "idx": 1107,
+    "parent_idx": 105,
+    "third_city": "복산2동"
+  },
+  {
+    "idx": 1108,
+    "parent_idx": 105,
+    "third_city": "중앙동"
+  },
+  {
+    "idx": 1109,
+    "parent_idx": 105,
+    "third_city": "우정동"
+  },
+  {
+    "idx": 1110,
+    "parent_idx": 105,
+    "third_city": "태화동"
+  },
+  {
+    "idx": 1111,
+    "parent_idx": 105,
+    "third_city": "태화동"
+  },
+  {
+    "idx": 1112,
+    "parent_idx": 105,
+    "third_city": "다운동"
+  },
+  {
+    "idx": 1113,
+    "parent_idx": 105,
+    "third_city": "병영1동"
+  },
+  {
+    "idx": 1114,
+    "parent_idx": 105,
+    "third_city": "병영2동"
+  },
+  {
+    "idx": 1115,
+    "parent_idx": 105,
+    "third_city": "약사동"
+  },
+  {
+    "idx": 1116,
+    "parent_idx": 105,
+    "third_city": "성안동"
+  },
+  {
+    "idx": 1117,
+    "parent_idx": 106,
+    "third_city": "신정1동"
+  },
+  {
+    "idx": 1118,
+    "parent_idx": 106,
+    "third_city": "신정2동"
+  },
+  {
+    "idx": 1119,
+    "parent_idx": 106,
+    "third_city": "신정3동"
+  },
+  {
+    "idx": 1120,
+    "parent_idx": 106,
+    "third_city": "신정4동"
+  },
+  {
+    "idx": 1121,
+    "parent_idx": 106,
+    "third_city": "신정5동"
+  },
+  {
+    "idx": 1122,
+    "parent_idx": 106,
+    "third_city": "달동"
+  },
+  {
+    "idx": 1123,
+    "parent_idx": 106,
+    "third_city": "삼산동"
+  },
+  {
+    "idx": 1124,
+    "parent_idx": 106,
+    "third_city": "삼호동"
+  },
+  {
+    "idx": 1125,
+    "parent_idx": 106,
+    "third_city": "무거동"
+  },
+  {
+    "idx": 1126,
+    "parent_idx": 106,
+    "third_city": "옥동"
+  },
+  {
+    "idx": 1127,
+    "parent_idx": 106,
+    "third_city": "대현동"
+  },
+  {
+    "idx": 1128,
+    "parent_idx": 106,
+    "third_city": "수암동"
+  },
+  {
+    "idx": 1129,
+    "parent_idx": 106,
+    "third_city": "선암동"
+  },
+  {
+    "idx": 1130,
+    "parent_idx": 106,
+    "third_city": "야음장생포동"
+  },
+  {
+    "idx": 1131,
+    "parent_idx": 107,
+    "third_city": "방어동"
+  },
+  {
+    "idx": 1132,
+    "parent_idx": 107,
+    "third_city": "일산동"
+  },
+  {
+    "idx": 1133,
+    "parent_idx": 107,
+    "third_city": "화정동"
+  },
+  {
+    "idx": 1134,
+    "parent_idx": 107,
+    "third_city": "대송동"
+  },
+  {
+    "idx": 1135,
+    "parent_idx": 107,
+    "third_city": "전하1동"
+  },
+  {
+    "idx": 1136,
+    "parent_idx": 107,
+    "third_city": "전하2동"
+  },
+  {
+    "idx": 1137,
+    "parent_idx": 107,
+    "third_city": "남목1동"
+  },
+  {
+    "idx": 1138,
+    "parent_idx": 107,
+    "third_city": "남목2동"
+  },
+  {
+    "idx": 1139,
+    "parent_idx": 107,
+    "third_city": "남목3동"
+  },
+  {
+    "idx": 1140,
+    "parent_idx": 108,
+    "third_city": "농소1동"
+  },
+  {
+    "idx": 1141,
+    "parent_idx": 108,
+    "third_city": "농소2동"
+  },
+  {
+    "idx": 1142,
+    "parent_idx": 108,
+    "third_city": "농소3동"
+  },
+  {
+    "idx": 1143,
+    "parent_idx": 108,
+    "third_city": "강동동"
+  },
+  {
+    "idx": 1144,
+    "parent_idx": 108,
+    "third_city": "효문동"
+  },
+  {
+    "idx": 1145,
+    "parent_idx": 108,
+    "third_city": "송정동"
+  },
+  {
+    "idx": 1146,
+    "parent_idx": 108,
+    "third_city": "양정동"
+  },
+  {
+    "idx": 1147,
+    "parent_idx": 108,
+    "third_city": "염포동"
+  },
+  {
+    "idx": 1148,
+    "parent_idx": 109,
+    "third_city": "온산읍"
+  },
+  {
+    "idx": 1149,
+    "parent_idx": 109,
+    "third_city": "언양읍"
+  },
+  {
+    "idx": 1150,
+    "parent_idx": 109,
+    "third_city": "온양읍"
+  },
+  {
+    "idx": 1151,
+    "parent_idx": 109,
+    "third_city": "범서읍"
+  },
+  {
+    "idx": 1152,
+    "parent_idx": 109,
+    "third_city": "서생면"
+  },
+  {
+    "idx": 1153,
+    "parent_idx": 109,
+    "third_city": "청량면"
+  },
+  {
+    "idx": 1154,
+    "parent_idx": 109,
+    "third_city": "웅촌면"
+  },
+  {
+    "idx": 1155,
+    "parent_idx": 109,
+    "third_city": "두동면"
+  },
+  {
+    "idx": 1156,
+    "parent_idx": 109,
+    "third_city": "두서면"
+  },
+  {
+    "idx": 1157,
+    "parent_idx": 109,
+    "third_city": "상북면"
+  },
+  {
+    "idx": 1158,
+    "parent_idx": 109,
+    "third_city": "삼남면"
+  },
+  {
+    "idx": 1159,
+    "parent_idx": 109,
+    "third_city": "삼동면"
+  },
+  {
+    "idx": 1160,
+    "parent_idx": 115,
+    "third_city": "조치원읍"
+  },
+  {
+    "idx": 1161,
+    "parent_idx": 115,
+    "third_city": "연기면"
+  },
+  {
+    "idx": 1162,
+    "parent_idx": 115,
+    "third_city": "연동면"
+  },
+  {
+    "idx": 1163,
+    "parent_idx": 115,
+    "third_city": "부강면"
+  },
+  {
+    "idx": 1164,
+    "parent_idx": 115,
+    "third_city": "금남면"
+  },
+  {
+    "idx": 1165,
+    "parent_idx": 115,
+    "third_city": "장군면"
+  },
+  {
+    "idx": 1166,
+    "parent_idx": 115,
+    "third_city": "연서면"
+  },
+  {
+    "idx": 1167,
+    "parent_idx": 115,
+    "third_city": "전의면"
+  },
+  {
+    "idx": 1168,
+    "parent_idx": 115,
+    "third_city": "전동면"
+  },
+  {
+    "idx": 1169,
+    "parent_idx": 115,
+    "third_city": "소정면"
+  },
+  {
+    "idx": 1170,
+    "parent_idx": 115,
+    "third_city": "한솔동"
+  },
+  {
+    "idx": 1171,
+    "parent_idx": 115,
+    "third_city": "새롬동"
+  },
+  {
+    "idx": 1172,
+    "parent_idx": 115,
+    "third_city": "도담동"
+  },
+  {
+    "idx": 1173,
+    "parent_idx": 115,
+    "third_city": "아름동"
+  },
+  {
+    "idx": 1174,
+    "parent_idx": 115,
+    "third_city": "종촌동"
+  },
+  {
+    "idx": 1175,
+    "parent_idx": 115,
+    "third_city": "고운동"
+  },
+  {
+    "idx": 1176,
+    "parent_idx": 115,
+    "third_city": "보람동"
+  },
+  {
+    "idx": 1177,
+    "parent_idx": 26,
+    "third_city": "파장동"
+  },
+  {
+    "idx": 1178,
+    "parent_idx": 26,
+    "third_city": "율천동"
+  },
+  {
+    "idx": 1179,
+    "parent_idx": 26,
+    "third_city": "정자1동"
+  },
+  {
+    "idx": 1180,
+    "parent_idx": 26,
+    "third_city": "정자2동"
+  },
+  {
+    "idx": 1181,
+    "parent_idx": 26,
+    "third_city": "정자3동"
+  },
+  {
+    "idx": 1182,
+    "parent_idx": 26,
+    "third_city": "정자3동"
+  },
+  {
+    "idx": 1183,
+    "parent_idx": 26,
+    "third_city": "영화동"
+  },
+  {
+    "idx": 1184,
+    "parent_idx": 26,
+    "third_city": "송죽동"
+  },
+  {
+    "idx": 1185,
+    "parent_idx": 26,
+    "third_city": "조원1동"
+  },
+  {
+    "idx": 1186,
+    "parent_idx": 26,
+    "third_city": "조원2동"
+  },
+  {
+    "idx": 1187,
+    "parent_idx": 26,
+    "third_city": "연무동"
+  },
+  {
+    "idx": 1188,
+    "parent_idx": 27,
+    "third_city": "세류1동"
+  },
+  {
+    "idx": 1189,
+    "parent_idx": 27,
+    "third_city": "세류2동"
+  },
+  {
+    "idx": 1190,
+    "parent_idx": 27,
+    "third_city": "세류3동"
+  },
+  {
+    "idx": 1191,
+    "parent_idx": 27,
+    "third_city": "평동"
+  },
+  {
+    "idx": 1192,
+    "parent_idx": 27,
+    "third_city": "서둔동"
+  },
+  {
+    "idx": 1193,
+    "parent_idx": 27,
+    "third_city": "구운동"
+  },
+  {
+    "idx": 1194,
+    "parent_idx": 27,
+    "third_city": "금곡동"
+  },
+  {
+    "idx": 1195,
+    "parent_idx": 27,
+    "third_city": "호매실동"
+  },
+  {
+    "idx": 1196,
+    "parent_idx": 27,
+    "third_city": "권선1동"
+  },
+  {
+    "idx": 1197,
+    "parent_idx": 27,
+    "third_city": "권선2동"
+  },
+  {
+    "idx": 1198,
+    "parent_idx": 27,
+    "third_city": "곡선동"
+  },
+  {
+    "idx": 1199,
+    "parent_idx": 27,
+    "third_city": "입북동"
+  },
+  {
+    "idx": 1200,
+    "parent_idx": 28,
+    "third_city": "매교동"
+  },
+  {
+    "idx": 1201,
+    "parent_idx": 28,
+    "third_city": "매산동"
+  },
+  {
+    "idx": 1202,
+    "parent_idx": 28,
+    "third_city": "고등동"
+  },
+  {
+    "idx": 1203,
+    "parent_idx": 28,
+    "third_city": "화서1동"
+  },
+  {
+    "idx": 1204,
+    "parent_idx": 28,
+    "third_city": "화서2동"
+  },
+  {
+    "idx": 1205,
+    "parent_idx": 28,
+    "third_city": "지동"
+  },
+  {
+    "idx": 1206,
+    "parent_idx": 28,
+    "third_city": "우만1동"
+  },
+  {
+    "idx": 1207,
+    "parent_idx": 28,
+    "third_city": "우만2동"
+  },
+  {
+    "idx": 1208,
+    "parent_idx": 28,
+    "third_city": "인계동"
+  },
+  {
+    "idx": 1209,
+    "parent_idx": 28,
+    "third_city": "행궁동"
+  },
+  {
+    "idx": 1210,
+    "parent_idx": 29,
+    "third_city": "매탄1동"
+  },
+  {
+    "idx": 1211,
+    "parent_idx": 29,
+    "third_city": "매탄2동"
+  },
+  {
+    "idx": 1212,
+    "parent_idx": 29,
+    "third_city": "매탄3동"
+  },
+  {
+    "idx": 1213,
+    "parent_idx": 29,
+    "third_city": "매탄4동"
+  },
+  {
+    "idx": 1214,
+    "parent_idx": 29,
+    "third_city": "원천동"
+  },
+  {
+    "idx": 1215,
+    "parent_idx": 29,
+    "third_city": "영통1동"
+  },
+  {
+    "idx": 1216,
+    "parent_idx": 29,
+    "third_city": "영통2동"
+  },
+  {
+    "idx": 1217,
+    "parent_idx": 29,
+    "third_city": "영통3동"
+  },
+  {
+    "idx": 1218,
+    "parent_idx": 29,
+    "third_city": "태장동"
+  },
+  {
+    "idx": 1219,
+    "parent_idx": 29,
+    "third_city": "광교1동"
+  },
+  {
+    "idx": 1220,
+    "parent_idx": 29,
+    "third_city": "광교2동"
+  },
+  {
+    "idx": 1221,
+    "parent_idx": 30,
+    "third_city": "신흥1동"
+  },
+  {
+    "idx": 1222,
+    "parent_idx": 30,
+    "third_city": "신흥2동"
+  },
+  {
+    "idx": 1223,
+    "parent_idx": 30,
+    "third_city": "신흥3동"
+  },
+  {
+    "idx": 1224,
+    "parent_idx": 30,
+    "third_city": "태평1동"
+  },
+  {
+    "idx": 1225,
+    "parent_idx": 30,
+    "third_city": "태평2동"
+  },
+  {
+    "idx": 1226,
+    "parent_idx": 30,
+    "third_city": "태평3동"
+  },
+  {
+    "idx": 1227,
+    "parent_idx": 30,
+    "third_city": "태평4동"
+  },
+  {
+    "idx": 1228,
+    "parent_idx": 30,
+    "third_city": "수진1동"
+  },
+  {
+    "idx": 1229,
+    "parent_idx": 30,
+    "third_city": "수진2동"
+  },
+  {
+    "idx": 1230,
+    "parent_idx": 30,
+    "third_city": "단대동"
+  },
+  {
+    "idx": 1231,
+    "parent_idx": 30,
+    "third_city": "산성동"
+  },
+  {
+    "idx": 1232,
+    "parent_idx": 30,
+    "third_city": "양지동"
+  },
+  {
+    "idx": 1233,
+    "parent_idx": 30,
+    "third_city": "복정동"
+  },
+  {
+    "idx": 1234,
+    "parent_idx": 30,
+    "third_city": "위례동"
+  },
+  {
+    "idx": 1235,
+    "parent_idx": 30,
+    "third_city": "신촌동"
+  },
+  {
+    "idx": 1236,
+    "parent_idx": 30,
+    "third_city": "고등동"
+  },
+  {
+    "idx": 1237,
+    "parent_idx": 30,
+    "third_city": "시흥동"
+  },
+  {
+    "idx": 1238,
+    "parent_idx": 31,
+    "third_city": "성남동"
+  },
+  {
+    "idx": 1239,
+    "parent_idx": 31,
+    "third_city": "중앙동"
+  },
+  {
+    "idx": 1240,
+    "parent_idx": 31,
+    "third_city": "금광1동"
+  },
+  {
+    "idx": 1241,
+    "parent_idx": 31,
+    "third_city": "금광2동"
+  },
+  {
+    "idx": 1242,
+    "parent_idx": 31,
+    "third_city": "은행1동"
+  },
+  {
+    "idx": 1243,
+    "parent_idx": 31,
+    "third_city": "은행2동"
+  },
+  {
+    "idx": 1244,
+    "parent_idx": 31,
+    "third_city": "상대원1동"
+  },
+  {
+    "idx": 1245,
+    "parent_idx": 31,
+    "third_city": "상대원2동"
+  },
+  {
+    "idx": 1246,
+    "parent_idx": 31,
+    "third_city": "상대원3동"
+  },
+  {
+    "idx": 1247,
+    "parent_idx": 31,
+    "third_city": "하대원동"
+  },
+  {
+    "idx": 1248,
+    "parent_idx": 31,
+    "third_city": "도촌동"
+  },
+  {
+    "idx": 1249,
+    "parent_idx": 32,
+    "third_city": "분당동"
+  },
+  {
+    "idx": 1250,
+    "parent_idx": 32,
+    "third_city": "수내1동"
+  },
+  {
+    "idx": 1251,
+    "parent_idx": 32,
+    "third_city": "수내2동"
+  },
+  {
+    "idx": 1252,
+    "parent_idx": 32,
+    "third_city": "수내3동"
+  },
+  {
+    "idx": 1253,
+    "parent_idx": 32,
+    "third_city": "정자동"
+  },
+  {
+    "idx": 1254,
+    "parent_idx": 32,
+    "third_city": "정자1동"
+  },
+  {
+    "idx": 1255,
+    "parent_idx": 32,
+    "third_city": "정자2동"
+  },
+  {
+    "idx": 1256,
+    "parent_idx": 32,
+    "third_city": "정자3동"
+  },
+  {
+    "idx": 1257,
+    "parent_idx": 32,
+    "third_city": "서현1동"
+  },
+  {
+    "idx": 1258,
+    "parent_idx": 32,
+    "third_city": "서현2동"
+  },
+  {
+    "idx": 1259,
+    "parent_idx": 32,
+    "third_city": "이매1동"
+  },
+  {
+    "idx": 1260,
+    "parent_idx": 32,
+    "third_city": "이매2동"
+  },
+  {
+    "idx": 1261,
+    "parent_idx": 32,
+    "third_city": "야탑1동"
+  },
+  {
+    "idx": 1262,
+    "parent_idx": 32,
+    "third_city": "야탑2동"
+  },
+  {
+    "idx": 1263,
+    "parent_idx": 32,
+    "third_city": "야탑3동"
+  },
+  {
+    "idx": 1264,
+    "parent_idx": 32,
+    "third_city": "판교동"
+  },
+  {
+    "idx": 1265,
+    "parent_idx": 32,
+    "third_city": "삼평동"
+  },
+  {
+    "idx": 1266,
+    "parent_idx": 32,
+    "third_city": "백현동"
+  },
+  {
+    "idx": 1267,
+    "parent_idx": 32,
+    "third_city": "금곡동"
+  },
+  {
+    "idx": 1268,
+    "parent_idx": 32,
+    "third_city": "구미1동"
+  },
+  {
+    "idx": 1269,
+    "parent_idx": 32,
+    "third_city": "구미동"
+  },
+  {
+    "idx": 1270,
+    "parent_idx": 32,
+    "third_city": "운중동"
+  },
+  {
+    "idx": 1271,
+    "parent_idx": 33,
+    "third_city": "의정부1동"
+  },
+  {
+    "idx": 1272,
+    "parent_idx": 33,
+    "third_city": "의정부2동"
+  },
+  {
+    "idx": 1273,
+    "parent_idx": 33,
+    "third_city": "의정부3동"
+  },
+  {
+    "idx": 1274,
+    "parent_idx": 33,
+    "third_city": "호원1동"
+  },
+  {
+    "idx": 1275,
+    "parent_idx": 33,
+    "third_city": "호원2동"
+  },
+  {
+    "idx": 1276,
+    "parent_idx": 33,
+    "third_city": "장암동"
+  },
+  {
+    "idx": 1277,
+    "parent_idx": 33,
+    "third_city": "신곡1동"
+  },
+  {
+    "idx": 1278,
+    "parent_idx": 33,
+    "third_city": "신곡2동"
+  },
+  {
+    "idx": 1279,
+    "parent_idx": 33,
+    "third_city": "송산1동"
+  },
+  {
+    "idx": 1280,
+    "parent_idx": 33,
+    "third_city": "송산2동"
+  },
+  {
+    "idx": 1281,
+    "parent_idx": 33,
+    "third_city": "자금동"
+  },
+  {
+    "idx": 1282,
+    "parent_idx": 33,
+    "third_city": "가능1동"
+  },
+  {
+    "idx": 1283,
+    "parent_idx": 33,
+    "third_city": "흥선동"
+  },
+  {
+    "idx": 1284,
+    "parent_idx": 33,
+    "third_city": "녹양동"
+  },
+  {
+    "idx": 1285,
+    "parent_idx": 34,
+    "third_city": "안양1동"
+  },
+  {
+    "idx": 1286,
+    "parent_idx": 34,
+    "third_city": "안양2동"
+  },
+  {
+    "idx": 1287,
+    "parent_idx": 34,
+    "third_city": "안양3동"
+  },
+  {
+    "idx": 1288,
+    "parent_idx": 34,
+    "third_city": "안양4동"
+  },
+  {
+    "idx": 1289,
+    "parent_idx": 34,
+    "third_city": "안양5동"
+  },
+  {
+    "idx": 1290,
+    "parent_idx": 34,
+    "third_city": "안양6동"
+  },
+  {
+    "idx": 1291,
+    "parent_idx": 34,
+    "third_city": "안양7동"
+  },
+  {
+    "idx": 1292,
+    "parent_idx": 34,
+    "third_city": "안양8동"
+  },
+  {
+    "idx": 1293,
+    "parent_idx": 34,
+    "third_city": "안양9동"
+  },
+  {
+    "idx": 1294,
+    "parent_idx": 34,
+    "third_city": "석수1동"
+  },
+  {
+    "idx": 1295,
+    "parent_idx": 34,
+    "third_city": "석수2동"
+  },
+  {
+    "idx": 1296,
+    "parent_idx": 34,
+    "third_city": "석수3동"
+  },
+  {
+    "idx": 1297,
+    "parent_idx": 34,
+    "third_city": "박달1동"
+  },
+  {
+    "idx": 1298,
+    "parent_idx": 34,
+    "third_city": "박달2동"
+  },
+  {
+    "idx": 1299,
+    "parent_idx": 35,
+    "third_city": "비산1동"
+  },
+  {
+    "idx": 1300,
+    "parent_idx": 35,
+    "third_city": "비산2동"
+  },
+  {
+    "idx": 1301,
+    "parent_idx": 35,
+    "third_city": "비산3동"
+  },
+  {
+    "idx": 1302,
+    "parent_idx": 35,
+    "third_city": "부흥동"
+  },
+  {
+    "idx": 1303,
+    "parent_idx": 35,
+    "third_city": "달안동"
+  },
+  {
+    "idx": 1304,
+    "parent_idx": 35,
+    "third_city": "관양1동"
+  },
+  {
+    "idx": 1305,
+    "parent_idx": 35,
+    "third_city": "관양2동"
+  },
+  {
+    "idx": 1306,
+    "parent_idx": 35,
+    "third_city": "부림동"
+  },
+  {
+    "idx": 1307,
+    "parent_idx": 35,
+    "third_city": "평촌동"
+  },
+  {
+    "idx": 1308,
+    "parent_idx": 35,
+    "third_city": "평안동"
+  },
+  {
+    "idx": 1309,
+    "parent_idx": 35,
+    "third_city": "귀인동"
+  },
+  {
+    "idx": 1310,
+    "parent_idx": 35,
+    "third_city": "호계1동"
+  },
+  {
+    "idx": 1311,
+    "parent_idx": 35,
+    "third_city": "호계2동"
+  },
+  {
+    "idx": 1312,
+    "parent_idx": 35,
+    "third_city": "호계3동"
+  },
+  {
+    "idx": 1313,
+    "parent_idx": 35,
+    "third_city": "범계동"
+  },
+  {
+    "idx": 1314,
+    "parent_idx": 35,
+    "third_city": "신촌동"
+  },
+  {
+    "idx": 1315,
+    "parent_idx": 35,
+    "third_city": "갈산동"
+  },
+  {
+    "idx": 1316,
+    "parent_idx": 36,
+    "third_city": "심곡2동"
+  },
+  {
+    "idx": 1317,
+    "parent_idx": 36,
+    "third_city": "심곡1동"
+  },
+  {
+    "idx": 1318,
+    "parent_idx": 36,
+    "third_city": "심곡3동"
+  },
+  {
+    "idx": 1319,
+    "parent_idx": 36,
+    "third_city": "원미2동"
+  },
+  {
+    "idx": 1320,
+    "parent_idx": 36,
+    "third_city": "소사동"
+  },
+  {
+    "idx": 1321,
+    "parent_idx": 36,
+    "third_city": "원미1동"
+  },
+  {
+    "idx": 1322,
+    "parent_idx": 36,
+    "third_city": "역곡1동"
+  },
+  {
+    "idx": 1323,
+    "parent_idx": 36,
+    "third_city": "역곡2동"
+  },
+  {
+    "idx": 1324,
+    "parent_idx": 36,
+    "third_city": "춘의동"
+  },
+  {
+    "idx": 1325,
+    "parent_idx": 36,
+    "third_city": "도당동"
+  },
+  {
+    "idx": 1326,
+    "parent_idx": 36,
+    "third_city": "중동"
+  },
+  {
+    "idx": 1327,
+    "parent_idx": 36,
+    "third_city": "상동"
+  },
+  {
+    "idx": 1328,
+    "parent_idx": 36,
+    "third_city": "상1동"
+  },
+  {
+    "idx": 1329,
+    "parent_idx": 36,
+    "third_city": "중4동"
+  },
+  {
+    "idx": 1330,
+    "parent_idx": 36,
+    "third_city": "약대동"
+  },
+  {
+    "idx": 1331,
+    "parent_idx": 36,
+    "third_city": "중1동"
+  },
+  {
+    "idx": 1332,
+    "parent_idx": 36,
+    "third_city": "중2동"
+  },
+  {
+    "idx": 1333,
+    "parent_idx": 36,
+    "third_city": "중3동"
+  },
+  {
+    "idx": 1334,
+    "parent_idx": 36,
+    "third_city": "상2동"
+  },
+  {
+    "idx": 1335,
+    "parent_idx": 36,
+    "third_city": "상3동"
+  },
+  {
+    "idx": 1336,
+    "parent_idx": 36,
+    "third_city": "심곡본동"
+  },
+  {
+    "idx": 1337,
+    "parent_idx": 36,
+    "third_city": "심곡본1동"
+  },
+  {
+    "idx": 1338,
+    "parent_idx": 36,
+    "third_city": "송내1동"
+  },
+  {
+    "idx": 1339,
+    "parent_idx": 36,
+    "third_city": "송내2동"
+  },
+  {
+    "idx": 1340,
+    "parent_idx": 36,
+    "third_city": "소사본동"
+  },
+  {
+    "idx": 1341,
+    "parent_idx": 36,
+    "third_city": "소사본3동"
+  },
+  {
+    "idx": 1342,
+    "parent_idx": 36,
+    "third_city": "괴안동"
+  },
+  {
+    "idx": 1343,
+    "parent_idx": 36,
+    "third_city": "범박동"
+  },
+  {
+    "idx": 1344,
+    "parent_idx": 36,
+    "third_city": "역곡3동"
+  },
+  {
+    "idx": 1345,
+    "parent_idx": 36,
+    "third_city": "성곡동"
+  },
+  {
+    "idx": 1346,
+    "parent_idx": 36,
+    "third_city": "고강본동"
+  },
+  {
+    "idx": 1347,
+    "parent_idx": 36,
+    "third_city": "고강1동"
+  },
+  {
+    "idx": 1348,
+    "parent_idx": 36,
+    "third_city": "오정동"
+  },
+  {
+    "idx": 1349,
+    "parent_idx": 36,
+    "third_city": "원종1동"
+  },
+  {
+    "idx": 1350,
+    "parent_idx": 36,
+    "third_city": "원종2동"
+  },
+  {
+    "idx": 1351,
+    "parent_idx": 36,
+    "third_city": "신흥동"
+  },
+  {
+    "idx": 1352,
+    "parent_idx": 37,
+    "third_city": "광명1동"
+  },
+  {
+    "idx": 1353,
+    "parent_idx": 37,
+    "third_city": "광명2동"
+  },
+  {
+    "idx": 1354,
+    "parent_idx": 37,
+    "third_city": "광명3동"
+  },
+  {
+    "idx": 1355,
+    "parent_idx": 37,
+    "third_city": "광명4동"
+  },
+  {
+    "idx": 1356,
+    "parent_idx": 37,
+    "third_city": "광명5동"
+  },
+  {
+    "idx": 1357,
+    "parent_idx": 37,
+    "third_city": "광명6동"
+  },
+  {
+    "idx": 1358,
+    "parent_idx": 37,
+    "third_city": "광명7동"
+  },
+  {
+    "idx": 1359,
+    "parent_idx": 37,
+    "third_city": "철산1동"
+  },
+  {
+    "idx": 1360,
+    "parent_idx": 37,
+    "third_city": "철산2동"
+  },
+  {
+    "idx": 1361,
+    "parent_idx": 37,
+    "third_city": "철산3동"
+  },
+  {
+    "idx": 1362,
+    "parent_idx": 37,
+    "third_city": "철산4동"
+  },
+  {
+    "idx": 1363,
+    "parent_idx": 37,
+    "third_city": "하안1동"
+  },
+  {
+    "idx": 1364,
+    "parent_idx": 37,
+    "third_city": "하안2동"
+  },
+  {
+    "idx": 1365,
+    "parent_idx": 37,
+    "third_city": "하안3동"
+  },
+  {
+    "idx": 1366,
+    "parent_idx": 37,
+    "third_city": "하안4동"
+  },
+  {
+    "idx": 1367,
+    "parent_idx": 37,
+    "third_city": "소하1동"
+  },
+  {
+    "idx": 1368,
+    "parent_idx": 37,
+    "third_city": "소하2동"
+  },
+  {
+    "idx": 1369,
+    "parent_idx": 37,
+    "third_city": "학온동"
+  },
+  {
+    "idx": 1370,
+    "parent_idx": 38,
+    "third_city": "팽성읍"
+  },
+  {
+    "idx": 1371,
+    "parent_idx": 38,
+    "third_city": "안중읍"
+  },
+  {
+    "idx": 1372,
+    "parent_idx": 38,
+    "third_city": "포승읍"
+  },
+  {
+    "idx": 1373,
+    "parent_idx": 38,
+    "third_city": "청북읍"
+  },
+  {
+    "idx": 1374,
+    "parent_idx": 38,
+    "third_city": "진위면"
+  },
+  {
+    "idx": 1375,
+    "parent_idx": 38,
+    "third_city": "서탄면"
+  },
+  {
+    "idx": 1376,
+    "parent_idx": 38,
+    "third_city": "고덕면"
+  },
+  {
+    "idx": 1377,
+    "parent_idx": 38,
+    "third_city": "오성면"
+  },
+  {
+    "idx": 1378,
+    "parent_idx": 38,
+    "third_city": "현덕면"
+  },
+  {
+    "idx": 1379,
+    "parent_idx": 38,
+    "third_city": "중앙동"
+  },
+  {
+    "idx": 1380,
+    "parent_idx": 38,
+    "third_city": "서정동"
+  },
+  {
+    "idx": 1381,
+    "parent_idx": 38,
+    "third_city": "송탄동"
+  },
+  {
+    "idx": 1382,
+    "parent_idx": 38,
+    "third_city": "지산동"
+  },
+  {
+    "idx": 1383,
+    "parent_idx": 38,
+    "third_city": "송북동"
+  },
+  {
+    "idx": 1384,
+    "parent_idx": 38,
+    "third_city": "신장1동"
+  },
+  {
+    "idx": 1385,
+    "parent_idx": 38,
+    "third_city": "신장2동"
+  },
+  {
+    "idx": 1386,
+    "parent_idx": 38,
+    "third_city": "신평동"
+  },
+  {
+    "idx": 1387,
+    "parent_idx": 38,
+    "third_city": "원평동"
+  },
+  {
+    "idx": 1388,
+    "parent_idx": 38,
+    "third_city": "통복동"
+  },
+  {
+    "idx": 1389,
+    "parent_idx": 38,
+    "third_city": "비전1동"
+  },
+  {
+    "idx": 1390,
+    "parent_idx": 38,
+    "third_city": "비전2동"
+  },
+  {
+    "idx": 1391,
+    "parent_idx": 38,
+    "third_city": "세교동"
+  },
+  {
+    "idx": 1392,
+    "parent_idx": 39,
+    "third_city": "생연1동"
+  },
+  {
+    "idx": 1393,
+    "parent_idx": 39,
+    "third_city": "생연2동"
+  },
+  {
+    "idx": 1394,
+    "parent_idx": 39,
+    "third_city": "중앙동"
+  },
+  {
+    "idx": 1395,
+    "parent_idx": 39,
+    "third_city": "보산동"
+  },
+  {
+    "idx": 1396,
+    "parent_idx": 39,
+    "third_city": "불현동"
+  },
+  {
+    "idx": 1397,
+    "parent_idx": 39,
+    "third_city": "송내동"
+  },
+  {
+    "idx": 1398,
+    "parent_idx": 39,
+    "third_city": "소요동"
+  },
+  {
+    "idx": 1399,
+    "parent_idx": 39,
+    "third_city": "상패동"
+  },
+  {
+    "idx": 1400,
+    "parent_idx": 40,
+    "third_city": "일동"
+  },
+  {
+    "idx": 1401,
+    "parent_idx": 40,
+    "third_city": "이동"
+  },
+  {
+    "idx": 1402,
+    "parent_idx": 40,
+    "third_city": "사동"
+  },
+  {
+    "idx": 1403,
+    "parent_idx": 40,
+    "third_city": "사이동"
+  },
+  {
+    "idx": 1404,
+    "parent_idx": 40,
+    "third_city": "해양동"
+  },
+  {
+    "idx": 1405,
+    "parent_idx": 40,
+    "third_city": "본오1동"
+  },
+  {
+    "idx": 1406,
+    "parent_idx": 40,
+    "third_city": "본오2동"
+  },
+  {
+    "idx": 1407,
+    "parent_idx": 40,
+    "third_city": "본오3동"
+  },
+  {
+    "idx": 1408,
+    "parent_idx": 40,
+    "third_city": "부곡동"
+  },
+  {
+    "idx": 1409,
+    "parent_idx": 40,
+    "third_city": "월피동"
+  },
+  {
+    "idx": 1410,
+    "parent_idx": 40,
+    "third_city": "성포동"
+  },
+  {
+    "idx": 1411,
+    "parent_idx": 40,
+    "third_city": "반월동"
+  },
+  {
+    "idx": 1412,
+    "parent_idx": 40,
+    "third_city": "안산동"
+  },
+  {
+    "idx": 1413,
+    "parent_idx": 41,
+    "third_city": "와동"
+  },
+  {
+    "idx": 1414,
+    "parent_idx": 41,
+    "third_city": "고잔동"
+  },
+  {
+    "idx": 1415,
+    "parent_idx": 41,
+    "third_city": "중앙동"
+  },
+  {
+    "idx": 1416,
+    "parent_idx": 41,
+    "third_city": "호수동"
+  },
+  {
+    "idx": 1417,
+    "parent_idx": 41,
+    "third_city": "원곡동"
+  },
+  {
+    "idx": 1418,
+    "parent_idx": 41,
+    "third_city": "백운동"
+  },
+  {
+    "idx": 1419,
+    "parent_idx": 41,
+    "third_city": "신길동"
+  },
+  {
+    "idx": 1420,
+    "parent_idx": 41,
+    "third_city": "초지동"
+  },
+  {
+    "idx": 1421,
+    "parent_idx": 41,
+    "third_city": "선부1동"
+  },
+  {
+    "idx": 1422,
+    "parent_idx": 41,
+    "third_city": "선부2동"
+  },
+  {
+    "idx": 1423,
+    "parent_idx": 41,
+    "third_city": "선부3동"
+  },
+  {
+    "idx": 1424,
+    "parent_idx": 41,
+    "third_city": "대부동"
+  },
+  {
+    "idx": 1425,
+    "parent_idx": 116,
+    "third_city": "주교동"
+  },
+  {
+    "idx": 1426,
+    "parent_idx": 116,
+    "third_city": "원신동"
+  },
+  {
+    "idx": 1427,
+    "parent_idx": 116,
+    "third_city": "흥도동"
+  },
+  {
+    "idx": 1428,
+    "parent_idx": 116,
+    "third_city": "성사1동"
+  },
+  {
+    "idx": 1429,
+    "parent_idx": 116,
+    "third_city": "성사2동"
+  },
+  {
+    "idx": 1430,
+    "parent_idx": 116,
+    "third_city": "효자동"
+  },
+  {
+    "idx": 1431,
+    "parent_idx": 116,
+    "third_city": "신도동"
+  },
+  {
+    "idx": 1432,
+    "parent_idx": 116,
+    "third_city": "창릉동"
+  },
+  {
+    "idx": 1433,
+    "parent_idx": 116,
+    "third_city": "고양동"
+  },
+  {
+    "idx": 1434,
+    "parent_idx": 116,
+    "third_city": "관산동"
+  },
+  {
+    "idx": 1435,
+    "parent_idx": 116,
+    "third_city": "능곡동"
+  },
+  {
+    "idx": 1436,
+    "parent_idx": 116,
+    "third_city": "화정1동"
+  },
+  {
+    "idx": 1437,
+    "parent_idx": 116,
+    "third_city": "화정2동"
+  },
+  {
+    "idx": 1438,
+    "parent_idx": 116,
+    "third_city": "행주동"
+  },
+  {
+    "idx": 1439,
+    "parent_idx": 116,
+    "third_city": "행신1동"
+  },
+  {
+    "idx": 1440,
+    "parent_idx": 116,
+    "third_city": "행신2동"
+  },
+  {
+    "idx": 1441,
+    "parent_idx": 116,
+    "third_city": "행신3동"
+  },
+  {
+    "idx": 1442,
+    "parent_idx": 116,
+    "third_city": "화전동"
+  },
+  {
+    "idx": 1443,
+    "parent_idx": 116,
+    "third_city": "대덕동"
+  },
+  {
+    "idx": 1444,
+    "parent_idx": 117,
+    "third_city": "식사동"
+  },
+  {
+    "idx": 1445,
+    "parent_idx": 117,
+    "third_city": "중산동"
+  },
+  {
+    "idx": 1446,
+    "parent_idx": 117,
+    "third_city": "정발산동"
+  },
+  {
+    "idx": 1447,
+    "parent_idx": 117,
+    "third_city": "풍산동"
+  },
+  {
+    "idx": 1448,
+    "parent_idx": 117,
+    "third_city": "백석1동"
+  },
+  {
+    "idx": 1449,
+    "parent_idx": 117,
+    "third_city": "백석2동"
+  },
+  {
+    "idx": 1450,
+    "parent_idx": 117,
+    "third_city": "마두1동"
+  },
+  {
+    "idx": 1451,
+    "parent_idx": 117,
+    "third_city": "마두2동"
+  },
+  {
+    "idx": 1452,
+    "parent_idx": 117,
+    "third_city": "장항1동"
+  },
+  {
+    "idx": 1453,
+    "parent_idx": 117,
+    "third_city": "장항2동"
+  },
+  {
+    "idx": 1454,
+    "parent_idx": 117,
+    "third_city": "고봉동"
+  },
+  {
+    "idx": 1455,
+    "parent_idx": 42,
+    "third_city": "일산1동"
+  },
+  {
+    "idx": 1456,
+    "parent_idx": 42,
+    "third_city": "일산2동"
+  },
+  {
+    "idx": 1457,
+    "parent_idx": 42,
+    "third_city": "일산3동"
+  },
+  {
+    "idx": 1458,
+    "parent_idx": 42,
+    "third_city": "탄현동"
+  },
+  {
+    "idx": 1459,
+    "parent_idx": 42,
+    "third_city": "주엽1동"
+  },
+  {
+    "idx": 1460,
+    "parent_idx": 42,
+    "third_city": "주엽2동"
+  },
+  {
+    "idx": 1461,
+    "parent_idx": 42,
+    "third_city": "대화동"
+  },
+  {
+    "idx": 1462,
+    "parent_idx": 42,
+    "third_city": "송포동"
+  },
+  {
+    "idx": 1463,
+    "parent_idx": 42,
+    "third_city": "송산동"
+  },
+  {
+    "idx": 1464,
+    "parent_idx": 43,
+    "third_city": "중앙동"
+  },
+  {
+    "idx": 1465,
+    "parent_idx": 43,
+    "third_city": "갈현동"
+  },
+  {
+    "idx": 1466,
+    "parent_idx": 43,
+    "third_city": "별양동"
+  },
+  {
+    "idx": 1467,
+    "parent_idx": 43,
+    "third_city": "부림동"
+  },
+  {
+    "idx": 1468,
+    "parent_idx": 43,
+    "third_city": "과천동"
+  },
+  {
+    "idx": 1469,
+    "parent_idx": 43,
+    "third_city": "문원동"
+  },
+  {
+    "idx": 1470,
+    "parent_idx": 44,
+    "third_city": "갈매동"
+  },
+  {
+    "idx": 1471,
+    "parent_idx": 44,
+    "third_city": "동구동"
+  },
+  {
+    "idx": 1472,
+    "parent_idx": 44,
+    "third_city": "인창동"
+  },
+  {
+    "idx": 1473,
+    "parent_idx": 44,
+    "third_city": "교문1동"
+  },
+  {
+    "idx": 1474,
+    "parent_idx": 44,
+    "third_city": "교문2동"
+  },
+  {
+    "idx": 1475,
+    "parent_idx": 44,
+    "third_city": "수택1동"
+  },
+  {
+    "idx": 1476,
+    "parent_idx": 44,
+    "third_city": "수택2동"
+  },
+  {
+    "idx": 1477,
+    "parent_idx": 44,
+    "third_city": "수택3동"
+  },
+  {
+    "idx": 1478,
+    "parent_idx": 45,
+    "third_city": "와부읍"
+  },
+  {
+    "idx": 1479,
+    "parent_idx": 45,
+    "third_city": "진접읍"
+  },
+  {
+    "idx": 1480,
+    "parent_idx": 45,
+    "third_city": "화도읍"
+  },
+  {
+    "idx": 1481,
+    "parent_idx": 45,
+    "third_city": "진건읍"
+  },
+  {
+    "idx": 1482,
+    "parent_idx": 45,
+    "third_city": "오남읍"
+  },
+  {
+    "idx": 1483,
+    "parent_idx": 45,
+    "third_city": "별내면"
+  },
+  {
+    "idx": 1484,
+    "parent_idx": 45,
+    "third_city": "수동면"
+  },
+  {
+    "idx": 1485,
+    "parent_idx": 45,
+    "third_city": "조안면"
+  },
+  {
+    "idx": 1486,
+    "parent_idx": 45,
+    "third_city": "퇴계원면"
+  },
+  {
+    "idx": 1487,
+    "parent_idx": 45,
+    "third_city": "호평동"
+  },
+  {
+    "idx": 1488,
+    "parent_idx": 45,
+    "third_city": "평내동"
+  },
+  {
+    "idx": 1489,
+    "parent_idx": 45,
+    "third_city": "금곡동"
+  },
+  {
+    "idx": 1490,
+    "parent_idx": 45,
+    "third_city": "양정동"
+  },
+  {
+    "idx": 1491,
+    "parent_idx": 45,
+    "third_city": "다산1동"
+  },
+  {
+    "idx": 1492,
+    "parent_idx": 45,
+    "third_city": "다산2동"
+  },
+  {
+    "idx": 1493,
+    "parent_idx": 45,
+    "third_city": "별내동"
+  },
+  {
+    "idx": 1494,
+    "parent_idx": 46,
+    "third_city": "중앙동"
+  },
+  {
+    "idx": 1495,
+    "parent_idx": 46,
+    "third_city": "남촌동"
+  },
+  {
+    "idx": 1496,
+    "parent_idx": 46,
+    "third_city": "신장동"
+  },
+  {
+    "idx": 1497,
+    "parent_idx": 46,
+    "third_city": "세마동"
+  },
+  {
+    "idx": 1498,
+    "parent_idx": 46,
+    "third_city": "초평동"
+  },
+  {
+    "idx": 1499,
+    "parent_idx": 46,
+    "third_city": "대원동"
+  },
+  {
+    "idx": 1500,
+    "parent_idx": 47,
+    "third_city": "대야동"
+  },
+  {
+    "idx": 1501,
+    "parent_idx": 47,
+    "third_city": "신천동"
+  },
+  {
+    "idx": 1502,
+    "parent_idx": 47,
+    "third_city": "신현동"
+  },
+  {
+    "idx": 1503,
+    "parent_idx": 47,
+    "third_city": "은행동"
+  },
+  {
+    "idx": 1504,
+    "parent_idx": 47,
+    "third_city": "매화동"
+  },
+  {
+    "idx": 1505,
+    "parent_idx": 47,
+    "third_city": "목감동"
+  },
+  {
+    "idx": 1506,
+    "parent_idx": 47,
+    "third_city": "군자동"
+  },
+  {
+    "idx": 1507,
+    "parent_idx": 47,
+    "third_city": "월곶동"
+  },
+  {
+    "idx": 1508,
+    "parent_idx": 47,
+    "third_city": "정왕본동"
+  },
+  {
+    "idx": 1509,
+    "parent_idx": 47,
+    "third_city": "정왕1동"
+  },
+  {
+    "idx": 1510,
+    "parent_idx": 47,
+    "third_city": "정왕2동"
+  },
+  {
+    "idx": 1511,
+    "parent_idx": 47,
+    "third_city": "정왕3동"
+  },
+  {
+    "idx": 1512,
+    "parent_idx": 47,
+    "third_city": "정왕4동"
+  },
+  {
+    "idx": 1513,
+    "parent_idx": 47,
+    "third_city": "과림동"
+  },
+  {
+    "idx": 1514,
+    "parent_idx": 47,
+    "third_city": "연성동"
+  },
+  {
+    "idx": 1515,
+    "parent_idx": 47,
+    "third_city": "장곡동"
+  },
+  {
+    "idx": 1516,
+    "parent_idx": 47,
+    "third_city": "능곡동"
+  },
+  {
+    "idx": 1517,
+    "parent_idx": 48,
+    "third_city": "군포1동"
+  },
+  {
+    "idx": 1518,
+    "parent_idx": 48,
+    "third_city": "군포2동"
+  },
+  {
+    "idx": 1519,
+    "parent_idx": 48,
+    "third_city": "산본1동"
+  },
+  {
+    "idx": 1520,
+    "parent_idx": 48,
+    "third_city": "산본2동"
+  },
+  {
+    "idx": 1521,
+    "parent_idx": 48,
+    "third_city": "금정동"
+  },
+  {
+    "idx": 1522,
+    "parent_idx": 48,
+    "third_city": "재궁동"
+  },
+  {
+    "idx": 1523,
+    "parent_idx": 48,
+    "third_city": "오금동"
+  },
+  {
+    "idx": 1524,
+    "parent_idx": 48,
+    "third_city": "수리동"
+  },
+  {
+    "idx": 1525,
+    "parent_idx": 48,
+    "third_city": "궁내동"
+  },
+  {
+    "idx": 1526,
+    "parent_idx": 48,
+    "third_city": "대야동"
+  },
+  {
+    "idx": 1527,
+    "parent_idx": 48,
+    "third_city": "광정동"
+  },
+  {
+    "idx": 1528,
+    "parent_idx": 49,
+    "third_city": "고천동"
+  },
+  {
+    "idx": 1529,
+    "parent_idx": 49,
+    "third_city": "부곡동"
+  },
+  {
+    "idx": 1530,
+    "parent_idx": 49,
+    "third_city": "오전동"
+  },
+  {
+    "idx": 1531,
+    "parent_idx": 49,
+    "third_city": "내손1동"
+  },
+  {
+    "idx": 1532,
+    "parent_idx": 49,
+    "third_city": "내손2동"
+  },
+  {
+    "idx": 1533,
+    "parent_idx": 49,
+    "third_city": "청계동"
+  },
+  {
+    "idx": 1534,
+    "parent_idx": 50,
+    "third_city": "천현동"
+  },
+  {
+    "idx": 1535,
+    "parent_idx": 50,
+    "third_city": "신장1동"
+  },
+  {
+    "idx": 1536,
+    "parent_idx": 50,
+    "third_city": "신장2동"
+  },
+  {
+    "idx": 1537,
+    "parent_idx": 50,
+    "third_city": "덕풍1동"
+  },
+  {
+    "idx": 1538,
+    "parent_idx": 50,
+    "third_city": "덕풍2동"
+  },
+  {
+    "idx": 1539,
+    "parent_idx": 50,
+    "third_city": "덕풍3동"
+  },
+  {
+    "idx": 1540,
+    "parent_idx": 50,
+    "third_city": "풍산동"
+  },
+  {
+    "idx": 1541,
+    "parent_idx": 50,
+    "third_city": "감북동"
+  },
+  {
+    "idx": 1542,
+    "parent_idx": 50,
+    "third_city": "위례동"
+  },
+  {
+    "idx": 1543,
+    "parent_idx": 50,
+    "third_city": "춘궁동"
+  },
+  {
+    "idx": 1544,
+    "parent_idx": 50,
+    "third_city": "초이동"
+  },
+  {
+    "idx": 1545,
+    "parent_idx": 50,
+    "third_city": "미사1동"
+  },
+  {
+    "idx": 1546,
+    "parent_idx": 50,
+    "third_city": "미사2동"
+  },
+  {
+    "idx": 1547,
+    "parent_idx": 51,
+    "third_city": "포곡읍"
+  },
+  {
+    "idx": 1548,
+    "parent_idx": 51,
+    "third_city": "모현읍"
+  },
+  {
+    "idx": 1549,
+    "parent_idx": 51,
+    "third_city": "이동읍"
+  },
+  {
+    "idx": 1550,
+    "parent_idx": 51,
+    "third_city": "남사면"
+  },
+  {
+    "idx": 1551,
+    "parent_idx": 51,
+    "third_city": "원삼면"
+  },
+  {
+    "idx": 1552,
+    "parent_idx": 51,
+    "third_city": "백암면"
+  },
+  {
+    "idx": 1553,
+    "parent_idx": 51,
+    "third_city": "양지면"
+  },
+  {
+    "idx": 1554,
+    "parent_idx": 51,
+    "third_city": "중앙동"
+  },
+  {
+    "idx": 1555,
+    "parent_idx": 51,
+    "third_city": "역삼동"
+  },
+  {
+    "idx": 1556,
+    "parent_idx": 51,
+    "third_city": "유림동"
+  },
+  {
+    "idx": 1557,
+    "parent_idx": 51,
+    "third_city": "동부동"
+  },
+  {
+    "idx": 1558,
+    "parent_idx": 52,
+    "third_city": "신갈동"
+  },
+  {
+    "idx": 1559,
+    "parent_idx": 52,
+    "third_city": "영덕동"
+  },
+  {
+    "idx": 1560,
+    "parent_idx": 52,
+    "third_city": "구갈동"
+  },
+  {
+    "idx": 1561,
+    "parent_idx": 52,
+    "third_city": "상갈동"
+  },
+  {
+    "idx": 1562,
+    "parent_idx": 52,
+    "third_city": "기흥동"
+  },
+  {
+    "idx": 1563,
+    "parent_idx": 52,
+    "third_city": "서농동"
+  },
+  {
+    "idx": 1564,
+    "parent_idx": 52,
+    "third_city": "구성동"
+  },
+  {
+    "idx": 1565,
+    "parent_idx": 52,
+    "third_city": "마북동"
+  },
+  {
+    "idx": 1566,
+    "parent_idx": 52,
+    "third_city": "동백동"
+  },
+  {
+    "idx": 1567,
+    "parent_idx": 52,
+    "third_city": "상하동"
+  },
+  {
+    "idx": 1568,
+    "parent_idx": 52,
+    "third_city": "보정동"
+  },
+  {
+    "idx": 1569,
+    "parent_idx": 53,
+    "third_city": "풍덕천1동"
+  },
+  {
+    "idx": 1570,
+    "parent_idx": 53,
+    "third_city": "풍덕천2동"
+  },
+  {
+    "idx": 1571,
+    "parent_idx": 53,
+    "third_city": "신봉동"
+  },
+  {
+    "idx": 1572,
+    "parent_idx": 53,
+    "third_city": "죽전1동"
+  },
+  {
+    "idx": 1573,
+    "parent_idx": 53,
+    "third_city": "죽전2동"
+  },
+  {
+    "idx": 1574,
+    "parent_idx": 53,
+    "third_city": "동천동"
+  },
+  {
+    "idx": 1575,
+    "parent_idx": 53,
+    "third_city": "상현1동"
+  },
+  {
+    "idx": 1576,
+    "parent_idx": 53,
+    "third_city": "상현2동"
+  },
+  {
+    "idx": 1577,
+    "parent_idx": 53,
+    "third_city": "성복동"
+  },
+  {
+    "idx": 1578,
+    "parent_idx": 54,
+    "third_city": "문산읍"
+  },
+  {
+    "idx": 1579,
+    "parent_idx": 54,
+    "third_city": "파주읍"
+  },
+  {
+    "idx": 1580,
+    "parent_idx": 54,
+    "third_city": "법원읍"
+  },
+  {
+    "idx": 1581,
+    "parent_idx": 54,
+    "third_city": "조리읍"
+  },
+  {
+    "idx": 1582,
+    "parent_idx": 54,
+    "third_city": "월롱면"
+  },
+  {
+    "idx": 1583,
+    "parent_idx": 54,
+    "third_city": "탄현면"
+  },
+  {
+    "idx": 1584,
+    "parent_idx": 54,
+    "third_city": "광탄면"
+  },
+  {
+    "idx": 1585,
+    "parent_idx": 54,
+    "third_city": "파평면"
+  },
+  {
+    "idx": 1586,
+    "parent_idx": 54,
+    "third_city": "적성면"
+  },
+  {
+    "idx": 1587,
+    "parent_idx": 54,
+    "third_city": "군내면"
+  },
+  {
+    "idx": 1588,
+    "parent_idx": 54,
+    "third_city": "장단면"
+  },
+  {
+    "idx": 1589,
+    "parent_idx": 54,
+    "third_city": "진동면"
+  },
+  {
+    "idx": 1590,
+    "parent_idx": 54,
+    "third_city": "진서면"
+  },
+  {
+    "idx": 1591,
+    "parent_idx": 54,
+    "third_city": "금촌1동"
+  },
+  {
+    "idx": 1592,
+    "parent_idx": 54,
+    "third_city": "금촌2동"
+  },
+  {
+    "idx": 1593,
+    "parent_idx": 54,
+    "third_city": "금촌3동"
+  },
+  {
+    "idx": 1594,
+    "parent_idx": 54,
+    "third_city": "교하동"
+  },
+  {
+    "idx": 1595,
+    "parent_idx": 54,
+    "third_city": "운정1동"
+  },
+  {
+    "idx": 1596,
+    "parent_idx": 54,
+    "third_city": "운정2동"
+  },
+  {
+    "idx": 1597,
+    "parent_idx": 54,
+    "third_city": "운정3동"
+  },
+  {
+    "idx": 1598,
+    "parent_idx": 55,
+    "third_city": "장호원읍"
+  },
+  {
+    "idx": 1599,
+    "parent_idx": 55,
+    "third_city": "부발읍"
+  },
+  {
+    "idx": 1600,
+    "parent_idx": 55,
+    "third_city": "신둔면"
+  },
+  {
+    "idx": 1601,
+    "parent_idx": 55,
+    "third_city": "백사면"
+  },
+  {
+    "idx": 1602,
+    "parent_idx": 55,
+    "third_city": "호법면"
+  },
+  {
+    "idx": 1603,
+    "parent_idx": 55,
+    "third_city": "마장면"
+  },
+  {
+    "idx": 1604,
+    "parent_idx": 55,
+    "third_city": "대월면"
+  },
+  {
+    "idx": 1605,
+    "parent_idx": 55,
+    "third_city": "모가면"
+  },
+  {
+    "idx": 1606,
+    "parent_idx": 55,
+    "third_city": "설성면"
+  },
+  {
+    "idx": 1607,
+    "parent_idx": 55,
+    "third_city": "율면"
+  },
+  {
+    "idx": 1608,
+    "parent_idx": 55,
+    "third_city": "창전동"
+  },
+  {
+    "idx": 1609,
+    "parent_idx": 55,
+    "third_city": "증포동"
+  },
+  {
+    "idx": 1610,
+    "parent_idx": 55,
+    "third_city": "중리동"
+  },
+  {
+    "idx": 1611,
+    "parent_idx": 55,
+    "third_city": "관고동"
+  },
+  {
+    "idx": 1612,
+    "parent_idx": 56,
+    "third_city": "공도읍"
+  },
+  {
+    "idx": 1613,
+    "parent_idx": 56,
+    "third_city": "보개면"
+  },
+  {
+    "idx": 1614,
+    "parent_idx": 56,
+    "third_city": "금광면"
+  },
+  {
+    "idx": 1615,
+    "parent_idx": 56,
+    "third_city": "서운면"
+  },
+  {
+    "idx": 1616,
+    "parent_idx": 56,
+    "third_city": "미양면"
+  },
+  {
+    "idx": 1617,
+    "parent_idx": 56,
+    "third_city": "대덕면"
+  },
+  {
+    "idx": 1618,
+    "parent_idx": 56,
+    "third_city": "양성면"
+  },
+  {
+    "idx": 1619,
+    "parent_idx": 56,
+    "third_city": "원곡면"
+  },
+  {
+    "idx": 1620,
+    "parent_idx": 56,
+    "third_city": "일죽면"
+  },
+  {
+    "idx": 1621,
+    "parent_idx": 56,
+    "third_city": "죽산면"
+  },
+  {
+    "idx": 1622,
+    "parent_idx": 56,
+    "third_city": "삼죽면"
+  },
+  {
+    "idx": 1623,
+    "parent_idx": 56,
+    "third_city": "고삼면"
+  },
+  {
+    "idx": 1624,
+    "parent_idx": 56,
+    "third_city": "안성1동"
+  },
+  {
+    "idx": 1625,
+    "parent_idx": 56,
+    "third_city": "안성2동"
+  },
+  {
+    "idx": 1626,
+    "parent_idx": 56,
+    "third_city": "안성3동"
+  },
+  {
+    "idx": 1627,
+    "parent_idx": 57,
+    "third_city": "통진읍"
+  },
+  {
+    "idx": 1628,
+    "parent_idx": 57,
+    "third_city": "고촌읍"
+  },
+  {
+    "idx": 1629,
+    "parent_idx": 57,
+    "third_city": "양촌읍"
+  },
+  {
+    "idx": 1630,
+    "parent_idx": 57,
+    "third_city": "대곶면"
+  },
+  {
+    "idx": 1631,
+    "parent_idx": 57,
+    "third_city": "월곶면"
+  },
+  {
+    "idx": 1632,
+    "parent_idx": 57,
+    "third_city": "하성면"
+  },
+  {
+    "idx": 1633,
+    "parent_idx": 57,
+    "third_city": "김포본동"
+  },
+  {
+    "idx": 1634,
+    "parent_idx": 57,
+    "third_city": "장기본동"
+  },
+  {
+    "idx": 1635,
+    "parent_idx": 57,
+    "third_city": "사우동"
+  },
+  {
+    "idx": 1636,
+    "parent_idx": 57,
+    "third_city": "풍무동"
+  },
+  {
+    "idx": 1637,
+    "parent_idx": 57,
+    "third_city": "장기동"
+  },
+  {
+    "idx": 1638,
+    "parent_idx": 57,
+    "third_city": "구래동"
+  },
+  {
+    "idx": 1639,
+    "parent_idx": 57,
+    "third_city": "운양동"
+  },
+  {
+    "idx": 1640,
+    "parent_idx": 58,
+    "third_city": "봉담읍"
+  },
+  {
+    "idx": 1641,
+    "parent_idx": 58,
+    "third_city": "우정읍"
+  },
+  {
+    "idx": 1642,
+    "parent_idx": 58,
+    "third_city": "향남읍"
+  },
+  {
+    "idx": 1643,
+    "parent_idx": 58,
+    "third_city": "남양읍"
+  },
+  {
+    "idx": 1644,
+    "parent_idx": 58,
+    "third_city": "매송면"
+  },
+  {
+    "idx": 1645,
+    "parent_idx": 58,
+    "third_city": "비봉면"
+  },
+  {
+    "idx": 1646,
+    "parent_idx": 58,
+    "third_city": "마도면"
+  },
+  {
+    "idx": 1647,
+    "parent_idx": 58,
+    "third_city": "송산면"
+  },
+  {
+    "idx": 1648,
+    "parent_idx": 58,
+    "third_city": "서신면"
+  },
+  {
+    "idx": 1649,
+    "parent_idx": 58,
+    "third_city": "팔탄면"
+  },
+  {
+    "idx": 1650,
+    "parent_idx": 58,
+    "third_city": "장안면"
+  },
+  {
+    "idx": 1651,
+    "parent_idx": 58,
+    "third_city": "양감면"
+  },
+  {
+    "idx": 1652,
+    "parent_idx": 58,
+    "third_city": "정남면"
+  },
+  {
+    "idx": 1653,
+    "parent_idx": 58,
+    "third_city": "새솔동"
+  },
+  {
+    "idx": 1654,
+    "parent_idx": 58,
+    "third_city": "진안동"
+  },
+  {
+    "idx": 1655,
+    "parent_idx": 58,
+    "third_city": "병점1동"
+  },
+  {
+    "idx": 1656,
+    "parent_idx": 58,
+    "third_city": "병점2동"
+  },
+  {
+    "idx": 1657,
+    "parent_idx": 58,
+    "third_city": "반월동"
+  },
+  {
+    "idx": 1658,
+    "parent_idx": 58,
+    "third_city": "기배동"
+  },
+  {
+    "idx": 1659,
+    "parent_idx": 58,
+    "third_city": "화산동"
+  },
+  {
+    "idx": 1660,
+    "parent_idx": 58,
+    "third_city": "동탄1동"
+  },
+  {
+    "idx": 1661,
+    "parent_idx": 58,
+    "third_city": "동탄2동"
+  },
+  {
+    "idx": 1662,
+    "parent_idx": 58,
+    "third_city": "동탄3동"
+  },
+  {
+    "idx": 1663,
+    "parent_idx": 58,
+    "third_city": "동탄4동"
+  },
+  {
+    "idx": 1664,
+    "parent_idx": 58,
+    "third_city": "동탄5동"
+  },
+  {
+    "idx": 1665,
+    "parent_idx": 58,
+    "third_city": "동탄5동"
+  },
+  {
+    "idx": 1666,
+    "parent_idx": 58,
+    "third_city": "동탄6동"
+  },
+  {
+    "idx": 1667,
+    "parent_idx": 59,
+    "third_city": "오포읍"
+  },
+  {
+    "idx": 1668,
+    "parent_idx": 59,
+    "third_city": "초월읍"
+  },
+  {
+    "idx": 1669,
+    "parent_idx": 59,
+    "third_city": "곤지암읍"
+  },
+  {
+    "idx": 1670,
+    "parent_idx": 59,
+    "third_city": "도척면"
+  },
+  {
+    "idx": 1671,
+    "parent_idx": 59,
+    "third_city": "퇴촌면"
+  },
+  {
+    "idx": 1672,
+    "parent_idx": 59,
+    "third_city": "남종면"
+  },
+  {
+    "idx": 1673,
+    "parent_idx": 59,
+    "third_city": "남한산성면"
+  },
+  {
+    "idx": 1674,
+    "parent_idx": 59,
+    "third_city": "경안동"
+  },
+  {
+    "idx": 1675,
+    "parent_idx": 59,
+    "third_city": "송정동"
+  },
+  {
+    "idx": 1676,
+    "parent_idx": 59,
+    "third_city": "광남동"
+  },
+  {
+    "idx": 1677,
+    "parent_idx": 60,
+    "third_city": "백석읍"
+  },
+  {
+    "idx": 1678,
+    "parent_idx": 60,
+    "third_city": "은현면"
+  },
+  {
+    "idx": 1679,
+    "parent_idx": 60,
+    "third_city": "남면"
+  },
+  {
+    "idx": 1680,
+    "parent_idx": 60,
+    "third_city": "광적면"
+  },
+  {
+    "idx": 1681,
+    "parent_idx": 60,
+    "third_city": "장흥면"
+  },
+  {
+    "idx": 1682,
+    "parent_idx": 60,
+    "third_city": "양주1동"
+  },
+  {
+    "idx": 1683,
+    "parent_idx": 60,
+    "third_city": "양주2동"
+  },
+  {
+    "idx": 1684,
+    "parent_idx": 60,
+    "third_city": "회천1동"
+  },
+  {
+    "idx": 1685,
+    "parent_idx": 60,
+    "third_city": "회천2동"
+  },
+  {
+    "idx": 1686,
+    "parent_idx": 60,
+    "third_city": "회천3동"
+  },
+  {
+    "idx": 1687,
+    "parent_idx": 60,
+    "third_city": "회천4동"
+  },
+  {
+    "idx": 1688,
+    "parent_idx": 61,
+    "third_city": "소흘읍"
+  },
+  {
+    "idx": 1689,
+    "parent_idx": 61,
+    "third_city": "군내면"
+  },
+  {
+    "idx": 1690,
+    "parent_idx": 61,
+    "third_city": "내촌면"
+  },
+  {
+    "idx": 1691,
+    "parent_idx": 61,
+    "third_city": "가산면"
+  },
+  {
+    "idx": 1692,
+    "parent_idx": 61,
+    "third_city": "신북면"
+  },
+  {
+    "idx": 1693,
+    "parent_idx": 61,
+    "third_city": "창수면"
+  },
+  {
+    "idx": 1694,
+    "parent_idx": 61,
+    "third_city": "영중면"
+  },
+  {
+    "idx": 1695,
+    "parent_idx": 61,
+    "third_city": "일동면"
+  },
+  {
+    "idx": 1696,
+    "parent_idx": 61,
+    "third_city": "이동면"
+  },
+  {
+    "idx": 1697,
+    "parent_idx": 61,
+    "third_city": "영북면"
+  },
+  {
+    "idx": 1698,
+    "parent_idx": 61,
+    "third_city": "관인면"
+  },
+  {
+    "idx": 1699,
+    "parent_idx": 61,
+    "third_city": "화현면"
+  },
+  {
+    "idx": 1700,
+    "parent_idx": 61,
+    "third_city": "포천동"
+  },
+  {
+    "idx": 1701,
+    "parent_idx": 61,
+    "third_city": "선단동"
+  },
+  {
+    "idx": 1702,
+    "parent_idx": 62,
+    "third_city": "가남읍"
+  },
+  {
+    "idx": 1703,
+    "parent_idx": 62,
+    "third_city": "점동면"
+  },
+  {
+    "idx": 1704,
+    "parent_idx": 62,
+    "third_city": "흥천면"
+  },
+  {
+    "idx": 1705,
+    "parent_idx": 62,
+    "third_city": "금사면"
+  },
+  {
+    "idx": 1706,
+    "parent_idx": 62,
+    "third_city": "능서면"
+  },
+  {
+    "idx": 1707,
+    "parent_idx": 62,
+    "third_city": "대신면"
+  },
+  {
+    "idx": 1708,
+    "parent_idx": 62,
+    "third_city": "북내면"
+  },
+  {
+    "idx": 1709,
+    "parent_idx": 62,
+    "third_city": "강천면"
+  },
+  {
+    "idx": 1710,
+    "parent_idx": 62,
+    "third_city": "산북면"
+  },
+  {
+    "idx": 1711,
+    "parent_idx": 62,
+    "third_city": "여흥동"
+  },
+  {
+    "idx": 1712,
+    "parent_idx": 62,
+    "third_city": "중앙동"
+  },
+  {
+    "idx": 1713,
+    "parent_idx": 62,
+    "third_city": "오학동"
+  },
+  {
+    "idx": 1714,
+    "parent_idx": 63,
+    "third_city": "연천읍"
+  },
+  {
+    "idx": 1715,
+    "parent_idx": 63,
+    "third_city": "전곡읍"
+  },
+  {
+    "idx": 1716,
+    "parent_idx": 63,
+    "third_city": "군남면"
+  },
+  {
+    "idx": 1717,
+    "parent_idx": 63,
+    "third_city": "청산면"
+  },
+  {
+    "idx": 1718,
+    "parent_idx": 63,
+    "third_city": "백학면"
+  },
+  {
+    "idx": 1719,
+    "parent_idx": 63,
+    "third_city": "미산면"
+  },
+  {
+    "idx": 1720,
+    "parent_idx": 63,
+    "third_city": "왕징면"
+  },
+  {
+    "idx": 1721,
+    "parent_idx": 63,
+    "third_city": "신서면"
+  },
+  {
+    "idx": 1722,
+    "parent_idx": 63,
+    "third_city": "중면"
+  },
+  {
+    "idx": 1723,
+    "parent_idx": 63,
+    "third_city": "장남면"
+  },
+  {
+    "idx": 1724,
+    "parent_idx": 64,
+    "third_city": "가평읍"
+  },
+  {
+    "idx": 1725,
+    "parent_idx": 64,
+    "third_city": "설악면"
+  },
+  {
+    "idx": 1726,
+    "parent_idx": 64,
+    "third_city": "청평면"
+  },
+  {
+    "idx": 1727,
+    "parent_idx": 64,
+    "third_city": "상면"
+  },
+  {
+    "idx": 1728,
+    "parent_idx": 64,
+    "third_city": "조종면"
+  },
+  {
+    "idx": 1729,
+    "parent_idx": 64,
+    "third_city": "북면"
+  },
+  {
+    "idx": 1730,
+    "parent_idx": 65,
+    "third_city": "양평읍"
+  },
+  {
+    "idx": 1731,
+    "parent_idx": 65,
+    "third_city": "강상면"
+  },
+  {
+    "idx": 1732,
+    "parent_idx": 65,
+    "third_city": "강하면"
+  },
+  {
+    "idx": 1733,
+    "parent_idx": 65,
+    "third_city": "양서면"
+  },
+  {
+    "idx": 1734,
+    "parent_idx": 65,
+    "third_city": "옥천면"
+  },
+  {
+    "idx": 1735,
+    "parent_idx": 65,
+    "third_city": "서종면"
+  },
+  {
+    "idx": 1736,
+    "parent_idx": 65,
+    "third_city": "단월면"
+  },
+  {
+    "idx": 1737,
+    "parent_idx": 65,
+    "third_city": "청운면"
+  },
+  {
+    "idx": 1738,
+    "parent_idx": 65,
+    "third_city": "양동면"
+  },
+  {
+    "idx": 1739,
+    "parent_idx": 65,
+    "third_city": "지평면"
+  },
+  {
+    "idx": 1740,
+    "parent_idx": 65,
+    "third_city": "용문면"
+  },
+  {
+    "idx": 1741,
+    "parent_idx": 65,
+    "third_city": "개군면"
+  }
+ ]
+}
