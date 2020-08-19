@@ -55,6 +55,11 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
         recyclerviews.get(1).setAdapter(adapters.get(1));
         recyclerviews.get(2).setAdapter(adapters.get(2));
 
+        RecyclerDeco spaceDecoration = new RecyclerDeco(1);
+        recyclerviews.get(0).addItemDecoration(spaceDecoration);
+        recyclerviews.get(1).addItemDecoration(spaceDecoration);
+        recyclerviews.get(2).addItemDecoration(spaceDecoration);
+
         //---
 //        recyclerView1 = v.findViewById(R.id.now_invest_items);
 //
@@ -138,7 +143,6 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
 
         List<Integer> listResId3 = Arrays.asList(
                 R.drawable.invest_n1,
-                R.drawable.invest_n2,
                 R.drawable.invest_n2
         );
         for (int i = 0; i < listResId3.size(); i++) {

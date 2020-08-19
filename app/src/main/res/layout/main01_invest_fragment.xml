@@ -45,11 +45,11 @@
                 android:text="오픈 예정 상품"/>
 
             //리사이클러 뷰 추가
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/future_invest_items"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                />
+                android:layout_height="match_parent" />
 
             <TextView
                 android:id="@+id/past_invest"
