@@ -22,5 +22,6 @@
         app:menu="@menu/bottom_item"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
+        app:labelVisibilityMode="labeled"
         />
 </FrameLayout>

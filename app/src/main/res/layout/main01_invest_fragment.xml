@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".Login.LoginActivity">
 
     <ScrollView
@@ -11,7 +12,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity ="center"
-        android:id="@+id/scrollView">
+        android:id="@+id/scrollView"
+        android:layout_marginLeft="20dp"
+        android:background="#FFFFFF">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,7 +27,9 @@
                 android:id="@+id/now_invest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="모집중인 상품" />
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="신규 투자 상품" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/now_invest_items"
@@ -35,25 +40,30 @@
                 android:id="@+id/future_invest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="출시예정 상품"/>
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="오픈 예정 상품"/>
 
             //리사이클러 뷰 추가
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/future_invest_items"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                />
 
             <TextView
                 android:id="@+id/past_invest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="마감된 상풍"/>
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="마감된 상품" />
 
             //리사이클러 뷰 추가
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/past_invest_items"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent" />
 
         </LinearLayout>
 
