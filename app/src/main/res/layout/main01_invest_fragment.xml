@@ -7,7 +7,7 @@
     android:background="#FFFFFF"
     tools:context=".Login.LoginActivity">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -15,57 +15,81 @@
         android:id="@+id/scrollView"
         android:layout_marginLeft="20dp"
         android:background="#FFFFFF">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            //리사이클러 뷰 추가
-
-            <TextView
-                android:id="@+id/now_invest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:textColor="#000000"
-                android:text="신규 투자 상품" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/now_invest_items"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/future_invest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:textColor="#000000"
-                android:text="오픈 예정 상품"/>
+                //리사이클러 뷰 추가
 
-            //리사이클러 뷰 추가
+                <TextView
+                    android:id="@+id/now_invest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    android:text="신규 투자 상품" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/future_invest_items"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/now_invest_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/past_invest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:textColor="#000000"
-                android:text="마감된 상품" />
+                <TextView
+                    android:id="@+id/future_invest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    android:text="오픈 예정 상품"/>
 
-            //리사이클러 뷰 추가
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/past_invest_items"
+                //리사이클러 뷰 추가
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/future_invest_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/past_invest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    android:text="마감된 상품" />
+
+                //리사이클러 뷰 추가
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/past_invest_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="false"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 </RelativeLayout>
