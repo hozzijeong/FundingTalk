@@ -126,7 +126,8 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
 
         List<Integer> listResId2 = Arrays.asList(
                 R.drawable.invest_f1,
-                R.drawable.invest_f2
+                R.drawable.invest_f2,
+                R.drawable.invest_f3
         );
         for (int i = 0; i < listResId2.size(); i++) {
             // 각 List의 값들을 data 객체에 set 해줍니다.
@@ -142,8 +143,9 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
         adapters.get(1).notifyDataSetChanged();
 
         List<Integer> listResId3 = Arrays.asList(
-                R.drawable.invest_n1,
-                R.drawable.invest_n2
+                R.drawable.invest_p1,
+                R.drawable.invest_p2,
+                R.drawable.invest_p3
         );
         for (int i = 0; i < listResId3.size(); i++) {
             // 각 List의 값들을 data 객체에 set 해줍니다.
