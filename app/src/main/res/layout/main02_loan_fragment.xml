@@ -1,31 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/loan_base1_layout"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loan_base1_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login.LoginActivity"
-    android:background="@drawable/loan_bg_1">
-<!--    250 xp씩 위로 올림-->
-    <Button
-        android:id="@+id/loan_move_btn"
-        android:layout_width="803px"
-        android:layout_height="211px"
-        android:layout_marginStart="206px"
-        android:layout_marginEnd="431px"
-        android:layout_marginTop="1192px"
-        android:background="@drawable/loan_st_1" />
+    android:background="@drawable/loan_bg_1"
+    tools:context=".Login.LoginActivity">
+    <!--    250 px씩 위로 올림
+    size 를 1464 / 3294 로 맞춤. size는 6.7인치 설정. 근데 짧음
+-->
 
     <Button
         android:id="@+id/loan_go_login_btn"
         android:layout_width="264px"
         android:layout_height="45px"
+        android:layout_marginBottom="248dp"
         android:background="@drawable/loan_lg"
         android:fontFamily="@font/nanumbarungothic"
         android:textSize="39px"
-        android:layout_marginStart="544px"
-        android:layout_marginTop="1909px"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/loan_move_btn"
+        android:layout_width="803px"
+        android:layout_height="211px"
+
+        android:background="@drawable/loan_st_1"
+        app:layout_constraintBottom_toTopOf="@+id/loan_go_login_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.339"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.674"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.LoginActivity"
+    android:layout_marginBottom="28dp"
+
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/custom_invest_total_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="61px"
+                android:fontFamily="@font/nanumbarungothic"
+                android:text="총 x건의 투자 잔액"
+                android:textSize="53px"
+                android:layout_marginTop="35dp"
+                />
+
+            <TextView
+                android:id="@+id/custom_invest_total_money_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="89px"
+                android:fontFamily="@font/nanumbarungothicbold"
+                android:text="0원"
+                android:textSize="78px"
+                tools:ignore="MissingConstraints"
+                android:layout_marginTop="30px"
+                />
+
+            <TextView
+                android:id="@+id/custom_invest_return_title_tv"
+                android:layout_width="409px"
+                android:layout_height="61px"
+                android:fontFamily="@font/nanumbarungothic"
+                android:text="연 예상 수익률"
+                android:textSize="53px"
+                tools:ignore="MissingConstraints"
+                android:layout_marginTop="146px"
+                />
+
+            <TextView
+                android:id="@+id/custom_invest_return_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="89px"
+                android:fontFamily="@font/nanumbarungothicbold"
+                android:text="- %"
+                android:textSize="78px"
+                tools:ignore="MissingConstraints"
+                android:layout_marginTop="30px"
+                />
+
+            <LinearLayout
+                android:id="@+id/custom_invest_loss_layout"
+                android:layout_width="453px"
+                android:layout_height="242px"
+                android:gravity="center|left"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints"
+                android:layout_marginTop="218px">
+
+                <TextView
+                    android:layout_width="200px"
+                    android:layout_height="61px"
+                    android:text="손실원금" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="89px"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:text="0원"
+                    android:textSize="70px" />
+
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/custom_invest_btn_layout"
+                android:layout_width="1150px"
+                android:layout_height="231px"
+                tools:ignore="MissingConstraints"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="84px"
+                >
+                <Button
+                    android:id="@+id/custom_invest_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:gravity="center|left"
+                    android:paddingStart="82px"
+                    android:text="투자 현황"
+                    android:textSize="61px" />
+                <!--                bring to front 사용해서 앞으로 끌어올릴 것-->
+
+                <TextView
+                    android:id="@+id/custom_invest_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="65px"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginEnd="189px"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:text="총 x건"
+                    android:textSize="57px" />
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/custom_invest_graph"
+                android:layout_width="1150px"
+                android:layout_height="1394px"
+                android:layout_below="@id/custom_invest_btn_layout"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/splash_img"
+                android:layout_marginTop="37px"
+                />
+
+            <LinearLayout
+                android:id="@+id/custom_invest_deposit"
+                android:layout_width="1150px"
+                android:layout_height="720px"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="44px"
+                >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="70px"
+                android:fontFamily="@font/nanumbarungothicbold"
+                android:textSize="61px"
+                android:text="나의 예치금"
+                android:layout_marginTop="67px"
+                android:layout_marginStart="81px"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="77px"
+                android:fontFamily="@font/nanumbarungothicbold"
+                android:textSize="67px"
+                android:text="65 원"
+                android:layout_marginTop="67px"
+                android:layout_marginStart="81px"
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:orientation="horizontal"
+                android:layout_marginTop="105px"
+                android:layout_marginEnd="57px"
+                android:layout_marginStart="81px"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:text="신한은행 110-00-00000-00000"
+                    android:textSize="42px"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <Button
+                    android:layout_width="206px"
+                    android:layout_height="match_parent"
+                    android:text="복사하기"
+                    android:textSize="32px"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="200px"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="100px"
+                android:gravity="bottom"
+                >
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="거래내역 보기"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="출금 하기"/>
+            </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

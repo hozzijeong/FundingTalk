@@ -5,10 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
 import com.fundingtalk.fundingtalk.Login.LoginActivity;
@@ -22,7 +22,7 @@ public class Loan_Main_Fragment extends Main_BaseFragment implements View.OnClic
     // MainActivity에 뿌리를 두고 있음
     @BindView(R.id.loan_go_login_btn) Button login;
     @BindView(R.id.loan_move_btn) Button move;
-    @BindView(R.id.loan_base1_layout) RelativeLayout main_layout;
+    @BindView(R.id.loan_base1_layout) ConstraintLayout main_layout;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

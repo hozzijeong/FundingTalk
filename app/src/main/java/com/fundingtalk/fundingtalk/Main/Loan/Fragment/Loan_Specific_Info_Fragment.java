@@ -57,7 +57,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
     @BindView(R.id.cost_result) TextView house_cost;
     @BindView(R.id.check_limit) Button check_limit;
     @BindView(R.id.check_address) Button check_address;
-
+    @BindView(R.id.loan_specific_back) Button back;
     public static Double rate;
     public static long pos_cost;
 
@@ -85,6 +85,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         first_city.setOnClickListener(this);
         second_city.setOnClickListener(this);
         third_city.setOnClickListener(this);
+        back.setOnClickListener(this);
         database = FirebaseFirestore.getInstance();
         setReset();
         getFirstCity();
@@ -203,6 +204,9 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
 
                 loanActivity.changeFragment(R.id.loan_main_layout,loanActivity.loan_result_fragment);
 
+                break;
+                case R.id.loan_specific_back:
+                    loanActivity.changeFragment(R.id.loan_main_layout,loanActivity.loan_base_info_fragment);
                 break;
         }
     }

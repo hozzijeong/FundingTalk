@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.LoginActivity"
+    android:layout_marginBottom="28dp"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+        <TextView
+            android:id="@+id/custom_loan_total_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="61px"
+            android:fontFamily="@font/nanumbarungothic"
+            android:text="총 x건의 대출 잔액"
+            android:textSize="53px"
+            android:layout_marginTop="35dp"
+            />
+
+        <TextView
+            android:id="@+id/custom_loan_total_money_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="89px"
+            android:layout_marginTop="30px"
+            android:fontFamily="@font/nanumbarungothicbold"
+            android:text="0원"
+            android:textSize="78px"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/custom_loan_interest_tv"
+            android:layout_width="409px"
+            android:layout_height="61px"
+            android:layout_marginTop="146px"
+            android:fontFamily="@font/nanumbarungothic"
+            android:text="이번 달 대출 이자"
+            android:textSize="53px"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/custom_loan_interest_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="89px"
+            android:layout_marginTop="30px"
+            android:fontFamily="@font/nanumbarungothicbold"
+            android:text="- %"
+            android:textSize="78px"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/custom_loan_loss_layout"
+            android:layout_width="1000px"
+            android:layout_height="242px"
+            android:layout_marginTop="146px"
+            android:orientation="vertical"
+            android:paddingStart="46px">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35px"
+                android:text="대출 이자 및 금액상환 가상 계좌"
+                android:fontFamily="@font/nanumbarungothic"
+                android:textSize="30px"
+                android:layout_marginTop="52px"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:orientation="horizontal"
+                android:layout_marginTop="28px"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50px"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:text="신한은행 110-00-00000-1111 펀딩톡"
+                    android:textSize="42px"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <Button
+                    android:layout_width="206px"
+                    android:layout_height="match_parent"
+                    android:text="복사하기"
+                    android:textSize="21px"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="75px"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/custom_loan_btn_layout"
+            android:layout_width="1150px"
+            android:layout_height="231px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="84px"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/custom_loan_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/nanumbarungothicbold"
+                android:gravity="center|left"
+                android:paddingStart="82px"
+                android:text="채권 현황"
+                android:textSize="61px" />
+            <!--                bring to front 사용해서 앞으로 끌어올릴 것-->
+
+            <TextView
+                android:id="@+id/custom_loan_count"
+                android:layout_width="wrap_content"
+                android:layout_height="65px"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginEnd="189px"
+                android:fontFamily="@font/nanumbarungothicbold"
+                android:text="총 x건"
+                android:textSize="57px" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/custom_loan_graph"
+            android:layout_width="1150px"
+            android:layout_height="1394px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="37px"
+            android:background="@drawable/splash_img" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
