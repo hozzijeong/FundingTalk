@@ -9,6 +9,8 @@ import com.fundingtalk.fundingtalk.AppHelper.BaseActivity;
 import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Main_Fragment;
 import com.fundingtalk.fundingtalk.Main.ETC.Fragment.Etc_Main_Fragment;
 import com.fundingtalk.fundingtalk.Main.Investment.Fragment.Invest_Main_Fragment;
+import com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_finish_Fragment;
+import com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment;
 import com.fundingtalk.fundingtalk.Main.Loan.Fragment.Loan_Main_Fragment;
 import com.fundingtalk.fundingtalk.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -20,7 +22,9 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     public Custom_Main_Fragment custom_main_fragment;
     public Invest_Main_Fragment invest_main_fragment;
     public Loan_Main_Fragment loan_main_fragment;
-    public Etc_Main_Fragment faq_main_fragment;
+    public Etc_Main_Fragment etc_main_fragment;
+    public invest_input_file_Fragment invest_input_file_Fragment;
+    public invest_finish_Fragment invest_finish_Fragment;
     @BindView(R.id.main_bottom_navi) BottomNavigationView bottom_navi;
 
     @Override
@@ -41,7 +45,9 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         custom_main_fragment = new Custom_Main_Fragment();
         invest_main_fragment = new Invest_Main_Fragment();
         loan_main_fragment = new Loan_Main_Fragment();
-        faq_main_fragment = new Etc_Main_Fragment();
+        etc_main_fragment = new Etc_Main_Fragment();
+        invest_input_file_Fragment = new invest_input_file_Fragment();
+        invest_finish_Fragment = new invest_finish_Fragment();
     }
 
     @Override
@@ -62,7 +68,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
                 return true;
             case R.id.main_faq:
                 // faq로 이동
-                changeFragment(R.id.main_layout,faq_main_fragment);
+                changeFragment(R.id.main_layout,etc_main_fragment);
                 return true;
 
             default:return false;

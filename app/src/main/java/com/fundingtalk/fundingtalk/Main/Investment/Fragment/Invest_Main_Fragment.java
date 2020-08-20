@@ -14,8 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
 import com.fundingtalk.fundingtalk.Main.Investment.Decriptions.*;
-import com.fundingtalk.fundingtalk.Main.Investment.invest_input_file;
-import com.fundingtalk.fundingtalk.Main.MainActivity;
 import com.fundingtalk.fundingtalk.R;
 
 import java.util.ArrayList;
@@ -76,9 +74,9 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
             // TODO : 아이템 클릭 이벤트를 MainActivity에서 처리.
                 Log.d("이동", String.valueOf(position));
                 if(position == 0){
-                    Intent intent = new Intent(v.getContext(), invest_input_file.class);
-                    startActivity(intent);//액티비티 띄우기
-//                    mainActivity.changeFragment(R.id.main_layout,invest_input_file);
+//                    Intent intent = new Intent(v.getContext(), invest_input_file.class);
+//                    startActivity(intent);//액티비티 띄우기
+                    mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_input_file_Fragment);
                 }
                 if(position == 1){
                     Intent intent = new Intent(v.getContext(), now_Second_desc.class);
