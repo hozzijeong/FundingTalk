@@ -1,5 +1,6 @@
 package com.fundingtalk.fundingtalk.Main.Investment;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -7,12 +8,20 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Main_Fragment;
+import com.fundingtalk.fundingtalk.Main.ETC.Fragment.Etc_Main_Fragment;
+import com.fundingtalk.fundingtalk.Main.Investment.Fragment.Invest_Main_Fragment;
+import com.fundingtalk.fundingtalk.Main.Loan.Fragment.Loan_Main_Fragment;
 import com.fundingtalk.fundingtalk.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class invest_input_file extends AppCompatActivity {
 

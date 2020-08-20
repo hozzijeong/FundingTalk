@@ -78,6 +78,7 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
                 if(position == 0){
                     Intent intent = new Intent(v.getContext(), invest_input_file.class);
                     startActivity(intent);//액티비티 띄우기
+//                    mainActivity.changeFragment(R.id.main_layout,invest_input_file);
                 }
                 if(position == 1){
                     Intent intent = new Intent(v.getContext(), now_Second_desc.class);
