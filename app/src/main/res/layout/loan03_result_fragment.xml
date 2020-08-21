@@ -45,6 +45,7 @@
             android:textSize="20sp" />
 
         <TextView
+            android:id="@+id/result_address_tv"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:layout_marginTop="20dp"
@@ -66,9 +67,11 @@
         android:id="@+id/linearLayout4"
         android:layout_width="360dp"
         android:layout_height="220dp"
+        android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
@@ -112,7 +115,7 @@
             android:textColor="#4F79E0" />
 
         <TextView
-            android:id="@+id/result_cost_ltv"
+            android:id="@+id/result_cost_and_ltv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -166,12 +169,7 @@
                 android:fontFamily="@font/nanumbarungothic"
                 android:layout_marginTop="8dp"
                 />
-
-
-
-
         </LinearLayout>
-
 
         <LinearLayout
             android:id="@+id/result_on_login"

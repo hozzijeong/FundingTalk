@@ -5,7 +5,9 @@
     android:id="@+id/loan_base1_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login.LoginActivity">
+    tools:context=".Login.LoginActivity"
+    android:background="@drawable/loan_bg_1"
+    >
     <!--    250 px씩 위로 올림
     size 를 1464 / 3294 로 맞춤. size는 6.7인치 설정. 근데 짧음
 -->
