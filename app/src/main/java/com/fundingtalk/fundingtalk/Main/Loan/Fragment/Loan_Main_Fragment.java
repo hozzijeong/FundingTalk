@@ -30,13 +30,13 @@ public class Loan_Main_Fragment extends Main_BaseFragment implements View.OnClic
         ButterKnife.bind(this,v);
         login.setOnClickListener(this);
         move.setOnClickListener(this);
-        if (LoginActivity.login_state){
-            main_layout.setBackgroundResource(R.drawable.loan_bg_1_1);
-            login.setVisibility(View.INVISIBLE);
-        }else{
-            main_layout.setBackgroundResource(R.drawable.loan_bg_1);
-            login.setVisibility(View.VISIBLE);
-        }
+//        if (LoginActivity.login_state){
+//            main_layout.setBackgroundResource(R.drawable.loan_bg_1_1);
+//            login.setVisibility(View.INVISIBLE);
+//        }else{
+//            main_layout.setBackgroundResource(R.drawable.loan_bg_1);
+//            login.setVisibility(View.VISIBLE);
+//        }
         return v;
     }
 
