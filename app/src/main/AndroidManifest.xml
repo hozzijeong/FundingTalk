@@ -15,10 +15,6 @@
         </activity>
         <activity android:name=".Splash.SplashActivity">
         </activity>
-        <activity android:name=".Main.Investment.Decriptions.future_Second_desc"></activity>
-        <activity android:name=".Main.Investment.Decriptions.future_First_desc" />
-        <activity android:name=".Main.Investment.Decriptions.now_Second_desc" />
-        <activity android:name=".Main.Investment.Decriptions.now_First_desc" />
         <activity android:name=".Login.LoginActivity">
 
         </activity>
