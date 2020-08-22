@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
+import com.fundingtalk.fundingtalk.Main.MainActivity;
 import com.fundingtalk.fundingtalk.R;
 
 public class invest_input_file_Fragment extends Main_BaseFragment {
@@ -29,6 +30,12 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
 
         View v = inflater.inflate(R.layout.invest_input_file_fragment,container,false);
 
+
+//        public void onClick(View v){
+//            if(v.getId() == R.id.invest_back_activity) {  // 뒤로가기 버튼을 누른다면
+//                //intent로 값을 받아와서 그 페이지로 뒤로가기 구현
+//            }
+//        }
 
             //돈 입력받는 텍스트
             EditText numberText = (EditText)v.findViewById(R.id.input_money);
@@ -85,6 +92,7 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
                     }
                 }
             });
+
 
             numberText.addTextChangedListener(new TextWatcher() { //나중에 입력하고 나서 경고문 뜨게 하고 싶을때 하기※※※※※※※※※※※
                 @Override

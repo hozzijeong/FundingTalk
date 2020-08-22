@@ -15,8 +15,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="49dp"
-        android:layout_height="58dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.06"
@@ -31,8 +31,9 @@
         android:layout_height="wrap_content"
         android:text="투자"
         android:textColor="#000000"
-        android:textSize="45dp"
+        android:textSize="40dp"
         android:textStyle="bold"
+        android:fontFamily="@font/scdream6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.108"
@@ -71,6 +72,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="신규 투자 상품"
+                    android:fontFamily="@font/scdream6"
                     android:textColor="#000000"
                     android:textSize="20dp" />
 
@@ -92,6 +94,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="오픈 예정 상품"
+                    android:fontFamily="@font/scdream6"
                     android:textColor="#000000"
                     android:textSize="20dp" />
 
@@ -115,6 +118,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="마감된 상품"
+                    android:fontFamily="@font/scdream6"
                     android:textColor="#000000"
                     android:textSize="20dp" />
 

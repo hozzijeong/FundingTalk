@@ -42,9 +42,8 @@
 
                 //동의함이 아니고 다른 단어를 입력하면 block되게 + 빨간색이뜸 - 경고표시???????????????????
 
-
-                <ImageView
-                    android:id="@+id/imageView6"
+                <Button
+                    android:id="@+id/invest_back_activity"
                     android:layout_width="27dp"
                     android:layout_height="27dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -53,13 +52,16 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.078"
-                    app:srcCompat="@drawable/top_back_icon" />
+                    android:background="@drawable/top_back_icon"
+                    android:onClick="onClick"
+                    />
 
                 <TextView
                     android:id="@+id/maintext"
                     android:layout_width="169dp"
                     android:layout_height="45dp"
                     android:text="투자신청서"
+                    android:fontFamily="@font/nanumbarungothicbold"
                     android:textColor="#FFFFFF"
                     android:textSize="35dp"
                     android:textStyle="bold"
@@ -75,6 +77,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="현재 해당상품에 투자가능한 금액은 ????만원입니다."
+                    android:fontFamily="@font/nanumbarungothic"
                     android:gravity="center"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -101,6 +104,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="예상 수익금 : "
+                        android:fontFamily="@font/nanumbarungothic"
                         android:textColor="#FFFFFF"/>
 
                     //위에 입력한 것을 바탕으로 예상 수익금을 계산함???????????????
@@ -110,6 +114,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="원??????원"
+                        android:fontFamily="@font/nanumbarungothic"
                         android:textColor="#FFFFFF"/>
 
                 </LinearLayout>
@@ -131,6 +136,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="20dp"
                         android:text="나 ???은 상기내용을 확인하였으며, 그 내용에"
+                        android:fontFamily="@font/nanumbarungothic"
                         android:textColor="#FFFFFF" />
 
                     <EditText
@@ -155,6 +161,7 @@
                         android:id="@+id/info2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanumbarungothic"
                         android:text="※ '동의함'을 직접 입력하신후 투자가 가능합니다."
                         android:textColor="#FFFFFF"
                         tools:layout_editor_absoluteX="76dp"

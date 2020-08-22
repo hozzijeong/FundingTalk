@@ -1,5 +1,7 @@
 package com.fundingtalk.fundingtalk.Main;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -90,4 +92,20 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         }
 
     }
+
+    @Override public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setIcon(R.drawable.top_logo)
+                .setTitle("펀딩톡 종료")
+                .setMessage("FundingTalk을 종료하시겠습니까?")
+                .setPositiveButton("종료", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("아니요", null)
+                .show();
+    }
+
 }
