@@ -79,7 +79,8 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
                     mainActivity.changeFragment(R.id.main_layout,mainActivity.now_first_desc_fragment);
                 }
                 if(position == 1){
-                    mainActivity.changeFragment(R.id.main_layout,mainActivity.now_second_desc_fragment);
+//                    mainActivity.changeFragment(R.id.main_layout,mainActivity.now_second_desc_fragment);
+                    mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_input_file_Fragment);
                 }
             }
         }) ;

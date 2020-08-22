@@ -26,7 +26,8 @@
         <activity android:name=".Login.LoginActivity">
         </activity>
 
-        <activity android:name=".Main.MainActivity">
+        <activity android:name=".Main.MainActivity"
+            android:windowSoftInputMode="adjustResize|adjustPan">
         </activity>
     </application>
 
