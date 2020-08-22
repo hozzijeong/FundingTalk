@@ -8,7 +8,7 @@
      await firestoreService.initializeApp(serviceAccount, firebaseConfig.databaseURL);
      console.log('Firebase Initialized');
 
-     await firestoreService.restore('./third_city.json');
+     await firestoreService.restore('./fourth_city_info.json');
      consloe.log('Upload Success');
    }
   catch(error){

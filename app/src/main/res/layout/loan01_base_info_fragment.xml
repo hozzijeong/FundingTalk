@@ -20,8 +20,9 @@
             android:id="@+id/loan_back_activity"
             android:layout_width="15dp"
             android:layout_height="13dp"
-            android:layout_alignStart="@id/loan_title"
             android:background="@drawable/back"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="90dp"
              />
 
         <TextView
@@ -33,7 +34,6 @@
             android:text="대출"
             android:textColor="#000000"
             android:textSize="40dp"
-            android:layout_marginTop="85dp"
             android:layout_marginStart="19dp"
             />
 
