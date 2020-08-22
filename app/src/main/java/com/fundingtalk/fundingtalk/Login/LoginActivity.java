@@ -1,5 +1,6 @@
 package com.fundingtalk.fundingtalk.Login;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,7 @@ public class LoginActivity extends BaseActivity {
     EditText ed_id, ed_pw;
     String string_id, string_pw;
     public static Boolean login_state = false;
+    Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,17 +33,18 @@ public class LoginActivity extends BaseActivity {
                 string_id = ed_id.getText().toString();
                 string_pw = ed_pw.getText().toString();
                 // '로그인하기' -> 투자 페이지로(이동할 페이지는 임의로 설정.) 이동
-                //if(string_id == 데이터 베이스에 저장된 아이디, string_pw == 해당 아이디의 비밀번호) {
-                //    login_state = true;
+                if(string_id.equals("aaa") && string_pw.equals("aaa")) {
+                    login_state = true;
+                    changeActivity(context, MainActivity.class);
                 //    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 //    startActivity(intent);
-                //    finish();
-                //}
+                    finish();
+                }
 
                 // 아이디 혹은 비밀번호가 틀렸을 경우, 토스트 띄우기
-                //else {
-                //    Toast.makeText()
-                //}
+                else {
+                    Toast.makeText(context,"아이디/비밀번호가 틀렸습니다.",Toast.LENGTH_LONG).show();
+                }
             }
         });
     }

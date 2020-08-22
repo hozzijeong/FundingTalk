@@ -24,7 +24,7 @@
         </activity>
         <activity android:name=".Main.Investment.Decriptions.now_Second_desc" />
         <activity android:name=".Main.Investment.Decriptions.now_First_desc" />
-        <activity android:name=".Login.LoginActivity" />
+        <activity android:name=".Login.LoginActivity"></activity>
         <activity android:name=".Main.MainActivity">
         </activity>
     </application>
