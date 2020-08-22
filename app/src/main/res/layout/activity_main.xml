@@ -7,20 +7,24 @@
     tools:context=".Main.MainActivity">
 
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main_layout"
         android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sub_layout"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="403px"
-        >
-    </RelativeLayout>
+        android:layout_marginBottom="100dp"
+        android:visibility="invisible"
+        />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/main_bottom_navi"
         android:layout_width="match_parent"
-        android:layout_height="403px"
+        android:layout_height="100dp"
         app:menu="@menu/bottom_item"
-        android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
         />
 </FrameLayout>

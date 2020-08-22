@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +24,7 @@ public class Loan_Main_Fragment extends Main_BaseFragment implements View.OnClic
     @BindView(R.id.loan_go_login_btn) Button login;
     @BindView(R.id.loan_move_btn) Button move;
     @BindView(R.id.loan_base1_layout) ConstraintLayout main_layout;
+    @BindView(R.id.loan_off_login_layout) RelativeLayout offLogin;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -30,13 +32,13 @@ public class Loan_Main_Fragment extends Main_BaseFragment implements View.OnClic
         ButterKnife.bind(this,v);
         login.setOnClickListener(this);
         move.setOnClickListener(this);
-//        if (LoginActivity.login_state){
-//            main_layout.setBackgroundResource(R.drawable.loan_bg_1_1);
-//            login.setVisibility(View.INVISIBLE);
-//        }else{
-//            main_layout.setBackgroundResource(R.drawable.loan_bg_1);
-//            login.setVisibility(View.VISIBLE);
-//        }
+        if (LoginActivity.login_state){
+            offLogin.setVisibility(View.INVISIBLE);
+            login.setEnabled(false);
+        }else{
+            login.setEnabled(true);
+            offLogin.setVisibility(View.VISIBLE);
+        }
         return v;
     }
 
@@ -45,7 +47,6 @@ public class Loan_Main_Fragment extends Main_BaseFragment implements View.OnClic
         switch (view.getId()){
             case R.id.loan_go_login_btn:
                 mainActivity.changeActivity(mainActivity, LoginActivity.class);
-                mainActivity.show_Log("login");
                 break;
             case R.id.loan_move_btn:
                 mainActivity.changeActivity(mainActivity, LoanActivity.class);

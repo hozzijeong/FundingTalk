@@ -1,5 +1,7 @@
 package com.fundingtalk.fundingtalk.Main.Custom.Adapter;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -21,12 +23,11 @@ public class Custom_Tab_Adapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-
+                Log.d("TAG","getItem: "+position);
                 return new Custom_Invest_Fragment();
             case 1:
-                Custom_Loan_Fragment loan_fragment = new Custom_Loan_Fragment();
-
-                return loan_fragment;
+                Log.d("TAG","getItem: "+position);
+                return new Custom_Loan_Fragment();
             default:return null;
         }
     }

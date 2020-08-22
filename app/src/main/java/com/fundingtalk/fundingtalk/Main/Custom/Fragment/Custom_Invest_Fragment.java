@@ -19,7 +19,6 @@ public class Custom_Invest_Fragment extends Main_BaseFragment {
         3. 마이페이지 이미지 씌우기
         4. 로그인 기능? 구현할 거 있으면 구현하기
         5. 대출 마지막 페이지 생성 및 디자인
-
      */
     @Nullable
     @Override

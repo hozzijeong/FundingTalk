@@ -58,15 +58,13 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
     @BindView(R.id.check_limit) Button check_limit;
     @BindView(R.id.check_address) Button check_address;
     @BindView(R.id.loan_specific_back) Button back;
-    public static Double rate;
-    public static long pos_cost;
 
-    boolean login_temp_state = true;
-    public static boolean  counsel_state;
+    public static boolean login_temp_state = true; // 로그인 여부를 확인하는 변수
+    public static boolean  counsel_state; // 상담 가능 여부를 확인하는 변수 ( 만약에 시작 ltv 가 최저 ltv 보다 낮다면 그냥 상담)
+    public static Loan_Apt_Info loan_apt_info; // 최종적으로 선택된 아파트의 정보를 담는 class
 
     private int city_num = 0;
     private Calc calc; // 계산식이 들어가 있는 클래스
-    private Loan_Apt_Info loan_apt_info; // 최종적으로 선택된 아파트의 정보를 담는 class
     private City_First city; // 선택된 도시들의 정보를 담는 class innerclass로 second -> third가 존재
     private ArrayList<City> cities = new ArrayList<>(); // DB에서 파싱한 도시 정보를 저장하는 클래스 배열
     private ArrayList<City> first_cities = new ArrayList<>();
@@ -155,8 +153,6 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                         }
                     }
                 }
-//
-
                 Collections.sort(temp ,myComparator); // "가나다" 순으로 정렬
                 // 정렬 후, 중복된 정보 삭제.
 
@@ -181,7 +177,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                     로그인 했을 경우와 하지 않았을 경우
                  */
                 calc.getApply_ltv();
-
+                loan_apt_info.min_ltv =  calc.min_ltv; // 뒷장에 사용할 최소 ltv 구함.
                 //대출 가능 금액 산정 -> pos_cost;
                 if(calc.start_ltv<calc.min_ltv){
                     counsel_state = true;
@@ -190,15 +186,15 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                     long max_cost = calc.max_cost();
                     if(login_temp_state) {
                         if (max_cost >= calc.wish_loan) {
-                            pos_cost = calc.wish_loan;
+                            loan_apt_info.pos_cost = calc.wish_loan;
                         } else {
-                            pos_cost = calc.max_cost();
+                            loan_apt_info.pos_cost = calc.max_cost();
                         }
                         //대출 금리 산정
-                        rate = calc.calc_loan_interest_rate();
+                        loan_apt_info.rate = calc.calc_loan_interest_rate();
                     }else{
-                        pos_cost = calc.max_cost();
-                        rate = calc.min_rate*100;
+                        loan_apt_info.pos_cost = calc.max_cost();
+                        loan_apt_info.rate = calc.min_rate*100;
                     }
                 }
 
@@ -310,7 +306,9 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                     house_cost.setText(real_cost+" 만원");
                     loanActivity.show_Log(real_cost+"");
                     //최종적으로 대출용 아파트의 정보 ( 실거래가와 LTV)를 저장하는 클래스 생성
-                    loan_apt_info = new Loan_Apt_Info(real_cost,city.city_second.ltv);
+                    loan_apt_info = new Loan_Apt_Info(real_cost,city.city_second.ltv); // 펀딩톡 감정가와
+                    loan_apt_info.apt_name = arrayList.get(i).full_name; // 뒷장에 사용할 아파트 이름 저장& 가격은 realcost 사용.
+
                     // 대출 최소 대출 금액을 먼저 입력하기 위해서...
                     calc = new Calc(loan_apt_info.real_cost,loan_apt_info.ltv); // min 이랑 max ltv 설정 완료.
                     check_limit.setEnabled(true);
