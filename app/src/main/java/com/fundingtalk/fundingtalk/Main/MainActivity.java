@@ -8,6 +8,10 @@ import androidx.annotation.NonNull;
 import com.fundingtalk.fundingtalk.AppHelper.BaseActivity;
 import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Main_Fragment;
 import com.fundingtalk.fundingtalk.Main.ETC.Fragment.Etc_Main_Fragment;
+import com.fundingtalk.fundingtalk.Main.Investment.Decriptions.future_first_desc_fragment;
+import com.fundingtalk.fundingtalk.Main.Investment.Decriptions.future_second_desc_fragment;
+import com.fundingtalk.fundingtalk.Main.Investment.Decriptions.now_first_desc_fragment;
+import com.fundingtalk.fundingtalk.Main.Investment.Decriptions.now_second_desc_fragment;
 import com.fundingtalk.fundingtalk.Main.Investment.Fragment.Invest_Main_Fragment;
 import com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_finish_Fragment;
 import com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment;
@@ -25,6 +29,12 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     public Etc_Main_Fragment etc_main_fragment;
     public invest_input_file_Fragment invest_input_file_Fragment;
     public invest_finish_Fragment invest_finish_Fragment;
+
+    public now_first_desc_fragment now_first_desc_fragment;
+    public now_second_desc_fragment now_second_desc_fragment;
+    public future_first_desc_fragment future_first_desc_fragment;
+    public future_second_desc_fragment future_second_desc_fragment;
+
     @BindView(R.id.main_bottom_navi) BottomNavigationView bottom_navi;
 
     @Override
@@ -48,6 +58,11 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         etc_main_fragment = new Etc_Main_Fragment();
         invest_input_file_Fragment = new invest_input_file_Fragment();
         invest_finish_Fragment = new invest_finish_Fragment();
+
+        now_first_desc_fragment = new now_first_desc_fragment();
+        now_second_desc_fragment = new now_second_desc_fragment();
+        future_first_desc_fragment = new future_first_desc_fragment();
+        future_second_desc_fragment = new future_second_desc_fragment();
     }
 
     @Override

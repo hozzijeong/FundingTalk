@@ -76,11 +76,10 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
                 if(position == 0){
 //                    Intent intent = new Intent(v.getContext(), invest_input_file.class);
 //                    startActivity(intent);//액티비티 띄우기
-                    mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_input_file_Fragment);
+                    mainActivity.changeFragment(R.id.main_layout,mainActivity.now_first_desc_fragment);
                 }
                 if(position == 1){
-                    Intent intent = new Intent(v.getContext(), now_Second_desc.class);
-                    startActivity(intent);//액티비티 띄우기
+                    mainActivity.changeFragment(R.id.main_layout,mainActivity.now_second_desc_fragment);
                 }
             }
         }) ;
@@ -94,12 +93,10 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
             // Log.d("이동", String.valueOf(position));
             //클릭하면 페이지 이동
                 if(position == 0){
-                    Intent intent = new Intent(v.getContext(), future_First_desc.class);
-                    startActivity(intent);//액티비티 띄우기
+                    mainActivity.changeFragment(R.id.main_layout,mainActivity.future_first_desc_fragment);
                 }
                 if(position == 1){
-                    Intent intent = new Intent(v.getContext(), future_Second_desc.class);
-                    startActivity(intent);//액티비티 띄우기
+                    mainActivity.changeFragment(R.id.main_layout,mainActivity.future_second_desc_fragment);
                 }
             }
 
