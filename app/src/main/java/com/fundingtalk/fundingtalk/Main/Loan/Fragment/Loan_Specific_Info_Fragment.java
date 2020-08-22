@@ -135,8 +135,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                 break;
             case R.id.check_address:
                 ArrayList<Apt_Info> temp = new ArrayList<>();
-                String input_name = specific_address.getText().toString();
-
+                String input_name = specific_address.getText().toString().trim();
                 // 여기서 이제 city fourth에 배열로 법정동 명들이 저장되어 있음
                 // apt_infos의 local_dong이 fourth_city에 있는 동 중에 하나라도 포함되어 있고,
                 // 아파트 이름이 포함되어 있으면 그때 temp.add를 하면 됨.
@@ -144,6 +143,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                 // 아파트 인포에 값을 넣었고, city.citysecond.city-> 태평동이 나왔어.
                 // 그렇다면 이제 아파트 인포를 돌려서 법정동이 태평동인 것들과 아파트 이름을 포함한 아파트 값을 넣으면 됨.
                 // 반복문의 순서가 바뀌어야함.
+
                 for(int i=0; i<city.city_second.city_third.fourth_city.size(); i++){
                     for(int j=0; j<apt_infos.size(); j++){
                         if(city.city_second.city_third.fourth_city.get(i).city_name.trim().
@@ -179,8 +179,12 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                 calc.getApply_ltv();
                 loan_apt_info.min_ltv =  calc.min_ltv; // 뒷장에 사용할 최소 ltv 구함.
                 //대출 가능 금액 산정 -> pos_cost;
-                if(calc.start_ltv<calc.min_ltv){
+                // 적용 ltv 가 max ltv와 같거나 크거나 || 시작 ltv가 최소 ltv 보다 작으면 상담신청
+                loanActivity.show_Log("\nstart: "+calc.start_ltv+"\nmin: "+calc.min_ltv+
+                        "\nmax: "+calc.max_ltv+"\napply: "+calc.apply_ltv);
+                if(calc.start_ltv<calc.min_ltv || calc.apply_ltv>=calc.max_ltv){
                     counsel_state = true;
+                    loanActivity.show_Log("상담 신청");
                 }else{
                     counsel_state = false;
                     long max_cost = calc.max_cost();
@@ -337,7 +341,6 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         city_num = 0;
     }
     private void getCity(long idx,String path){
-
         /*
             이전에 있던 도시 정보들을 깔끔하게 지워주고,
             부모 idx값 과 두 번째 도시인지 세 번재 도시인지 문서 경로를 입력받아
@@ -379,7 +382,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                                     }
 
                                     for(int i=0; i<city.city_second.city_third.fourth_city.size(); i++){
-                                        loanActivity.show_Log("법정동: "+city.city_second.city_third.fourth_city.get(i).city_name);
+                                        loanActivity.show_Log("add된 법정동: "+city.city_second.city_third.fourth_city.get(i).city_name);
                                     }
 
                                     getAptDealInfo();

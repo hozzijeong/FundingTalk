@@ -46,15 +46,14 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
         form = new DecimalFormat("#.##");
         form2 = new DecimalFormat("###,###");
         address_tv.setText(Loan_Specific_Info_Fragment.loan_apt_info.apt_name);
-        if(!Loan_Specific_Info_Fragment.counsel_state){
-            if(Loan_Specific_Info_Fragment.login_temp_state){
-                onLogin();
-            }else{
-                offLogin();
-            }
+        if(Loan_Specific_Info_Fragment.login_temp_state){
+            onLogin();
         }else{
-
+            offLogin();
         }
+        // 상담 상태에 따라서도 변경되는 창을 만들어 놓을 것.
+
+
         return v;
     }
 
