@@ -62,6 +62,8 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
 
                     //모든걸 잘 입력하면
                     if (ok_money == 1 && ok_confirm == 1){
+                        numberText.setText("");
+                        confirmtext.setText("");
                         mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_finish_Fragment);
 //                    Log.d("입력", "완전히 완료");
                     }
