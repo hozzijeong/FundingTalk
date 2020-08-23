@@ -1,4 +1,4 @@
-package com.fundingtalk.fundingtalk.Main.ETC.Fragment;
+package com.fundingtalk.fundingtalk.Main.ETC.Adapter;
 
 import android.util.Log;
 
@@ -12,6 +12,8 @@ import com.fundingtalk.fundingtalk.AppHelper.BaseActivity;
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
 import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Invest_Fragment;
 import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Loan_Fragment;
+import com.fundingtalk.fundingtalk.Main.ETC.Fragment.etc_notice_fragment;
+import com.fundingtalk.fundingtalk.Main.ETC.Fragment.etc_qna_fragment;
 
 import java.util.ArrayList;
 
@@ -45,5 +47,6 @@ public class etc_adapter extends FragmentStatePagerAdapter {
     public int getCount() {
         return fragments.size();
     }
+
 }
 

@@ -4,17 +4,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
-import com.fundingtalk.fundingtalk.Main.Custom.Adapter.Custom_Tab_Adapter;
+import com.fundingtalk.fundingtalk.Main.ETC.Adapter.etc_adapter;
 import com.fundingtalk.fundingtalk.R;
 import com.google.android.material.tabs.TabLayout;
 
