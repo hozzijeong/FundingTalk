@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.LoginActivity"
+    android:orientation="vertical"
+    android:background="@drawable/loan_bg_2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <Button
+            android:id="@+id/loan_back_activity"
+            android:layout_width="15dp"
+            android:layout_height="13dp"
+            android:layout_alignStart="@id/loan_title"
+            android:background="@drawable/back"
+             />
+
+        <TextView
+            android:id="@+id/loan_title"
+            android:layout_width="86dp"
+            android:layout_height="52dp"
+            android:fontFamily="@font/scdream6"
+            android:gravity="center"
+            android:text="대출"
+            android:textColor="#000000"
+            android:textSize="40dp"
+            android:layout_marginTop="85dp"
+            android:layout_marginStart="19dp"
+            />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="160dp"
+            android:layout_height="20dp"
+            android:fontFamily="@font/nanumbarungothicbold"
+            android:text="대출한도 및 여부 조회"
+            android:textSize="18sp"
+            android:layout_marginTop="11dp"
+            android:layout_marginStart="19dp"
+             />
+
+        <LinearLayout
+            android:id="@+id/base_layout"
+            android:layout_width="302dp"
+            android:layout_height="170dp"
+            android:orientation="vertical"
+            android:weightSum="4"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="29dp"
+            >
+
+            <EditText
+                android:id="@+id/loan_user_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/loan_base_frame"
+                android:fontFamily="@font/nanumbarungothic"
+                android:hint="이름 입력"
+                android:paddingStart="20dp"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/loan_user_birth_et"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/loan_base_frame"
+                android:fontFamily="@font/nanumbarungothic"
+                android:hint="YYYY/MM/DD"
+                android:paddingStart="20dp"
+
+                android:textSize="10sp"
+
+                />
+
+            <EditText
+                android:id="@+id/loan_user_phone_et"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/loan_base_frame"
+                android:fontFamily="@font/nanumbarungothic"
+                android:hint="-제외하고 입력해주세요"
+
+                android:paddingStart="20dp"
+                android:textSize="10sp"
+
+                />
+
+
+            <EditText
+                android:id="@+id/loan_user_mail_et"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/loan_base_frame"
+                android:fontFamily="@font/nanumbarungothic"
+                android:hint="메일 입력"
+                android:paddingStart="20dp"
+
+                android:textSize="10sp"
+
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="80dp"
+            android:layout_height="15dp"
+            android:fontFamily="@font/nanumbarungothicbold"
+            android:text="본인 거주 여부"
+            android:textSize="13sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="29dp"
+             />
+        <RadioGroup
+            android:id="@+id/loan_live_state_rg"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="10dp"
+            >
+
+            <RadioButton
+                android:id="@+id/loan_live_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/radio_button"
+                android:text="예"
+                android:padding="6dp"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/loan_live_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@drawable/radio_button"
+                android:text="아니오"
+                android:padding="6dp"
+                android:textSize="10sp" />
+
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="80dp"
+            android:layout_height="15dp"
+            android:fontFamily="@font/nanumbarungothicbold"
+            android:text="대출 신청 내용"
+            android:textSize="13sp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="41dp"
+             />
+
+        <EditText
+            android:id="@+id/loan_user_use_et"
+            android:layout_width="302dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/loan_base_frame"
+            android:hint="주택 구매 용도는 불가능합니다."
+            android:paddingStart="20dp"
+            android:textSize="10sp"
+             />
+
+        <Button
+            android:id="@+id/loan_specific_btn"
+            android:layout_width="292dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginTop="69dp"
+            android:background="@drawable/next"
+            android:textSize="20sp"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

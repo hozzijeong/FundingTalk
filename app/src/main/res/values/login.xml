@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="id">
+        <item>fundingtalk</item>
+        <item>easteregg</item>
+    </string-array>
+
+    <string-array name="ps">
+        <item>ft123</item>
+        <item>hidden</item>
+    </string-array>
+
+    <string-array name="name">
+        <item>최승현 </item>
+        <item>관리자</item>
+    </string-array>
+
+    <integer-array name="money">
+        <item>3500000 </item>
+        <item>99999999</item>
+    </integer-array>
+</resources>

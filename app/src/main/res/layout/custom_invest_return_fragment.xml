@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="1338px"
+        android:layout_marginTop="162px"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.002"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:layout_width="62px"
+            android:layout_height="52px"
+            android:layout_marginStart="68px"
+            android:layout_marginTop="53px"
+            android:background="@drawable/back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="130px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="205px"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:fontFamily="@font/nanumbarungothic"
+                android:gravity="center"
+                android:text="2020.08"
+                android:textSize="15dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="72px"
+            android:fontFamily="@font/nanumbarungothic"
+            android:text="수령액"
+            android:textSize="40px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="106px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="17px"
+            android:fontFamily="@font/nanumbarungothic"
+            android:text="20,194원"
+            android:textSize="92px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="213px"
+            android:layout_marginTop="219px"
+            android:layout_marginEnd="163px"
+            android:layout_marginBottom="119px"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:gravity="center_vertical"
+                    android:text="원금"
+                    android:textSize="44px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:gravity="right|center_vertical"
+                    android:text="205150 원"
+                    android:textSize="44px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:gravity="center_vertical"
+                    android:text="이자"
+                    android:textSize="44px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:gravity="right|center_vertical"
+                    android:text="205150 원"
+                    android:textSize="44px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:gravity="center_vertical"
+                    android:text="연체이자"
+                    android:textSize="44px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:gravity="right|center_vertical"
+                    android:text="205150 원"
+                    android:textSize="44px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:gravity="center_vertical"
+                    android:text="세금"
+                    android:textSize="44px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:gravity="right|center_vertical"
+                    android:text="205150 원"
+                    android:textSize="44px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:gravity="center_vertical"
+                    android:text="수수료"
+                    android:textSize="44px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:gravity="right|center_vertical"
+                    android:text="205150 원"
+                    android:textSize="44px" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/custom_loan_return_count"
+        android:layout_width="wrap_content"
+        android:layout_height="100px"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/nanumbarungothicbold"
+        android:gravity="center"
+        android:text="총 x건"
+        android:textSize="61px"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="444dp"
+        android:layout_marginStart="129px"
+        android:layout_marginEnd="109px"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
