@@ -1,34 +1,21 @@
 package com.fundingtalk.fundingtalk.Main.Investment.Decriptions;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
-import com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment;
 import com.fundingtalk.fundingtalk.R;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 
-import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.back_check;
+import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.*;
 
 public class now_first_desc_fragment extends Main_BaseFragment {
 
@@ -54,7 +41,7 @@ public class now_first_desc_fragment extends Main_BaseFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.now_first_desc_fragment,container,false);
+        View v = inflater.inflate(R.layout.desc_fragment,container,false);
         //---
 
         ImageButton back = (ImageButton)v.findViewById(R.id.back_icon);
@@ -74,6 +61,7 @@ public class now_first_desc_fragment extends Main_BaseFragment {
             public void onClick(View v) { //클릭 했을경우
                 //버튼 클릭 시 발생할 이벤트내용
                 back_check = 1;
+                rating = 9.9;
                 mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_input_file_Fragment);
             }
         });
@@ -109,7 +97,7 @@ public class now_first_desc_fragment extends Main_BaseFragment {
         setdesc("감정가는 KB부동산시세외 일반거래가 37,000만원 및 국토교통부\n 최근실거래가(최근6개월)의 변화 추이동을 반영하여 적용되었습니다.");
         setloan_info_input("2억 8,000만원 (원금)");
         setfunding_info_input("3,000만원 (원금)");
-        setnakchal_input("본 담보가 위치한 경기도 고양시 덕양구의 최근 6개월 낙찰가율은 102%입닏.");
+        setnakchal_input("본 담보가 위치한 경기도 고양시 덕양구의 최근 6개월 낙찰가율은 102%입니다.");
 
         return v;
     }

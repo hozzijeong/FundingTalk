@@ -25,14 +25,15 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
     private int ok_money = 0;
     private int ok_confirm = 0;
     static public int back_check = 0;
+    static public double rating = 0;
+    static public int now_money = 0; //로그인할때 설정해주기
+    static public int now_name = 0;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.invest_input_file_fragment,container,false);
-
-        Bundle bundle = getArguments();
 
         Button back = (Button)v.findViewById(R.id.invest_back_activity);
         back.setOnClickListener(new View.OnClickListener() { // 이미지 버튼 이벤트 정의
