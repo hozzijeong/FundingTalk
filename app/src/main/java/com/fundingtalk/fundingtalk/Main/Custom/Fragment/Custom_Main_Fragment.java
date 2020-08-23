@@ -21,6 +21,7 @@ public class Custom_Main_Fragment extends Main_BaseFragment {
 
     /*
         다른 fragment 갔다가 여기로 들어오면 앞의 내용들이 다 없어짐
+
      */
     @BindView(R.id.tab_layout) TabLayout tabLayout;
     @BindView(R.id.custom_viewpager) ViewPager customViewPager;

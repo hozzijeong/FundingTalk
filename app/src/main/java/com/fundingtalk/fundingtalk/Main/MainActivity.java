@@ -1,5 +1,7 @@
 package com.fundingtalk.fundingtalk.Main;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -10,7 +12,13 @@ import com.fundingtalk.fundingtalk.Login.LoginActivity;
 import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Main_Fragment;
 import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Notlogin_Fragment;
 import com.fundingtalk.fundingtalk.Main.ETC.Fragment.Etc_Main_Fragment;
+import com.fundingtalk.fundingtalk.Main.Investment.Decriptions.future_first_desc_fragment;
+import com.fundingtalk.fundingtalk.Main.Investment.Decriptions.future_second_desc_fragment;
+import com.fundingtalk.fundingtalk.Main.Investment.Decriptions.now_first_desc_fragment;
+import com.fundingtalk.fundingtalk.Main.Investment.Decriptions.now_second_desc_fragment;
 import com.fundingtalk.fundingtalk.Main.Investment.Fragment.Invest_Main_Fragment;
+import com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_finish_Fragment;
+import com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment;
 import com.fundingtalk.fundingtalk.Main.Loan.Fragment.Loan_Main_Fragment;
 import com.fundingtalk.fundingtalk.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -22,6 +30,15 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     public Custom_Main_Fragment custom_main_fragment;
     public Invest_Main_Fragment invest_main_fragment;
     public Loan_Main_Fragment loan_main_fragment;
+    public Etc_Main_Fragment etc_main_fragment;
+    public invest_input_file_Fragment invest_input_file_Fragment;
+    public invest_finish_Fragment invest_finish_Fragment;
+
+    public now_first_desc_fragment now_first_desc_fragment;
+    public now_second_desc_fragment now_second_desc_fragment;
+    public future_first_desc_fragment future_first_desc_fragment;
+    public future_second_desc_fragment future_second_desc_fragment;
+
     public Etc_Main_Fragment faq_main_fragment;
     public Custom_Notlogin_Fragment custom_notlogin_fragment;
     @BindView(R.id.main_bottom_navi) BottomNavigationView bottom_navi;
@@ -46,6 +63,14 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         loan_main_fragment = new Loan_Main_Fragment();
         faq_main_fragment = new Etc_Main_Fragment();
         custom_notlogin_fragment = new Custom_Notlogin_Fragment();
+        etc_main_fragment = new Etc_Main_Fragment();
+        invest_input_file_Fragment = new invest_input_file_Fragment();
+        invest_finish_Fragment = new invest_finish_Fragment();
+
+        now_first_desc_fragment = new now_first_desc_fragment();
+        now_second_desc_fragment = new now_second_desc_fragment();
+        future_first_desc_fragment = new future_first_desc_fragment();
+        future_second_desc_fragment = new future_second_desc_fragment();
     }
 
     @Override
@@ -72,11 +97,27 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
                 }
             case R.id.main_faq:
                 // faq로 이동
-                changeFragment(R.id.main_layout,faq_main_fragment);
+                changeFragment(R.id.main_layout,etc_main_fragment);
                 return true;
 
             default:return false;
         }
 
     }
+
+    @Override public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setIcon(R.drawable.top_logo)
+                .setTitle("펀딩톡 종료")
+                .setMessage("FundingTalk을 종료하시겠습니까?")
+                .setPositiveButton("종료", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("아니요", null)
+                .show();
+    }
+
 }

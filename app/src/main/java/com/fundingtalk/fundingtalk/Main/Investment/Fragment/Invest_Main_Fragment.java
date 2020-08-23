@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
 import com.fundingtalk.fundingtalk.Main.Investment.Decriptions.*;
-import com.fundingtalk.fundingtalk.Main.MainActivity;
 import com.fundingtalk.fundingtalk.R;
 
 import java.util.ArrayList;
@@ -75,12 +74,12 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
             // TODO : 아이템 클릭 이벤트를 MainActivity에서 처리.
                 Log.d("이동", String.valueOf(position));
                 if(position == 0){
-                    Intent intent = new Intent(v.getContext(), now_First_desc.class);
-                    startActivity(intent);//액티비티 띄우기
+//                    Intent intent = new Intent(v.getContext(), invest_input_file.class);
+//                    startActivity(intent);//액티비티 띄우기
+                    mainActivity.changeFragment(R.id.main_layout,mainActivity.now_first_desc_fragment);
                 }
                 if(position == 1){
-                    Intent intent = new Intent(v.getContext(), now_Second_desc.class);
-                    startActivity(intent);//액티비티 띄우기
+                    mainActivity.changeFragment(R.id.main_layout,mainActivity.now_second_desc_fragment);
                 }
             }
         }) ;
@@ -94,12 +93,10 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
             // Log.d("이동", String.valueOf(position));
             //클릭하면 페이지 이동
                 if(position == 0){
-                    Intent intent = new Intent(v.getContext(), future_First_desc.class);
-                    startActivity(intent);//액티비티 띄우기
+                    mainActivity.changeFragment(R.id.main_layout,mainActivity.future_first_desc_fragment);
                 }
                 if(position == 1){
-                    Intent intent = new Intent(v.getContext(), future_Second_desc.class);
-                    startActivity(intent);//액티비티 띄우기
+                    mainActivity.changeFragment(R.id.main_layout,mainActivity.future_second_desc_fragment);
                 }
             }
 
@@ -126,7 +123,8 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
 
         List<Integer> listResId2 = Arrays.asList(
                 R.drawable.invest_f1,
-                R.drawable.invest_f2
+                R.drawable.invest_f2,
+                R.drawable.invest_f3
         );
         for (int i = 0; i < listResId2.size(); i++) {
             // 각 List의 값들을 data 객체에 set 해줍니다.
@@ -142,8 +140,9 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
         adapters.get(1).notifyDataSetChanged();
 
         List<Integer> listResId3 = Arrays.asList(
-                R.drawable.invest_n1,
-                R.drawable.invest_n2
+                R.drawable.invest_p1,
+                R.drawable.invest_p2,
+                R.drawable.invest_p3
         );
         for (int i = 0; i < listResId3.size(); i++) {
             // 각 List의 값들을 data 객체에 set 해줍니다.

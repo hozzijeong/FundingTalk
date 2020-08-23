@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login.LoginActivity"
-
+    android:background="@drawable/loan_bg_3"
     >
 
     <LinearLayout
@@ -29,7 +29,7 @@
             android:layout_width="52dp"
             android:layout_height="15dp"
             android:text="주소 입력"
-
+            android:fontFamily="@font/nanumbarungothicbold"
             android:textSize="13dp"
             android:layout_marginTop="30dp"
             android:layout_marginStart="29dp"
@@ -52,7 +52,8 @@
                 android:layout_weight="1"
                 android:hint="시/도 입력"
                 android:textSize="10dp"
-
+                android:fontFamily="@font/nanumbarungothic"
+                android:background="@drawable/loan_check_3"
                 android:layout_marginRight="5dp"
                 />
 
@@ -64,7 +65,8 @@
                 android:hint="시/군/구 입력"
                 android:textSize="10dp"
                 android:layout_marginRight="5dp"
-
+                android:fontFamily="@font/nanumbarungothic"
+                android:background="@drawable/loan_check_3"
                 />
 
             <Button
@@ -74,7 +76,8 @@
                 android:layout_weight="1"
                 android:hint="읍/면/동 입력"
                 android:textSize="10dp"
-
+                android:fontFamily="@font/nanumbarungothic"
+                android:background="@drawable/loan_check_3"
                 />
         </LinearLayout>
         <LinearLayout
@@ -89,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:hint="아파트이름 / 전용면적 입력"
                 android:textSize="10dp"
-
+                android:fontFamily="@font/nanumbarungothic"
                 android:layout_marginStart="29dp"
                 android:layout_marginEnd="23dp"
                 />
@@ -98,11 +101,11 @@
                 android:layout_width="60dp"
                 android:layout_height="23dp"
                 android:layout_alignParentEnd="true"
-
+                android:background="@drawable/loan_search_3"
                 android:layout_alignBottom="@id/address_specific"
                 android:text="조회하기"
                 android:textSize="10dp"
-
+                android:fontFamily="@font/nanumbarungothic"
                 />
 
         </LinearLayout>
@@ -113,7 +116,7 @@
             android:layout_height="15dp"
             android:text="담보 가격"
             android:textSize="13dp"
-
+            android:fontFamily="@font/nanumbarungothicbold"
             android:layout_marginStart="29dp"
             android:layout_marginTop="41dp"
             android:gravity="center_vertical"
@@ -128,7 +131,7 @@
             android:gravity="center_vertical"
             android:text="만원"
             android:textSize="10dp"
-
+            android:fontFamily="@font/nanumbarungothic"
             android:background = "@drawable/loan_base_frame"
             android:paddingStart="20dp"
             />
@@ -139,7 +142,7 @@
             android:layout_height="15dp"
             android:text="선순위 대출금액"
             android:textSize="13dp"
-
+            android:fontFamily="@font/nanumbarungothicbold"
             android:layout_marginStart="29dp"
             android:layout_marginTop="45dp"
             android:gravity="center_vertical"
@@ -154,7 +157,7 @@
             android:gravity="center_vertical"
             android:hint="만원"
             android:paddingStart="20dp"
-
+            android:fontFamily="@font/nanumbarungothic"
             android:background="@drawable/loan_base_frame"
             />
         <TextView
@@ -165,7 +168,7 @@
             android:textSize="13dp"
             android:layout_marginStart="29dp"
             android:layout_marginTop="65dp"
-
+            android:fontFamily="@font/nanumbarungothicbold"
             android:gravity="center_vertical"
             />
         <EditText
@@ -188,7 +191,7 @@
             android:layout_marginStart="34dp"
             android:layout_marginTop="130dp"
             android:textSize="16dp"
-
+            android:background="@drawable/loan_search_3_1"
             />
 
 

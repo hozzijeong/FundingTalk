@@ -175,12 +175,16 @@ public class Calc extends Loan_Apt_Info{
          */
         // check 에 i 값을 넣음으로 써, startLtv 의 이자를 몇%부터 넣어야 하는지 찾기.
         int check = -1;
+
+        // 왜 여기서 -1이 나오는거지?
         for(int i=0; i<rate_table.length-1; i++){
             if(start_ltv>rate_table[i][0] && start_ltv<rate_table[i+1][0]){
                 check = i;
+                break;
             }
-            if(start_ltv == rate_table[i][0]){
+            if(start_ltv.equals(rate_table[i][0])){
                 check = i;
+                break;
             }
         }
         double start_rest = 0.0;

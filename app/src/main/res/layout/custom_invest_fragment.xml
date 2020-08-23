@@ -25,7 +25,7 @@
                 android:id="@+id/custom_invest_total_count_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="61px"
-
+                android:fontFamily="@font/nanumbarungothic"
                 android:text="총 x건의 투자 잔액"
                 android:textSize="53px"
                 android:layout_marginTop="35dp"
@@ -35,7 +35,7 @@
                 android:id="@+id/custom_invest_total_money_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="89px"
-
+                android:fontFamily="@font/nanumbarungothicbold"
                 android:text="0원"
                 android:textSize="78px"
                 tools:ignore="MissingConstraints"
@@ -46,7 +46,7 @@
                 android:id="@+id/custom_invest_return_title_tv"
                 android:layout_width="409px"
                 android:layout_height="61px"
-
+                android:fontFamily="@font/nanumbarungothic"
                 android:text="연 예상 수익률"
                 android:textSize="53px"
                 tools:ignore="MissingConstraints"
@@ -57,7 +57,7 @@
                 android:id="@+id/custom_invest_return_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="89px"
-
+                android:fontFamily="@font/nanumbarungothicbold"
                 android:text="- %"
                 android:textSize="78px"
                 tools:ignore="MissingConstraints"
@@ -81,7 +81,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="89px"
-
+                    android:fontFamily="@font/nanumbarungothicbold"
                     android:text="0원"
                     android:textSize="70px" />
 
@@ -100,7 +100,7 @@
                     android:id="@+id/custom_invest_list"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
+                    android:fontFamily="@font/nanumbarungothicbold"
                     android:gravity="center|left"
                     android:paddingStart="82px"
                     android:text="투자 현황"
@@ -113,7 +113,7 @@
                     android:layout_height="65px"
                     android:layout_gravity="center_vertical|right"
                     android:layout_marginEnd="189px"
-
+                    android:fontFamily="@font/nanumbarungothicbold"
                     android:text="총 x건"
                     android:textSize="57px" />
 
@@ -137,74 +137,74 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="44px"
                 >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="70px"
+                android:fontFamily="@font/nanumbarungothicbold"
+                android:textSize="61px"
+                android:text="나의 예치금"
+                android:layout_marginTop="67px"
+                android:layout_marginStart="81px"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="77px"
+                android:fontFamily="@font/nanumbarungothicbold"
+                android:textSize="67px"
+                android:text="65 원"
+                android:layout_marginTop="67px"
+                android:layout_marginStart="81px"
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:orientation="horizontal"
+                android:layout_marginTop="105px"
+                android:layout_marginEnd="57px"
+                android:layout_marginStart="81px"
+
+                >
+
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="70px"
-
-                    android:textSize="61px"
-                    android:text="나의 예치금"
-                    android:layout_marginTop="67px"
-                    android:layout_marginStart="81px"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="77px"
-
-                    android:textSize="67px"
-                    android:text="65 원"
-                    android:layout_marginTop="67px"
-                    android:layout_marginStart="81px"
-
-                    />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="100px"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="105px"
-                    android:layout_marginEnd="57px"
-                    android:layout_marginStart="81px"
-
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:text="신한은행 110-00-00000-00000"
-                        android:textSize="42px"
-                        android:layout_gravity="center_vertical"
-                        />
-
-                    <Button
-                        android:layout_width="206px"
-                        android:layout_height="match_parent"
-                        android:text="복사하기"
-                        android:textSize="32px"
-
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="200px"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="2"
-                    android:layout_marginTop="100px"
-                    android:gravity="bottom"
-                    >
-                    <Button
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="거래내역 보기"/>
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:text="신한은행 110-00-00000-00000"
+                    android:textSize="42px"
+                    android:layout_gravity="center_vertical"
+                    />
 
-                    <Button
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="출금 하기"/>
-                </LinearLayout>
+                <Button
+                    android:layout_width="206px"
+                    android:layout_height="match_parent"
+                    android:text="복사하기"
+                    android:textSize="32px"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="200px"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="100px"
+                android:gravity="bottom"
+                >
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="거래내역 보기"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="출금 하기"/>
+            </LinearLayout>
 
             </LinearLayout>
 

@@ -11,6 +11,17 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Main.Loan.LoanActivity" />
         <activity android:name=".Splash.ManualActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD3ypl03kBZqibLe-ZI4T4ijF39qXP96Fk"/>
+
+        <activity android:name=".Main.Loan.LoanActivity">
+        </activity>
+
+        <activity android:name=".Splash.ManualActivity">
+        </activity>
+
         <activity android:name=".Splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +37,13 @@
         <activity android:name=".Main.Investment.Decriptions.now_First_desc" />
         <activity android:name=".Login.LoginActivity" />
         <activity android:name=".Main.MainActivity"></activity>
+
+        <activity android:name=".Login.LoginActivity">
+        </activity>
+
+        <activity android:name=".Main.MainActivity"
+            android:windowSoftInputMode="adjustResize|adjustPan">
+        </activity>
     </application>
 
 </manifest>
