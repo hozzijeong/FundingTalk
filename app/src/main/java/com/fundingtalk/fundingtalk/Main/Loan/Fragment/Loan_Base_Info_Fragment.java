@@ -30,7 +30,7 @@ public class Loan_Base_Info_Fragment extends Loan_BaseFragment implements View.O
     @BindView(R.id.loan_live_ok) RadioButton ok;
     @BindView(R.id.loan_live_no) RadioButton no;
     @BindView(R.id.loan_back_activity) Button back;
-    private boolean possible;
+    private boolean possible = true;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -84,11 +84,11 @@ public class Loan_Base_Info_Fragment extends Loan_BaseFragment implements View.O
         switch(view.getId()){
             case R.id.loan_specific_btn:
                 loanActivity.show_Log("다음 단계: "+next_state());
-                if(next_state()){
-                    loanActivity.changeFragment(R.id.loan_main_layout,loanActivity.loan_specific_info_fragment);
-                }else{
-                    Toast.makeText(loanActivity,"정보 입력을 확인해주세요.",Toast.LENGTH_LONG).show();
-                }
+//                if(next_state()){
+                loanActivity.changeFragment(R.id.loan_main_layout,loanActivity.loan_specific_info_fragment);
+//                }else{
+                Toast.makeText(loanActivity,"정보 입력을 확인해주세요.",Toast.LENGTH_LONG).show();
+//                }
                 break;
             case R.id.loan_back_activity:
                 loanActivity.changeActivity(loanActivity, MainActivity.class);

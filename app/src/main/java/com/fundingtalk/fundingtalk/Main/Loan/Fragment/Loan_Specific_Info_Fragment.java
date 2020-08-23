@@ -127,7 +127,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                     check_address.setEnabled(false);
                     showDialog(city_num,city.second_info);
                 }
-                    city_num++;
+                city_num++;
                 break;
             case R.id.address_gu:
                 if(city_num == 2){
@@ -210,7 +210,6 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         /*
             아파트 데이터 정보를 얻어오는 method.
             거래 날짜를 일단은 지난달로 설정 & 한번에 얻어오는 정보를 50개로 설정함.
-
          */
         StrictMode.enableDefaults();
         String url = base_url+"ServiceKey="+KEY+
@@ -233,7 +232,6 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
             으로 나누어서 해당 리스트를 매번 변경시킴.
             firebase 에서 얻어오는 정보 중 중요한 것은 도시 이름과 그 도시의 idx( 다음 도시 데이터를 얻기 위함)
             이기 때문에 2가지를 중요하게 설정한다.
-
             데이터가 한꺼번에 몰린다면 runtimeException이 나기때문에, "조회하기"를 눌렀을 때, 아파트 정보를 받아오기 보다는
             3번째 도시를 선택했을 때 아파트 정보를 미리 받아와서 Apt_Info 배열에 저장한다.
                 -> 아파트 정보를 얻는데 필요한 것은
@@ -288,7 +286,6 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
             아파트 이름을 정확하게 입력한다고 해도, (동, 호수는 입력 받는 것은 나중에 추가 예정)
             여러가지 아파트 이름이 나올 수 있기 때문에, 입력받은 아파트의 이름을 포함하는 모든 거래 매물 자료들을
             Apt_Info 클래스에 저장해서, 해당 아파트를 클릭하면 해당 구매 정보가 나올 수 있도록 유도.
-
          */
         AlertDialog.Builder ab = new AlertDialog.Builder(loanActivity);
         String[] aptname = new String[arrayList.size()];
@@ -340,7 +337,6 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
             이전에 있던 도시 정보들을 깔끔하게 지워주고,
             부모 idx값 과 두 번째 도시인지 세 번재 도시인지 문서 경로를 입력받아
             cities Array배열에 새롭게 저장.
-
             저장된 cities 배열이 showDialog 에서 Dialog로 보여지는 것!
          */
         database.collection(path).
@@ -391,22 +387,21 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         /*
             데이터 파싱할때 idx 값에 따라 "where.equalto"방식 활용 할 것.
             제일 처음 도시 정보를 얻는 과정.
-
          */
         database.collection("city_info").get().
                 addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if(task.isSuccessful()){
-                    for(QueryDocumentSnapshot doc: task.getResult()){
-                        first_cities.add(new City(doc.getString("first_city"),
-                                doc.getLong("idx")));
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if(task.isSuccessful()){
+                            for(QueryDocumentSnapshot doc: task.getResult()){
+                                first_cities.add(new City(doc.getString("first_city"),
+                                        doc.getLong("idx")));
+                            }
+                        }else{
+                            loanActivity.show_Log("failed");
+                        }
                     }
-                }else{
-                    loanActivity.show_Log("failed");
-                }
-            }
-        });
+                });
 
     }
     private void pullParsing(String base_url){
@@ -469,7 +464,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                     e.printStackTrace();
                 }
             }
-        loanActivity.show_Log("파싱 끝");
+            loanActivity.show_Log("파싱 끝");
         } catch (Exception e) {
             e.printStackTrace();
         }

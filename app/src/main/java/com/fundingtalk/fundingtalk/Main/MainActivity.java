@@ -6,7 +6,9 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 
 import com.fundingtalk.fundingtalk.AppHelper.BaseActivity;
+import com.fundingtalk.fundingtalk.Login.LoginActivity;
 import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Main_Fragment;
+import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Notlogin_Fragment;
 import com.fundingtalk.fundingtalk.Main.ETC.Fragment.Etc_Main_Fragment;
 import com.fundingtalk.fundingtalk.Main.Investment.Fragment.Invest_Main_Fragment;
 import com.fundingtalk.fundingtalk.Main.Loan.Fragment.Loan_Main_Fragment;
@@ -21,6 +23,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     public Invest_Main_Fragment invest_main_fragment;
     public Loan_Main_Fragment loan_main_fragment;
     public Etc_Main_Fragment faq_main_fragment;
+    public Custom_Notlogin_Fragment custom_notlogin_fragment;
     @BindView(R.id.main_bottom_navi) BottomNavigationView bottom_navi;
 
     @Override
@@ -42,6 +45,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         invest_main_fragment = new Invest_Main_Fragment();
         loan_main_fragment = new Loan_Main_Fragment();
         faq_main_fragment = new Etc_Main_Fragment();
+        custom_notlogin_fragment = new Custom_Notlogin_Fragment();
     }
 
     @Override
@@ -58,8 +62,14 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
                 return true;
             case R.id.main_custom:
                 // 개인 정보로 이동
-                changeFragment(R.id.main_layout,custom_main_fragment);
-                return true;
+                if(LoginActivity.login_state) {
+                    changeFragment(R.id.main_layout, custom_main_fragment);
+                    return true;
+                }
+                else {
+                    changeFragment(R.id.main_layout, custom_notlogin_fragment);
+                    return true;
+                }
             case R.id.main_faq:
                 // faq로 이동
                 changeFragment(R.id.main_layout,faq_main_fragment);
