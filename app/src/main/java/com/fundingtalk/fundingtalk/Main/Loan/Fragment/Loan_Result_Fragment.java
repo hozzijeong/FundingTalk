@@ -53,7 +53,6 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
         }
         // 상담 상태에 따라서도 변경되는 창을 만들어 놓을 것.
 
-
         return v;
     }
 
@@ -70,6 +69,7 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
 
         onLogin.setVisibility(View.VISIBLE);
         noLogin.setVisibility(View.INVISIBLE);
+
         if (check_all.isChecked()){
             check1.setChecked(true);
             check2.setChecked(true);
