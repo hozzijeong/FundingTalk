@@ -46,14 +46,10 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
         form = new DecimalFormat("#.##");
         form2 = new DecimalFormat("###,###");
         address_tv.setText(Loan_Specific_Info_Fragment.loan_apt_info.apt_name);
-        if(!Loan_Specific_Info_Fragment.counsel_state){
-            if(Loan_Specific_Info_Fragment.login_temp_state){
-                onLogin();
-            }else{
-                offLogin();
-            }
+        if(Loan_Specific_Info_Fragment.login_temp_state){
+            onLogin();
         }else{
-
+            offLogin();
         }
         return v;
     }

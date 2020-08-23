@@ -35,30 +35,35 @@ public class etc_qna_fragment extends Main_BaseFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.etc_qna_fragment,container,false);
+        View v = inflater.inflate(R.layout.etc_notice_fragment,container,false);
 
-        init(v);
+        RecyclerView noticeview = v.findViewById(R.id.noticeview);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mainActivity);
+        noticeview.setLayoutManager(linearLayoutManager);
+
+        adapter = new notice_adapter();
+        noticeview.setAdapter(adapter);
 
         getData();
         return v;
     }
 
-    private void init(View v) {
-        RecyclerView noticeview = v.findViewById(R.id.noticeview);
-        Log.d("hehehhe2","**************************************************");
-
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-        if(linearLayoutManager == null){
-            Log.d("hehehhe","**************************************************");
-        }
-        else{
-            Log.d("hehehhe3","**************************************************");
-        }
-        noticeview.setLayoutManager(linearLayoutManager);
-
-        adapter = new notice_adapter();
-        noticeview.setAdapter(adapter);
-    }
+//    private void init(View v) {
+//        RecyclerView noticeview = v.findViewById(R.id.noticeview);
+//        Log.d("hehehhe2","**************************************************");
+//
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mainActivity);
+//        if(linearLayoutManager == null){
+//            Log.d("hehehhe","**************************************************");
+//        }
+//        else{
+//            Log.d("hehehhe3","**************************************************");
+//        }
+//        noticeview.setLayoutManager(linearLayoutManager);
+//
+//        adapter = new notice_adapter();
+//        noticeview.setAdapter(adapter);
+//    }
 
     private void getData() {
         List<String> listTitle = Arrays.asList(

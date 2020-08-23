@@ -215,7 +215,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         StrictMode.enableDefaults();
         String url = base_url+"ServiceKey="+KEY+
                 "&LAWD_CD="+city.city_second.local_code+
-                "&DEAL_YMD=202007&numOfRows=100";
+                "&DEAL_YMD=202007&numOfRows=1000";
         loanActivity.show_Log(url);
         new Thread(new Runnable(){
             @Override
