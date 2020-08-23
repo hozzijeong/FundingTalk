@@ -141,16 +141,17 @@
                 android:id="@+id/loan_live_ok"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:button="@drawable/radio_button"
+                android:button="@drawable/radio_check"
                 android:text="예"
                 android:padding="6dp"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                />
 
             <RadioButton
                 android:id="@+id/loan_live_no"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:button="@drawable/radio_button"
+                android:button="@drawable/radio_check"
                 android:text="아니오"
                 android:padding="6dp"
                 android:textSize="10sp" />

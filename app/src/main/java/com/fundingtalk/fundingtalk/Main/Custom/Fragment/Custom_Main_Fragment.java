@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.widget.NestedScrollView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
@@ -25,12 +26,13 @@ public class Custom_Main_Fragment extends Main_BaseFragment {
      */
     @BindView(R.id.tab_layout) TabLayout tabLayout;
     @BindView(R.id.custom_viewpager) ViewPager customViewPager;
-
+    NestedScrollView scrollView;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.main03_custom_fragment,container,false);
         ButterKnife.bind(this,v);
+        scrollView = v.findViewById(R.id.scrollView);
         Custom_Tab_Adapter tab_adapter = new Custom_Tab_Adapter(mainActivity.getSupportFragmentManager(),2);
         customViewPager.setAdapter(tab_adapter);
         customViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
@@ -50,6 +52,24 @@ public class Custom_Main_Fragment extends Main_BaseFragment {
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+        customViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if(position ==ViewPager.SCROLL_STATE_DRAGGING){
+                    scrollView.requestDisallowInterceptTouchEvent(true);
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
 
             }
         });

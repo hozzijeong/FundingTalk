@@ -8,14 +8,14 @@
     android:layout_marginBottom="28dp"
     >
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        >-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -146,5 +146,5 @@
             android:layout_marginTop="37px"
             android:background="@drawable/splash_img" />
         </LinearLayout>
-    </ScrollView>
+<!--    </ScrollView>-->
 </androidx.constraintlayout.widget.ConstraintLayout>

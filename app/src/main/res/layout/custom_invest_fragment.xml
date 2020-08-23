@@ -5,17 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="1431dp"
     tools:context=".Login.LoginActivity"
-    android:layout_marginBottom="28dp"
-
     >
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -63,30 +54,50 @@
                 tools:ignore="MissingConstraints"
                 android:layout_marginTop="30px"
                 />
-
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="242px"
+            android:layout_marginTop="218px"
+            >
             <LinearLayout
                 android:id="@+id/custom_invest_loss_layout"
                 android:layout_width="453px"
                 android:layout_height="242px"
-                android:gravity="center|left"
                 android:orientation="vertical"
-                tools:ignore="MissingConstraints"
-                android:layout_marginTop="218px">
-
+                >
                 <TextView
                     android:layout_width="200px"
                     android:layout_height="61px"
                     android:text="손실원금" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="89px"
+                    android:layout_marginTop="5dp"
                     android:fontFamily="@font/nanumbarungothicbold"
                     android:text="0원"
                     android:textSize="70px" />
-
-
             </LinearLayout>
+            <LinearLayout
+                android:id="@+id/custom_invest_layout"
+                android:layout_width="453px"
+                android:layout_height="242px"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="200px"
+                    android:layout_height="61px"
+                    android:text="손실원금" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="89px"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:text="0원"
+                    android:textSize="70px" />
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
 
             <FrameLayout
                 android:id="@+id/custom_invest_btn_layout"
@@ -132,7 +143,7 @@
             <LinearLayout
                 android:id="@+id/custom_invest_deposit"
                 android:layout_width="1150px"
-                android:layout_height="720px"
+                android:layout_height="800px"
                 android:orientation="vertical"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="44px"
@@ -190,7 +201,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="2"
-                android:layout_marginTop="100px"
+                android:layout_marginTop="25dp"
                 android:gravity="bottom"
                 >
                 <Button
@@ -209,8 +220,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
-    </ScrollView>
 
 
 

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -52,7 +53,14 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
             offLogin();
         }
         // 상담 상태에 따라서도 변경되는 창을 만들어 놓을 것.
-
+        check_all.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                check1.setChecked(true);
+                check2.setChecked(true);
+                check3.setChecked(true);
+            }
+        });
         return v;
     }
 
@@ -69,12 +77,6 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
 
         onLogin.setVisibility(View.VISIBLE);
         noLogin.setVisibility(View.INVISIBLE);
-
-        if (check_all.isChecked()){
-            check1.setChecked(true);
-            check2.setChecked(true);
-            check3.setChecked(true);
-        }
         next_btn.setText("대출 진행하기");
     }
 
@@ -100,6 +102,10 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
                 // 그냥 전체 다 메인으로 돌아가기로 설정.
                 loanActivity.changeActivity(loanActivity, MainActivity.class);
                 loanActivity.finish();
+                break;
+
+            case R.id.result_back:
+
                 break;
         }
     }

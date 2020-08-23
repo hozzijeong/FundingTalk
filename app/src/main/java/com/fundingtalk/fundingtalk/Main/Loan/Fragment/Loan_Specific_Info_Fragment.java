@@ -63,6 +63,8 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
     public static boolean  counsel_state; // 상담 가능 여부를 확인하는 변수 ( 만약에 시작 ltv 가 최저 ltv 보다 낮다면 그냥 상담)
     public static Loan_Apt_Info loan_apt_info; // 최종적으로 선택된 아파트의 정보를 담는 class
 
+
+    private int apt_max_cnt = 0;
     private int city_num = 0;
     private Calc calc; // 계산식이 들어가 있는 클래스
     private City_First city; // 선택된 도시들의 정보를 담는 class innerclass로 second -> third가 존재
@@ -219,7 +221,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         StrictMode.enableDefaults();
         String url = base_url+"ServiceKey="+KEY+
                 "&LAWD_CD="+city.city_second.local_code+
-                "&DEAL_YMD=202007&numOfRows=100";
+                "&DEAL_YMD=202007&numOfRows="+apt_max_cnt;
         loanActivity.show_Log(url);
         new Thread(new Runnable(){
             @Override
@@ -365,6 +367,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                                         city.second_info.add(cities.get(cnt));
                                         cnt++;
                                     }
+
                                     break;
                                 case "third_city_info":
                                     cities.clear();
@@ -372,6 +375,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                                         cities.add(new City(doc.getString("third_city"),
                                                 doc.getLong("idx")));
                                     }
+                                    getMaxCount();
                                     break;
                                 case "fourth_city_info":
                                     for(QueryDocumentSnapshot doc:task.getResult()){
@@ -474,11 +478,66 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                     e.printStackTrace();
                 }
             }
-        loanActivity.show_Log("파싱 끝");
+        loanActivity.show_Log("파싱 끝, 사이즈: "+apt_info.size);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
+    }
+    private void getMaxCount(){
+        StrictMode.enableDefaults();
+        String url = base_url+"ServiceKey="+KEY+
+                "&LAWD_CD="+city.city_second.local_code+
+                "&DEAL_YMD=202007";
+        loanActivity.show_Log(url);
+        new Thread(new Runnable(){
+            @Override
+            public void run() {
+                TrafficStats.setThreadStatsTag(1);
+                countParsing(url);
+            }
+        }).start();
+    }
+    private void countParsing(String base_url){
+        try {
+            URL url = new URL(base_url);
+            InputStream is = url.openStream();
+            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+            factory.setNamespaceAware(true);
+            XmlPullParser parser = factory.newPullParser();
+            parser.setInput(new InputStreamReader(is, "utf-8"));
+            int parserEvent = parser.getEventType();
+            Apt_Info apt_info = null;
+            String tag = "";
+            while(parserEvent != XmlPullParser.END_DOCUMENT){
+                switch (parserEvent){
+                    case XmlPullParser.START_DOCUMENT:
+                        Log.d("LOG","개수 파싱 시작");
+                        break;
+                    case XmlPullParser.START_TAG:
+                        //아파트 정보를 얻을 때 해당 법정동 "동" 까지 확인하기.
+                        tag = parser.getName();
+//                        Log.d("LOG","start Tag:"+tag);
+                        if(tag.equals("totalCount")){
+                            apt_max_cnt = Integer.parseInt(parser.nextText().trim());
+                        }
+
+                        break;
+                    case XmlPullParser.END_TAG:
+                        tag = parser.getName();
+//                        loanActivity.show_Log("End_Tag: "+tag);
+                        break;
+                }
+                try{
+                    parserEvent = parser.next();
+                }catch (IOException e){
+                    e.printStackTrace();
+                }
+            }
+            loanActivity.show_Log("개수 파싱 끝, 개수: "+apt_max_cnt);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private final static Comparator<Apt_Info> myComparator= new Comparator<Apt_Info>() {
