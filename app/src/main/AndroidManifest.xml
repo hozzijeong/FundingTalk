@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD3ypl03kBZqibLe-ZI4T4ijF39qXP96Fk"/>
+
         <activity android:name=".Main.Loan.LoanActivity">
         </activity>
 

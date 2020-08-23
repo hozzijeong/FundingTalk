@@ -9,14 +9,26 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
+import com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment;
 import com.fundingtalk.fundingtalk.R;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.back_check;
 
 public class now_first_desc_fragment extends Main_BaseFragment {
 
@@ -36,11 +48,36 @@ public class now_first_desc_fragment extends Main_BaseFragment {
     private TextView funding_info_input;
     private TextView nakchal_input;
 
+    private MapView mapView;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.now_first_desc_fragment,container,false);
+        //---
+
+        ImageButton back = (ImageButton)v.findViewById(R.id.back_icon);
+
+        back.setOnClickListener(new View.OnClickListener() { // 이미지 버튼 이벤트 정의
+            @Override
+            public void onClick(View v) { //클릭 했을경우
+                //버튼 클릭 시 발생할 이벤트내용
+                mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_main_fragment);
+            }
+        });
+
+        Button ok_button = (Button)v.findViewById(R.id.goto_check);
+
+        ok_button.setOnClickListener(new View.OnClickListener() { // 이미지 버튼 이벤트 정의
+            @Override
+            public void onClick(View v) { //클릭 했을경우
+                //버튼 클릭 시 발생할 이벤트내용
+                back_check = 1;
+                mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_input_file_Fragment);
+            }
+        });
+
 
         address = (TextView) v.findViewById(R.id.address);
         pro_percent = (TextView) v.findViewById(R.id.pro_percent);
@@ -69,7 +106,7 @@ public class now_first_desc_fragment extends Main_BaseFragment {
         setpro_fourth_input("84.87 (약 25.67평)");
         setpro_fifth_input("83.78%");
         setpro_gamjung_input("37,000만원");
-        setdesc("감정가는 KB부동산시세외 일반거래가 37,000만원 및 국토교통부\\n 최근실거래가(최근6개월)의 변화 추이동을 반영하여 적용되었습니다.");
+        setdesc("감정가는 KB부동산시세외 일반거래가 37,000만원 및 국토교통부\n 최근실거래가(최근6개월)의 변화 추이동을 반영하여 적용되었습니다.");
         setloan_info_input("2억 8,000만원 (원금)");
         setfunding_info_input("3,000만원 (원금)");
         setnakchal_input("본 담보가 위치한 경기도 고양시 덕양구의 최근 6개월 낙찰가율은 102%입닏.");
@@ -112,4 +149,54 @@ public class now_first_desc_fragment extends Main_BaseFragment {
     public String getfunding_info_input() { return (String) this.funding_info_input.getText() ; }
     public String getnakchal_input() { return (String) this.nakchal_input.getText() ; }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        mapView = view.findViewById(R.id.mapView);
+        mapView.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mapView.onStart();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mapView.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mapView.onPause();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        mapView.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        mapView.onStop();
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        mapView.onDestroy();
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        mapView.onLowMemory();
+    }
 }
+
+

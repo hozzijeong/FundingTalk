@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -23,6 +24,7 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
 
     private int ok_money = 0;
     private int ok_confirm = 0;
+    static public int back_check = 0;
 
     @Nullable
     @Override
@@ -30,12 +32,31 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
 
         View v = inflater.inflate(R.layout.invest_input_file_fragment,container,false);
 
+        Bundle bundle = getArguments();
 
-//        public void onClick(View v){
-//            if(v.getId() == R.id.invest_back_activity) {  // 뒤로가기 버튼을 누른다면
-//                //intent로 값을 받아와서 그 페이지로 뒤로가기 구현
-//            }
-//        }
+        Button back = (Button)v.findViewById(R.id.invest_back_activity);
+        back.setOnClickListener(new View.OnClickListener() { // 이미지 버튼 이벤트 정의
+            @Override
+            public void onClick(View v) { //뒤로가기 클릭 했을경우
+                //버튼 클릭 시 발생할 이벤트내용
+                switch (back_check){
+                    case 1:
+                        mainActivity.changeFragment(R.id.main_layout,mainActivity.now_first_desc_fragment);
+                        break;
+                    case 2:
+                        mainActivity.changeFragment(R.id.main_layout,mainActivity.now_second_desc_fragment);
+                        break;
+                    case 3:
+                        mainActivity.changeFragment(R.id.main_layout,mainActivity.future_first_desc_fragment);
+                        break;
+                    case 4:
+                        mainActivity.changeFragment(R.id.main_layout,mainActivity.future_second_desc_fragment);
+                        break;
+                }
+
+            }
+        });
+
 
             //돈 입력받는 텍스트
             EditText numberText = (EditText)v.findViewById(R.id.input_money);

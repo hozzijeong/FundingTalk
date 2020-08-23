@@ -17,7 +17,7 @@ public class now_second_desc_fragment extends Main_BaseFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.now_second_desc_fragment,container,false);
+        View v = inflater.inflate(R.layout.now_first_desc_fragment,container,false);
 
         return v;
     }
