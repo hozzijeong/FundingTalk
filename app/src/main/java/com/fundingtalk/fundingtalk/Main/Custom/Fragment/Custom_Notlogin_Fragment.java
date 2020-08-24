@@ -26,6 +26,7 @@ import butterknife.ButterKnife;
 
 public class Custom_Notlogin_Fragment extends Main_BaseFragment {
     public Custom_Notlogin_Fragment custom_notlogin_fragment;
+    public Custom_Main_Fragment custom_main_fragment;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

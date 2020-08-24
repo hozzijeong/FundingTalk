@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fundingtalk.fundingtalk">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
+
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/fundingtalk_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/fundingtalk_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Main.Loan.LoanActivity" />
@@ -15,13 +16,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyD3ypl03kBZqibLe-ZI4T4ijF39qXP96Fk"/>
-
-        <activity android:name=".Main.Loan.LoanActivity">
-        </activity>
-
-        <activity android:name=".Splash.ManualActivity">
-        </activity>
-
         <activity android:name=".Splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,14 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main.Investment.Decriptions.future_Second_desc" />
-        <activity android:name=".Main.Investment.Decriptions.future_First_desc" />
-        <activity android:name=".Main.Investment.invest_finish" />
-        <activity android:name=".Main.Investment.invest_input_file"></activity>
-        <activity android:name=".Main.Investment.Decriptions.now_Second_desc" />
-        <activity android:name=".Main.Investment.Decriptions.now_First_desc" />
-        <activity android:name=".Login.LoginActivity" />
-        <activity android:name=".Main.MainActivity"></activity>
 
         <activity android:name=".Login.LoginActivity">
         </activity>

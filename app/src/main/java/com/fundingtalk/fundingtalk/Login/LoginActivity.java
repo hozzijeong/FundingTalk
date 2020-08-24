@@ -1,6 +1,8 @@
 package com.fundingtalk.fundingtalk.Login;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +22,6 @@ public class LoginActivity extends BaseActivity {
     String string_id, string_pw;
     public static Boolean login_state = false;
     Context context = this;
-    MainActivity mainActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,10 +55,24 @@ public class LoginActivity extends BaseActivity {
         });
     }
 
+    @Override public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setIcon(R.drawable.top_logo)
+                .setTitle("펀딩톡 종료")
+                .setMessage("FundingTalk을 종료하시겠습니까?")
+                .setPositiveButton("종료", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("아니요", null)
+                .show();
+    }
+
     // 왼쪽 상단 화살표 버튼 누를 시 실행되는 함수. => 로그인 프래그먼트로 이동???(안될것같음)
     public void BackButtonClicked(View v) {
-        changeActivity(getApplicationContext(), Custom_Notlogin_Fragment.class);
+        changeActivity(this, MainActivity.class);
         finish();
     }
 }
-
