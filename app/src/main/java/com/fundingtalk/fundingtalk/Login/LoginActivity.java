@@ -17,6 +17,9 @@ import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Notlogin_Fragment
 import com.fundingtalk.fundingtalk.Main.MainActivity;
 import com.fundingtalk.fundingtalk.R;
 
+import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.Invest_Main_Fragment.back_page;
+import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.*;
+
 public class LoginActivity extends BaseActivity {
     EditText ed_id, ed_pw;
     String string_id, string_pw;
@@ -37,12 +40,14 @@ public class LoginActivity extends BaseActivity {
                 string_id = ed_id.getText().toString();
                 string_pw = ed_pw.getText().toString();
                 // '로그인하기' -> 투자 페이지로(이동할 페이지는 임의로 설정.) 이동
-                if(string_id.equals("aaa") && string_pw.equals("aaa")) {
+                if(string_id.equals("fundingtalk") && string_pw.equals("a123456789")) {
                     login_state = true;
 //                    mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_main_fragment);
                     changeActivity(context,MainActivity.class);
-                //    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                //    startActivity(intent);
+                    //    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    //    startActivity(intent);
+                    now_money = 5000;
+                    now_name = "최승현";
                     Toast.makeText(context, "로그인 되었습니다.",Toast.LENGTH_LONG).show();
                     finish();
                 }

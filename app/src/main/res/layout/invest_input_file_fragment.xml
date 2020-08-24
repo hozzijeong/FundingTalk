@@ -12,7 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:background="@drawable/input_gradient_back"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
         <!--            android:background="@drawable/invest_ok_back"-->
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -64,6 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nanumbarungothic"
+                android:bufferType="spannable"
                 android:gravity="center"
                 android:text="현재 해당상품에 투자가능한 금액은 ????만원입니다."
                 android:textColor="#FFFFFF"
@@ -123,6 +129,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
                     android:fontFamily="@font/nanumbarungothic"
+                    android:bufferType="spannable"
                     android:text="나 ???은 상기내용을 확인하였으며, 그 내용에"
                     android:textColor="#FFFFFF" />
 

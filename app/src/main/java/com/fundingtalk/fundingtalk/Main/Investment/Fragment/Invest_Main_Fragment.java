@@ -22,7 +22,7 @@ import java.util.List;
 
 public class Invest_Main_Fragment extends Main_BaseFragment {
 
-
+    static public int back_page = 0;
 
     @Nullable
     @Override
@@ -76,9 +76,11 @@ public class Invest_Main_Fragment extends Main_BaseFragment {
                 if(position == 0){
 //                    Intent intent = new Intent(v.getContext(), invest_input_file.class);
 //                    startActivity(intent);//액티비티 띄우기
+                    back_page = 1;
                     mainActivity.changeFragment(R.id.main_layout,mainActivity.now_first_desc_fragment);
                 }
                 if(position == 1){
+                    back_page = 2;
                     mainActivity.changeFragment(R.id.main_layout,mainActivity.now_second_desc_fragment);
                 }
             }

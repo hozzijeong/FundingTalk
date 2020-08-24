@@ -26,6 +26,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.Invest_Main_Fragment.back_page;
+
 public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
     public Custom_Main_Fragment custom_main_fragment;
     public Invest_Main_Fragment invest_main_fragment;
@@ -52,7 +54,17 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         //bottom_navigation 을 클릭했을 때, 페이지 변경을 위한 이벤트 처리
         bottom_navi.setOnNavigationItemSelectedListener(this);
 
-        changeFragment(R.id.main_layout,invest_main_fragment);
+
+        if (back_page == 1){
+            changeFragment(R.id.main_layout,now_first_desc_fragment);
+        }
+        else if(back_page == 2){
+            changeFragment(R.id.main_layout,now_second_desc_fragment);
+        }
+        else{
+            changeFragment(R.id.main_layout,invest_main_fragment);
+        }
+
 
     }
 

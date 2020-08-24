@@ -105,6 +105,7 @@ public class future_first_desc_fragment extends Main_BaseFragment {
         setnakchal_input("본 담보가 위치한 부산광역시 부산진구의 최근 6개월 낙찰가율은 90.1% 입니다.");
         setprogressbar();
         setfinishbutton();
+        go_check_button.setEnabled(false);
 
         return v;
     }

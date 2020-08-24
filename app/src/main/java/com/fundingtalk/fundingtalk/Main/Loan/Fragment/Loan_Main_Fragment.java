@@ -19,6 +19,8 @@ import com.fundingtalk.fundingtalk.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.Invest_Main_Fragment.back_page;
+
 public class Loan_Main_Fragment extends Main_BaseFragment implements View.OnClickListener {
     // MainActivity에 뿌리를 두고 있음
     @BindView(R.id.loan_go_login_btn) Button login;
@@ -46,10 +48,13 @@ public class Loan_Main_Fragment extends Main_BaseFragment implements View.OnClic
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.loan_go_login_btn:
+                back_page = 3;
                 mainActivity.changeActivity(mainActivity, LoginActivity.class);
+                mainActivity.finish();
                 break;
             case R.id.loan_move_btn:
                 mainActivity.changeActivity(mainActivity, LoanActivity.class);
+                mainActivity.finish();
                 break;
         }
     }

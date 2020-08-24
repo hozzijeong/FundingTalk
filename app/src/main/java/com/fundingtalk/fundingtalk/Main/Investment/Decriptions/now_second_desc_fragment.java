@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
+import com.fundingtalk.fundingtalk.Login.LoginActivity;
 import com.fundingtalk.fundingtalk.R;
 import com.google.android.gms.maps.MapView;
 
@@ -62,9 +63,16 @@ public class now_second_desc_fragment extends Main_BaseFragment {
             @Override
             public void onClick(View v) { //클릭 했을경우
                 //버튼 클릭 시 발생할 이벤트내용
-                back_check = 2;
-                rating = 9.9;
-                mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_input_file_Fragment);
+                if(LoginActivity.login_state) {
+                    back_check = 2;
+                    rating = 9.9;
+                    mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_input_file_Fragment);
+                }
+                else {
+                    mainActivity.changeActivity(mainActivity, LoginActivity.class);
+                    mainActivity.finish();
+                }
+
             }
         });
 
