@@ -1,6 +1,7 @@
 package com.fundingtalk.fundingtalk.Main.ETC.Fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,11 +27,14 @@ public class Etc_Main_Fragment extends Main_BaseFragment {
 
         tabLayout2=(TabLayout)v.findViewById(R.id.tabs);
 
+        Log.d("first", "뷰페이저 시작전");
         viewPager=(ViewPager)v.findViewById(R.id.viewPager);
+        Log.d("second", "뷰페이저 시작");
 //        viewPager.setAdapter(new etc_adapter(getChildFragmentManager()));
 
         etc_adapter etc_adapter = new etc_adapter(mainActivity.getSupportFragmentManager(),2);
         viewPager.setAdapter(etc_adapter);
+        Log.d("third", "뷰페이저 d어댑터");
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout2));
         tabLayout2.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

@@ -19,13 +19,6 @@ public class invest_finish_Fragment extends Main_BaseFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.invest_finish_fragment, container, false);
-        Button button1 = (Button) v.findViewById(R.id.goto_main);
-        button1.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_main_fragment);
-            }
-        });
 
         Button button2 = (Button) v.findViewById(R.id.goto_custom) ; //마이페이지 가는 버튼 구현
         button2.setOnClickListener(new Button.OnClickListener() {
