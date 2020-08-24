@@ -47,7 +47,7 @@ public class etc_qna_fragment extends Main_BaseFragment {
         invests.invisibleChildren.add(new qna_adapter.Item(qna_adapter.CHILD, "Q. 펀딩톡 전용 가상계좌는 무엇인가요?"));
         invests.invisibleChildren.add(new qna_adapter.Item(qna_adapter.CHILD, "Q. 모집금액이 모집되지 않아도 펀딩이 되나요?"));
 
-        data.add(invests);
+
 
         qna_adapter.Item loans = new qna_adapter.Item(qna_adapter.HEADER, "대출관련");
         loans.invisibleChildren = new ArrayList<>();
@@ -58,7 +58,7 @@ public class etc_qna_fragment extends Main_BaseFragment {
         loans.invisibleChildren.add(new qna_adapter.Item(qna_adapter.CHILD, "Q. 대출금리, 기간, 금액은 어떻게 되나요?"));
         loans.invisibleChildren.add(new qna_adapter.Item(qna_adapter.CHILD, "Q. 중도상환은 가능한가요?"));
 
-        data.add(loans);
+
 
         qna_adapter.Item guitar = new qna_adapter.Item(qna_adapter.HEADER, "기타");
         guitar.invisibleChildren = new ArrayList<>();
@@ -69,11 +69,11 @@ public class etc_qna_fragment extends Main_BaseFragment {
 //        guitar.invisibleChildren.add(new qna_adapter.Item(qna_adapter.CHILD, "가상계좌에 예치된 금액을 출금받을 수 있나요?"));
 //        guitar.invisibleChildren.add(new qna_adapter.Item(qna_adapter.CHILD, "미성년자도 투자가 되나요?"));
 
+        data.add(invests);
+        data.add(loans);
         data.add(guitar);
 
         recyclerview.setAdapter(new qna_adapter(data));
-
-
 
         //---
         return v;
