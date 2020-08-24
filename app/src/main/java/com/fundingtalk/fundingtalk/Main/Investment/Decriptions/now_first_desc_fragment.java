@@ -41,7 +41,7 @@ public class now_first_desc_fragment extends Main_BaseFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.desc_fragment,container,false);
+        View v = inflater.inflate(R.layout.invest_desc_fragment,container,false);
         //---
 
         ImageButton back = (ImageButton)v.findViewById(R.id.back_icon);
