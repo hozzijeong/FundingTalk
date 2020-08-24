@@ -4,21 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login.LoginActivity"
     android:background="@drawable/loan_bg_finish"
-    >
+    tools:context=".Login.LoginActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="363dp"
+        android:layout_width="0dp"
         android:layout_height="277dp"
-        android:layout_marginStart="35dp"
+        android:layout_marginTop="25dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingStart="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.079">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,15 +68,14 @@
         android:id="@+id/linearLayout4"
         android:layout_width="360dp"
         android:layout_height="220dp"
-        android:layout_marginTop="316dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.48000002">
 
         <TextView
             android:id="@+id/result_user_name"
@@ -132,12 +131,11 @@
         android:id="@+id/frameLayout2"
         android:layout_width="360dp"
         android:layout_height="184dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/result_next_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.902">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
 
         <LinearLayout
@@ -212,33 +210,33 @@
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:buttonTint="#4F79E0"
                     android:fontFamily="@font/nanumbarungothic"
                     android:text="(필수)개인(신용)정보 조회 동의"
                     android:textColor="#000000"
-                    android:textSize="12sp"
-                    android:buttonTint="#4F79E0"/>
+                    android:textSize="12sp" />
 
                 <CheckBox
                     android:id="@+id/result_check2"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:buttonTint="#4F79E0"
                     android:fontFamily="@font/nanumbarungothic"
                     android:text="(필수)개인(신용)정보 제3자 제공 동의"
                     android:textColor="#000000"
-                    android:textSize="12sp"
-                    android:buttonTint="#4F79E0"/>
+                    android:textSize="12sp" />
 
                 <CheckBox
                     android:id="@+id/result_check3"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:buttonTint="#4F79E0"
                     android:fontFamily="@font/nanumbarungothic"
                     android:text="(필수)개인(신용)정보 수집/이용 제공 동의"
                     android:textColor="#000000"
-                    android:textSize="12sp"
-                    android:buttonTint="#4F79E0"/>
+                    android:textSize="12sp" />
 
                 <CheckBox
                     android:id="@+id/result_check_all"
@@ -274,8 +272,9 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

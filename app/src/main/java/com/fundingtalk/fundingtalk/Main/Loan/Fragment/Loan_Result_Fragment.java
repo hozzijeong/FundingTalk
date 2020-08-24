@@ -1,5 +1,6 @@
 package com.fundingtalk.fundingtalk.Main.Loan.Fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,6 +37,7 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
     @BindView(R.id.result_check2) CheckBox check2;
     @BindView(R.id.result_check3) CheckBox check3;
     @BindView(R.id.result_check_all) CheckBox check_all;
+    @BindView(R.id.result_back) Button back;
     DecimalFormat form;
     DecimalFormat form2;
     String name;
@@ -44,6 +46,7 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.loan03_result_fragment,container,false);
         ButterKnife.bind(this,v);
+        back.setOnClickListener(this);
         form = new DecimalFormat("#.##");
         form2 = new DecimalFormat("###,###");
         address_tv.setText(Loan_Specific_Info_Fragment.loan_apt_info.apt_name);
@@ -65,6 +68,7 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
     }
 
 
+    @SuppressLint("SetTextI18n")
     private void onLogin(){
         name = "최승현";
         user_name.setText(name+"님의 대출 가능 금액입니다.");
@@ -80,6 +84,7 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
         next_btn.setText("대출 진행하기");
     }
 
+    @SuppressLint("SetTextI18n")
     private void offLogin(){
         name = "고객님";
         user_name.setText(name+"의 대출 가능 한도입니다.");

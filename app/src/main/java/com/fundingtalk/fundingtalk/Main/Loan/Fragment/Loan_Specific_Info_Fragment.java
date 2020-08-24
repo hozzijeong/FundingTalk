@@ -187,6 +187,9 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                 if(calc.start_ltv<calc.min_ltv || calc.apply_ltv>=calc.max_ltv){
                     counsel_state = true;
                     loanActivity.show_Log("상담 신청");
+                    // 상담 신청 페이지를 따로 제작해야함
+
+
                 }else{
                     counsel_state = false;
                     long max_cost = calc.max_cost();
@@ -339,6 +342,8 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         cities.clear();
         second_city.setText("");
         third_city.setText("");
+        apt_infos.clear();
+        loan_apt_info = null;
         second_city.setEnabled(false);
         third_city.setEnabled(false);
         check_address.setEnabled(false);
@@ -492,6 +497,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
     }
     private void getMaxCount(){
         StrictMode.enableDefaults();
+        // 재탕 할때(초기화 했을때) citysecond의 값이 null 이 되서 오류 발생
         String url = base_url+"ServiceKey="+KEY+
                 "&LAWD_CD="+city.city_second.local_code+
                 "&DEAL_YMD=202007";

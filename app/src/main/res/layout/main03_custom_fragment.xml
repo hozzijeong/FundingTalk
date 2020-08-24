@@ -12,12 +12,13 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="1913px"
-            android:layout_marginTop="162px"
-            android:src="@drawable/mypage_bg_1"
-            />
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="62dp"
+            android:src="@drawable/mypage_bg_1" />
         <TextView
             android:id="@+id/custom_title"
             android:layout_width="650px"

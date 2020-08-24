@@ -5,7 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RelativeLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,7 +25,9 @@ public class Loan_Main_Fragment extends Main_BaseFragment implements View.OnClic
     @BindView(R.id.loan_go_login_btn) Button login;
     @BindView(R.id.loan_move_btn) Button move;
     @BindView(R.id.loan_base1_layout) ConstraintLayout main_layout;
-    @BindView(R.id.loan_off_login_layout) RelativeLayout offLogin;
+    @BindView(R.id.imageView2) ImageView offLoginIv;
+    @BindView(R.id.textView2) TextView offloginTv;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -33,13 +36,25 @@ public class Loan_Main_Fragment extends Main_BaseFragment implements View.OnClic
         login.setOnClickListener(this);
         move.setOnClickListener(this);
         if (LoginActivity.login_state){
-            offLogin.setVisibility(View.INVISIBLE);
             login.setEnabled(false);
         }else{
             login.setEnabled(true);
-            offLogin.setVisibility(View.VISIBLE);
+            offLogin();
         }
         return v;
+    }
+
+    private void offLogin(){
+        login.setVisibility(View.VISIBLE);
+        offLoginIv.setVisibility(View.VISIBLE);
+        offloginTv.setVisibility(View.VISIBLE);
+    }
+
+
+    private void onLogin(){
+        login.setVisibility(View.INVISIBLE);
+        offLoginIv.setVisibility(View.INVISIBLE);
+        offloginTv.setVisibility(View.INVISIBLE);
     }
 
     @Override
