@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -29,11 +30,15 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
     static public int now_money = 0; //로그인할때 설정해주기
     static public int now_name = 0;
 
+    private TextView calc_money;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.invest_input_file_fragment,container,false);
+
+        calc_money = v.findViewById(R.id.add_money);
 
         Button back = (Button)v.findViewById(R.id.invest_back_activity);
         back.setOnClickListener(new View.OnClickListener() { // 이미지 버튼 이벤트 정의
@@ -70,7 +75,7 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
                 @Override
                 public void onClick(View view) {
                     try { //숫자말고 다른 것을 입력할때 튕기는것을 방지
-                        if ( (Integer.parseInt(numberText.getText().toString()) <= 5000) && (isInteger(numberText.getText().toString()) == true) ) { //나중에 DB값으로 바꾸기
+                        if ( (Integer.parseInt(numberText.getText().toString()) <= 5000) && (isInteger(numberText.getText().toString()) == true) ) { //나중에 DB값으로 바꾸기************
                             ok_money = 1;
 //                    Log.d("숫자입력", "숫자 완료");
                         }
@@ -80,7 +85,7 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
                         myToast.show();
                     }
 
-                    if ( confirmtext.getText().toString().equals("abc")) { //나중에 동의함으로 수정
+                    if ( confirmtext.getText().toString().equals("동의함")) { //나중에 동의함으로 수정
                         //동의함이 들어오면
                         ok_confirm = 1;
 //                    Log.d("입력", "동의함 완료 완료");
@@ -130,7 +135,8 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
                 @Override
                 public void afterTextChanged(Editable arg0) {
                     // 입력이 끝났을 때
-
+                    double oper = rating * 0.01 * Integer.parseInt(String.valueOf(arg0))*10000;
+                    calc_money.setText(String.valueOf((int)oper) + "원");
                 }
             });
         //---
