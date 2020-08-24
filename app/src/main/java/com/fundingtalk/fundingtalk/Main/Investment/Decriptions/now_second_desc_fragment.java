@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -34,6 +35,7 @@ public class now_second_desc_fragment extends Main_BaseFragment {
     private TextView loan_info_input;
     private TextView funding_info_input;
     private TextView nakchal_input;
+    private ImageView progressbar;
 
     private MapView mapView;
 
@@ -82,12 +84,13 @@ public class now_second_desc_fragment extends Main_BaseFragment {
         loan_info_input = (TextView) v.findViewById(R.id.loan_info_input);
         funding_info_input = (TextView) v.findViewById(R.id.funding_info_input);
         nakchal_input = (TextView) v.findViewById(R.id.nakchal_input);
+        progressbar = (ImageView) v.findViewById(R.id.progress_bar);
 
         setaddress("경기도 김포시 운양동 김포한강신도시반도유보라2차 703동");
         setpro_percent("9.9%");
         setpro_month("12개월");
         setpro_money("0.1억");
-        seting_percent("현재 진행중 (85%)");
+        seting_percent("현재 진행중 (42%)");
         setpro_first_input("만기일시상환");
         setpro_second_input("가계자금");
         setpro_third_input("근저당권");
@@ -98,6 +101,7 @@ public class now_second_desc_fragment extends Main_BaseFragment {
         setloan_info_input("2억 9,550만원(원금) ");
         setfunding_info_input("1,100만원 (원금)");
         setnakchal_input("본 담보가 위치한 경기도 김포시의 최근 6개월 낙찰가율은 91.8% 입니다.");
+        setprogressbar();
 
         return v;
     }
@@ -119,6 +123,7 @@ public class now_second_desc_fragment extends Main_BaseFragment {
     public void setloan_info_input(String a){loan_info_input.setText(a); }
     public void setfunding_info_input(String a){ funding_info_input.setText(a); }
     public void setnakchal_input(String a){ nakchal_input.setText(a); }
+    public void setprogressbar(){progressbar.setImageResource(R.drawable.prog2);};
 
 
     public String getaddress() { return (String) this.address.getText(); }
