@@ -264,6 +264,8 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                         city = new City_First(items[i],index[i]);
                         first_city.setText(city.city_name);
                         second_city.setEnabled(true);
+                        house_cost.setText("");
+                        specific_address.setText("");
                         getCity(city.index,"second_city_info");
                         // 2번째 도시 정보를 받아옴. 근데 여기서 다시 첫 번째를 클릭한다면?
                         break;
@@ -274,11 +276,15 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                         loanActivity.show_Log("지역 코드: "+city.city_second.local_code
                                 +"\nLtv: "+city.city_second.ltv);
                         third_city.setEnabled(true);
+                        house_cost.setText("");
+                        specific_address.setText("");
                         getCity(city.city_second.index,"third_city_info");
                         break;
                     case 2:
                         city.city_second.city_third = new City_Third(items[i],index[i]);
                         third_city.setText(city.city_second.city_third.city_name);
+                        house_cost.setText("");
+                        specific_address.setText("");
                         getCity(city.city_second.city_third.index,"fourth_city_info");
                         check_address.setEnabled(true);
                         break;

@@ -105,7 +105,7 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
                 break;
 
             case R.id.result_back:
-
+                loanActivity.changeFragment(R.id.loan_main_layout,loanActivity.loan_specific_info_fragment);
                 break;
         }
     }
