@@ -8,7 +8,9 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 
 import com.fundingtalk.fundingtalk.AppHelper.BaseActivity;
+import com.fundingtalk.fundingtalk.Login.LoginActivity;
 import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Main_Fragment;
+import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Notlogin_Fragment;
 import com.fundingtalk.fundingtalk.Main.ETC.Fragment.Etc_Main_Fragment;
 import com.fundingtalk.fundingtalk.Main.Investment.Decriptions.future_first_desc_fragment;
 import com.fundingtalk.fundingtalk.Main.Investment.Decriptions.future_second_desc_fragment;
@@ -37,6 +39,8 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     public future_first_desc_fragment future_first_desc_fragment;
     public future_second_desc_fragment future_second_desc_fragment;
 
+    public Etc_Main_Fragment faq_main_fragment;
+    public Custom_Notlogin_Fragment custom_notlogin_fragment;
     @BindView(R.id.main_bottom_navi) BottomNavigationView bottom_navi;
 
     @Override
@@ -57,6 +61,8 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         custom_main_fragment = new Custom_Main_Fragment();
         invest_main_fragment = new Invest_Main_Fragment();
         loan_main_fragment = new Loan_Main_Fragment();
+        faq_main_fragment = new Etc_Main_Fragment();
+        custom_notlogin_fragment = new Custom_Notlogin_Fragment();
         etc_main_fragment = new Etc_Main_Fragment();
         invest_input_file_Fragment = new invest_input_file_Fragment();
         invest_finish_Fragment = new invest_finish_Fragment();
@@ -81,8 +87,14 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
                 return true;
             case R.id.main_custom:
                 // 개인 정보로 이동
-                changeFragment(R.id.main_layout,custom_main_fragment);
-                return true;
+                if(LoginActivity.login_state) {
+                    changeFragment(R.id.main_layout, custom_main_fragment);
+                    return true;
+                }
+                else {
+                    changeFragment(R.id.main_layout, custom_notlogin_fragment);
+                    return true;
+                }
             case R.id.main_faq:
                 // faq로 이동
                 changeFragment(R.id.main_layout,etc_main_fragment);

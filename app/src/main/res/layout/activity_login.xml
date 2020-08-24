@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_bg_shot5"
+    android:clickable="false"
     android:orientation="vertical">
 
     <Button
@@ -11,6 +12,7 @@
         android:layout_width="61.79px"
         android:layout_height="52.52px"
         android:background="@drawable/lg_back"
+        android:onClick="BackButtonClicked"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.055"
@@ -98,15 +100,13 @@
         android:id="@+id/loginButton"
         android:layout_width="1168px"
         android:layout_height="155px"
-        android:layout_marginTop="1523px"
         android:background="@drawable/lg_button"
         android:fontFamily="@font/scdream6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
