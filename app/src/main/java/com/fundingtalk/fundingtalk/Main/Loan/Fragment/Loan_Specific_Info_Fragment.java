@@ -63,6 +63,8 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
     public static boolean  counsel_state; // 상담 가능 여부를 확인하는 변수 ( 만약에 시작 ltv 가 최저 ltv 보다 낮다면 그냥 상담)
     public static Loan_Apt_Info loan_apt_info; // 최종적으로 선택된 아파트의 정보를 담는 class
 
+
+    private int apt_max_cnt = 0;
     private int city_num = 0;
     private Calc calc; // 계산식이 들어가 있는 클래스
     private City_First city; // 선택된 도시들의 정보를 담는 class innerclass로 second -> third가 존재
@@ -135,8 +137,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                 break;
             case R.id.check_address:
                 ArrayList<Apt_Info> temp = new ArrayList<>();
-                String input_name = specific_address.getText().toString();
-
+                String input_name = specific_address.getText().toString().trim();
                 // 여기서 이제 city fourth에 배열로 법정동 명들이 저장되어 있음
                 // apt_infos의 local_dong이 fourth_city에 있는 동 중에 하나라도 포함되어 있고,
                 // 아파트 이름이 포함되어 있으면 그때 temp.add를 하면 됨.
@@ -144,6 +145,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                 // 아파트 인포에 값을 넣었고, city.citysecond.city-> 태평동이 나왔어.
                 // 그렇다면 이제 아파트 인포를 돌려서 법정동이 태평동인 것들과 아파트 이름을 포함한 아파트 값을 넣으면 됨.
                 // 반복문의 순서가 바뀌어야함.
+
                 for(int i=0; i<city.city_second.city_third.fourth_city.size(); i++){
                     for(int j=0; j<apt_infos.size(); j++){
                         if(city.city_second.city_third.fourth_city.get(i).city_name.trim().
@@ -179,8 +181,15 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                 calc.getApply_ltv();
                 loan_apt_info.min_ltv =  calc.min_ltv; // 뒷장에 사용할 최소 ltv 구함.
                 //대출 가능 금액 산정 -> pos_cost;
-                if(calc.start_ltv<calc.min_ltv){
+                // 적용 ltv 가 max ltv와 같거나 크거나 || 시작 ltv가 최소 ltv 보다 작으면 상담신청
+                loanActivity.show_Log("\nstart: "+calc.start_ltv+"\nmin: "+calc.min_ltv+
+                        "\nmax: "+calc.max_ltv+"\napply: "+calc.apply_ltv);
+                if(calc.start_ltv<calc.min_ltv || calc.apply_ltv>=calc.max_ltv){
                     counsel_state = true;
+                    loanActivity.show_Log("상담 신청");
+                    // 상담 신청 페이지를 따로 제작해야함
+
+
                 }else{
                     counsel_state = false;
                     long max_cost = calc.max_cost();
@@ -214,7 +223,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         StrictMode.enableDefaults();
         String url = base_url+"ServiceKey="+KEY+
                 "&LAWD_CD="+city.city_second.local_code+
-                "&DEAL_YMD=202007&numOfRows=1000";
+                "&DEAL_YMD=202007&numOfRows="+apt_max_cnt;
         loanActivity.show_Log(url);
         new Thread(new Runnable(){
             @Override
@@ -256,6 +265,8 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                         city = new City_First(items[i],index[i]);
                         first_city.setText(city.city_name);
                         second_city.setEnabled(true);
+                        house_cost.setText("");
+                        specific_address.setText("");
                         getCity(city.index,"second_city_info");
                         // 2번째 도시 정보를 받아옴. 근데 여기서 다시 첫 번째를 클릭한다면?
                         break;
@@ -266,11 +277,15 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                         loanActivity.show_Log("지역 코드: "+city.city_second.local_code
                                 +"\nLtv: "+city.city_second.ltv);
                         third_city.setEnabled(true);
+                        house_cost.setText("");
+                        specific_address.setText("");
                         getCity(city.city_second.index,"third_city_info");
                         break;
                     case 2:
                         city.city_second.city_third = new City_Third(items[i],index[i]);
                         third_city.setText(city.city_second.city_third.city_name);
+                        house_cost.setText("");
+                        specific_address.setText("");
                         getCity(city.city_second.city_third.index,"fourth_city_info");
                         check_address.setEnabled(true);
                         break;
@@ -324,6 +339,8 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         cities.clear();
         second_city.setText("");
         third_city.setText("");
+        apt_infos.clear();
+        loan_apt_info = null;
         second_city.setEnabled(false);
         third_city.setEnabled(false);
         check_address.setEnabled(false);
@@ -334,7 +351,6 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         city_num = 0;
     }
     private void getCity(long idx,String path){
-
         /*
             이전에 있던 도시 정보들을 깔끔하게 지워주고,
             부모 idx값 과 두 번째 도시인지 세 번재 도시인지 문서 경로를 입력받아
@@ -358,6 +374,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                                         city.second_info.add(cities.get(cnt));
                                         cnt++;
                                     }
+
                                     break;
                                 case "third_city_info":
                                     cities.clear();
@@ -365,6 +382,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                                         cities.add(new City(doc.getString("third_city"),
                                                 doc.getLong("idx")));
                                     }
+                                    getMaxCount();
                                     break;
                                 case "fourth_city_info":
                                     for(QueryDocumentSnapshot doc:task.getResult()){
@@ -375,7 +393,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                                     }
 
                                     for(int i=0; i<city.city_second.city_third.fourth_city.size(); i++){
-                                        loanActivity.show_Log("법정동: "+city.city_second.city_third.fourth_city.get(i).city_name);
+                                        loanActivity.show_Log("add된 법정동: "+city.city_second.city_third.fourth_city.get(i).city_name);
                                     }
 
                                     getAptDealInfo();
@@ -466,11 +484,68 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                     e.printStackTrace();
                 }
             }
-            loanActivity.show_Log("파싱 끝");
+        loanActivity.show_Log("파싱 끝, 사이즈: "+apt_info.size);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
 
+    }
+    private void getMaxCount(){
+        StrictMode.enableDefaults();
+        // 재탕 할때(초기화 했을때) citysecond의 값이 null 이 되서 오류 발생
+        String url = base_url+"ServiceKey="+KEY+
+                "&LAWD_CD="+city.city_second.local_code+
+                "&DEAL_YMD=202007";
+        loanActivity.show_Log(url);
+        new Thread(new Runnable(){
+            @Override
+            public void run() {
+                TrafficStats.setThreadStatsTag(1);
+                countParsing(url);
+            }
+        }).start();
+    }
+    private void countParsing(String base_url){
+        try {
+            URL url = new URL(base_url);
+            InputStream is = url.openStream();
+            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+            factory.setNamespaceAware(true);
+            XmlPullParser parser = factory.newPullParser();
+            parser.setInput(new InputStreamReader(is, "utf-8"));
+            int parserEvent = parser.getEventType();
+            Apt_Info apt_info = null;
+            String tag = "";
+            while(parserEvent != XmlPullParser.END_DOCUMENT){
+                switch (parserEvent){
+                    case XmlPullParser.START_DOCUMENT:
+                        Log.d("LOG","개수 파싱 시작");
+                        break;
+                    case XmlPullParser.START_TAG:
+                        //아파트 정보를 얻을 때 해당 법정동 "동" 까지 확인하기.
+                        tag = parser.getName();
+//                        Log.d("LOG","start Tag:"+tag);
+                        if(tag.equals("totalCount")){
+                            apt_max_cnt = Integer.parseInt(parser.nextText().trim());
+                        }
+
+                        break;
+                    case XmlPullParser.END_TAG:
+                        tag = parser.getName();
+//                        loanActivity.show_Log("End_Tag: "+tag);
+                        break;
+                }
+                try{
+                    parserEvent = parser.next();
+                }catch (IOException e){
+                    e.printStackTrace();
+                }
+            }
+            loanActivity.show_Log("개수 파싱 끝, 개수: "+apt_max_cnt);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private final static Comparator<Apt_Info> myComparator= new Comparator<Apt_Info>() {

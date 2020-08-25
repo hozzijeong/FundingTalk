@@ -214,6 +214,7 @@ public class Calc extends Loan_Apt_Info{
         double end_rest = (apply_ltv - (start_ltv-5))*20*0.01; // 나머지 값 을 나타냄.(%)
         rest_temp = temp * end_rest;
         rate+= rest_temp;
+
         return (rate*100/(cnt+end_rest+start_rest))*0.01;
     }
 }

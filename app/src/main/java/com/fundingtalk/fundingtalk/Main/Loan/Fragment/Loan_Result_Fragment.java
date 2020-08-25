@@ -1,11 +1,13 @@
 package com.fundingtalk.fundingtalk.Main.Loan.Fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -35,6 +37,7 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
     @BindView(R.id.result_check2) CheckBox check2;
     @BindView(R.id.result_check3) CheckBox check3;
     @BindView(R.id.result_check_all) CheckBox check_all;
+    @BindView(R.id.result_back) Button back;
     DecimalFormat form;
     DecimalFormat form2;
     String name;
@@ -43,6 +46,7 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.loan03_result_fragment,container,false);
         ButterKnife.bind(this,v);
+        back.setOnClickListener(this);
         form = new DecimalFormat("#.##");
         form2 = new DecimalFormat("###,###");
         address_tv.setText(Loan_Specific_Info_Fragment.loan_apt_info.apt_name);
@@ -51,10 +55,20 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
         }else{
             offLogin();
         }
+        // 상담 상태에 따라서도 변경되는 창을 만들어 놓을 것.
+        check_all.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                check1.setChecked(true);
+                check2.setChecked(true);
+                check3.setChecked(true);
+            }
+        });
         return v;
     }
 
 
+    @SuppressLint("SetTextI18n")
     private void onLogin(){
         name = "최승현";
         user_name.setText(name+"님의 대출 가능 금액입니다.");
@@ -67,14 +81,10 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
 
         onLogin.setVisibility(View.VISIBLE);
         noLogin.setVisibility(View.INVISIBLE);
-        if (check_all.isChecked()){
-            check1.setChecked(true);
-            check2.setChecked(true);
-            check3.setChecked(true);
-        }
         next_btn.setText("대출 진행하기");
     }
 
+    @SuppressLint("SetTextI18n")
     private void offLogin(){
         name = "고객님";
         user_name.setText(name+"의 대출 가능 한도입니다.");
@@ -97,6 +107,10 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
                 // 그냥 전체 다 메인으로 돌아가기로 설정.
                 loanActivity.changeActivity(loanActivity, MainActivity.class);
                 loanActivity.finish();
+                break;
+
+            case R.id.result_back:
+                loanActivity.changeFragment(R.id.loan_main_layout,loanActivity.loan_specific_info_fragment);
                 break;
         }
     }

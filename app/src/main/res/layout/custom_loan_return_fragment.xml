@@ -4,7 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/mypage_bg_2"
+    >
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -15,9 +17,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.002"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="0dp"
+        android:background="@drawable/mypage_bg_1"
+        >
 
         <Button
+            android:id="@+id/loan_return_back"
             android:layout_width="62px"
             android:layout_height="52px"
             android:layout_marginStart="68px"
@@ -32,8 +37,9 @@
             android:orientation="horizontal">
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/arrow_back_24_left"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -43,11 +49,15 @@
                 android:fontFamily="@font/nanumbarungothic"
                 android:gravity="center"
                 android:text="2020.08"
-                android:textSize="15dp" />
+                android:textSize="15dp"
+                android:textColor="#ffffff"
+                />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/arrow_back_24_right"
+                />
         </LinearLayout>
 
         <TextView
@@ -57,7 +67,10 @@
             android:layout_marginTop="72px"
             android:fontFamily="@font/nanumbarungothic"
             android:text="상환액"
-            android:textSize="40px" />
+            android:textSize="40px"
+            android:textColor="#9CFFFFFF"
+
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -66,7 +79,9 @@
             android:layout_marginTop="17px"
             android:fontFamily="@font/nanumbarungothic"
             android:text="20,194원"
-            android:textSize="92px" />
+            android:textSize="92px"
+            android:textColor="#ffffff"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -92,7 +107,9 @@
                     android:fontFamily="@font/nanumbarungothicbold"
                     android:gravity="center_vertical"
                     android:text="원금"
-                    android:textSize="44px" />
+                    android:textSize="44px"
+                    android:textColor="#9CFFFFFF"
+                    />
 
                 <TextView
                     android:layout_width="0dp"
@@ -101,7 +118,9 @@
                     android:fontFamily="@font/nanumbarungothicbold"
                     android:gravity="right|center_vertical"
                     android:text="205150 원"
-                    android:textSize="44px" />
+                    android:textSize="44px"
+                    android:textColor="#ffffff"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -118,7 +137,9 @@
                     android:fontFamily="@font/nanumbarungothicbold"
                     android:gravity="center_vertical"
                     android:text="이자"
-                    android:textSize="44px" />
+                    android:textSize="44px"
+                    android:textColor="#9CFFFFFF"
+                    />
 
                 <TextView
                     android:layout_width="0dp"
@@ -127,7 +148,9 @@
                     android:fontFamily="@font/nanumbarungothicbold"
                     android:gravity="right|center_vertical"
                     android:text="205150 원"
-                    android:textSize="44px" />
+                    android:textSize="44px"
+                    android:textColor="#ffffff"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -144,7 +167,9 @@
                     android:fontFamily="@font/nanumbarungothicbold"
                     android:gravity="center_vertical"
                     android:text="연체이자"
-                    android:textSize="44px" />
+                    android:textSize="44px"
+                    android:textColor="#9CFFFFFF"
+                    />
 
                 <TextView
                     android:layout_width="0dp"
@@ -153,7 +178,9 @@
                     android:fontFamily="@font/nanumbarungothicbold"
                     android:gravity="right|center_vertical"
                     android:text="205150 원"
-                    android:textSize="44px" />
+                    android:textSize="44px"
+                    android:textColor="#ffffff"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -170,7 +197,9 @@
                     android:fontFamily="@font/nanumbarungothicbold"
                     android:gravity="center_vertical"
                     android:text="세금"
-                    android:textSize="44px" />
+                    android:textSize="44px"
+                    android:textColor="#9CFFFFFF"
+                    />
 
                 <TextView
                     android:layout_width="0dp"
@@ -179,7 +208,9 @@
                     android:fontFamily="@font/nanumbarungothicbold"
                     android:gravity="right|center_vertical"
                     android:text="205150 원"
-                    android:textSize="44px" />
+                    android:textSize="44px"
+                    android:textColor="#ffffff"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -196,7 +227,9 @@
                     android:fontFamily="@font/nanumbarungothicbold"
                     android:gravity="center_vertical"
                     android:text="수수료"
-                    android:textSize="44px" />
+                    android:textSize="44px"
+                    android:textColor="#9CFFFFFF"
+                    />
 
                 <TextView
                     android:layout_width="0dp"
@@ -205,21 +238,25 @@
                     android:fontFamily="@font/nanumbarungothicbold"
                     android:gravity="right|center_vertical"
                     android:text="205150 원"
-                    android:textSize="44px" />
+                    android:textSize="44px"
+                    android:textColor="#ffffff"
+                    />
             </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView2"
+        android:id="@+id/loan_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="444dp"
-        android:layout_marginStart="129px"
-        android:layout_marginEnd="109px"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp"/>
+        android:layout_marginEnd="27dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/custom_loan_return_count"
@@ -230,7 +267,8 @@
         android:gravity="center"
         android:text="총 x건"
         android:textSize="61px"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView2"
+        android:textColor="#535353"
+        app:layout_constraintBottom_toTopOf="@+id/loan_list"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
