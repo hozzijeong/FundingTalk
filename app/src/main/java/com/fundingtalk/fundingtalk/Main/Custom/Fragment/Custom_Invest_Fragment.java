@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,6 +15,8 @@ import com.fundingtalk.fundingtalk.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.now_money;
 
 public class Custom_Invest_Fragment extends Main_BaseFragment implements View.OnClickListener {
     /*
@@ -26,12 +29,18 @@ public class Custom_Invest_Fragment extends Main_BaseFragment implements View.On
      */
     @BindView(R.id.custom_invest_list) Button invest_list;
 
+    TextView now_m;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.custom_invest_fragment,container,false);
         ButterKnife.bind(this,v);
         invest_list.setOnClickListener(this);
+
+        now_m = (TextView) v.findViewById(R.id.custom_now_money);
+        now_m.setText(String.valueOf(now_money) + "만원");
+
         return  v;
     }
 

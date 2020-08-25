@@ -113,6 +113,8 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
 
                     //모든걸 잘 입력하면
                     if (ok_money == 1 && ok_confirm == 1){
+                        Log.d("******************************", numberText.getText().toString());
+                        now_money = now_money - Integer.parseInt(numberText.getText().toString());
                         numberText.getText().clear();
                         confirmtext.getText().clear();
                         mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_finish_Fragment);
@@ -152,8 +154,15 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
                 @Override
                 public void afterTextChanged(Editable arg0) {
                     // 입력이 끝났을 때
-                    double oper = rating * 0.01 * Integer.parseInt(String.valueOf(arg0))*10000;
-                    calc_money.setText(String.valueOf((int)oper) + "원");
+                    try {
+                        if(arg0.toString() != null || arg0.toString().trim() != ""){
+                            double oper = rating * 0.01 *10000 * Integer.parseInt(arg0.toString()) ;
+                            calc_money.setText(String.valueOf((int)oper) + "원");
+                        }
+                    } catch (NumberFormatException e) {
+                        e.printStackTrace();
+                        Log.d("HHHHHHHHHH","EEEEEEEEEEEEEEEEEEEE");
+                    }
                 }
             });
         //---
