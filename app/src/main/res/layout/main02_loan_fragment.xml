@@ -12,88 +12,22 @@
     size 를 1464 / 3294 로 맞춤. size는 6.7인치 설정. 근데 짧음
 -->
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
         android:fontFamily="@font/scdream6"
         android:text="대출"
         android:textColor="#000000"
         android:textSize="135px"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="#FFFFFF">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="대출"
-            android:textSize="135px"
-            android:textColor="#000000"
-            android:fontFamily="@font/scdream6"
-            android:layout_marginTop="423px"
-            android:layout_marginStart="76px"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="대출 한도 및\n금리를 조회해보세요"
-            android:textColor="#3E3E3E"
-            android:textSize="97px"
-            android:fontFamily="@font/nanumbarungothicbold"
-            android:layout_marginTop="335px"
-            android:layout_marginStart="202px"
-            />
-
-
-
-        <Button
-            android:id="@+id/loan_move_btn"
-            android:layout_width="803px"
-            android:layout_height="211px"
-            android:background="@drawable/loan_st_1"
-            android:layout_marginTop="209px"
-            android:layout_marginStart="206px"/>
-
-
-        <RelativeLayout
-            android:id="@+id/loan_off_login_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <ImageView
-                android:layout_width="287px"
-                android:layout_height="350px"
-                android:background="@drawable/money"
-                android:layout_marginTop="315px"
-                android:layout_marginStart="190px"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="로그인을 통해 조금 더\n정확한 정보를 받아보세요"
-                android:textColor="#4B4B4B"
-                android:textSize="45px"
-                android:fontFamily="@font/nanumbarungothic"
-                android:layout_marginStart="539px"
-                android:layout_marginTop="398px"
-                />
-            <Button
-                android:id="@+id/loan_go_login_btn"
-                android:layout_width="264px"
-                android:layout_height="45px"
-                android:background="@drawable/loan_lg"
-                android:fontFamily="@font/nanumbarungothic"
-                android:textSize="39px"
-                android:layout_marginStart="544px"
-                android:layout_marginTop="613px"
-                />
-        </RelativeLayout>
+        app:layout_constraintVertical_bias="0.15" />
 
     <TextView
-        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nanumbarungothicbold"
@@ -102,64 +36,62 @@
         android:textSize="97px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.314"
+        app:layout_constraintHorizontal_bias="0.327"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.305" />
+        app:layout_constraintVertical_bias="0.321" />
 
     <Button
         android:id="@+id/loan_move_btn"
         android:layout_width="803px"
         android:layout_height="211px"
-        android:layout_marginTop="52dp"
         android:background="@drawable/loan_st_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.314"
+        app:layout_constraintHorizontal_bias="0.327"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.471" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/loan_login_image"
         android:layout_width="287px"
         android:layout_height="350px"
-        android:layout_marginStart="64dp"
-        android:layout_marginBottom="176dp"
         android:background="@drawable/money"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.734" />
+
+    <Button
+        android:id="@+id/loan_go_login_btn"
+        android:layout_width="264px"
+        android:layout_height="45px"
+        android:background="@drawable/loan_lg"
+        android:fontFamily="@font/nanumbarungothic"
+        android:textSize="39px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.76" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/loan_login_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="169dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="208dp"
         android:fontFamily="@font/nanumbarungothic"
         android:text="로그인을 통해 조금 더\n정확한 정보를 받아보세요"
         android:textColor="#4B4B4B"
         android:textSize="45px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/loan_go_login_btn"
-        android:layout_width="264px"
-        android:layout_height="45px"
-        android:layout_marginStart="20dp"
-        android:background="@drawable/loan_lg"
-        android:fontFamily="@font/nanumbarungothic"
-        android:textSize="39px"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.123" />
-
+        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.714" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

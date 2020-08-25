@@ -137,33 +137,6 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        show_Log("종료1");
-        AlertDialog.Builder ab = new AlertDialog.Builder(this);
-        ab.setTitle("메세지").setMessage("정말로 종료하시겠습니까?");
-        ab.setPositiveButton("예", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.dismiss();
-                finish();
-            }
-        });
-        ab.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.cancel();
-                dialogInterface.dismiss();
-            }
-        });
-        ab.setCancelable(false);
-        AlertDialog dialog = ab.create();
-        dialog.show();
-        show_Log("종료2");
-
-    }
-
     @Override public void onBackPressed() {
         new AlertDialog.Builder(this)
                 .setIcon(R.drawable.top_logo)
