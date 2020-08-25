@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
 import com.fundingtalk.fundingtalk.Main.Custom.Adapter.RecyclerAdapter;
+import com.fundingtalk.fundingtalk.Main.Custom.Adapter.RecyclerDeco;
 import com.fundingtalk.fundingtalk.Main.Custom.Item.Item;
 import com.fundingtalk.fundingtalk.R;
 
@@ -32,7 +33,6 @@ public class Custom_Invest_List_Fragment extends Main_BaseFragment implements Vi
     private RecyclerAdapter adapter;
     public static ArrayList<Item> items = new ArrayList<>();;
     private RecyclerDeco deco;
-    public static ArrayList<Item> items;
     LinearLayoutManager linearLayoutManager;
 
     TextView given_money;
