@@ -63,7 +63,6 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
 
     public static Loan_Apt_Info loan_apt_info; // 최종적으로 선택된 아파트의 정보를 담는 class
 
-
     private int apt_max_cnt = 0;
     private int city_num = 0;
     private Calc calc; // 계산식이 들어가 있는 클래스

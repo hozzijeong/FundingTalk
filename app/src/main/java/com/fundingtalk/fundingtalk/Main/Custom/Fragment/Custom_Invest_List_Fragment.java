@@ -28,7 +28,7 @@ public class Custom_Invest_List_Fragment extends Main_BaseFragment implements Vi
     @BindView(R.id.invest_return_back) Button back;
     @BindView(R.id.custom_loan_return_count) TextView count;
     private RecyclerAdapter adapter;
-    ArrayList<Item> items;
+    public static ArrayList<Item> items;
     LinearLayoutManager linearLayoutManager;
     @Nullable
     @Override

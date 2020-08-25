@@ -32,7 +32,9 @@ public class Custom_Invest_Fragment extends Main_BaseFragment implements View.On
         View v = inflater.inflate(R.layout.custom_invest_fragment,container,false);
         ButterKnife.bind(this,v);
         invest_list.setOnClickListener(this);
+//        invest_list.setText(Custom_Invest_List_Fragment.items.size()+" 건");
         return  v;
+
     }
 
     @Override
