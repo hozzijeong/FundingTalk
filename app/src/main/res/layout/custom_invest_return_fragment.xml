@@ -82,6 +82,7 @@
             android:text="20,194원"
             android:textSize="92px"
             android:textColor="#ffffff"
+            android:id="@+id/given_money"
             />
 
         <LinearLayout
@@ -121,6 +122,7 @@
                     android:text="205150 원"
                     android:textSize="44px"
                     android:textColor="#ffffff"
+                    android:id="@+id/item1"
                     />
             </LinearLayout>
 
@@ -151,6 +153,7 @@
                     android:text="205150 원"
                     android:textSize="44px"
                     android:textColor="#ffffff"
+                    android:id="@+id/item2"
                     />
             </LinearLayout>
 
@@ -181,6 +184,7 @@
                     android:text="205150 원"
                     android:textSize="44px"
                     android:textColor="#ffffff"
+                    android:id="@+id/item3"
                     />
             </LinearLayout>
 
@@ -211,6 +215,7 @@
                     android:text="205150 원"
                     android:textSize="44px"
                     android:textColor="#ffffff"
+                    android:id="@+id/item4"
                     />
             </LinearLayout>
 
@@ -241,6 +246,7 @@
                     android:text="205150 원"
                     android:textSize="44px"
                     android:textColor="#ffffff"
+                    android:id="@+id/item5"
                     />
             </LinearLayout>
         </LinearLayout>

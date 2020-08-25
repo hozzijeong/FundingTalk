@@ -66,6 +66,8 @@ public class now_second_desc_fragment extends Main_BaseFragment {
                 if(LoginActivity.login_state) {
                     back_check = 2;
                     rating = 9.9;
+                    total_info_c = "연 9.9% 12개월";
+                    address_c ="경기도 김포시 운양동";
                     mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_input_file_Fragment);
                 }
                 else {

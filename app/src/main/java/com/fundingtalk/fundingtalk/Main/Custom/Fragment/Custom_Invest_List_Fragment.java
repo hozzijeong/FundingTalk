@@ -22,22 +22,48 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.now_money;
+
 public class Custom_Invest_List_Fragment extends Main_BaseFragment implements View.OnClickListener {
 
     @BindView(R.id.invest_list) RecyclerView invest_list;
     @BindView(R.id.invest_return_back) Button back;
     @BindView(R.id.custom_loan_return_count) TextView count;
     private RecyclerAdapter adapter;
-    ArrayList<Item> items;
+    public static ArrayList<Item> items = new ArrayList<>();;
     LinearLayoutManager linearLayoutManager;
+
+    TextView given_money;
+    TextView item1;
+    TextView item2;
+    TextView item3;
+    TextView item4;
+    TextView item5;
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.custom_invest_return_fragment,container,false);
         ButterKnife.bind(this,v);
         back.setOnClickListener(this);
-        items = new ArrayList<>();
+
+        given_money = (TextView) v.findViewById(R.id.given_money);
+        item1 = (TextView) v.findViewById(R.id.item1);
+        item2 = (TextView) v.findViewById(R.id.item2);
+        item3 = (TextView) v.findViewById(R.id.item3);
+        item4 = (TextView) v.findViewById(R.id.item4);
+        item5 = (TextView) v.findViewById(R.id.item5);
+
+        given_money.setText("20,560 원");
+        item1.setText(String.valueOf(5350-now_money) +"만원");
+        item2.setText("20560 원");
+        item3.setText("305640 원");
+        item4.setText("205120 원");
+        item5.setText("35420 원");
+
         setItems();
+        count.setText("총 "+items.size()+"개");
         linearLayoutManager = new LinearLayoutManager(mainActivity);
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
         invest_list.setLayoutManager(linearLayoutManager);
@@ -57,8 +83,10 @@ public class Custom_Invest_List_Fragment extends Main_BaseFragment implements Vi
         String money2= "250 만원";
         items.add(new Item(total_info1,address1,money_info,money1));
         items.add(new Item(total_info2,address2,money_info,money2));
+    }
 
-        count.setText("총 "+items.size()+"개");
+    static public void addItems_custom(String total_info, String address, String money_info, String money){
+        items.add(new Item(total_info,address,money_info,money));
     }
 
 
