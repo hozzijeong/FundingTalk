@@ -64,7 +64,6 @@ public class Loan_Main_Fragment extends Main_BaseFragment implements View.OnClic
                 break;
             case R.id.loan_move_btn:
                 mainActivity.changeActivity(mainActivity, LoanActivity.class);
-                mainActivity.finish();
                 break;
         }
     }
