@@ -57,7 +57,7 @@ dependencies {
     implementation "androidx.annotation:annotation:1.1.0"
     //CardView를 사용하기 위한 dependencies
     implementation 'androidx.cardview:cardview:1.0.0'
-    compile 'com.android.support.constraint:constraint-layout:2.0.0'
-    
+    implementation 'com.android.support.constraint:constraint-layout:2.0.0'
+
     implementation 'com.google.android.gms:play-services-maps:10.2.0'
 }
