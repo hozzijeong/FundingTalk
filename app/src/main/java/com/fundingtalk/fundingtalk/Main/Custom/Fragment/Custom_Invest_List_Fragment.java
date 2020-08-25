@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
 import com.fundingtalk.fundingtalk.Main.Custom.Adapter.RecyclerAdapter;
+import com.fundingtalk.fundingtalk.Main.Custom.Adapter.RecyclerDeco;
 import com.fundingtalk.fundingtalk.Main.Custom.Item.Item;
 import com.fundingtalk.fundingtalk.R;
 
@@ -28,7 +29,8 @@ public class Custom_Invest_List_Fragment extends Main_BaseFragment implements Vi
     @BindView(R.id.invest_return_back) Button back;
     @BindView(R.id.custom_loan_return_count) TextView count;
     private RecyclerAdapter adapter;
-    ArrayList<Item> items;
+    private RecyclerDeco deco;
+    public static ArrayList<Item> items;
     LinearLayoutManager linearLayoutManager;
     @Nullable
     @Override
@@ -41,6 +43,10 @@ public class Custom_Invest_List_Fragment extends Main_BaseFragment implements Vi
         linearLayoutManager = new LinearLayoutManager(mainActivity);
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
         invest_list.setLayoutManager(linearLayoutManager);
+
+        deco = new RecyclerDeco(20);
+        invest_list.addItemDecoration(deco);
+
         adapter = new RecyclerAdapter(mainActivity,items);
         invest_list.setAdapter(adapter);
         return v;

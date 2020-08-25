@@ -112,7 +112,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
             case R.id.main_custom:
                 // 개인 정보로 이동
                 if(LoginActivity.login_state) {
-                    changeFragment(R.id.main_layout, custom_main_fragment);
+                    changeFragment(R.id.main_layout, new Custom_Main_Fragment());
                     return true;
                 }
                 else {
@@ -121,7 +121,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
                 }
             case R.id.main_faq:
                 // faq로 이동
-                changeFragment(R.id.main_layout,etc_main_fragment);
+                changeFragment(R.id.main_layout,new Etc_Main_Fragment());
 
                 return true;
 

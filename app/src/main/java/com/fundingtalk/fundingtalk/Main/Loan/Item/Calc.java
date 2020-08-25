@@ -1,5 +1,7 @@
 package com.fundingtalk.fundingtalk.Main.Loan.Item;
 
+import android.util.Log;
+
 public class Calc extends Loan_Apt_Info{
 
     public Double min_rate; // 로그인 안됐을 경우 최소 이자 비율을 보여주기 위한 변수
@@ -189,31 +191,38 @@ public class Calc extends Loan_Apt_Info{
         }
         double start_rest = 0.0;
         double temp;
-        double rest_temp;
+        double rest_temp = 0;
         // LTV가 딱 맞아 떨어지면, 대출 시작 점이 그떄부터 인거니까 check의 값을 해당 값과 맞춰 주면 됨.
         if(check != -1){
              start_rest = (rate_table[check+1][0] - start_ltv)*20*0.01;
              temp = rate_table[check][1];
              rest_temp = temp*start_rest;
-             check++; // 밑 구간의 값을 잘랐기 때문에 check ++;
+            Log.d("chk","시작: "+start_ltv);
+            check++; // 밑 구간의 값을 잘랐기 때문에 check ++;
              start_ltv = rate_table[check][0]; // 밑 구간의 값을 계산했기 때문에, 0으로 초기화 시킴.
+            Log.d("chk","시작: "+start_ltv);
         }
 
         while (apply_ltv>start_ltv){
             rate += rate_table[check][1];
             cnt++;
+            check++;
             // start_ltv의 값이 안넘어야함.
             start_ltv += 5;
         }
-
-        cnt-=2;
+        Log.d("chk","카운트1: "+cnt);
+        Log.d("chk","check1: "+check);
+        cnt -= 1;
         check --;
+
+        Log.d("chk","카운트2: "+cnt);
+        Log.d("chk","check2: "+check);
         temp = rate_table[check][1];
         rate -= temp;
 
         double end_rest = (apply_ltv - (start_ltv-5))*20*0.01; // 나머지 값 을 나타냄.(%)
-        rest_temp = temp * end_rest;
-        rate+= rest_temp;
+        rest_temp += temp * end_rest;
+        rate += rest_temp;
 
         return (rate*100/(cnt+end_rest+start_rest))*0.01;
     }

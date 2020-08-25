@@ -8,9 +8,6 @@
     tools:context=".Login.LoginActivity"
     android:background="@drawable/mypage_bg_2"
     >
-    <!--    250 px씩 위로 올림
-    size 를 1464 / 3294 로 맞춤. size는 6.7인치 설정. 근데 짧음
--->
 
     <TextView
         android:layout_width="wrap_content"

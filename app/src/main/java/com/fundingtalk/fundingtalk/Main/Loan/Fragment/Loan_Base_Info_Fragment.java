@@ -91,7 +91,7 @@ public class Loan_Base_Info_Fragment extends Loan_BaseFragment implements View.O
 //                }
                 break;
             case R.id.loan_back_activity:
-                loanActivity.changeActivity(loanActivity, MainActivity.class);
+                //loanActivity.changeActivity(loanActivity, MainActivity.class);
                 loanActivity.finish();
                 break;
         }
