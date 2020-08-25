@@ -21,21 +21,31 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
+import com.fundingtalk.fundingtalk.Main.Custom.Item.Item;
 import com.fundingtalk.fundingtalk.Main.MainActivity;
 import com.fundingtalk.fundingtalk.R;
+import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Invest_List_Fragment;
+
+import static com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Invest_List_Fragment.*;
 
 public class invest_input_file_Fragment extends Main_BaseFragment {
 
     private int ok_money = 0;
     private int ok_confirm = 0;
-    static public int back_check = 0;
-    static public double rating = 0;
+
+    static public int back_check = 0; //몇번째 페이지로 뒤로갈지?
+    static public double rating = 0; // 수익률
     static public int now_money = 0; //로그인할때 설정해주기
     static public String now_name;
+
+    static public String total_info_c;
+    static public String address_c;
+
 
     private TextView calc_money;
     private TextView n_money;
     private TextView n_name;
+    private String money_info = "총 투자 금액";
 
     @Nullable
     @Override
@@ -113,8 +123,9 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
 
                     //모든걸 잘 입력하면
                     if (ok_money == 1 && ok_confirm == 1){
-                        Log.d("******************************", numberText.getText().toString());
+
                         now_money = now_money - Integer.parseInt(numberText.getText().toString());
+                        items.add(new Item(total_info_c,address_c,money_info,numberText.getText().toString() + "만원"));
                         numberText.getText().clear();
                         confirmtext.getText().clear();
                         mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_finish_Fragment);

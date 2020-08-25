@@ -64,6 +64,8 @@ public class now_first_desc_fragment extends Main_BaseFragment {
                 if(LoginActivity.login_state) {
                     back_check = 1;
                     rating = 9.9;
+                    total_info_c = "연 9.9% 12개월";
+                    address_c ="경기도 고양시 덕양구 화정동";
                     mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_input_file_Fragment);
                 }
                 else {
