@@ -85,7 +85,7 @@ public class Loan_Base_Info_Fragment extends Loan_BaseFragment implements View.O
             case R.id.loan_specific_btn:
                 loanActivity.show_Log("다음 단계: "+next_state());
 //                if(next_state()){
-                    loanActivity.changeFragment(R.id.loan_main_layout,loanActivity.loan_specific_info_fragment);
+                    loanActivity.addFragment(R.id.loan_main_layout,loanActivity.loan_specific_info_fragment);
 //                }else{
                     Toast.makeText(loanActivity,"정보 입력을 확인해주세요.",Toast.LENGTH_LONG).show();
 //                }

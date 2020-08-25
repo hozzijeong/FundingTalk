@@ -8,13 +8,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.Group;
 
 import com.fundingtalk.fundingtalk.AppHelper.Loan_BaseFragment;
+import com.fundingtalk.fundingtalk.Login.LoginActivity;
 import com.fundingtalk.fundingtalk.Main.MainActivity;
 import com.fundingtalk.fundingtalk.R;
 
@@ -30,14 +31,13 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
     @BindView(R.id.result_cost_result) TextView cost_result;
     @BindView(R.id.result_cost_and_ltv) TextView cost_and_ltv;
     @BindView(R.id.result_user_name)TextView user_name;
-    @BindView(R.id.result_on_login) LinearLayout onLogin;
-    @BindView(R.id.result_no_login) LinearLayout noLogin;
+    @BindView(R.id.result_onlogin) Group onLogin;
+    @BindView(R.id.result_offlogin) Group noLogin;
     @BindView(R.id.result_next_btn) Button next_btn;
     @BindView(R.id.result_check1) CheckBox check1;
     @BindView(R.id.result_check2) CheckBox check2;
     @BindView(R.id.result_check3) CheckBox check3;
     @BindView(R.id.result_check_all) CheckBox check_all;
-    @BindView(R.id.result_back) Button back;
     DecimalFormat form;
     DecimalFormat form2;
     String name;
@@ -46,11 +46,10 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.loan03_result_fragment,container,false);
         ButterKnife.bind(this,v);
-        back.setOnClickListener(this);
         form = new DecimalFormat("#.##");
         form2 = new DecimalFormat("###,###");
         address_tv.setText(Loan_Specific_Info_Fragment.loan_apt_info.apt_name);
-        if(Loan_Specific_Info_Fragment.login_temp_state){
+        if(LoginActivity.login_state){
             onLogin();
         }else{
             offLogin();
@@ -107,10 +106,6 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
                 // 그냥 전체 다 메인으로 돌아가기로 설정.
                 loanActivity.changeActivity(loanActivity, MainActivity.class);
                 loanActivity.finish();
-                break;
-
-            case R.id.result_back:
-                loanActivity.changeFragment(R.id.loan_main_layout,loanActivity.loan_specific_info_fragment);
                 break;
         }
     }

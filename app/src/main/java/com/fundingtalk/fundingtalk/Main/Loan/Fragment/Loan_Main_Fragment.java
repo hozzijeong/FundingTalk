@@ -5,12 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.Group;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
 import com.fundingtalk.fundingtalk.Login.LoginActivity;
@@ -27,8 +26,7 @@ public class Loan_Main_Fragment extends Main_BaseFragment implements View.OnClic
     @BindView(R.id.loan_go_login_btn) Button login;
     @BindView(R.id.loan_move_btn) Button move;
     @BindView(R.id.loan_base1_layout) ConstraintLayout main_layout;
-    @BindView(R.id.imageView2) ImageView offLoginIv;
-    @BindView(R.id.textView2) TextView offloginTv;
+    @BindView(R.id.loan_logoff_icon) Group logoff;
 
     @Nullable
     @Override
@@ -39,6 +37,7 @@ public class Loan_Main_Fragment extends Main_BaseFragment implements View.OnClic
         move.setOnClickListener(this);
         if (LoginActivity.login_state){
             login.setEnabled(false);
+            onLogin();
         }else{
             login.setEnabled(true);
             offLogin();
@@ -47,16 +46,12 @@ public class Loan_Main_Fragment extends Main_BaseFragment implements View.OnClic
     }
 
     private void offLogin(){
-        login.setVisibility(View.VISIBLE);
-        offLoginIv.setVisibility(View.VISIBLE);
-        offloginTv.setVisibility(View.VISIBLE);
+        logoff.setVisibility(View.VISIBLE);
     }
 
 
     private void onLogin(){
-        login.setVisibility(View.INVISIBLE);
-        offLoginIv.setVisibility(View.INVISIBLE);
-        offloginTv.setVisibility(View.INVISIBLE);
+        logoff.setVisibility(View.INVISIBLE);
     }
 
     @Override

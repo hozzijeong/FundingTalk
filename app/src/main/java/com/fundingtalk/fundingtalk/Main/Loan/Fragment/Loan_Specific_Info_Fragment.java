@@ -17,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.fundingtalk.fundingtalk.AppHelper.Loan_BaseFragment;
+import com.fundingtalk.fundingtalk.Login.LoginActivity;
 import com.fundingtalk.fundingtalk.Main.Loan.Item.Apt_Info;
 import com.fundingtalk.fundingtalk.Main.Loan.Item.Calc;
 import com.fundingtalk.fundingtalk.Main.Loan.Item.City;
@@ -59,7 +60,6 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
     @BindView(R.id.check_address) Button check_address;
     @BindView(R.id.loan_specific_back) Button back;
 
-    public static boolean login_temp_state = true; // 로그인 여부를 확인하는 변수
     public static boolean  counsel_state; // 상담 가능 여부를 확인하는 변수 ( 만약에 시작 ltv 가 최저 ltv 보다 낮다면 그냥 상담)
     public static Loan_Apt_Info loan_apt_info; // 최종적으로 선택된 아파트의 정보를 담는 class
 
@@ -189,11 +189,10 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                     loanActivity.show_Log("상담 신청");
                     // 상담 신청 페이지를 따로 제작해야함
 
-
                 }else{
                     counsel_state = false;
                     long max_cost = calc.max_cost();
-                    if(login_temp_state) {
+                    if(LoginActivity.login_state) {
                         if (max_cost >= calc.wish_loan) {
                             loan_apt_info.pos_cost = calc.wish_loan;
                         } else {
@@ -207,11 +206,11 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                     }
                 }
 
-                loanActivity.changeFragment(R.id.loan_main_layout,loanActivity.loan_result_fragment);
+                loanActivity.addFragment(R.id.loan_main_layout,loanActivity.loan_result_fragment);
 
                 break;
                 case R.id.loan_specific_back:
-                    loanActivity.changeFragment(R.id.loan_main_layout,loanActivity.loan_base_info_fragment);
+                    loanActivity.removeFragment(this);
                 break;
         }
     }
@@ -571,10 +570,20 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                 // 아파트 평균값 계산식 다시 해보기
                 String cmp1_name = arrayList.get(cnt).apt_name+ "/"+arrayList.get(cnt).size;
                 String cmp2_name = arrayList.get(i).apt_name+ "/"+arrayList.get(i).size;
-                int idx1 = cmp1_name.indexOf(".");
-                int idx2 = cmp2_name.indexOf(".");
-                cmp1_name = cmp1_name.substring(0,idx1);
-                cmp2_name = cmp2_name.substring(0,idx2);
+                int idx1;
+                int idx2;
+                if(cmp1_name.contains(".")){
+                    idx1 = cmp1_name.indexOf(".");
+                    if(idx1 != 0){
+                        cmp1_name = cmp1_name.substring(0,idx1);
+                    }
+                }
+                if(cmp2_name.contains(".")){
+                    idx2 = cmp2_name.indexOf(".");
+                    if(idx2 != 0){
+                        cmp2_name = cmp2_name.substring(0,idx2);
+                    }
+                }
                 main_cost = Long.parseLong(arrayList.get(cnt).deal_amount); // 여기서 값이 계속 초기화가 됨.
                 if(cmp1_name.equals(cmp2_name)){
                     avg_cost += Long.parseLong(arrayList.get(i).deal_amount);

@@ -3,15 +3,11 @@ package com.fundingtalk.fundingtalk.AppHelper;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-import android.view.View;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
-import com.fundingtalk.fundingtalk.R;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -26,6 +22,20 @@ public class BaseActivity extends AppCompatActivity {
         ft.replace(resource,fragment);
         ft.commit();
     }
+
+    public void addFragment(int resource,Fragment fragment){
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.add(resource,fragment);
+        ft.addToBackStack(null);
+        ft.commit();
+    }
+
+    public void removeFragment(Fragment fragment){
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.remove(fragment);
+        ft.commit();
+    }
+
 
     public void changeActivity(Context context, Class cls){
         Intent intent = new Intent(context,cls);
