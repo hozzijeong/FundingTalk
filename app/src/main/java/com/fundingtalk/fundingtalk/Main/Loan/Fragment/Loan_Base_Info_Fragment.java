@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.fundingtalk.fundingtalk.AppHelper.Loan_BaseFragment;
-import com.fundingtalk.fundingtalk.Main.MainActivity;
 import com.fundingtalk.fundingtalk.R;
 
 import butterknife.BindView;
@@ -84,11 +83,11 @@ public class Loan_Base_Info_Fragment extends Loan_BaseFragment implements View.O
         switch(view.getId()){
             case R.id.loan_specific_btn:
                 loanActivity.show_Log("다음 단계: "+next_state());
-//                if(next_state()){
+                if(next_state()){
                     loanActivity.addFragment(R.id.loan_main_layout,loanActivity.loan_specific_info_fragment);
-//                }else{
+                }else{
                     Toast.makeText(loanActivity,"정보 입력을 확인해주세요.",Toast.LENGTH_LONG).show();
-//                }
+                }
                 break;
             case R.id.loan_back_activity:
                 //loanActivity.changeActivity(loanActivity, MainActivity.class);
