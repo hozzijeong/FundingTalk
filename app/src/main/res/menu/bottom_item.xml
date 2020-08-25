@@ -4,21 +4,28 @@
         android:id="@+id/main_invest"
         android:title="투자하기"
         android:icon="@mipmap/ic_launcher"
+        android:iconTint="#3757D0"
         />
     <item
         android:id="@+id/main_loan"
         android:title="대출받기"
         android:icon="@mipmap/ic_launcher"
+        android:iconTint="#3757D0"
+
         />
     <item
         android:id="@+id/main_custom"
         android:title="마이페이지"
         android:icon="@mipmap/ic_launcher"
+        android:iconTint="#3757D0"
+
         />
     <item
         android:id="@+id/main_faq"
         android:title="FAQ"
         android:icon="@mipmap/ic_launcher"
+        android:iconTint="#3757D0"
+
         />
 
 </menu>

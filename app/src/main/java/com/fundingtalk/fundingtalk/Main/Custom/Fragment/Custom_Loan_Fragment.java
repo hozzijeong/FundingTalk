@@ -30,7 +30,7 @@ public class Custom_Loan_Fragment extends Main_BaseFragment implements View.OnCl
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.custom_loan_list:
-                    mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_list_fragment);
+                    mainActivity.changeFragment(R.id.sub_layout,mainActivity.invest_list_fragment);
                 break;
         }
     }

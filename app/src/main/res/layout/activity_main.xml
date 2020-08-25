@@ -24,7 +24,9 @@
         android:id="@+id/main_bottom_navi"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        app:menu="@menu/bottom_item"
         android:layout_gravity="bottom"
+        android:background="#ffffff"
+        app:menu="@menu/bottom_item"
+
         />
 </FrameLayout>

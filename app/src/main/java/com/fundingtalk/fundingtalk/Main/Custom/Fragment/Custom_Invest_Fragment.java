@@ -40,7 +40,7 @@ public class Custom_Invest_Fragment extends Main_BaseFragment implements View.On
         switch (view.getId()){
             case R.id.custom_invest_list:
                     mainActivity.show_Log("버튼 클릭");
-                    mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_list_fragment);
+                    mainActivity.changeFragment(R.id.sub_layout,mainActivity.invest_list_fragment);
                 break;
         }
     }

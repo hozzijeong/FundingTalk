@@ -58,7 +58,7 @@ public class Custom_Loan_List_Fragment extends Main_BaseFragment implements View
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.loan_return_back:
-                mainActivity.changeFragment(R.id.main_layout,mainActivity.custom_main_fragment);
+                mainActivity.changeFragment(R.id.sub_layout,mainActivity.custom_main_fragment);
 
                 break;
         }
