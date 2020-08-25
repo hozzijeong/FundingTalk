@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@drawable/input_gradient_back"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+        <!--            android:background="@drawable/invest_ok_back"-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            // 투자신청서 페이지 제목
+
+            //투자가능 금액 DB에서 불러오기 **********************
+
+
+            //투자금액 입력칸 위에서 불러온 숫자보다 작지 않으면 block하기 처음에는 1000만원으로 기본값이 되엉 있음
+
+
+            //동의함이 아니고 다른 단어를 입력하면 block되게 + 빨간색이뜸 - 경고표시???????????????????
+
+            <Button
+                android:id="@+id/invest_back_activity"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:background="@drawable/top_back_icon"
+                android:onClick="onClick"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.065"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.078" />
+
+            <TextView
+                android:id="@+id/maintext"
+                android:layout_width="169dp"
+                android:layout_height="45dp"
+                android:fontFamily="@font/nanumbarungothicbold"
+                android:text="투자신청서"
+                android:textColor="#FFFFFF"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.159"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.201" />
+
+            <TextView
+                android:id="@+id/avail_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumbarungothic"
+                android:bufferType="spannable"
+                android:gravity="center"
+                android:text="현재 해당상품에 투자가능한 금액은 ????만원입니다."
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.352"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.353" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="270dp"
+                android:layout_height="17dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.269"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.581">
+
+                <TextView
+                    android:id="@+id/rate_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:text="예상 수익금 : "
+                    android:textColor="#FFFFFF" />
+
+                //위에 입력한 것을 바탕으로 예상 수익금을 계산함???????????????
+
+                <TextView
+                    android:id="@+id/add_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:text="0원"
+                    android:textColor="#002BFD" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="353dp"
+                android:layout_height="109dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.933">
+
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:bufferType="spannable"
+                    android:text="나 ???은 상기내용을 확인하였으며, 그 내용에"
+                    android:textColor="#FFFFFF" />
+
+                <EditText
+                    android:id="@+id/input_confirm"
+                    android:layout_width="195dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:alpha="0.73"
+                    android:background="@drawable/invest_input_edit"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="동의함(직접입력)"
+                    android:inputType="textPersonName"
+                    android:privateImeOptions="defaultInputmode=korean"
+                    android:textColor="#6E6E6E"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="79dp"
+                    tools:layout_editor_absoluteY="254dp" />
+
+                <TextView
+                    android:id="@+id/info2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:text="※ '동의함'을 직접 입력하신후 투자가 가능합니다."
+                    android:textColor="#FFFFFF"
+                    tools:layout_editor_absoluteX="76dp"
+                    tools:layout_editor_absoluteY="359dp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/input_money"
+                android:layout_width="326dp"
+                android:layout_height="55dp"
+                android:alpha="0.59"
+                android:background="@drawable/invest_input_view"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="#6E6E6E"
+                android:textSize="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.447"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.462" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/go_finish"
+        android:layout_width="314dp"
+        android:layout_height="41dp"
+        android:alpha="0.85"
+        android:background="@drawable/invest_ok_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

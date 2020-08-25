@@ -37,16 +37,10 @@ public class Custom_Main_Fragment extends Main_BaseFragment {
             public void onTabSelected(TabLayout.Tab tab) {
                 customViewPager.setCurrentItem(tab.getPosition());
             }
-
             @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
+            public void onTabUnselected(TabLayout.Tab tab) { }
             @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
+            public void onTabReselected(TabLayout.Tab tab) { }
         });
         customViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override

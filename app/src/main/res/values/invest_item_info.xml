@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    현재 투자진행중인 상품정보-->
+
+    <string-array name="now_name">
+        <item>경기도 고양시 덕양구 화정동 달빛(3단지신안) 3**동 </item>
+        <item>경기도 김포시 운양동 김포한강신도시반도유보라2차 7**동</item>
+    </string-array>
+
+    <string-array name="now_money">
+        <item>3,000</item>
+        <item>1,100</item>
+    </string-array>
+
+    <string-array name="now_month">
+        <item>12개월</item>
+        <item>12개월</item>
+    </string-array>
+
+    <string-array name="now_rate">
+        <item>9.91%</item>
+        <item>9.92%</item>
+    </string-array>
+
+    <string-array name="now_desc">
+        <item>만기 일시상환</item>
+        <item>만기 일시상환</item>
+    </string-array>
+
+<!--    <string-array name="now_image">-->
+<!--        <item>이미지1</item>-->
+<!--        <item>이미지1</item>-->
+<!--    </string-array>-->
+
+<!--    오픈예정 투자중인 상품정보-->
+
+    <string-array name="future_name">
+        <item>부부산광역시 부산진구 전포동 한일유앤아이 *동</item>
+        <item>경기도 고양시 일산서구 가좌동 가좌마을7단지꿈에그린아파트 *동</item>
+    </string-array>
+
+    <string-array name="future_money">
+        <item>2,000만원</item>
+        <item>6,500만원</item>
+    </string-array>
+
+    <string-array name="future_month">
+        <item>12개월</item>
+        <item>12개월</item>
+    </string-array>
+
+    <string-array name="future_rate">
+        <item>8.5%</item>
+        <item>9.55</item>
+    </string-array>
+
+    <string-array name="future_desc">
+        <item>만기 일시상환</item>
+        <item>만기 일시상환</item>
+    </string-array>
+
+<!--    <string-array name="future_image">-->
+<!--        <item>MBTI 성격유형검사</item>-->
+<!--        <item>멘사 IQ 테스트</item>-->
+<!--    </string-array>-->
+
+    <!--    투자완료된 상품정보-->
+
+    <string-array name="past_name">
+        <item>서울특별시 강남구 대치동 비취타운빌라</item>
+        <item>대구광역시 시지동 수성알파시티동화아이위시아파트</item>
+        <item>인천광역시 부평동 동아1단지아파트</item>
+    </string-array>
+
+    <string-array name="past_money">
+        <item>1억</item>
+        <item>2억</item>
+        <item>5000만원</item>
+    </string-array>
+
+    <string-array name="past_month">
+        <item>12개월</item>
+        <item>6개월</item>
+        <item>12개월</item>
+    </string-array>
+
+    <string-array name="past_rate">
+        <item>9.75%</item>
+        <item>9.6%</item>
+        <item>8.5%</item>
+    </string-array>
+
+    <string-array name="past_desc">
+        <item>만기 일시상환</item>
+        <item>만기 일시상환</item>
+        <item>만기 일시상환</item>
+    </string-array>
+
+<!--    <string-array name="past_image"> 안씀!!!!!!!!!!!1-->
+<!--        <item>MBTI 성격유형검사</item>-->
+<!--        <item>멘사 IQ 테스트</item>-->
+<!--    </string-array>-->
+</resources>

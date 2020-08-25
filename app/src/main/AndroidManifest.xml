@@ -3,15 +3,21 @@
     package="com.fundingtalk.fundingtalk">
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
+
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/fundingtalk_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/fundingtalk_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main.Loan.LoanActivity">
 
-        </activity>
+        <activity android:name=".Main.Loan.LoanActivity" />
+        <activity android:name=".Splash.ManualActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD3ypl03kBZqibLe-ZI4T4ijF39qXP96Fk"/>
+  
         <activity android:name=".Splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,8 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login.LoginActivity" />
-        <activity android:name=".Main.MainActivity">
+
+        <activity android:name=".Login.LoginActivity">
+        </activity>
+
+        <activity android:name=".Main.MainActivity"
+            android:windowSoftInputMode="adjustResize|adjustPan">
 
         </activity>
     </application>
