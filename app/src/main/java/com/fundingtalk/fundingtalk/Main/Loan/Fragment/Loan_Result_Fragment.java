@@ -46,6 +46,7 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.loan03_result_fragment,container,false);
         ButterKnife.bind(this,v);
+        next_btn.setOnClickListener(this);
         form = new DecimalFormat("#.##");
         form2 = new DecimalFormat("###,###");
         address_tv.setText(Loan_Specific_Info_Fragment.loan_apt_info.apt_name);
@@ -103,7 +104,6 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.result_next_btn:
-                // 그냥 전체 다 메인으로 돌아가기로 설정.
                 loanActivity.changeActivity(loanActivity, MainActivity.class);
                 loanActivity.finish();
                 break;

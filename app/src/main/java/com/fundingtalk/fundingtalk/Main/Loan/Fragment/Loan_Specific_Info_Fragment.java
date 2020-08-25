@@ -25,6 +25,7 @@ import com.fundingtalk.fundingtalk.Main.Loan.Item.City_First;
 import com.fundingtalk.fundingtalk.Main.Loan.Item.City_Second;
 import com.fundingtalk.fundingtalk.Main.Loan.Item.City_Third;
 import com.fundingtalk.fundingtalk.Main.Loan.Item.Loan_Apt_Info;
+import com.fundingtalk.fundingtalk.Main.MainActivity;
 import com.fundingtalk.fundingtalk.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -60,7 +61,6 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
     @BindView(R.id.check_address) Button check_address;
     @BindView(R.id.loan_specific_back) Button back;
 
-    public static boolean  counsel_state; // 상담 가능 여부를 확인하는 변수 ( 만약에 시작 ltv 가 최저 ltv 보다 낮다면 그냥 상담)
     public static Loan_Apt_Info loan_apt_info; // 최종적으로 선택된 아파트의 정보를 담는 class
 
 
@@ -185,12 +185,18 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                 loanActivity.show_Log("\nstart: "+calc.start_ltv+"\nmin: "+calc.min_ltv+
                         "\nmax: "+calc.max_ltv+"\napply: "+calc.apply_ltv);
                 if(calc.start_ltv<calc.min_ltv || calc.apply_ltv>=calc.max_ltv){
-                    counsel_state = true;
-                    loanActivity.show_Log("상담 신청");
-                    // 상담 신청 페이지를 따로 제작해야함
-
+                    new AlertDialog.Builder(loanActivity)
+                            .setTitle("메세지")
+                            .setMessage("상담이 필요한 대출 진행입니다.\n 상담 페이지로 이동하시겠습니까?")
+                            .setPositiveButton("예", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    loanActivity.changeActivity(loanActivity, MainActivity.class);
+                                }
+                            }).setNegativeButton("아니오",null)
+                            .setCancelable(false)
+                            .show();
                 }else{
-                    counsel_state = false;
                     long max_cost = calc.max_cost();
                     if(LoginActivity.login_state) {
                         if (max_cost >= calc.wish_loan) {
@@ -204,11 +210,11 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                         loan_apt_info.pos_cost = calc.max_cost();
                         loan_apt_info.rate = calc.min_rate*100;
                     }
+                    loanActivity.addFragment(R.id.loan_main_layout,loanActivity.loan_result_fragment);
                 }
 
-                loanActivity.addFragment(R.id.loan_main_layout,loanActivity.loan_result_fragment);
-
                 break;
+
                 case R.id.loan_specific_back:
                     loanActivity.removeFragment(this);
                 break;
@@ -546,7 +552,6 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
             e.printStackTrace();
         }
     }
-
     private final static Comparator<Apt_Info> myComparator= new Comparator<Apt_Info>() {
         private final Collator collator = Collator.getInstance();
         @Override
