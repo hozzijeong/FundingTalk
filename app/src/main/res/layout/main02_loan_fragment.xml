@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login.LoginActivity"
-    android:background="@drawable/loan_bg_1"
+    android:background="@drawable/mypage_bg_2"
     >
     <!--    250 px씩 위로 올림
     size 를 1464 / 3294 로 맞춤. size는 6.7인치 설정. 근데 짧음
@@ -27,33 +27,38 @@
         android:background="#FFFFFF"/>
 
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/nanumbarungothicbold"
-        android:text="대출 한도 및\n금리를 조회해보세요"
-        android:textColor="#3E3E3E"
-        android:textSize="97px"
+    <androidx.cardview.widget.CardView
+        android:layout_width="296dp"
+        android:layout_height="217dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#E6E8EC"
+        app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.314"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.305" />
+        app:layout_constraintVertical_bias="0.36" >
 
-    <Button
-        android:id="@+id/loan_move_btn"
-        android:layout_width="803px"
-        android:layout_height="211px"
-        android:layout_marginTop="52dp"
-        android:background="@drawable/loan_st_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.314"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.048" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="29dp"
+            android:fontFamily="@font/nanumbarungothicbold"
+            android:text="대출 한도 및\n금리를 조회해보세요"
+            android:textColor="#3E3E3E"
+            android:textSize="24dp" />
+
+        <Button
+            android:id="@+id/loan_move_btn"
+            android:layout_width="200dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="153dp"
+            android:background="@drawable/loan_st_1"
+            />
+    </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/loan_logoff_icon"
@@ -102,6 +107,18 @@
         app:layout_constraintStart_toEndOf="@+id/logoffIV"
         app:layout_constraintTop_toBottomOf="@+id/logoffTv"
         app:layout_constraintVertical_bias="0.123" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="119px"
+        android:layout_height="117px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.083"
+        app:srcCompat="@drawable/logo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
