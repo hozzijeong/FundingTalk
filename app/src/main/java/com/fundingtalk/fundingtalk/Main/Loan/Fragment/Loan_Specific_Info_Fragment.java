@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -172,46 +173,50 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
 
                 break;
             case R.id.check_limit:
-                calc.before_loan = Long.parseLong(before_loan.getText().toString().trim());
-                calc.wish_loan = Long.parseLong(wish_loan.getText().toString().trim());
-                calc.getStart_ltv();
+                if(wish_loan.length() == 0 || before_loan.length() ==0 ){
+                    Toast.makeText(loanActivity,"선순위 대출금 또는 희망 대출금을 입력해주세요",Toast.LENGTH_LONG).show();
+                }else{
+                    calc.before_loan = Long.parseLong(before_loan.getText().toString().trim());
+                    calc.wish_loan = Long.parseLong(wish_loan.getText().toString().trim());
+                    calc.getStart_ltv();
                 /*
                     최소 조건을 입력 받고 조건에 해당하면 검색 가능하게끔 구현
                     로그인 했을 경우와 하지 않았을 경우
                  */
-                calc.getApply_ltv();
-                loan_apt_info.min_ltv =  calc.min_ltv; // 뒷장에 사용할 최소 ltv 구함.
-                //대출 가능 금액 산정 -> pos_cost;
-                // 적용 ltv 가 max ltv와 같거나 크거나 || 시작 ltv가 최소 ltv 보다 작으면 상담신청
-                loanActivity.show_Log("\nstart: "+calc.start_ltv+"\nmin: "+calc.min_ltv+
-                        "\nmax: "+calc.max_ltv+"\napply: "+calc.apply_ltv);
-                if(calc.start_ltv<calc.min_ltv || calc.apply_ltv>=calc.max_ltv){
-                    new AlertDialog.Builder(loanActivity)
-                            .setTitle("메세지")
-                            .setMessage("상담이 필요한 대출 진행입니다.\n 상담 페이지로 이동하시겠습니까?")
-                            .setPositiveButton("예", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    loanActivity.changeActivity(loanActivity, MainActivity.class);
-                                }
-                            }).setNegativeButton("아니오",null)
-                            .setCancelable(false)
-                            .show();
-                }else{
-                    long max_cost = calc.max_cost();
-                    if(LoginActivity.login_state) {
-                        if (max_cost >= calc.wish_loan) {
-                            loan_apt_info.pos_cost = calc.wish_loan;
-                        } else {
-                            loan_apt_info.pos_cost = calc.max_cost();
-                        }
-                        //대출 금리 산정
-                        loan_apt_info.rate = calc.calc_loan_interest_rate();
+                    calc.getApply_ltv();
+                    loan_apt_info.min_ltv =  calc.min_ltv; // 뒷장에 사용할 최소 ltv 구함.
+                    //대출 가능 금액 산정 -> pos_cost;
+                    // 적용 ltv 가 max ltv와 같거나 크거나 || 시작 ltv가 최소 ltv 보다 작으면 상담신청
+                    loanActivity.show_Log("\nstart: "+calc.start_ltv+"\nmin: "+calc.min_ltv+
+                            "\nmax: "+calc.max_ltv+"\napply: "+calc.apply_ltv);
+                    if(calc.start_ltv<calc.min_ltv || calc.apply_ltv>=calc.max_ltv){
+                        new AlertDialog.Builder(loanActivity)
+                                .setTitle("메세지")
+                                .setMessage("상담이 필요한 대출 진행입니다.\n 상담 페이지로 이동하시겠습니까?")
+                                .setPositiveButton("예", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        loanActivity.changeActivity(loanActivity, MainActivity.class);
+                                    }
+                                }).setNegativeButton("아니오",null)
+                                .setCancelable(false)
+                                .show();
                     }else{
-                        loan_apt_info.pos_cost = calc.max_cost();
-                        loan_apt_info.rate = calc.min_rate*100;
+                        long max_cost = calc.max_cost();
+                        if(LoginActivity.login_state) {
+                            if (max_cost >= calc.wish_loan) {
+                                loan_apt_info.pos_cost = calc.wish_loan;
+                            } else {
+                                loan_apt_info.pos_cost = calc.max_cost();
+                            }
+                            //대출 금리 산정
+                            loan_apt_info.rate = calc.calc_loan_interest_rate();
+                        }else{
+                            loan_apt_info.pos_cost = calc.max_cost();
+                            loan_apt_info.rate = calc.min_rate*100;
+                        }
+                        loanActivity.addFragment(R.id.loan_main_layout,loanActivity.loan_result_fragment);
                     }
-                    loanActivity.addFragment(R.id.loan_main_layout,loanActivity.loan_result_fragment);
                 }
 
                 break;

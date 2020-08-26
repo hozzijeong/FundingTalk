@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -126,7 +127,11 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
                     loanActivity.changeActivity(loanActivity, MainActivity.class);
                     loanActivity.finish();
                 }else{
-                    loanActivity.addFragment(R.id.loan_main_layout,loanActivity.loan_finish_fragment);
+                    if(check1.isChecked() && check2.isChecked() && check3.isChecked()){
+                        loanActivity.addFragment(R.id.loan_main_layout,loanActivity.loan_finish_fragment);
+                    }else{
+                        Toast.makeText(loanActivity,"모두 동의해주세요.",Toast.LENGTH_LONG).show();
+                    }
                 }
                 break;
         }
