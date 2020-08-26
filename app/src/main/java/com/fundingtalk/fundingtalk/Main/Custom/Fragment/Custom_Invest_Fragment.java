@@ -43,7 +43,7 @@ public class Custom_Invest_Fragment extends Main_BaseFragment implements View.On
         invest_list.setOnClickListener(this);
 
         set1 = (TextView) v.findViewById(R.id.custom_invest_total_money_tv);
-        set1.setText(String.valueOf(5350-now_money) + "만원");
+        set1.setText(String.valueOf(850-now_money) + "만원");
 
         set1_1 = (TextView) v.findViewById(R.id.custom_invest_total_count_tv);
         set1_1.setText("총 " + String.valueOf(items.size()) +" 건의 투자 잔액");

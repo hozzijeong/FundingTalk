@@ -85,7 +85,7 @@ public class future_second_desc_fragment extends Main_BaseFragment {
         loan_info_input = (TextView) v.findViewById(R.id.loan_info_input);
         funding_info_input = (TextView) v.findViewById(R.id.funding_info_input);
         nakchal_input = (TextView) v.findViewById(R.id.nakchal_input);
-        progressbar = (ImageView) v.findViewById(R.id.progress_bar);
+//        progressbar = (ImageView) v.findViewById(R.id.progress_bar);
         go_check_button = (Button) v.findViewById(R.id.goto_check);
 
         setaddress("경기도 고양시 일산서구 가좌동 가좌마을7단지꿈에그린아파트 5동");
@@ -103,7 +103,7 @@ public class future_second_desc_fragment extends Main_BaseFragment {
         setloan_info_input("2억7,300만원 (원금)");
         setfunding_info_input("6,500만원 (원금)");
         setnakchal_input("본 담보가 위치한 부산광역시 부산진구의 최근 6개월 낙찰가율은 104.7% 입니다.");
-        setprogressbar();
+//        setprogressbar();
         setfinishbutton();
         go_check_button.setEnabled(false);
 
@@ -127,7 +127,7 @@ public class future_second_desc_fragment extends Main_BaseFragment {
     public void setloan_info_input(String a){loan_info_input.setText(a); }
     public void setfunding_info_input(String a){ funding_info_input.setText(a); }
     public void setnakchal_input(String a){ nakchal_input.setText(a); }
-    public void setprogressbar(){ progressbar.setVisibility(View.INVISIBLE); }
+//    public void setprogressbar(){ progressbar.setVisibility(View.INVISIBLE); }
     public void setfinishbutton() { go_check_button.setVisibility(View.INVISIBLE);}
 
 

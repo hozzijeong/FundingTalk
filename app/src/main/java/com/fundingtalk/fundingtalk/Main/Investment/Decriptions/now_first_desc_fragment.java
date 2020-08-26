@@ -16,6 +16,8 @@ import com.fundingtalk.fundingtalk.Login.LoginActivity;
 import com.fundingtalk.fundingtalk.R;
 import com.google.android.gms.maps.MapView;
 
+import com.google.android.gms.maps.LocationSource;
+
 import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.*;
 
 public class now_first_desc_fragment extends Main_BaseFragment {
@@ -37,6 +39,7 @@ public class now_first_desc_fragment extends Main_BaseFragment {
     private TextView nakchal_input;
 
     private MapView mapView;
+//    private MapController mapController;
 
     @Nullable
     @Override
@@ -44,6 +47,11 @@ public class now_first_desc_fragment extends Main_BaseFragment {
 
         View v = inflater.inflate(R.layout.invest_desc_fragment,container,false);
         //---
+
+        mapView = (MapView) v.findViewById(R.id.mapView);
+//        mapView.setSatellite(false);
+//        mapView.setStreetView(true);
+
 
         ImageButton back = (ImageButton)v.findViewById(R.id.back_icon);
 
@@ -96,7 +104,7 @@ public class now_first_desc_fragment extends Main_BaseFragment {
         setpro_percent("9.9%");
         setpro_month("12개월");
         setpro_money("0.3억");
-        seting_percent("현재 진행중 (78%)");
+        seting_percent("현재 진행중");
         setpro_first_input("만기일시상환");
         setpro_second_input("가계자금");
         setpro_third_input("근저당권");

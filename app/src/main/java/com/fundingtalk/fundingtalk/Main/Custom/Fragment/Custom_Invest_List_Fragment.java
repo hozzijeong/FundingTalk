@@ -53,7 +53,7 @@ public class Custom_Invest_List_Fragment extends Main_BaseFragment implements Vi
         given_money = (TextView) v.findViewById(R.id.given_money);
         item1 = (TextView) v.findViewById(R.id.item1);
         item2 = (TextView) v.findViewById(R.id.item2);
-        item3 = (TextView) v.findViewById(R.id.item3);
+//        item3 = (TextView) v.findViewById(R.id.item3);
         item4 = (TextView) v.findViewById(R.id.item4);
         item5 = (TextView) v.findViewById(R.id.item5);
 
