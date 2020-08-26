@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="61px"
             android:fontFamily="@font/nanumbarungothic"
-            android:text="총 x건의 대출 잔액"
+            android:text="총 1건의 대출 잔액"
             android:textSize="53px"
             android:layout_marginTop="35dp"
             android:textColor="#DBDBDB"
@@ -29,7 +29,7 @@
             android:layout_height="89px"
             android:layout_marginTop="30px"
             android:fontFamily="@font/nanumbarungothicbold"
-            android:text="0원"
+            android:text="30,000,000 원"
             android:textSize="78px"
             android:textColor="#ffffff"
             />
@@ -51,7 +51,7 @@
             android:layout_height="89px"
             android:layout_marginTop="30px"
             android:fontFamily="@font/nanumbarungothicbold"
-            android:text="- %"
+            android:text="242,500 원"
             android:textSize="78px"
             android:textColor="#ffffff"
             tools:ignore="MissingConstraints" />
@@ -92,6 +92,7 @@
                     />
 
                 <Button
+                    android:id="@+id/custom_copy_accNum"
                     android:layout_width="200px"
                     android:layout_height="150px"
                     android:text="복사하기"
@@ -113,7 +114,7 @@
                 android:fontFamily="@font/nanumbarungothicbold"
                 android:paddingEnd="150px"
                 android:textSize="61px"
-                android:text="x건"
+                android:text="1 건"
                 android:gravity="center_vertical|right"
                 android:background="@drawable/mypage_bond"/>
             <!--                bring to front 사용해서 앞으로 끌어올릴 것-->
@@ -125,7 +126,7 @@
             android:layout_height="1394px"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="37px"
-            android:background="@drawable/mypage_month" />
+            android:background="@drawable/graph" />
         </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

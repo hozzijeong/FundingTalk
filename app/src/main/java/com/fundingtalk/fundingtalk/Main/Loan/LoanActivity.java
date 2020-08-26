@@ -6,6 +6,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.fundingtalk.fundingtalk.AppHelper.BaseActivity;
 import com.fundingtalk.fundingtalk.Main.Loan.Fragment.Loan_Base_Info_Fragment;
+import com.fundingtalk.fundingtalk.Main.Loan.Fragment.Loan_Finish_Fragment;
 import com.fundingtalk.fundingtalk.Main.Loan.Fragment.Loan_Result_Fragment;
 import com.fundingtalk.fundingtalk.Main.Loan.Fragment.Loan_Specific_Info_Fragment;
 import com.fundingtalk.fundingtalk.R;
@@ -18,7 +19,7 @@ public class LoanActivity extends BaseActivity{
     public Loan_Base_Info_Fragment loan_base_info_fragment;
     public Loan_Specific_Info_Fragment loan_specific_info_fragment;
     public Loan_Result_Fragment loan_result_fragment;
-
+    public Loan_Finish_Fragment loan_finish_fragment;
     @BindView(R.id.loan_main_layout) ConstraintLayout mainLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,7 @@ public class LoanActivity extends BaseActivity{
         loan_base_info_fragment = new Loan_Base_Info_Fragment();
         loan_specific_info_fragment = new Loan_Specific_Info_Fragment();
         loan_result_fragment = new Loan_Result_Fragment();
+        loan_finish_fragment = new Loan_Finish_Fragment();
     }
 
 }

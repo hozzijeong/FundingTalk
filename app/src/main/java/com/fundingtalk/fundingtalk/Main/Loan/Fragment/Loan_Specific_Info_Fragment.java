@@ -41,6 +41,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.text.Collator;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -73,7 +74,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
     private final String KEY = "q0HJwcj%2F%2F4%2FAVUrU4w5RtlIRXnl1vYUBEQQppg0cz2Hmy0pTeor3jCrjgRVwdE6a%2BVTAdWIzIqO7YacFNK7Rbg%3D%3D";
     private String base_url ="http://openapi.molit.go.kr/OpenAPI_ToolInstallPackage/service/rest/RTMSOBJSvc/getRTMSDataSvcAptTradeDev?";
     private FirebaseFirestore database; // 시/도, 시/군/구, 읍/면/동 들의 정보들이 저장된 fireStore와 연동하기 위한 변수
-
+    DecimalFormat format;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -86,6 +87,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         third_city.setOnClickListener(this);
         back.setOnClickListener(this);
         database = FirebaseFirestore.getInstance();
+        format = new DecimalFormat("###,###");
         setReset();
         getFirstCity();
         /*
@@ -319,7 +321,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                 public void onClick(DialogInterface dialogInterface, int i) {
                     long real_cost = arrayList.get(i).avg_cost;
                     specific_address.setText(arrayList.get(i).full_name);
-                    house_cost.setText(real_cost+" 만원");
+                    house_cost.setText(format.format(real_cost)+" 만원");
                     loanActivity.show_Log(real_cost+"");
                     //최종적으로 대출용 아파트의 정보 ( 실거래가와 LTV)를 저장하는 클래스 생성
                     loan_apt_info = new Loan_Apt_Info(real_cost,city.city_second.ltv); // 펀딩톡 감정가와

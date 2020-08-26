@@ -99,7 +99,7 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
 
         onLogin.setVisibility(View.VISIBLE);
         noLogin.setVisibility(View.INVISIBLE);
-        next_btn.setText("대출 진행하기");
+        next_btn.setText("대출 신청하기");
     }
 
     @SuppressLint("SetTextI18n")
@@ -122,8 +122,12 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.result_next_btn:
-                loanActivity.changeActivity(loanActivity, MainActivity.class);
-                loanActivity.finish();
+                if(!LoginActivity.login_state){
+                    loanActivity.changeActivity(loanActivity, MainActivity.class);
+                    loanActivity.finish();
+                }else{
+                    loanActivity.addFragment(R.id.loan_main_layout,loanActivity.loan_finish_fragment);
+                }
                 break;
         }
     }

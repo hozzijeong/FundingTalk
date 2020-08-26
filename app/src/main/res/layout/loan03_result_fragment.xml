@@ -155,7 +155,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:constraint_referenced_ids="result_offlog_info,result_offlog_info2,result_offlog_info3"
-        android:visibility="invisible"
+        android:visibility="visible"
         />
 
     <TextView

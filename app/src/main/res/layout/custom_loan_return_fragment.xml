@@ -78,7 +78,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="17px"
             android:fontFamily="@font/nanumbarungothic"
-            android:text="20,194원"
+            android:text="242,500원"
             android:textSize="92px"
             android:textColor="#ffffff"
             />
@@ -117,7 +117,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/nanumbarungothicbold"
                     android:gravity="right|center_vertical"
-                    android:text="205150 원"
+                    android:text="30,000,000 원"
                     android:textSize="44px"
                     android:textColor="#ffffff"
                     />
@@ -147,7 +147,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/nanumbarungothicbold"
                     android:gravity="right|center_vertical"
-                    android:text="205150 원"
+                    android:text="242,500 원"
                     android:textSize="44px"
                     android:textColor="#ffffff"
                     />
@@ -177,7 +177,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/nanumbarungothicbold"
                     android:gravity="right|center_vertical"
-                    android:text="205150 원"
+                    android:text="0 원"
                     android:textSize="44px"
                     android:textColor="#ffffff"
                     />
@@ -207,7 +207,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/nanumbarungothicbold"
                     android:gravity="right|center_vertical"
-                    android:text="205150 원"
+                    android:text="-0 원"
                     android:textSize="44px"
                     android:textColor="#ffffff"
                     />
@@ -237,7 +237,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/nanumbarungothicbold"
                     android:gravity="right|center_vertical"
-                    android:text="205150 원"
+                    android:text="-0 원"
                     android:textSize="44px"
                     android:textColor="#ffffff"
                     />
