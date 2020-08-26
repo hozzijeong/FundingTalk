@@ -195,6 +195,7 @@
             android:buttonTint="#B9B9B9"
             android:fontFamily="@font/nanumbarungothic"
             android:text="개인(정보) 정보 조회 동의 (필수)"
+            android:bufferType="spannable"
             android:textColor="#575757"
             android:textSize="9dp" />
 
@@ -206,6 +207,7 @@
             android:buttonTint="#B9B9B9"
             android:fontFamily="@font/nanumbarungothic"
             android:text="개인(정보) 정보 제 3자 제공 동의 (필수)"
+            android:bufferType="spannable"
             android:textColor="#575757"
             android:textSize="9dp"
 
@@ -219,6 +221,7 @@
             android:buttonTint="#B9B9B9"
             android:fontFamily="@font/nanumbarungothic"
             android:text="개인(정보) 정보 수집,이용 제공 동의 (필수)"
+            android:bufferType="spannable"
             android:textColor="#575757"
             android:textSize="9dp" />
     </LinearLayout>
@@ -261,6 +264,7 @@
         android:text="대출진행을 원하시면 회원가입\n또는 로그인 하셔야 합니다."
         android:textColor="#363636"
         android:textSize="72px"
+        android:bufferType="spannable"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.166"
