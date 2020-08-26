@@ -102,13 +102,14 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
                 @Override
                 public void onClick(View view) {
                     try { //숫자말고 다른 것을 입력할때 튕기는것을 방지
-                        if ( (Integer.parseInt(numberText.getText().toString()) <= now_money) && (isInteger(numberText.getText().toString()) == true) ) { //나중에 DB값으로 바꾸기************
+                        if ( (Integer.parseInt(numberText.getText().toString()) <= now_money) && (isInteger(numberText.getText().toString()) == true) && (Integer.parseInt(numberText.getText().toString()) > 0) ) { //나중에 DB값으로 바꾸기************
                             ok_money = 1;
 //                    Log.d("숫자입력", "숫자 완료");
                         }
                     }
                     catch(NumberFormatException e){
                         Toast myToast = Toast.makeText(getActivity(),"투자금액을 제대로 입력해주세요", Toast.LENGTH_SHORT);
+                        ok_money = 0;
                         myToast.show();
                     }
 
@@ -118,12 +119,14 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
 //                    Log.d("입력", "동의함 완료 완료");
                     }
                     else{
+                        ok_confirm = 0;
                         Log.d("입력", confirmtext.getText().toString());
                     }
 
                     //모든걸 잘 입력하면
                     if (ok_money == 1 && ok_confirm == 1){
-
+                        ok_money = 0;
+                        ok_confirm = 0;
                         now_money = now_money - Integer.parseInt(numberText.getText().toString());
                         items.add(new Item(total_info_c,address_c,money_info,numberText.getText().toString() + "만원"));
                         numberText.getText().clear();
