@@ -265,7 +265,7 @@
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/nanumbarungothicbold"
         android:gravity="center"
-        android:text="총 x건"
+        android:text="총 1건"
         android:textSize="61px"
         android:textColor="#535353"
         app:layout_constraintBottom_toTopOf="@+id/loan_list"

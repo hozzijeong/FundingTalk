@@ -45,6 +45,7 @@ public class Custom_Loan_List_Fragment extends Main_BaseFragment implements View
         loan_list.addItemDecoration(deco);
         adapter = new RecyclerAdapter(mainActivity,items);
         loan_list.setAdapter(adapter);
+        setItems();
         return v;
     }
 
