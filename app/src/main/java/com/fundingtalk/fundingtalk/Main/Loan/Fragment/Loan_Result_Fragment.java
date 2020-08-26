@@ -1,7 +1,11 @@
 package com.fundingtalk.fundingtalk.Main.Loan.Fragment;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +42,7 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
     @BindView(R.id.result_check2) CheckBox check2;
     @BindView(R.id.result_check3) CheckBox check3;
     @BindView(R.id.result_check_all) CheckBox check_all;
+    @BindView(R.id.result_offlog_info2) TextView offlog;
     DecimalFormat form;
     DecimalFormat form2;
     String name;
@@ -47,6 +52,7 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
         View v = inflater.inflate(R.layout.loan03_result_fragment,container,false);
         ButterKnife.bind(this,v);
         next_btn.setOnClickListener(this);
+        setSpan();
         form = new DecimalFormat("#.##");
         form2 = new DecimalFormat("###,###");
         address_tv.setText(Loan_Specific_Info_Fragment.loan_apt_info.apt_name);
@@ -67,6 +73,25 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
         return v;
     }
 
+    private void setSpan(){
+        Spannable[] span = new Spannable[3];
+        span[0] = (Spannable) check1.getText();
+        span[1] = (Spannable) check2.getText();
+        span[2] = (Spannable) check3.getText();
+
+        SpannableString string = new SpannableString(offlog.getText().toString());
+        loanActivity.show_Log(offlog.getText().toString());
+        for(int i = 0; i< offlog.getText().toString().length(); i++){
+            if( (i >10 && i<16) || (i>18 && i<23) ){
+                loanActivity.show_Log(offlog.getText().toString().charAt(i)+"");
+            }
+        }
+        span[0].setSpan(new ForegroundColorSpan(Color.parseColor("#5A75D7")),16,20,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        span[1].setSpan(new ForegroundColorSpan(Color.parseColor("#5A75D7")),21,25,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        span[2].setSpan(new ForegroundColorSpan(Color.parseColor("#5A75D7")),22,26,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        string.setSpan(new ForegroundColorSpan(Color.parseColor("#5A75D7")),11,15,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        string.setSpan(new ForegroundColorSpan(Color.parseColor("#5A75D7")),19,22,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+    }
 
     @SuppressLint("SetTextI18n")
     private void onLogin(){
