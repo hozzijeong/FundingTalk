@@ -3,6 +3,7 @@ package com.fundingtalk.fundingtalk.Main;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
@@ -29,6 +30,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static com.fundingtalk.fundingtalk.Login.LoginActivity.login_state;
+import static com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Invest_List_Fragment.setItems;
 import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.Invest_Main_Fragment.back_page;
 
 public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -61,7 +64,10 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         setFragment();
         //bottom_navigation 을 클릭했을 때, 페이지 변경을 위한 이벤트 처리
         bottom_navi.setOnNavigationItemSelectedListener(this);
-
+        if (login_state){
+            setItems();
+        }
+        Log.d("여기에서 추가됨!!!!!!!!!!","*********************");
 
         if (back_page == 1){
             changeFragment(R.id.main_layout,now_first_desc_fragment);
@@ -111,7 +117,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
                 return true;
             case R.id.main_custom:
                 // 개인 정보로 이동
-                if(LoginActivity.login_state) {
+                if(login_state) {
                     changeFragment(R.id.main_layout, new Custom_Main_Fragment());
                     return true;
                 }

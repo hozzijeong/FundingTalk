@@ -64,7 +64,6 @@ public class Custom_Invest_List_Fragment extends Main_BaseFragment implements Vi
         item4.setText("205120 원");
         item5.setText("35420 원");
 
-        setItems();
         count.setText("총 "+items.size()+"개");
         linearLayoutManager = new LinearLayoutManager(mainActivity);
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
@@ -78,7 +77,7 @@ public class Custom_Invest_List_Fragment extends Main_BaseFragment implements Vi
         return v;
     }
 
-    private void setItems(){
+    static public void setItems(){
         String total_info1 = "연 9.55% 12개월";
         String address1 = "서울특별시 강남구 대치동";
         String money1= "100 만원";
