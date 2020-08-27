@@ -2,9 +2,12 @@ package com.fundingtalk.fundingtalk.Main;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -150,5 +153,8 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
                 .show();
     }
 
-
+    public void BlogButton(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://m.blog.naver.com/fundingtalk"));
+        startActivity(intent);
+    }
 }
