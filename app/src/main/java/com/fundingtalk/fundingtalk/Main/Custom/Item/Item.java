@@ -44,9 +44,10 @@ public class Item {
     }
 
     public void addmoney(String money_input){
-//        Log.d("heyefjkwebtnkjw", money.substring(1,4));
+        Log.d("heyefjkwebtnkjw", money.substring(1,4));
+        money = money.replace("만원", "");
         money = String.valueOf(Integer.parseInt(money) + Integer.parseInt(money_input));
-//        money = String.valueOf(Integer.parseInt(money.substring(0,5)) + Integer.parseInt(money_input.substring(0,4)));
+//        money = String.valueOf(Integer.parseInt(money.substring(0,4)) + Integer.parseInt(money_input.substring(0,4)));
     }
 
     public String total_info;

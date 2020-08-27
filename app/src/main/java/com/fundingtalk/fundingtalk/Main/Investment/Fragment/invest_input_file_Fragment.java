@@ -145,8 +145,8 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
                             }
                         }
                         if(index == -1){ //없으면
-                            items.add(new Item(total_info_c,address_c,money_info,numberText.getText().toString()));
-//                            items.add(new Item(total_info_c,address_c,money_info,numberText.getText().toString() + "만원"));
+//                            items.add(new Item(total_info_c,address_c,money_info,numberText.getText().toString()));
+                            items.add(new Item(total_info_c,address_c,money_info,numberText.getText().toString() + "만원"));
                         }
                         else { // 있으면
                             items.get(index).addmoney(numberText.getText().toString());

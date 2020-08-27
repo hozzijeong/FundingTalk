@@ -30,7 +30,6 @@ public class Loan_Finish_Fragment extends Loan_BaseFragment {
                 loanActivity.finish();
             }
         });
-
         return v;
     }
 }
