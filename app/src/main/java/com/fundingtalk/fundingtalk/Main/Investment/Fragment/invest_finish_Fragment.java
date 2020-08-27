@@ -24,7 +24,7 @@ public class invest_finish_Fragment extends Main_BaseFragment {
         button2.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mainActivity.changeFragment(R.id.main_layout,mainActivity.custom_main_fragment);
+                mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_main_fragment);
             }
         });
 

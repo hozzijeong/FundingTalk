@@ -1,20 +1,25 @@
 package com.fundingtalk.fundingtalk.Main.Loan.Fragment;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.Group;
 
 import com.fundingtalk.fundingtalk.AppHelper.Loan_BaseFragment;
+import com.fundingtalk.fundingtalk.Login.LoginActivity;
 import com.fundingtalk.fundingtalk.Main.MainActivity;
 import com.fundingtalk.fundingtalk.R;
 
@@ -30,14 +35,14 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
     @BindView(R.id.result_cost_result) TextView cost_result;
     @BindView(R.id.result_cost_and_ltv) TextView cost_and_ltv;
     @BindView(R.id.result_user_name)TextView user_name;
-    @BindView(R.id.result_on_login) LinearLayout onLogin;
-    @BindView(R.id.result_no_login) LinearLayout noLogin;
+    @BindView(R.id.result_onlogin) Group onLogin;
+    @BindView(R.id.result_offlogin) Group noLogin;
     @BindView(R.id.result_next_btn) Button next_btn;
     @BindView(R.id.result_check1) CheckBox check1;
     @BindView(R.id.result_check2) CheckBox check2;
     @BindView(R.id.result_check3) CheckBox check3;
     @BindView(R.id.result_check_all) CheckBox check_all;
-    @BindView(R.id.result_back) Button back;
+    @BindView(R.id.result_offlog_info2) TextView offlog;
     DecimalFormat form;
     DecimalFormat form2;
     String name;
@@ -46,11 +51,12 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.loan03_result_fragment,container,false);
         ButterKnife.bind(this,v);
-        back.setOnClickListener(this);
+        next_btn.setOnClickListener(this);
+        setSpan();
         form = new DecimalFormat("#.##");
         form2 = new DecimalFormat("###,###");
         address_tv.setText(Loan_Specific_Info_Fragment.loan_apt_info.apt_name);
-        if(Loan_Specific_Info_Fragment.login_temp_state){
+        if(LoginActivity.login_state){
             onLogin();
         }else{
             offLogin();
@@ -66,8 +72,19 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
         });
         return v;
     }
+    private void setSpan(){
+        Spannable[] span = new Spannable[3];
+        span[0] = (Spannable) check1.getText();
+        span[1] = (Spannable) check2.getText();
+        span[2] = (Spannable) check3.getText();
+        Spannable spannable = (Spannable) offlog.getText();
 
-
+        span[0].setSpan(new ForegroundColorSpan(Color.parseColor("#5A75D7")),16,20,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        span[1].setSpan(new ForegroundColorSpan(Color.parseColor("#5A75D7")),21,25,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        span[2].setSpan(new ForegroundColorSpan(Color.parseColor("#5A75D7")),22,26,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.parseColor("#5A75D7")),11,15,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(new ForegroundColorSpan(Color.parseColor("#5A75D7")),19,22,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+    }
     @SuppressLint("SetTextI18n")
     private void onLogin(){
         name = "최승현";
@@ -77,13 +94,12 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
         cost_rate.setText("대출 금리: "+form.format(Loan_Specific_Info_Fragment.loan_apt_info.rate)+"% ");
         cost_and_ltv.setText("펀딩톡 감정가: "+
                 form2.format(Loan_Specific_Info_Fragment.loan_apt_info.real_cost)+"만원 /"
-        +"LTV: "+Loan_Specific_Info_Fragment.loan_apt_info.min_ltv+"%");
+        +"적용 LTV: "+Loan_Specific_Info_Fragment.loan_apt_info.apply_ltv+"%");
 
         onLogin.setVisibility(View.VISIBLE);
         noLogin.setVisibility(View.INVISIBLE);
-        next_btn.setText("대출 진행하기");
+        next_btn.setText("대출 신청하기");
     }
-
     @SuppressLint("SetTextI18n")
     private void offLogin(){
         name = "고객님";
@@ -98,19 +114,20 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
         noLogin.setVisibility(View.VISIBLE);
         next_btn.setText("메인으로 돌아가기");
     }
-
-
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.result_next_btn:
-                // 그냥 전체 다 메인으로 돌아가기로 설정.
-                loanActivity.changeActivity(loanActivity, MainActivity.class);
-                loanActivity.finish();
-                break;
-
-            case R.id.result_back:
-                loanActivity.changeFragment(R.id.loan_main_layout,loanActivity.loan_specific_info_fragment);
+                if(!LoginActivity.login_state){
+                    loanActivity.changeActivity(loanActivity, MainActivity.class);
+                    loanActivity.finish();
+                }else{
+                    if(check1.isChecked() && check2.isChecked() && check3.isChecked()){
+                        loanActivity.addFragment(R.id.loan_main_layout,loanActivity.loan_finish_fragment);
+                    }else{
+                        Toast.makeText(loanActivity,"모두 동의해주세요.",Toast.LENGTH_LONG).show();
+                    }
+                }
                 break;
         }
     }

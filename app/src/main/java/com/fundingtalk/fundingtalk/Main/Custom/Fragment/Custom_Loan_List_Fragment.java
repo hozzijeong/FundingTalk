@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
 import com.fundingtalk.fundingtalk.Main.Custom.Adapter.RecyclerAdapter;
+import com.fundingtalk.fundingtalk.Main.Custom.Adapter.RecyclerDeco;
 import com.fundingtalk.fundingtalk.Main.Custom.Item.Item;
 import com.fundingtalk.fundingtalk.R;
 
@@ -27,6 +28,7 @@ public class Custom_Loan_List_Fragment extends Main_BaseFragment implements View
     @BindView(R.id.loan_list) RecyclerView loan_list;
     @BindView(R.id.loan_return_back) Button back;
     @BindView(R.id.custom_loan_return_count) TextView count;
+    private RecyclerDeco deco;
     ArrayList<Item> items;
     RecyclerAdapter adapter;
     LinearLayoutManager linearLayoutManager;
@@ -39,9 +41,11 @@ public class Custom_Loan_List_Fragment extends Main_BaseFragment implements View
         linearLayoutManager = new LinearLayoutManager(mainActivity);
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
         loan_list.setLayoutManager(linearLayoutManager);
-
+        deco = new RecyclerDeco(20);
+        loan_list.addItemDecoration(deco);
         adapter = new RecyclerAdapter(mainActivity,items);
         loan_list.setAdapter(adapter);
+        setItems();
         return v;
     }
 
@@ -58,8 +62,7 @@ public class Custom_Loan_List_Fragment extends Main_BaseFragment implements View
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.loan_return_back:
-                mainActivity.changeFragment(R.id.sub_layout,mainActivity.custom_main_fragment);
-
+                mainActivity.removeFragment(this);
                 break;
         }
     }

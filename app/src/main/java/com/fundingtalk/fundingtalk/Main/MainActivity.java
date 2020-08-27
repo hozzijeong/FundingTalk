@@ -2,7 +2,10 @@ package com.fundingtalk.fundingtalk.Main;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -10,11 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.fundingtalk.fundingtalk.AppHelper.BaseActivity;
-
+import com.fundingtalk.fundingtalk.Login.LoginActivity;
 import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Invest_List_Fragment;
 import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Loan_List_Fragment;
-import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Main_Fragment;
-import com.fundingtalk.fundingtalk.Login.LoginActivity;
 import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Main_Fragment;
 import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Notlogin_Fragment;
 import com.fundingtalk.fundingtalk.Main.ETC.Fragment.Etc_Main_Fragment;
@@ -32,6 +33,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static com.fundingtalk.fundingtalk.Login.LoginActivity.login_state;
+import static com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Invest_List_Fragment.setItems;
 import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.Invest_Main_Fragment.back_page;
 
 public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -56,7 +59,6 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
   
     @BindView(R.id.main_bottom_navi) BottomNavigationView bottom_navi;
     public @BindView(R.id.main_layout) ConstraintLayout mainLayout;
-    public @BindView(R.id.sub_layout) ConstraintLayout subLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,7 +67,10 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         setFragment();
         //bottom_navigation 을 클릭했을 때, 페이지 변경을 위한 이벤트 처리
         bottom_navi.setOnNavigationItemSelectedListener(this);
-
+        if (login_state){
+            setItems();
+        }
+        Log.d("여기에서 추가됨!!!!!!!!!!","*********************");
 
         if (back_page == 1){
             changeFragment(R.id.main_layout,now_first_desc_fragment);
@@ -107,20 +112,16 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         switch (menuItem.getItemId()){
             case R.id.main_invest:
                 // 투자하기로 이동(fragment)
-                mainLayout.setVisibility(View.VISIBLE);
-                subLayout.setVisibility(View.INVISIBLE);
                 changeFragment(R.id.main_layout,invest_main_fragment);
                 return true;
             case R.id.main_loan:
                 //대출 받기로 이동
-                mainLayout.setVisibility(View.VISIBLE);
-                subLayout.setVisibility(View.INVISIBLE);
                 changeFragment(R.id.main_layout,loan_main_fragment);
                 return true;
             case R.id.main_custom:
                 // 개인 정보로 이동
-                if(LoginActivity.login_state) {
-                    changeFragment(R.id.main_layout, custom_main_fragment);
+                if(login_state) {
+                    changeFragment(R.id.main_layout, new Custom_Main_Fragment());
                     return true;
                 }
                 else {
@@ -129,39 +130,12 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
                 }
             case R.id.main_faq:
                 // faq로 이동
-                changeFragment(R.id.main_layout,etc_main_fragment);
+                changeFragment(R.id.main_layout,new Etc_Main_Fragment());
 
                 return true;
 
             default:return false;
         }
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        show_Log("종료1");
-        AlertDialog.Builder ab = new AlertDialog.Builder(this);
-        ab.setTitle("메세지").setMessage("정말로 종료하시겠습니까?");
-        ab.setPositiveButton("예", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.dismiss();
-                finish();
-            }
-        });
-        ab.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.cancel();
-                dialogInterface.dismiss();
-            }
-        });
-        ab.setCancelable(false);
-        AlertDialog dialog = ab.create();
-        dialog.show();
-        show_Log("종료2");
-
     }
 
     @Override public void onBackPressed() {
@@ -179,5 +153,8 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
                 .show();
     }
 
-
+    public void BlogButton(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://m.blog.naver.com/fundingtalk"));
+        startActivity(intent);
+    }
 }

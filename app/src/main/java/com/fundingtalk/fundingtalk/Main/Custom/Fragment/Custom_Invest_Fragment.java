@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,6 +16,9 @@ import com.fundingtalk.fundingtalk.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.df3;
+import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.now_money;
+import static com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Invest_List_Fragment.*;
 public class Custom_Invest_Fragment extends Main_BaseFragment implements View.OnClickListener {
     /*
         2020.08.21 에 할일
@@ -26,12 +30,37 @@ public class Custom_Invest_Fragment extends Main_BaseFragment implements View.On
      */
     @BindView(R.id.custom_invest_list) Button invest_list;
 
+    TextView now_m;
+    Button see_count;
+    TextView set1;
+    TextView set1_1;
+    TextView set2;
+    TextView set3;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.custom_invest_fragment,container,false);
         ButterKnife.bind(this,v);
         invest_list.setOnClickListener(this);
+
+        set1 = (TextView) v.findViewById(R.id.custom_invest_total_money_tv);
+        set1.setText(String.valueOf(df3.format((850-now_money)*10000)) + "원");
+
+        set1_1 = (TextView) v.findViewById(R.id.custom_invest_total_count_tv);
+        set1_1.setText("총 " + String.valueOf(items.size()) +" 건의 투자 잔액");
+
+        set3 = (TextView) v.findViewById(R.id.custom_total_invest_cost);
+        set3.setText(String.valueOf(df3.format((1350 - now_money)*10000)) + "원");
+
+        set2 = (TextView) v.findViewById(R.id.custom_invest_return_tv);
+        set2.setText("9.8%");
+
+        see_count = (Button) v.findViewById(R.id.custom_invest_list);
+        see_count.setText(String.valueOf(items.size()) + "건");
+        now_m = (TextView) v.findViewById(R.id.custom_now_money);
+        now_m.setText(String.valueOf(df3.format(now_money*10000)) + "원");
+
         return  v;
     }
 
@@ -39,8 +68,7 @@ public class Custom_Invest_Fragment extends Main_BaseFragment implements View.On
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.custom_invest_list:
-                    mainActivity.show_Log("버튼 클릭");
-                    mainActivity.changeFragment(R.id.sub_layout,mainActivity.invest_list_fragment);
+                    mainActivity.addFragment(R.id.main_layout,mainActivity.invest_list_fragment);
                 break;
         }
     }

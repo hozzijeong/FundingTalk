@@ -11,14 +11,21 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentActivity;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
 import com.fundingtalk.fundingtalk.R;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.*;
 
-public class future_first_desc_fragment extends Main_BaseFragment {
+public class future_first_desc_fragment extends Main_BaseFragment implements OnMapReadyCallback {
 
     private TextView address;
     private TextView pro_percent;
@@ -47,8 +54,10 @@ public class future_first_desc_fragment extends Main_BaseFragment {
         View v = inflater.inflate(R.layout.invest_desc_fragment,container,false);
         //---
 
-        ImageButton back = (ImageButton)v.findViewById(R.id.back_icon);
+        mapView = (MapView)v.findViewById(R.id.mapView);
+        mapView.getMapAsync(this::onMapReady);
 
+        ImageButton back = (ImageButton)v.findViewById(R.id.back_icon);
         back.setOnClickListener(new View.OnClickListener() { // 이미지 버튼 이벤트 정의
             @Override
             public void onClick(View v) { //클릭 했을경우
@@ -69,7 +78,6 @@ public class future_first_desc_fragment extends Main_BaseFragment {
             }
         });
 
-
         address = (TextView) v.findViewById(R.id.address);
         pro_percent = (TextView) v.findViewById(R.id.pro_percent);
         pro_month = (TextView) v.findViewById(R.id.pro_month);
@@ -85,7 +93,7 @@ public class future_first_desc_fragment extends Main_BaseFragment {
         loan_info_input = (TextView) v.findViewById(R.id.loan_info_input);
         funding_info_input = (TextView) v.findViewById(R.id.funding_info_input);
         nakchal_input = (TextView) v.findViewById(R.id.nakchal_input);
-        progressbar = (ImageView) v.findViewById(R.id.progress_bar);
+//        progressbar = (ImageView) v.findViewById(R.id.progress_bar);
         go_check_button = (Button) v.findViewById(R.id.goto_check);
 
         setaddress("부산광역시 부산진구 전포동 한일유앤아이 2동");
@@ -100,10 +108,10 @@ public class future_first_desc_fragment extends Main_BaseFragment {
         setpro_fifth_input("74.71%");
         setpro_gamjung_input("31,000만원");
         setdesc("감정가는 KB부동산시세외 일반거래가 31,000만원 및 국토교통부\n 최근실거래가(최근6개월)의 변화 추이동을 반영하여 적용되었습니다.");
-        setloan_info_input("2억1,661만원 (원금) ");
+        setloan_info_input("21,661만원 (원금) ");
         setfunding_info_input("1,500만원 (원금) ");
         setnakchal_input("본 담보가 위치한 부산광역시 부산진구의 최근 6개월 낙찰가율은 90.1% 입니다.");
-        setprogressbar();
+//        setprogressbar();
         setfinishbutton();
         go_check_button.setEnabled(false);
 
@@ -125,7 +133,7 @@ public class future_first_desc_fragment extends Main_BaseFragment {
     public void setloan_info_input(String a){loan_info_input.setText(a); }
     public void setfunding_info_input(String a){ funding_info_input.setText(a); }
     public void setnakchal_input(String a){ nakchal_input.setText(a); }
-    public void setprogressbar(){ progressbar.setVisibility(View.INVISIBLE); }
+//    public void setprogressbar(){ progressbar.setVisibility(View.INVISIBLE); }
     public void setfinishbutton() { go_check_button.setVisibility(View.INVISIBLE);}
 
 
@@ -193,4 +201,28 @@ public class future_first_desc_fragment extends Main_BaseFragment {
         super.onLowMemory();
         mapView.onLowMemory();
     }
+
+    public void onMapReady(GoogleMap googleMap) {
+        // ↑매개변수로 GoogleMap 객체가 넘어옵니다.
+
+        // camera 좌쵸를 서울역 근처로 옮겨 봅니다.
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(
+                new LatLng(35.1513632,129.0623991)   // 위도, 경도
+        ));
+
+        // 구글지도(지구) 에서의 zoom 레벨은 1~23 까지 가능합니다.
+        // 여러가지 zoom 레벨은 직접 테스트해보세요
+        CameraUpdate zoom = CameraUpdateFactory.zoomTo(17);
+        googleMap.animateCamera(zoom);   // moveCamera 는 바로 변경하지만,
+        // animateCamera() 는 근거리에선 부드럽게 변경합니다
+
+        // marker 표시
+        // market 의 위치, 타이틀, 짧은설명 추가 가능.
+        MarkerOptions marker = new MarkerOptions();
+        marker .position(new LatLng(35.1513632,129.0623991))
+                .title("한일유앤아이 2동")
+                .snippet("부산광역시 부산진구 전포동 한일유앤아이 2동");
+        googleMap.addMarker(marker).showInfoWindow(); // 마커추가,화면에출력
+    }
+
 }

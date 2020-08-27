@@ -46,7 +46,7 @@ public class LoginActivity extends BaseActivity {
                     changeActivity(context,MainActivity.class);
                     //    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     //    startActivity(intent);
-                    now_money = 5000;
+                    now_money = 500;
                     now_name = "최승현";
                     Toast.makeText(context, "로그인 되었습니다.",Toast.LENGTH_LONG).show();
                     finish();

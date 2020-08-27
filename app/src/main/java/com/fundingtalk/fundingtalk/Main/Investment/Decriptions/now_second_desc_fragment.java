@@ -15,11 +15,17 @@ import androidx.annotation.Nullable;
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
 import com.fundingtalk.fundingtalk.Login.LoginActivity;
 import com.fundingtalk.fundingtalk.R;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.*;
 
-public class now_second_desc_fragment extends Main_BaseFragment {
+public class now_second_desc_fragment extends Main_BaseFragment implements OnMapReadyCallback {
 
     private TextView address;
     private TextView pro_percent;
@@ -45,6 +51,9 @@ public class now_second_desc_fragment extends Main_BaseFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.invest_desc_fragment,container,false);
+
+        mapView = (MapView)v.findViewById(R.id.mapView);
+        mapView.getMapAsync(this::onMapReady);
         //---
 
         ImageButton back = (ImageButton)v.findViewById(R.id.back_icon);
@@ -66,6 +75,8 @@ public class now_second_desc_fragment extends Main_BaseFragment {
                 if(LoginActivity.login_state) {
                     back_check = 2;
                     rating = 9.9;
+                    total_info_c = "연 9.9% 12개월";
+                    address_c ="경기도 김포시 운양동";
                     mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_input_file_Fragment);
                 }
                 else {
@@ -92,13 +103,13 @@ public class now_second_desc_fragment extends Main_BaseFragment {
         loan_info_input = (TextView) v.findViewById(R.id.loan_info_input);
         funding_info_input = (TextView) v.findViewById(R.id.funding_info_input);
         nakchal_input = (TextView) v.findViewById(R.id.nakchal_input);
-        progressbar = (ImageView) v.findViewById(R.id.progress_bar);
+//        progressbar = (ImageView) v.findViewById(R.id.progress_bar);
 
         setaddress("경기도 김포시 운양동 김포한강신도시반도유보라2차 703동");
         setpro_percent("9.9%");
         setpro_month("12개월");
         setpro_money("0.1억");
-        seting_percent("현재 진행중 (42%)");
+        seting_percent("현재 진행중");
         setpro_first_input("만기일시상환");
         setpro_second_input("가계자금");
         setpro_third_input("근저당권");
@@ -106,14 +117,13 @@ public class now_second_desc_fragment extends Main_BaseFragment {
         setpro_fifth_input("76.62%");
         setpro_gamjung_input("40,000만원");
         setdesc("감정가는 KB부동산시세외 일반거래가 40,000만원 및 국토교통부\n 최근실거래가(최근6개월)의 변화 추이동을 반영하여 적용되었습니다.");
-        setloan_info_input("2억 9,550만원(원금) ");
+        setloan_info_input("29,550만원(원금) ");
         setfunding_info_input("1,100만원 (원금)");
         setnakchal_input("본 담보가 위치한 경기도 김포시의 최근 6개월 낙찰가율은 91.8% 입니다.");
-        setprogressbar();
+//        setprogressbar();
 
         return v;
     }
-
 
 
     public void setaddress(String a){ address.setText(a); }
@@ -131,7 +141,7 @@ public class now_second_desc_fragment extends Main_BaseFragment {
     public void setloan_info_input(String a){loan_info_input.setText(a); }
     public void setfunding_info_input(String a){ funding_info_input.setText(a); }
     public void setnakchal_input(String a){ nakchal_input.setText(a); }
-    public void setprogressbar(){progressbar.setImageResource(R.drawable.prog2);};
+//    public void setprogressbar(){progressbar.setImageResource(R.drawable.prog2);};
 
 
     public String getaddress() { return (String) this.address.getText(); }
@@ -197,6 +207,29 @@ public class now_second_desc_fragment extends Main_BaseFragment {
     public void onLowMemory() {
         super.onLowMemory();
         mapView.onLowMemory();
+    }
+
+    public void onMapReady(GoogleMap googleMap) {
+        // ↑매개변수로 GoogleMap 객체가 넘어옵니다.
+
+        // camera 좌쵸를 서울역 근처로 옮겨 봅니다.
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(
+                new LatLng(37.6536831,126.6779551)   // 위도, 경도
+        ));
+
+        // 구글지도(지구) 에서의 zoom 레벨은 1~23 까지 가능합니다.
+        // 여러가지 zoom 레벨은 직접 테스트해보세요
+        CameraUpdate zoom = CameraUpdateFactory.zoomTo(17);
+        googleMap.animateCamera(zoom);   // moveCamera 는 바로 변경하지만,
+        // animateCamera() 는 근거리에선 부드럽게 변경합니다
+
+        // marker 표시
+        // market 의 위치, 타이틀, 짧은설명 추가 가능.
+        MarkerOptions marker = new MarkerOptions();
+        marker .position(new LatLng(37.6536831,126.6779551))
+                .title("반도유보라2차")
+                .snippet("경기도 김포시 운양동 김포 한강신도시 반도유보라2차");
+        googleMap.addMarker(marker).showInfoWindow(); // 마커추가,화면에출력
     }
 }
 

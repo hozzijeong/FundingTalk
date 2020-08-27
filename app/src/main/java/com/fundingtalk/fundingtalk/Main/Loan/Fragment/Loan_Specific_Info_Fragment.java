@@ -12,11 +12,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.fundingtalk.fundingtalk.AppHelper.Loan_BaseFragment;
+import com.fundingtalk.fundingtalk.Login.LoginActivity;
 import com.fundingtalk.fundingtalk.Main.Loan.Item.Apt_Info;
 import com.fundingtalk.fundingtalk.Main.Loan.Item.Calc;
 import com.fundingtalk.fundingtalk.Main.Loan.Item.City;
@@ -24,6 +26,7 @@ import com.fundingtalk.fundingtalk.Main.Loan.Item.City_First;
 import com.fundingtalk.fundingtalk.Main.Loan.Item.City_Second;
 import com.fundingtalk.fundingtalk.Main.Loan.Item.City_Third;
 import com.fundingtalk.fundingtalk.Main.Loan.Item.Loan_Apt_Info;
+import com.fundingtalk.fundingtalk.Main.MainActivity;
 import com.fundingtalk.fundingtalk.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -39,6 +42,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.text.Collator;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -59,10 +63,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
     @BindView(R.id.check_address) Button check_address;
     @BindView(R.id.loan_specific_back) Button back;
 
-    public static boolean login_temp_state = true; // 로그인 여부를 확인하는 변수
-    public static boolean  counsel_state; // 상담 가능 여부를 확인하는 변수 ( 만약에 시작 ltv 가 최저 ltv 보다 낮다면 그냥 상담)
     public static Loan_Apt_Info loan_apt_info; // 최종적으로 선택된 아파트의 정보를 담는 class
-
 
     private int apt_max_cnt = 0;
     private int city_num = 0;
@@ -74,7 +75,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
     private final String KEY = "q0HJwcj%2F%2F4%2FAVUrU4w5RtlIRXnl1vYUBEQQppg0cz2Hmy0pTeor3jCrjgRVwdE6a%2BVTAdWIzIqO7YacFNK7Rbg%3D%3D";
     private String base_url ="http://openapi.molit.go.kr/OpenAPI_ToolInstallPackage/service/rest/RTMSOBJSvc/getRTMSDataSvcAptTradeDev?";
     private FirebaseFirestore database; // 시/도, 시/군/구, 읍/면/동 들의 정보들이 저장된 fireStore와 연동하기 위한 변수
-
+    DecimalFormat format;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -87,12 +88,9 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         third_city.setOnClickListener(this);
         back.setOnClickListener(this);
         database = FirebaseFirestore.getInstance();
+        format = new DecimalFormat("###,###");
         setReset();
         getFirstCity();
-        /*
-            TextView 밑줄 긋는 방법
-            textview.setPaintFlags(textview.PaintFlags()|Paint.UNDERLINE_TEXT_FLAG);
-         */
 
         return v;
     }
@@ -171,47 +169,57 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
 
                 break;
             case R.id.check_limit:
-                calc.before_loan = Long.parseLong(before_loan.getText().toString().trim());
-                calc.wish_loan = Long.parseLong(wish_loan.getText().toString().trim());
-                calc.getStart_ltv();
+                if(wish_loan.length() == 0 || before_loan.length() ==0 ){
+                    Toast.makeText(loanActivity,"선순위 대출금 또는 희망 대출금을 입력해주세요",Toast.LENGTH_LONG).show();
+                }else{
+                    calc.before_loan = Long.parseLong(before_loan.getText().toString().trim());
+                    calc.wish_loan = Long.parseLong(wish_loan.getText().toString().trim());
+                    calc.getStart_ltv();
                 /*
                     최소 조건을 입력 받고 조건에 해당하면 검색 가능하게끔 구현
                     로그인 했을 경우와 하지 않았을 경우
                  */
-                calc.getApply_ltv();
-                loan_apt_info.min_ltv =  calc.min_ltv; // 뒷장에 사용할 최소 ltv 구함.
-                //대출 가능 금액 산정 -> pos_cost;
-                // 적용 ltv 가 max ltv와 같거나 크거나 || 시작 ltv가 최소 ltv 보다 작으면 상담신청
-                loanActivity.show_Log("\nstart: "+calc.start_ltv+"\nmin: "+calc.min_ltv+
-                        "\nmax: "+calc.max_ltv+"\napply: "+calc.apply_ltv);
-                if(calc.start_ltv<calc.min_ltv || calc.apply_ltv>=calc.max_ltv){
-                    counsel_state = true;
-                    loanActivity.show_Log("상담 신청");
-                    // 상담 신청 페이지를 따로 제작해야함
-
-
-                }else{
-                    counsel_state = false;
-                    long max_cost = calc.max_cost();
-                    if(login_temp_state) {
-                        if (max_cost >= calc.wish_loan) {
-                            loan_apt_info.pos_cost = calc.wish_loan;
-                        } else {
-                            loan_apt_info.pos_cost = calc.max_cost();
-                        }
-                        //대출 금리 산정
-                        loan_apt_info.rate = calc.calc_loan_interest_rate();
+                    calc.getApply_ltv();
+                    loan_apt_info.min_ltv =  calc.min_ltv; // 뒷장에 사용할 최소 ltv 구함.
+                    //대출 가능 금액 산정 -> pos_cost;
+                    // 적용 ltv 가 max ltv와 같거나 크거나 || 시작 ltv가 최소 ltv 보다 작으면 상담신청
+                    loanActivity.show_Log("\nstart: "+calc.start_ltv+"\nmin: "+calc.min_ltv+
+                            "\nmax: "+calc.max_ltv+"\napply: "+calc.apply_ltv);
+                    if(calc.start_ltv<calc.min_ltv || calc.apply_ltv>calc.max_ltv){
+                        new AlertDialog.Builder(loanActivity)
+                                .setTitle("메세지")
+                                .setMessage("상담이 필요한 대출 진행입니다.\n 상담 페이지로 이동하시겠습니까?")
+                                .setPositiveButton("예", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        loanActivity.changeActivity(loanActivity, MainActivity.class);
+                                    }
+                                }).setNegativeButton("아니오",null)
+                                .setCancelable(false)
+                                .show();
                     }else{
-                        loan_apt_info.pos_cost = calc.max_cost();
-                        loan_apt_info.rate = calc.min_rate*100;
+                        long max_cost = calc.max_cost();
+                        if(LoginActivity.login_state) {
+                            if (max_cost >= calc.wish_loan) {
+                                loan_apt_info.pos_cost = calc.wish_loan;
+                            } else {
+                                loan_apt_info.pos_cost = calc.max_cost();
+                            }
+                            //대출 금리 산정
+                            loan_apt_info.rate = calc.calc_loan_interest_rate();
+                            loan_apt_info.apply_ltv = calc.apply_ltv;
+                        }else{
+                            loan_apt_info.pos_cost = calc.max_cost();
+                            loan_apt_info.rate = calc.min_rate*100;
+                        }
+                        loanActivity.addFragment(R.id.loan_main_layout,loanActivity.loan_result_fragment);
                     }
                 }
 
-                loanActivity.changeFragment(R.id.loan_main_layout,loanActivity.loan_result_fragment);
-
                 break;
+
                 case R.id.loan_specific_back:
-                    loanActivity.changeFragment(R.id.loan_main_layout,loanActivity.loan_base_info_fragment);
+                    loanActivity.removeFragment(this);
                 break;
         }
     }
@@ -315,7 +323,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                 public void onClick(DialogInterface dialogInterface, int i) {
                     long real_cost = arrayList.get(i).avg_cost;
                     specific_address.setText(arrayList.get(i).full_name);
-                    house_cost.setText(real_cost+" 만원");
+                    house_cost.setText(format.format(real_cost)+" 만원");
                     loanActivity.show_Log(real_cost+"");
                     //최종적으로 대출용 아파트의 정보 ( 실거래가와 LTV)를 저장하는 클래스 생성
                     loan_apt_info = new Loan_Apt_Info(real_cost,city.city_second.ltv); // 펀딩톡 감정가와
@@ -547,7 +555,6 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
             e.printStackTrace();
         }
     }
-
     private final static Comparator<Apt_Info> myComparator= new Comparator<Apt_Info>() {
         private final Collator collator = Collator.getInstance();
         @Override
@@ -571,10 +578,20 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                 // 아파트 평균값 계산식 다시 해보기
                 String cmp1_name = arrayList.get(cnt).apt_name+ "/"+arrayList.get(cnt).size;
                 String cmp2_name = arrayList.get(i).apt_name+ "/"+arrayList.get(i).size;
-                int idx1 = cmp1_name.indexOf(".");
-                int idx2 = cmp2_name.indexOf(".");
-                cmp1_name = cmp1_name.substring(0,idx1);
-                cmp2_name = cmp2_name.substring(0,idx2);
+                int idx1;
+                int idx2;
+                if(cmp1_name.contains(".")){
+                    idx1 = cmp1_name.indexOf(".");
+                    if(idx1 != 0){
+                        cmp1_name = cmp1_name.substring(0,idx1);
+                    }
+                }
+                if(cmp2_name.contains(".")){
+                    idx2 = cmp2_name.indexOf(".");
+                    if(idx2 != 0){
+                        cmp2_name = cmp2_name.substring(0,idx2);
+                    }
+                }
                 main_cost = Long.parseLong(arrayList.get(cnt).deal_amount); // 여기서 값이 계속 초기화가 됨.
                 if(cmp1_name.equals(cmp2_name)){
                     avg_cost += Long.parseLong(arrayList.get(i).deal_amount);

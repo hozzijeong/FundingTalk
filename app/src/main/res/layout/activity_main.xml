@@ -7,18 +7,12 @@
     tools:context=".Main.MainActivity">
 
 
-<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--        android:id="@+id/main_layout"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent">-->
-<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="70dp"
-        android:background="#FFFFFF"
-        />
+        android:background="#FFFFFF" />
 <!--    android:visibility="invisible"-->
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -28,5 +22,8 @@
         app:menu="@menu/bottom_item"
         android:layout_gravity="bottom"
         app:labelVisibilityMode="labeled"
+        android:background="#ffffff"
+        app:itemIconTint="@color/btn_color"
+        app:itemTextColor="@color/btn_color"
         />
 </FrameLayout>
