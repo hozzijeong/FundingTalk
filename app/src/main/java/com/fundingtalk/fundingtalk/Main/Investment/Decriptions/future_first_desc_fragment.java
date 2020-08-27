@@ -11,14 +11,21 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentActivity;
 
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
 import com.fundingtalk.fundingtalk.R;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.*;
 
-public class future_first_desc_fragment extends Main_BaseFragment {
+public class future_first_desc_fragment extends Main_BaseFragment implements OnMapReadyCallback {
 
     private TextView address;
     private TextView pro_percent;
@@ -47,8 +54,10 @@ public class future_first_desc_fragment extends Main_BaseFragment {
         View v = inflater.inflate(R.layout.invest_desc_fragment,container,false);
         //---
 
-        ImageButton back = (ImageButton)v.findViewById(R.id.back_icon);
+        mapView = (MapView)v.findViewById(R.id.mapView);
+        mapView.getMapAsync(this::onMapReady);
 
+        ImageButton back = (ImageButton)v.findViewById(R.id.back_icon);
         back.setOnClickListener(new View.OnClickListener() { // 이미지 버튼 이벤트 정의
             @Override
             public void onClick(View v) { //클릭 했을경우
@@ -68,7 +77,6 @@ public class future_first_desc_fragment extends Main_BaseFragment {
                 mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_input_file_Fragment);
             }
         });
-
 
         address = (TextView) v.findViewById(R.id.address);
         pro_percent = (TextView) v.findViewById(R.id.pro_percent);
@@ -193,4 +201,28 @@ public class future_first_desc_fragment extends Main_BaseFragment {
         super.onLowMemory();
         mapView.onLowMemory();
     }
+
+    public void onMapReady(GoogleMap googleMap) {
+        // ↑매개변수로 GoogleMap 객체가 넘어옵니다.
+
+        // camera 좌쵸를 서울역 근처로 옮겨 봅니다.
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(
+                new LatLng(35.1513632,129.0623991)   // 위도, 경도
+        ));
+
+        // 구글지도(지구) 에서의 zoom 레벨은 1~23 까지 가능합니다.
+        // 여러가지 zoom 레벨은 직접 테스트해보세요
+        CameraUpdate zoom = CameraUpdateFactory.zoomTo(17);
+        googleMap.animateCamera(zoom);   // moveCamera 는 바로 변경하지만,
+        // animateCamera() 는 근거리에선 부드럽게 변경합니다
+
+        // marker 표시
+        // market 의 위치, 타이틀, 짧은설명 추가 가능.
+        MarkerOptions marker = new MarkerOptions();
+        marker .position(new LatLng(35.1513632,129.0623991))
+                .title("한일유앤아이 2동")
+                .snippet("부산광역시 부산진구 전포동 한일유앤아이 2동");
+        googleMap.addMarker(marker).showInfoWindow(); // 마커추가,화면에출력
+    }
+
 }
