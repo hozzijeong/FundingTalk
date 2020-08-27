@@ -25,10 +25,15 @@ import com.fundingtalk.fundingtalk.Main.Custom.Item.Item;
 import com.fundingtalk.fundingtalk.Main.MainActivity;
 import com.fundingtalk.fundingtalk.R;
 import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Invest_List_Fragment;
+import com.fundingtalk.fundingtalk.Main.*;
+
+import java.text.DecimalFormat;
 
 import static com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Invest_List_Fragment.*;
 
 public class invest_input_file_Fragment extends Main_BaseFragment {
+
+    static public DecimalFormat df3 = new DecimalFormat("###,###");
 
     private int ok_money = 0;
     private int ok_confirm = 0;
@@ -41,6 +46,8 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
     static public String total_info_c;
     static public String address_c;
 
+    public static double rating_plus = 24.233125;
+    public static double tax_plus = 10.191875;
 
     private TextView calc_money;
     private TextView n_money;
@@ -113,7 +120,7 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
                         myToast.show();
                     }
 
-                    if ( confirmtext.getText().toString().equals("aaa")) { //나중에 동의함으로 수정
+                    if ( confirmtext.getText().toString().equals("동의함")) { //나중에 동의함으로 수정
                         //동의함이 들어오면
                         ok_confirm = 1;
 //                    Log.d("입력", "동의함 완료 완료");
@@ -128,7 +135,23 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
                         ok_money = 0;
                         ok_confirm = 0;
                         now_money = now_money - Integer.parseInt(numberText.getText().toString());
-                        items.add(new Item(total_info_c,address_c,money_info,numberText.getText().toString() + "만원"));
+                        rating_plus += rating * 0.01 * 0.725 / 12 * (Integer.parseInt(numberText.getText().toString())); //이자추가
+                        tax_plus += rating * 0.01 * 0.275 /12 * (Integer.parseInt(numberText.getText().toString())); //이자추가
+
+                        int index = -1;
+                        for (int i = 2; i < items.size(); i++ ){
+                            if (items.get(i).getAddress().equals(address_c)){
+                                index = i;
+                            }
+                        }
+                        if(index == -1){ //없으면
+//                            items.add(new Item(total_info_c,address_c,money_info,numberText.getText().toString()));
+                            items.add(new Item(total_info_c,address_c,money_info,numberText.getText().toString() + "만원"));
+                        }
+                        else { // 있으면
+                            items.get(index).addmoney(numberText.getText().toString());
+                        }
+//                        items.add(new Item(total_info_c,address_c,money_info,numberText.getText().toString() + "만원"));
                         numberText.getText().clear();
                         confirmtext.getText().clear();
                         mainActivity.changeFragment(R.id.main_layout,mainActivity.invest_finish_Fragment);
@@ -167,11 +190,11 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
 
                 @Override
                 public void afterTextChanged(Editable arg0) {
-                    // 입력이 끝났을 때
+                    // 입력이 끝났을
                     try {
                         if(arg0.toString() != null || arg0.toString().trim() != ""){
                             double oper = rating * 0.01 *10000 * Integer.parseInt(arg0.toString()) ;
-                            calc_money.setText(String.valueOf((int)oper) + "원");
+                            calc_money.setText(String.valueOf(df3.format((int)oper)) + "원");
                         }
                     } catch (NumberFormatException e) {
                         e.printStackTrace();

@@ -120,32 +120,46 @@
                     app:layout_constraintTop_toTopOf="@+id/main_layout"
                     app:layout_constraintVertical_bias="0.571" />
 
-                <ImageView
-                    android:id="@+id/progress_bar"
-                    android:layout_width="309dp"
-                    android:layout_height="19dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.509"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.693"
-                    app:srcCompat="@drawable/pro_2" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/progress_bar"-->
+<!--                    android:layout_width="309dp"-->
+<!--                    android:layout_height="19dp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="0.509"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintVertical_bias="0.693"-->
+<!--                    app:srcCompat="@drawable/pro_2" />-->
 
                 <TextView
                     android:id="@+id/ing_percent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nanumbarungothic"
-                    android:text="현재진행중 (78%)"
+                    android:text="현재진행중"
                     android:textColor="#FFFFFF"
                     android:textSize="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.502"
+                    app:layout_constraintHorizontal_bias="0.501"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.796" />
+                    app:layout_constraintVertical_bias="0.728" />
+
+                <Button
+                    android:id="@+id/goto_check"
+                    android:layout_width="316dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/invest_ok_button"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:text="투자하기"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ing_percent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -153,17 +167,135 @@
                 android:layout_width="match_parent"
                 android:layout_height="350dp">
 
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/pro_all"-->
+                <!--                    android:layout_width="359dp"-->
+                <!--                    android:layout_height="213dp"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintHorizontal_bias="0.695"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent"-->
+                <!--                    app:layout_constraintVertical_bias="0.0"-->
+                <!--                    app:srcCompat="@drawable/pro_3" />-->
+
                 <ImageView
-                    android:id="@+id/pro_all"
-                    android:layout_width="370dp"
-                    android:layout_height="201dp"
+                    android:id="@+id/imageView6"
+                    android:layout_width="333dp"
+                    android:layout_height="6dp"
+                    app:layout_constraintBottom_toTopOf="@+id/pro_gamjung"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.102"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.394"
+                    app:srcCompat="@drawable/line" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="333dp"
+                    android:layout_height="6dp"
+                    app:layout_constraintBottom_toTopOf="@+id/pro_gamjung"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.102"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.929"
+                    app:srcCompat="@drawable/line" />
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="333dp"
+                    android:layout_height="6dp"
+                    app:layout_constraintBottom_toTopOf="@+id/pro_gamjung"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.102"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.805"
+                    app:srcCompat="@drawable/line" />
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="333dp"
+                    android:layout_height="6dp"
+                    app:layout_constraintBottom_toTopOf="@+id/pro_gamjung"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.102"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.654"
+                    app:srcCompat="@drawable/line" />
+
+                <TextView
+                    android:id="@+id/pro_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:text="상환방법 : "
+                    android:textColor="#959595"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.051"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.17" />
+
+                <TextView
+                    android:id="@+id/pro_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:text="대출 목적 : "
+                    android:textColor="#959595"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.042"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.239" />
+
+                <TextView
+                    android:id="@+id/pro_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:text="담보설정 : "
+                    android:textColor="#959595"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.067"
-                    app:srcCompat="@drawable/pro_3" />
+                    app:layout_constraintVertical_bias="0.314" />
+
+                <TextView
+                    android:id="@+id/pro_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:text="전용면적 : "
+                    android:textColor="#959595"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.051"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.389" />
+
+                <TextView
+                    android:id="@+id/pro_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:text="LTV : "
+                    android:textColor="#959595"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.116"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.461" />
 
                 <TextView
                     android:id="@+id/pro_fourth_input"
@@ -274,6 +406,18 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.94" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="333dp"
+                    android:layout_height="6dp"
+                    app:layout_constraintBottom_toTopOf="@+id/pro_gamjung"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.102"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.535"
+                    app:srcCompat="@drawable/line" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -406,20 +550,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.399" />
-
-                <Button
-                    android:id="@+id/goto_check"
-                    android:layout_width="316dp"
-                    android:layout_height="48dp"
-                    android:text="투자하기"
-                    android:fontFamily="@font/nanumbarungothicbold"
-                    android:background="#3757D0"
-                    android:textSize="20dp"
-                    android:textColor="#FFFFFF"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/mapView" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
