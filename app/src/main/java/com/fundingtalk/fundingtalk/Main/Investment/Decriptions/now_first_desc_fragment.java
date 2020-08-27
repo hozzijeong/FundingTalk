@@ -121,7 +121,7 @@ public class now_first_desc_fragment extends Main_BaseFragment implements OnMapR
         setpro_fifth_input("83.78%");
         setpro_gamjung_input("37,000만원");
         setdesc("감정가는 KB부동산시세외 일반거래가 37,000만원 및 국토교통부 최근실거래가(최근6개월)의 변화 추이동을 반영하여 적용되었습니다.");
-        setloan_info_input("2억 8,000만원 (원금)");
+        setloan_info_input("28,000만원 (원금)");
         setfunding_info_input("3,000만원 (원금)");
         setnakchal_input("본 담보가 위치한 경기도 고양시 덕양구의 최근 6개월 낙찰가율은 102%입니다.");
 
