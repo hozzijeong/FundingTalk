@@ -91,10 +91,6 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
         format = new DecimalFormat("###,###");
         setReset();
         getFirstCity();
-        /*
-            TextView 밑줄 긋는 방법
-            textview.setPaintFlags(textview.PaintFlags()|Paint.UNDERLINE_TEXT_FLAG);
-         */
 
         return v;
     }
@@ -189,7 +185,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                     // 적용 ltv 가 max ltv와 같거나 크거나 || 시작 ltv가 최소 ltv 보다 작으면 상담신청
                     loanActivity.show_Log("\nstart: "+calc.start_ltv+"\nmin: "+calc.min_ltv+
                             "\nmax: "+calc.max_ltv+"\napply: "+calc.apply_ltv);
-                    if(calc.start_ltv<calc.min_ltv || calc.apply_ltv>=calc.max_ltv){
+                    if(calc.start_ltv<calc.min_ltv || calc.apply_ltv>calc.max_ltv){
                         new AlertDialog.Builder(loanActivity)
                                 .setTitle("메세지")
                                 .setMessage("상담이 필요한 대출 진행입니다.\n 상담 페이지로 이동하시겠습니까?")
@@ -211,6 +207,7 @@ public class Loan_Specific_Info_Fragment extends Loan_BaseFragment implements Vi
                             }
                             //대출 금리 산정
                             loan_apt_info.rate = calc.calc_loan_interest_rate();
+                            loan_apt_info.apply_ltv = calc.apply_ltv;
                         }else{
                             loan_apt_info.pos_cost = calc.max_cost();
                             loan_apt_info.rate = calc.min_rate*100;
