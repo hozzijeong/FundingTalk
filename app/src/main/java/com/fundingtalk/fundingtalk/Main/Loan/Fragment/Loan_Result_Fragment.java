@@ -72,7 +72,6 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
         });
         return v;
     }
-
     private void setSpan(){
         Spannable[] span = new Spannable[3];
         span[0] = (Spannable) check1.getText();
@@ -86,7 +85,6 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
         spannable.setSpan(new ForegroundColorSpan(Color.parseColor("#5A75D7")),11,15,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         spannable.setSpan(new ForegroundColorSpan(Color.parseColor("#5A75D7")),19,22,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
     }
-
     @SuppressLint("SetTextI18n")
     private void onLogin(){
         name = "최승현";
@@ -96,13 +94,12 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
         cost_rate.setText("대출 금리: "+form.format(Loan_Specific_Info_Fragment.loan_apt_info.rate)+"% ");
         cost_and_ltv.setText("펀딩톡 감정가: "+
                 form2.format(Loan_Specific_Info_Fragment.loan_apt_info.real_cost)+"만원 /"
-        +"LTV: "+Loan_Specific_Info_Fragment.loan_apt_info.min_ltv+"%");
+        +"적용 LTV: "+Loan_Specific_Info_Fragment.loan_apt_info.apply_ltv+"%");
 
         onLogin.setVisibility(View.VISIBLE);
         noLogin.setVisibility(View.INVISIBLE);
         next_btn.setText("대출 신청하기");
     }
-
     @SuppressLint("SetTextI18n")
     private void offLogin(){
         name = "고객님";
@@ -117,8 +114,6 @@ public class Loan_Result_Fragment extends Loan_BaseFragment implements View.OnCl
         noLogin.setVisibility(View.VISIBLE);
         next_btn.setText("메인으로 돌아가기");
     }
-
-
     @Override
     public void onClick(View view) {
         switch (view.getId()){

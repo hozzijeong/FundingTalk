@@ -13,9 +13,8 @@
         android:layout_height="32dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="134dp"
-        android:background="@drawable/loan_base_frame"
+        android:background="@drawable/loan_bar"
         android:gravity="center_vertical"
-        android:hint="만원"
         android:paddingStart="20dp"
         android:textSize="10dp"
         app:layout_constraintBottom_toTopOf="@+id/check_limit"
@@ -155,10 +154,9 @@
         android:layout_width="302dp"
         android:layout_height="32dp"
         android:layout_marginBottom="61dp"
-        android:background="@drawable/loan_base_frame"
+        android:background="@drawable/loan_bar"
         android:fontFamily="@font/nanumbarungothic"
         android:gravity="center_vertical"
-        android:hint="만원"
         android:paddingStart="20dp"
         android:textSize="10dp"
         app:layout_constraintBottom_toTopOf="@+id/wish_loan_tv"
@@ -227,5 +225,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
