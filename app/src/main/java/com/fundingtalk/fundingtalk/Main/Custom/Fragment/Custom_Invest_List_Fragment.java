@@ -60,11 +60,11 @@ public class Custom_Invest_List_Fragment extends Main_BaseFragment implements Vi
         item4 = (TextView) v.findViewById(R.id.item4);
         item5 = (TextView) v.findViewById(R.id.item5);
 
-        given_money.setText("20,560 원");
+        given_money.setText("20,194 원");
         item1.setText(String.valueOf(df3.format((850-now_money)*10000)) +" 원");
-        item2.setText(String.valueOf(df3.format(rating_plus*10000)) + "  원");
+        item2.setText("27,854 원");
 //        item3.setText("305640 원");
-        item4.setText( String.valueOf(df3.format(tax_plus*10000)) + " 만원");
+        item4.setText( "7,660 원");
         item5.setText("0 원");
 
         count.setText("총 "+items.size()+"개");

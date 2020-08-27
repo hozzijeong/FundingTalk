@@ -33,7 +33,7 @@ import static com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Invest_Lis
 
 public class invest_input_file_Fragment extends Main_BaseFragment {
 
-    static public DecimalFormat df3 = new DecimalFormat("000,000");
+    static public DecimalFormat df3 = new DecimalFormat("###,###");
 
     private int ok_money = 0;
     private int ok_confirm = 0;
@@ -120,7 +120,7 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
                         myToast.show();
                     }
 
-                    if ( confirmtext.getText().toString().equals("aaa")) { //나중에 동의함으로 수정
+                    if ( confirmtext.getText().toString().equals("동의함")) { //나중에 동의함으로 수정
                         //동의함이 들어오면
                         ok_confirm = 1;
 //                    Log.d("입력", "동의함 완료 완료");
@@ -135,8 +135,8 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
                         ok_money = 0;
                         ok_confirm = 0;
                         now_money = now_money - Integer.parseInt(numberText.getText().toString());
-                        rating_plus += rating * 0.01 * 0.725 * (Integer.parseInt(numberText.getText().toString())); //이자추가
-                        tax_plus += rating * 0.01 * 0.275 * (Integer.parseInt(numberText.getText().toString())); //이자추가
+                        rating_plus += rating * 0.01 * 0.725 / 12 * (Integer.parseInt(numberText.getText().toString())); //이자추가
+                        tax_plus += rating * 0.01 * 0.275 /12 * (Integer.parseInt(numberText.getText().toString())); //이자추가
 
                         int index = -1;
                         for (int i = 2; i < items.size(); i++ ){
