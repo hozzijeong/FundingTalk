@@ -108,7 +108,7 @@ public class future_first_desc_fragment extends Main_BaseFragment implements OnM
         setpro_fifth_input("74.71%");
         setpro_gamjung_input("31,000만원");
         setdesc("감정가는 KB부동산시세외 일반거래가 31,000만원 및 국토교통부\n 최근실거래가(최근6개월)의 변화 추이동을 반영하여 적용되었습니다.");
-        setloan_info_input("2억1,661만원 (원금) ");
+        setloan_info_input("21,661만원 (원금) ");
         setfunding_info_input("1,500만원 (원금) ");
         setnakchal_input("본 담보가 위치한 부산광역시 부산진구의 최근 6개월 낙찰가율은 90.1% 입니다.");
 //        setprogressbar();
