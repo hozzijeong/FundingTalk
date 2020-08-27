@@ -16,4 +16,5 @@ public class Main_BaseFragment extends Fragment {
         // 변수 mainActivity 를 사용해서, MainActivity 에 있는 메소드 등에 접근 가능.
         mainActivity = (MainActivity) this.getActivity();
     }
+
 }

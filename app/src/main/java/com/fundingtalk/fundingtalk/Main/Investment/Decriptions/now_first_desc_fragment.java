@@ -14,19 +14,16 @@ import androidx.annotation.Nullable;
 import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
 import com.fundingtalk.fundingtalk.Login.LoginActivity;
 import com.fundingtalk.fundingtalk.R;
-import com.google.android.gms.maps.CameraUpdate;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
-
-import com.google.android.gms.maps.LocationSource;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.SupportMapFragment;
 
-import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.*;
+import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.address_c;
+import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.back_check;
+import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.rating;
+import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.total_info_c;
 
-public class now_first_desc_fragment extends Main_BaseFragment implements OnMapReadyCallback {
+public class now_first_desc_fragment extends Main_BaseFragment {
 
     private TextView address;
     private TextView pro_percent;
@@ -45,22 +42,12 @@ public class now_first_desc_fragment extends Main_BaseFragment implements OnMapR
     private TextView nakchal_input;
 
     private MapView mapView;
-//    private MapController mapController;
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.invest_desc_fragment,container,false);
         //---
-
-        mapView = (MapView)v.findViewById(R.id.mapView);
-        mapView.getMapAsync(this::onMapReady);
-
-//        mapView = (MapView) v.findViewById(R.id.mapView);
-//        mapView.setSatellite(false);
-//        mapView.setStreetView(true);
-
 
         ImageButton back = (ImageButton)v.findViewById(R.id.back_icon);
 
@@ -113,7 +100,7 @@ public class now_first_desc_fragment extends Main_BaseFragment implements OnMapR
         setpro_percent("9.9%");
         setpro_month("12개월");
         setpro_money("0.3억");
-        seting_percent("현재 진행중");
+        seting_percent("현재 진행중 (78%)");
         setpro_first_input("만기일시상환");
         setpro_second_input("가계자금");
         setpro_third_input("근저당권");
@@ -125,8 +112,18 @@ public class now_first_desc_fragment extends Main_BaseFragment implements OnMapR
         setfunding_info_input("3,000만원 (원금)");
         setnakchal_input("본 담보가 위치한 경기도 고양시 덕양구의 최근 6개월 낙찰가율은 102%입니다.");
 
+
+
         return v;
     }
+
+    private void setMaps(){
+        SupportMapFragment supportMapFragment =
+                (SupportMapFragment) mainActivity.getSupportFragmentManager().findFragmentById(R.id.mapView);
+
+        supportMapFragment.getMapAsync((OnMapReadyCallback) mainActivity);
+    }
+
 
 
 
@@ -210,29 +207,6 @@ public class now_first_desc_fragment extends Main_BaseFragment implements OnMapR
     public void onLowMemory() {
         super.onLowMemory();
         mapView.onLowMemory();
-    }
-
-    public void onMapReady(GoogleMap googleMap) {
-        // ↑매개변수로 GoogleMap 객체가 넘어옵니다.
-
-        // camera 좌쵸를 서울역 근처로 옮겨 봅니다.
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(
-                new LatLng(37.6438005,126.830154)   // 위도, 경도
-        ));
-
-        // 구글지도(지구) 에서의 zoom 레벨은 1~23 까지 가능합니다.
-        // 여러가지 zoom 레벨은 직접 테스트해보세요
-        CameraUpdate zoom = CameraUpdateFactory.zoomTo(17);
-        googleMap.animateCamera(zoom);   // moveCamera 는 바로 변경하지만,
-        // animateCamera() 는 근거리에선 부드럽게 변경합니다
-
-        // marker 표시
-        // market 의 위치, 타이틀, 짧은설명 추가 가능.
-        MarkerOptions marker = new MarkerOptions();
-        marker .position(new LatLng(37.6438005,126.830154))
-                .title("화정동 달빛")
-                .snippet("경기도 고양시 덕양구 화정동 달빛(3단지신안)");
-        googleMap.addMarker(marker).showInfoWindow(); // 마커추가,화면에출력
     }
 }
 
