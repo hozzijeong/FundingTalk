@@ -23,7 +23,10 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.df3;
 import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.now_money;
+import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.rating_plus;
+import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.tax_plus;
 
 public class Custom_Invest_List_Fragment extends Main_BaseFragment implements View.OnClickListener {
 
@@ -58,11 +61,11 @@ public class Custom_Invest_List_Fragment extends Main_BaseFragment implements Vi
         item5 = (TextView) v.findViewById(R.id.item5);
 
         given_money.setText("20,560 원");
-        item1.setText(String.valueOf(5350-now_money) +"만원");
-        item2.setText("20560 원");
-        item3.setText("305640 원");
-        item4.setText("205120 원");
-        item5.setText("35420 원");
+        item1.setText(String.valueOf(df3.format((850-now_money)*10000)) +" 원");
+        item2.setText(String.valueOf(df3.format(rating_plus*10000)) + "  원");
+//        item3.setText("305640 원");
+        item4.setText( String.valueOf(df3.format(tax_plus*10000)) + " 만원");
+        item5.setText("0 원");
 
         count.setText("총 "+items.size()+"개");
         linearLayoutManager = new LinearLayoutManager(mainActivity);
