@@ -100,7 +100,7 @@ public class now_first_desc_fragment extends Main_BaseFragment {
         setpro_percent("9.9%");
         setpro_month("12개월");
         setpro_money("0.3억");
-        seting_percent("현재 진행중 (78%)");
+        seting_percent("현재 진행중");
         setpro_first_input("만기일시상환");
         setpro_second_input("가계자금");
         setpro_third_input("근저당권");
