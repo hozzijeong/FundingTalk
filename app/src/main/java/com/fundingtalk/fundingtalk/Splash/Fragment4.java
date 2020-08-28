@@ -17,6 +17,7 @@ import com.fundingtalk.fundingtalk.Main.MainActivity;
 import com.fundingtalk.fundingtalk.R;
 
 import static com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Invest_List_Fragment.setItems;
+import static com.fundingtalk.fundingtalk.Main.MainActivity.items;
 
 public class Fragment4 extends Manual_BaseFragment {
 
@@ -31,6 +32,7 @@ public class Fragment4 extends Manual_BaseFragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                items.clear();
                 setItems();
                 manualActivity.changeActivity(manualActivity,MainActivity.class);
                 //editor.putBoolean("manual_state",true);
