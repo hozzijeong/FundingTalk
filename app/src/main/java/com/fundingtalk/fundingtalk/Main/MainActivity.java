@@ -71,6 +71,13 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         //bottom_navigation 을 클릭했을 때, 페이지 변경을 위한 이벤트 처리
         bottom_navi.setOnNavigationItemSelectedListener(this);
 
+        if (login_state){
+            if (!String.valueOf(items.get(0).getAddress()).equals("서울특별시 강남구 대치동")){
+                setItems();
+            }
+        }
+
+
         if (back_page == 1){
             changeFragment(R.id.main_layout,now_first_desc_fragment);
         }

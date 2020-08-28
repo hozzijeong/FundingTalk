@@ -32,8 +32,6 @@ public class Fragment4 extends Manual_BaseFragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                items.clear();
-                setItems();
                 manualActivity.changeActivity(manualActivity,MainActivity.class);
                 //editor.putBoolean("manual_state",true);
                 //editor.commit();
