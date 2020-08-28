@@ -72,10 +72,11 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         bottom_navi.setOnNavigationItemSelectedListener(this);
 
         if (login_state){
-            if(items.size() != 0){
-                if(!String.valueOf(items.get(0).getAddress()).equals("서울특별시 강남구 대치동")){
-                    setItems();
-                }
+            if(items.size() == 0){
+                setItems();
+//                if(!String.valueOf(items.get(0).getAddress()).equals("서울특별시 강남구 대치동")){
+//                    setItems();
+//                }
             }
         }
 
