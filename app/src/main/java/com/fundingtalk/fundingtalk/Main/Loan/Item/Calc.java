@@ -131,7 +131,7 @@ public class Calc extends Loan_Apt_Info{
         this.apply_ltv = (double) ((before_loan + wish_loan)*100 / real_cost);
         //적용 금리가 MAX LTV 를 넘어가면 LTV 는 최대 LTV로 설정한다.
         if(apply_ltv>max_ltv){
-            apply_ltv = max_ltv;
+            this.apply_ltv = max_ltv;
         }
         return apply_ltv;
     }
