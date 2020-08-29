@@ -13,11 +13,11 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.fundingtalk.fundingtalk.AppHelper.BaseActivity;
-import com.fundingtalk.fundingtalk.Login.LoginActivity;
 import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Invest_List_Fragment;
 import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Loan_List_Fragment;
 import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Main_Fragment;
 import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Notlogin_Fragment;
+import com.fundingtalk.fundingtalk.Main.Custom.Item.Item;
 import com.fundingtalk.fundingtalk.Main.ETC.Fragment.Etc_Main_Fragment;
 import com.fundingtalk.fundingtalk.Main.Investment.Decriptions.future_first_desc_fragment;
 import com.fundingtalk.fundingtalk.Main.Investment.Decriptions.future_second_desc_fragment;
@@ -29,6 +29,8 @@ import com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fr
 import com.fundingtalk.fundingtalk.Main.Loan.Fragment.Loan_Main_Fragment;
 import com.fundingtalk.fundingtalk.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -56,7 +58,8 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
 
     public Etc_Main_Fragment faq_main_fragment;
     public Custom_Notlogin_Fragment custom_notlogin_fragment;
-  
+    public static ArrayList<Item> items = new ArrayList<>();
+
     @BindView(R.id.main_bottom_navi) BottomNavigationView bottom_navi;
     public @BindView(R.id.main_layout) ConstraintLayout mainLayout;
     @Override
@@ -67,10 +70,16 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         setFragment();
         //bottom_navigation 을 클릭했을 때, 페이지 변경을 위한 이벤트 처리
         bottom_navi.setOnNavigationItemSelectedListener(this);
+
         if (login_state){
-            setItems();
+            if(items.size() == 0){
+                setItems();
+//                if(!String.valueOf(items.get(0).getAddress()).equals("서울특별시 강남구 대치동")){
+//                    setItems();
+//                }
+            }
         }
-        Log.d("여기에서 추가됨!!!!!!!!!!","*********************");
+
 
         if (back_page == 1){
             changeFragment(R.id.main_layout,now_first_desc_fragment);

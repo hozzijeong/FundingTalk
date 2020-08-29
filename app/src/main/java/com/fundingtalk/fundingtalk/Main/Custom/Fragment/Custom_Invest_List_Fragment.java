@@ -16,17 +16,14 @@ import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
 import com.fundingtalk.fundingtalk.Main.Custom.Adapter.RecyclerAdapter;
 import com.fundingtalk.fundingtalk.Main.Custom.Adapter.RecyclerDeco;
 import com.fundingtalk.fundingtalk.Main.Custom.Item.Item;
+import com.fundingtalk.fundingtalk.Main.MainActivity;
 import com.fundingtalk.fundingtalk.R;
-
-import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.df3;
 import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.now_money;
-import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.rating_plus;
-import static com.fundingtalk.fundingtalk.Main.Investment.Fragment.invest_input_file_Fragment.tax_plus;
 
 public class Custom_Invest_List_Fragment extends Main_BaseFragment implements View.OnClickListener {
 
@@ -34,7 +31,6 @@ public class Custom_Invest_List_Fragment extends Main_BaseFragment implements Vi
     @BindView(R.id.invest_return_back) Button back;
     @BindView(R.id.custom_loan_return_count) TextView count;
     private RecyclerAdapter adapter;
-    public static ArrayList<Item> items = new ArrayList<>();;
     private RecyclerDeco deco;
     LinearLayoutManager linearLayoutManager;
 
@@ -67,7 +63,7 @@ public class Custom_Invest_List_Fragment extends Main_BaseFragment implements Vi
         item4.setText( "7,660 원");
         item5.setText("0 원");
 
-        count.setText("총 "+items.size()+"개");
+        count.setText("총 "+MainActivity.items.size()+"개");
         linearLayoutManager = new LinearLayoutManager(mainActivity);
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
         invest_list.setLayoutManager(linearLayoutManager);
@@ -75,12 +71,13 @@ public class Custom_Invest_List_Fragment extends Main_BaseFragment implements Vi
         deco = new RecyclerDeco(20);
         invest_list.addItemDecoration(deco);
 
-        adapter = new RecyclerAdapter(mainActivity,items);
+        adapter = new RecyclerAdapter(mainActivity,MainActivity.items);
         invest_list.setAdapter(adapter);
         return v;
     }
 
     static public void setItems(){
+        MainActivity.items.clear();
         String total_info1 = "연 9.55% 12개월";
         String address1 = "서울특별시 강남구 대치동";
         String money1= "100 만원";
@@ -89,12 +86,12 @@ public class Custom_Invest_List_Fragment extends Main_BaseFragment implements Vi
         String address2 = "대구광역시 사직동";
         String money_info = "총 투자 금액";
         String money2= "250 만원";
-        items.add(new Item(total_info1,address1,money_info,money1));
-        items.add(new Item(total_info2,address2,money_info,money2));
+        MainActivity.items.add(new Item(total_info1,address1,money_info,money1));
+        MainActivity.items.add(new Item(total_info2,address2,money_info,money2));
     }
 
     static public void addItems_custom(String total_info, String address, String money_info, String money){
-        items.add(new Item(total_info,address,money_info,money));
+        MainActivity.items.add(new Item(total_info,address,money_info,money));
     }
 
 

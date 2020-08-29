@@ -1,6 +1,5 @@
 package com.fundingtalk.fundingtalk.Main.Investment.Fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.Spannable;
@@ -13,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,12 +22,8 @@ import com.fundingtalk.fundingtalk.AppHelper.Main_BaseFragment;
 import com.fundingtalk.fundingtalk.Main.Custom.Item.Item;
 import com.fundingtalk.fundingtalk.Main.MainActivity;
 import com.fundingtalk.fundingtalk.R;
-import com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Invest_List_Fragment;
-import com.fundingtalk.fundingtalk.Main.*;
 
 import java.text.DecimalFormat;
-
-import static com.fundingtalk.fundingtalk.Main.Custom.Fragment.Custom_Invest_List_Fragment.*;
 
 public class invest_input_file_Fragment extends Main_BaseFragment {
 
@@ -139,17 +133,17 @@ public class invest_input_file_Fragment extends Main_BaseFragment {
                         tax_plus += rating * 0.01 * 0.275 /12 * (Integer.parseInt(numberText.getText().toString())); //이자추가
 
                         int index = -1;
-                        for (int i = 2; i < items.size(); i++ ){
-                            if (items.get(i).getAddress().equals(address_c)){
+                        for (int i = 2; i < MainActivity.items.size(); i++ ){
+                            if (MainActivity.items.get(i).getAddress().equals(address_c)){
                                 index = i;
                             }
                         }
                         if(index == -1){ //없으면
 //                            items.add(new Item(total_info_c,address_c,money_info,numberText.getText().toString()));
-                            items.add(new Item(total_info_c,address_c,money_info,numberText.getText().toString() + "만원"));
+                            MainActivity.items.add(new Item(total_info_c,address_c,money_info,numberText.getText().toString() + "만원"));
                         }
                         else { // 있으면
-                            items.get(index).addmoney(numberText.getText().toString());
+                            MainActivity.items.get(index).addmoney(numberText.getText().toString());
                         }
 //                        items.add(new Item(total_info_c,address_c,money_info,numberText.getText().toString() + "만원"));
                         numberText.getText().clear();
