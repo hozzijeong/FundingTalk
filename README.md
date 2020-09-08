@@ -1,11 +1,48 @@
-# FundingTalk
+# 프로젝트 제목
 
-# it's size for Galaxy Note 20 (1440 x 3200)
+FundingTalk (대출과 투자를 모두 한꺼번에 할 수 있는 P2P 어플리케이션)
 
-![2](https://user-images.githubusercontent.com/17926024/91626722-b8c9ad80-e9ec-11ea-85ff-2e2db937d795.png)
-![3](https://user-images.githubusercontent.com/17926024/91626724-bcf5cb00-e9ec-11ea-8b6e-27f79f3e05af.png)
-![4](https://user-images.githubusercontent.com/17926024/91626727-c2531580-e9ec-11ea-99bb-f708cb7a4629.png)
-![5](https://user-images.githubusercontent.com/17926024/91626730-c7b06000-e9ec-11ea-87b0-326fdf5561be.png)
+## 시작하기
+
+이 어플리케이션의 해상도는 갤럭시 노트20에 최적화 되어 있습니다. (1440 x 3200)
+
+2020년 제 2회 앱 메이커톤 대회 출품작입니다. (우수상 수상)
+
+개발기간 (20.08.03~ 20.08.29)
+
+### 설치 및 배포
+
+Release파일에서 APK 및 source code를 다운 받고 apk로 휴대폰에 다운받으면 됩니다.
+
+## 사용된 도구
+
+* [FireBase](https://firebase.google.com/?hl=ko) - 데이터 베이스
+* [Butterknife](https://github.com/JakeWharton/butterknife) - 뷰 바인더
+
+## 버전 관리
+
+1.1버전 - 초기작
+
+## 저자
+
+* **kl529** - *초기작 (개발자)* - [GitHub](https://github.com/kl529)
+* **hozzijeong** - *초기작 (개발자)* - [GitHub](https://github.com/hozzijeong)
+* **minSsan** - *초기작 (개발자)* - [GitHub](https://github.com/minSsan)
+
+
+[기여자 목록](https://github.com/your/project/contributors)을 확인하여 이 프로젝트에 참가하신 분들을 보실 수 있습니다.
+
+## 라이센스
+
+이 프로젝트는 MIT 허가서를 사용합니다
+
+## 감사 인사
+
+* 펀딩톡 팀원(2020년 제 2회 메이커톤) 모두 고생하셨습니다.
+
+
+## 페이지 뷰
+
 ![custom – 1](https://user-images.githubusercontent.com/17926024/91626731-cd0daa80-e9ec-11ea-91b5-2ff5b90ccf06.png)
 ![custom – 20](https://user-images.githubusercontent.com/17926024/91626732-ce3ed780-e9ec-11ea-81b3-874170adbe22.png)
 ![대출 상환액](https://user-images.githubusercontent.com/17926024/91626737-d3038b80-e9ec-11ea-88ef-c702bf364197.png)
