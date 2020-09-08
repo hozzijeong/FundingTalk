@@ -41,33 +41,31 @@ Release파일에서 APK 및 source code를 다운 받고 apk로 휴대폰에 다
 * 펀딩톡 팀원(2020년 제 2회 메이커톤) 모두 고생하셨습니다.
 
 
-## 페이지 뷰
-
-* 전체 페이지 뷰 UI 링크
+## 전체 페이지 뷰 UI 링크
 https://xd.adobe.com/spec/6034e994-1c54-4267-7c18-2f07b34b8c78-1605/
 
-* 시작페이지
+## 시작페이지
 
 ![custom – 20](https://user-images.githubusercontent.com/17926024/91626732-ce3ed780-e9ec-11ea-81b3-874170adbe22.png)
 
-* 홈화면
+## 홈화면
 
 ![홈화면](https://user-images.githubusercontent.com/17926024/91626773-0e05bf00-e9ed-11ea-98a5-5728f294d936.png)
 
-* 대출 관련 페이지
+## 대출 관련 페이지
 
 ![대출2 – 1](https://user-images.githubusercontent.com/17926024/91626740-d860d600-e9ec-11ea-90b0-3ff3a0b2befe.png)
 ![대출2 – 2](https://user-images.githubusercontent.com/17926024/91626742-db5bc680-e9ec-11ea-98cf-ab6a2131bd33.png)
 
-* 로그인 페이지
+## 로그인 페이지
 
 ![로그인](https://user-images.githubusercontent.com/17926024/91626749-e44c9800-e9ec-11ea-996f-252f4a13cbcd.png)
 
-* 마이페이지
+## 마이페이지
 
 ![마페 대1](https://user-images.githubusercontent.com/17926024/91626751-e878b580-e9ec-11ea-8ad4-f14011d4f08e.png)
 
-* 투자 관련 페이지
+## 투자 관련 페이지
 
 ![투자1](https://user-images.githubusercontent.com/17926024/91626763-fcbcb280-e9ec-11ea-99e6-a1bf467b3951.png)
 ![투자2](https://user-images.githubusercontent.com/17926024/91626765-fe867600-e9ec-11ea-880e-cbd8ddc306f9.png)
