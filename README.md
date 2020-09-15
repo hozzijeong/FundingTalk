@@ -27,7 +27,7 @@ Release파일에서 APK 및 source code를 다운 받고 apk로 휴대폰에 다
 
 * **kl529** - *초기작 (개발자)* - [GitHub](https://github.com/kl529)
 * **hozzijeong** - *초기작 (개발자)* - [GitHub](https://github.com/hozzijeong)
-* **minSsan** - *초기작 (개발자)* - [GitHub](https://github.com/minSsan)
+* **minSsan** - *초기작 (개발자)* - [GitHub](https://github.com/minSsan) - Splash, Manual 기능, Login 기능, Login 여부에 따른 화면 연결 등 기본적인 부분 담당
 
 
 [기여자 목록](https://github.com/your/project/contributors)을 확인하여 이 프로젝트에 참가하신 분들을 보실 수 있습니다.
